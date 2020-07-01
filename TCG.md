@@ -93,5 +93,23 @@ O P.FX não conta como um personagem extra na contagem de time.
 ## Ações  
 As ações são cartas não básicas que dão novas habilidades para um personagem e elas podem ser de dois tipos: Movimento ou Inventário.  
 Uma ação do tipo Movimento representa uma ação que o personagem utiliza o próprio corpo como meio - por exemplo, um soco especial é uma ação de movimento.  
-Uma ação do tipo Inventário
+Uma ação do tipo Inventário representa uma ação que o personagem utiliza alguma outra coisa como meio - por exemplo, um golpe de katana ou uma pesquisa em um computador representam ações do tipo Inventário.  
 
+Uma ação, indepentende de qual seja o tipo, tem alguns requisitos para utilização:
+* Tipo de Habilidade: uma ação tem uma habilidade específica ou ela é geral. Qualquer personagem pode utilizar uma ação geral, mas apenas se o personagem tiver aquela habilidade específica ele pode usar.
+* Custo de Ativação: Uma ação pode gerar, manter ou utilizar energia. Para utilizar a ação é necessário que a quantidade de energia esteja disponível.  
+
+### Tipos de Habilidades
+Os tipos de habilidade são:
+* Rajada Energética - armas de fogo, rajadas de calor, laser, plasma;
+* Elemental - fogo, vento, água, gelo, ar, trovão, poderes da natureza, terra, fator de cura;
+* CC (Armas Brancas) - espadas, adagas, facas, porretes, machados, clavas;
+* Tóxico - veneno, radiação, toxinas, químicos;
+* Ciência - computadores, cyber ataques, hacking, QI alto, experiências;
+* Mentalismo - ataques psiquicos, ataques psionicos, ataques emocionais, leitura de mente;
+* Magia - Poder místico, poder dos deuses, magia, armas mágias, itens mágicos, cura;
+* Super Velocidade;
+* Agilidade;
+* Vôo;
+* Cosmíca - multiverso, gravidade, universo, poder do cosmo - tipo cavaleiros do zodíaco;
+* Força - força sobrehumana, superforça;
