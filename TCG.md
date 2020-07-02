@@ -58,6 +58,9 @@ No primeiro turno até 3 personagens podem entrar em jogo, mas nos seguintes tur
 ### Características Básicas  
 **Nome/Alter-ego**  
 
+**Alinhamento**
+Heró, Vilão, Herói/Vilão, Vilão/Herói
+
 **Saúde, Proteção e Equipamento**  
 São as informações básicas do seu personagem. Saúde representa a quantidade de dano que ele pode receber, proteção é o quanto de dano ele pode *mitigar* e equipamento representa a quantidade de ações que podem ser anexadas ao personagem.
 
@@ -113,3 +116,4 @@ Os tipos de habilidade são:
 * Vôo;
 * Cosmíca - multiverso, gravidade, universo, poder do cosmo - tipo cavaleiros do zodíaco;
 * Força - força sobrehumana, superforça;
+
