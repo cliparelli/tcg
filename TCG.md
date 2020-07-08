@@ -5,10 +5,10 @@ Project Name: Heroes - The Contest
 
 ## Estrutura do Jogo
 * Tipos de Carta  
-* Estruturação do Deck
 * Estruturas de Energia  
-* Tokens, Efeitos & Habilidades Passivas (Buffs, Nerfs, Debuffs, Stripe e etc...)  
 * Game Changers (Eventos & Equipamentos)  
+* Estruturação do Deck
+* Tokens, Efeitos & Habilidades Passivas (Buffs, Nerfs, Debuffs, Stripe e etc...)  
 * Estrutura de Turno & Dinâmica de Jogo  
 * Personagens & Combate  
 
@@ -21,6 +21,7 @@ As Cartas são divididas em cinco tipos, sendo que algumas delas podem ter sub-t
 * Eventos  
 * Personagens  
 	* Personagens FX
+	* Mobs
 * Ações  
 	* Movimentos  
 	* Inventário  
@@ -58,6 +59,8 @@ Podem haver no máximo quatro personagens em jogo (sejam básicos, sejam FX) por
 Apenas um personagem de cada nome ou alter-ego pode estar em jogo, a menos que um efeito ou habilidade passiva altere isso. A menos que um personagem tenha Terras diferentes, podem haver mais de um personagem com o mesmo nome. Ex.: Podem haver o _Superman, O Líder Supremo_ (Terra 30) e _Superman_ (Terra 1) em jogo ao mesmo tempo.  
 
 No primeiro turno até 3 personagens podem entrar em jogo, mas nos seguintes turnos apenas um personagem pode ser colocado em jogo. Não há custo para colocar um personagem em jogo.  
+
+Os Personagens devem ser retirados de jogo quando os pontos de saúde chegam a zero.
 
 ### Características Básicas  
 **Nome/Alter-ego**  
@@ -134,9 +137,32 @@ Um equipamento deve ser descartado caso a quantidade de energia no equipamento c
 O deck é o conjunto de cartas com o qual o jogador vai participar de uma partida de [PROJECT NAME].  
 O deck tem um limite mínimo de 30 cartas e máximo de 40 - a idéia é que as cartas necessárias apareçam rápido e as partidas sejam rápidas!  
 
-Aglumas cartas tem limites de quantidade dentro do deck:
-* Cada carta pode ter até três cópias, da mesma versão;
-* Até 6 Personagens Básicos e 4 Personagens FX - não ter personagens FX em seu deck, não aumenta os espaços para personagens básicos - limintando a 10 cartas de personagens (entre básicos e FX);
-* Até 8 Fontes de Energia (básicas ou avançadas);
-* Cartas marcados como únicos, devem ter apenas uma cópia no deck. Pode haver apenas uma carta marcada como item único em jogo;
+Algumas cartas tem limites de quantidade dentro do deck:  
+* Cada carta pode ter até três cópias, da mesma versão;  
+* Até 8 Personagens Básicos e 4 Personagens FX - não ter personagens FX em seu deck, não aumenta os espaços para personagens básicos - limintando a 12 cartas de personagens (entre básicos e FX);  
+* Até 8 Fontes de Energia (básicas ou avançadas);  
+* Cartas marcados como únicos, devem ter apenas uma cópia no deck. Pode haver apenas uma carta marcada como item único em jogo.  
+
+As cartas descartadas são colocadas no fim do deck. Apenas os personagens que foram mortos devem ser retirados de jogo - uma carta retirada de jogo não volta ao jogo e nem volta ao deck.  
+
+## Dinâmica do Jogo  
+O [PROJECT NAME] pode ser jogado com no mínimo dois jogadores portando seus decks. Porém as dinâmicas podem acontecer com mais de dois jogadores.
+**Modos Básicos**  
+* Tradicional - Dois jogadores, jogando o famoso 1 x 1;
+* Arena - Três jogadores, todos contra todos;
+* Times - quatro ou mais jogadores - times são definidos, onde um grupo batalha entre si. Os jogos com jogadores ímpares devem seguir a estrutura Arena ou mista;
+* Mista - No mínimo três jogadores - a estrutura de arena e times funcionam juntas, onde os momentos devem ser pré-acordados entre os jogadores - exemplo: jogando com 6 jogadores, dois times de três jogadores e o time vencedor batalha entre si em formato Arena;
+
+## Modo Avançado - Caçadores Cósmicos  
+Ideal para dois jogadores, mas pode ser configurado para mais. Um personagem é escolhido como "Mob" e o objetivo do jogo é matá-lo.  
+O Mob tem seus atributos de Saúde aumentados por 5 x a quantidade de jogadores - se houverem dois jogadores, a saúde do Mob é aumentado por 10, se houverem três por 15 e assim por diante.  
+
+Uma nova área é adicionada a dinâmica do jogo - o Time Comum. Cada um dos jogadores terá seu time com quatro jogadores, mas em seus devidos turnos eles podem realocar um de seus personagens em jogo no Time Comum.
+O time comum tem quatro espaços, assim como os times individuais, e estes personagens que irão atacar o Mob.  
+
+A dinâmica dos turnos é alterada - cada jogador joga todo seu turno sem a fase de combate. 
+Após todos os jogadores terem seus turnos uma grande fase de combate se inicia. Os personagens com menos vida atacam primeiro - para definir a ordem de ataque do Mob, utilize a vida base. Assim sendo, se os personagens tiverem todos 4 pontos de saúde e o Mob tiver 3, ele atacará antes dos outros personagens.
+
+
+
 
