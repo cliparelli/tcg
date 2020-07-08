@@ -5,12 +5,12 @@ Project Name: Heroes - The Contest
 
 ## Estrutura do Jogo
 * Tipos de Carta  
-* Estruturas de Energia  
-* Personagens & Combate  
-* Game Changers (Eventos & Equipamentos)  
-* Tokens, Efeitos & Habilidades Passivas (Buffs, Nerfs, Debuffs, Stripe e etc...)  
-* Estrutura de Turno & Dinâmica de Jogo  
 * Estruturação do Deck
+* Estruturas de Energia  
+* Tokens, Efeitos & Habilidades Passivas (Buffs, Nerfs, Debuffs, Stripe e etc...)  
+* Game Changers (Eventos & Equipamentos)  
+* Estrutura de Turno & Dinâmica de Jogo  
+* Personagens & Combate  
 
 ## Cartas
 As Cartas são divididas em cinco tipos, sendo que algumas delas podem ter sub-tipos
@@ -34,11 +34,15 @@ As Fontes de Energia básica são os tipos comuns de fonte de energia, que geram
 Por outro lado, as Fontes de Energia Avançadas podem produzir mais de uma energia por turno ou gerar outros efeitos. As Fontes Avançadas podem ter um custo extra para entrar em jogo ou gerar os efeitos especificados - por exemplo, _Mogo, O Planeta Vivo_ precisa que uma das Fontes de Energia Básicas em jogo seja **descartada**.  
 
 As Fontes Básicas disponibilizam automáticamente uma energia a cada turno, sem a necessidade de ativação, já as Fontes Avançadas obrigatóriamente necessitam de uma ativação do jogador.  
+As energias que foram geradas pelas fontes de energia que não forem alocadas em alvos adequados, irão se dissipar ao fim do turno.  
 
 Quais tipos de carta podem receber energia? Apenas Personagens e Equipamentos podem ter energia alocado em si - eles podem receber até quatro energias. A menos que uma ação, equipamento ou habilidade gere um efeito altere essa quantidade ele não poderá ter mais que o limite definido anteriormente - este efeito é chamado de **Armazenamento**.  
-Ex.: _Soco de Massa Infinita_ tem um custo de ativação de 8 Energias e tem um efeito de Armazenamento (8), ou seja, o novo limite para que o personagem que esteja com esta ação anexada tem o limite de 8 energias.
+Ex.: _Soco de Massa Infinita_ tem um custo de ativação de 8 Energias e tem um efeito de Armazenamento (8), ou seja, o novo limite para que o personagem que esteja com esta ação anexada é de 8 energias.
 
-Existem tipos especiais de equipamentos chamados de Silos de Energia e servem para guardar energia que não foi alocada em nenhum outro personagem ou equipamento. Estes equipamentos também tem um limite de armazenamento e é definido pela passiva **Armazenamento** informado em seu texto.
+Existem tipos especiais de equipamentos chamados de Silos de Energia e servem para guardar energia que não foi alocada em nenhum outro personagem ou equipamento. Estes equipamentos também tem um limite de armazenamento e é definido pela passiva Armazenamento informado em seu texto.
+
+Quando uma energia é gasta, utilizada ou "expirou", dizemos que ela foi dissipada.  
+Quando uma energia foi transferida de uma carta a outra, dizemos que ela está sendo alocada.
 
 ## Eventos  
 Os Eventos são cartas não básicos que geram um efeito, alteram uma regra ou dinâmica enquanto estiverem em jogo. Apenas um evento pode estar em jogo por vez, indepentende de quem o invocou e só podem ser colocados uma vez por turno.  
@@ -116,4 +120,23 @@ Os tipos de habilidade são:
 * Vôo;
 * Cosmíca - multiverso, gravidade, universo, poder do cosmo - tipo cavaleiros do zodíaco;
 * Força - força sobrehumana, superforça;
+
+## Equipamentos
+Os equipamentos são cartas não básicas que buscam suportar as ações dos personagens, gerando uma ação no jogo, seja dano, seja um efeito, seja a geração de energia, entre outros.  
+
+Um equipamento tem um custo para entrar em jogo e ações que ele pode gerar tem um custo de ativação (mesmo que seja 0).  
+Para entrar em jogo, o custo do equipamento deve ser pago através da energia gerada por Fontes de Energia, energia armazenada em Silos ou algum efeito que gere energia.
+As energias dissipadas são igual ao custo menos um. Esta última energia deve ser alocada no suporte, fazendo com que esta seja a energia inicial do equipamento.  
+
+Um equipamento deve ser descartado caso a quantidade de energia no equipamento chegue a zero.  
+
+## Montando um Deck
+O deck é o conjunto de cartas com o qual o jogador vai participar de uma partida de [PROJECT NAME].  
+O deck tem um limite mínimo de 30 cartas e máximo de 40 - a idéia é que as cartas necessárias apareçam rápido e as partidas sejam rápidas!  
+
+Aglumas cartas tem limites de quantidade dentro do deck:
+* Cada carta pode ter até três cópias, da mesma versão;
+* Até 6 Personagens Básicos e 4 Personagens FX - não ter personagens FX em seu deck, não aumenta os espaços para personagens básicos - limintando a 10 cartas de personagens (entre básicos e FX);
+* Até 8 Fontes de Energia (básicas ou avançadas);
+* Cartas marcados como únicos, devem ter apenas uma cópia no deck. Pode haver apenas uma carta marcada como item único em jogo;
 
