@@ -153,7 +153,8 @@ O [PROJECT NAME] pode ser jogado com no mínimo dois jogadores portando seus dec
 * Times - quatro ou mais jogadores - times são definidos, onde um grupo batalha entre si. Os jogos com jogadores ímpares devem seguir a estrutura Arena ou mista;
 * Mista - No mínimo três jogadores - a estrutura de arena e times funcionam juntas, onde os momentos devem ser pré-acordados entre os jogadores - exemplo: jogando com 6 jogadores, dois times de três jogadores e o time vencedor batalha entre si em formato Arena;
 
-## Modo Avançado - Caçadores Cósmicos  
+## Modo Avançado - Desafiadores do Infinito
+  
 Ideal para dois jogadores, mas pode ser configurado para mais. Um personagem é escolhido como "Mob" e o objetivo do jogo é matá-lo.  
 O Mob tem seus atributos de Saúde aumentados por 5 x a quantidade de jogadores - se houverem dois jogadores, a saúde do Mob é aumentado por 10, se houverem três por 15 e assim por diante.  
 
