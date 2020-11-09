@@ -53,11 +53,10 @@ Os textos do evento que alteram a dinâmica de jogo sempre terão um alvo - seja
 Um Evento só poderá ser alvo deu efeito ou ação cujo o texto especifique seu alvo. Por exemplo o texto "Descarte o Evento em jogo" pode ter um evento como alvo, porém o texto "Aloque X de energia no alvo" não tem o evento como alvo válido (lembrando que apenas Personagens e Equipamentos podem receber energia).  
 
 ## Personagens  
-Os personagens são cartas básicas em seu deck - apenas os personagens básicos, os personagens FX são tidas como cartas não básicas. Existe um limite de 6 personagens básicos e um limite de 4 Personagens FX.  
+Os personagens são cartas básicas de seu deck.  
 Podem haver no máximo quatro personagens em jogo (sejam básicos, sejam FX) por jogador. Estes quatro personagens forma o time do jogador e podem ter até duas substituições. Quando 4 personagens são nocauteados, o jogador controlador destes personagens perde o jogo.  
 
 Apenas um personagem de cada nome ou alter-ego pode estar em jogo, a menos que um efeito ou habilidade passiva altere isso. A menos que um personagem tenha Terras diferentes, podem haver mais de um personagem com o mesmo nome. Ex.: Podem haver o _Superman, O Líder Supremo_ (Terra 30) e _Superman_ (Terra 1) em jogo ao mesmo tempo.  
-
 No primeiro turno até 3 personagens podem entrar em jogo, mas nos seguintes turnos apenas um personagem pode ser colocado em jogo. Não há custo para colocar um personagem em jogo.  
 
 Os Personagens devem ser retirados de jogo quando os pontos de saúde chegam a zero.
@@ -68,7 +67,7 @@ Os Personagens devem ser retirados de jogo quando os pontos de saúde chegam a z
 **Alinhamento**
 Heró, Vilão, Herói/Vilão, Vilão/Herói
 
-**Saúde, Proteção e Equipamento**  
+**Saúde, Proteção, Velocidade e Equipamento**  
 São as informações básicas do seu personagem. Saúde representa a quantidade de dano que ele pode receber, proteção é o quanto de dano ele pode *mitigar* e equipamento representa a quantidade de ações que podem ser anexadas ao personagem.
 
 **Habilidades**  
@@ -90,6 +89,7 @@ As ações do personagem tem efeito de combate e devem ser utilizadas apenas na 
 **Habiladade Passiva**  
 As habilidades passivas são ações que o personagem pode usar que geram algo no jogo, mas não utilizam energia. Diferente das ações ativas que não utilizam energia, as habilidades passivas deve ser utilizadas fora da fase de combate.  
 Uma habilidade passiva não tem efeito de combate e após a utilização de uma habilidade passiva o personagem só poderá utilizar ações ativas sem custo de energia.  
+As habilidades podem ser habilidades de liderança ou de hiper estado (quando o personagem está com o máximo de energia). 
 Após a utilização da habilidade passiva, o personagem deverá ser girado 45° no sentido anti-horário.
 
 **FX**  
