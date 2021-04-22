@@ -6,13 +6,28 @@ Project Name: Heroes - The Contest
 
 ## Estrutura do Jogo
 
+-   Campo de Batalha
 -   Tipos de Carta
 -   Estruturas de Energia
 -   Game Changers (Eventos & Equipamentos)
--   Estruturação do Deck
+-   Personagens
+-   Ações
+-   Montando um Deck
 -   Tokens, Efeitos & Habilidades Passivas (Buffs, Nerfs, Debuffs, Stripe e etc...)
 -   Estrutura de Turno & Dinâmica de Jogo
 -   Personagens & Combate
+
+## Campo de Batalha
+
+Este jogo se passa em um campo de batalha entre dois ou mais jogadores. Este Campo de Batalha é dividido em três grandes áreas - o seu campo, o do oponente e a área de batalha, um campo comum para o confronto - e cada um deles tem as seguintes divisões:
+
+-   Deck: a pilha de cartas que serve como base de jogo;
+-   Mão: As cartas que são retiradas do deck e são para o uso individual de cada jogador. Esta é uma área privada que pode ser mostrada para outros jogadores através de ações durante o jogo;
+-   Time de Heróis: Onde cada jogador prepara seus personagens para entrarem no campo de batalha;
+-   Usinas de Energia: Área onde as Fontes de Energia devem ficar durante o jogo;
+-   Zona Morta: Todas as cartas que vão para fora do jogo, devem ficar nesta área. Ela não é reembaralhada junto com o deck em momento algum.
+
+O Campo de Batalha é onde o personagem ativo fica e aonde as ações de combate são resolvidas.
 
 ## Cartas
 
@@ -26,8 +41,6 @@ As Cartas são divididas em cinco tipos, sendo que algumas delas podem ter sub-t
     -   Personagens 5 Stars
     -   Mobs
 -   Ações
-    -   Movimentos
-    -   Inventário
 -   Equipamentos
 
 ## Fontes de Energia
@@ -57,6 +70,16 @@ Os textos do evento que alteram a dinâmica de jogo sempre terão um alvo - seja
 
 Um Evento só poderá ser alvo deu efeito ou ação cujo o texto especifique seu alvo. Por exemplo o texto "Descarte o Evento em jogo" pode ter um evento como alvo, porém o texto "Aloque X de energia no alvo" não tem o evento como alvo válido (lembrando que apenas Personagens e Equipamentos podem receber energia).
 
+## Equipamentos
+
+Os equipamentos são cartas não básicas que buscam suportar os personagens e jogadores, gerando uma ação no jogo, seja dano, seja um efeito, seja a geração de energia, entre outros.
+
+Um equipamento tem um custo para entrar em jogo e ações que ele pode gerar, tem um custo de ativação (mesmo que seja 0).  
+Para entrar em jogo, o custo do equipamento deve ser pago através da energia gerada por Fontes de Energia, energia armazenada em Silos ou algum efeito que gere energia.
+As energias dissipadas são igual ao custo menos um. Esta última energia deve ser alocada no suporte, fazendo com que esta seja a energia inicial do equipamento.
+
+Um equipamento deve ser descartado caso a quantidade de energia no equipamento chegue a zero. Os equipamentos podem ser alvos de ações que manipulem energia somente.
+
 ## Personagens
 
 Os personagens são cartas básicas de seu deck.  
@@ -71,80 +94,64 @@ Os Personagens devem ser retirados de jogo quando os pontos de saúde chegam a z
 
 **Nome/Alter-ego**
 
-**Alinhamento**
+**Alinhamento** Validar se vale a pena ter essa informação
 Heró, Vilão, Herói/Vilão, Vilão/Herói
 
-**Saúde, Proteção, Velocidade e Equipamento**  
-São as informações básicas do seu personagem. Saúde representa a quantidade de dano que ele pode receber, proteção é o quanto de dano ele pode _mitigar_ e equipamento representa a quantidade de ações que podem ser anexadas ao personagem.
+**Saúde, Proteção e Velocidade**  
+São as capacidades básicas do seu personagem.
+
+-   Saúde: Representa a quantidade de dano que o personagem pode receber antes de ser retirado de jogo. Quando a quantidade de Saúde do personagem chega a zero, ele automaticamente retirado de jogo. Este atributo é decrescido quando o personagem sofre dano e é acrescido quando ele é curado por algum efeito de jogo;
+
+-   Proteção: É quantidade de dano que este personagem pode _mitigar_. Todo o dano mitigado, não é decrescido da Saúde do personagem e neste caso é descricido da Proteção. A proteção quando atinge zero, significa que o personagem já não tem mais nenhum capacidade para mitigar dano naturalmente. Este atributo é decrescido quando o personagem sofre dano e é acrescido através de tokens e stacks de Escudo;
+
+-   Velocidade: Representa a ordem de ação do personagem. Quanto maior a velocidade, primeiro este personagem é colocado na ordem de ataque durante o turno.
+
+Mais detalhes sobre dano, mitigação de dano e ordem de ataque serão abordadas durante a dinâmica do jogo.
 
 **Habilidades**  
-Um personagem básico pode ter até quatro habilidades, recebendo uma extra com o personagem FX. As habilidades dizem respeito aos tipos de ação que este personagem pode usar.
+Um personagem básico pode ter até quatro habilidades. As habilidades dizem respeito aos tipos de ação que este personagem pode usar.
 
 **Alianças**  
 Um personagem pode participar de uma equipe, pertencer a um planeta distante ou ser algo especial. A aliança diz respeito ao agrupamento que ele faz parte. Por exemplo, os personagens _Batman_, _Superman_ e _Mulher-Maravilha_ podem ter a aliança Liga da Justiça, mas pode haver outra versão do _Batman_ que ele tem a aliança _Corporação Batman_.  
-Um personagem pode ter mais de uma aliança, mas nunca contraditórias.
-
-**Terra**  
-Este jogo se passa no Multiverso dos Quadrinhos, então cada personagem vem de uma terra de seu multiverso. A DC e a Marvel por exemplo tem seu multiverso bem estabelecido, mas por exemplo, as históris de Sloane (Druillet) se passam em um universo a parte deste.  
-Cada personagem tem uma marcação ao qual terra pertence (sempre é demonstrada por um globo em número). Caso esta característica não esteja informada, o personagem tem um Universo Único.
+Um personagem pode ter mais de uma aliança.
 
 **Ações Ativas**  
 Um personagem pode ter até três ações, descritos no texto principal. Cada ação pode gerar ou utilizar energia. Existem ações que não utilizam energia para serem usadas.  
 Uma ação sempre irá gerar algo, seja um efeito, seja dano, seja uma ação no jogo. Todas ações podem ser usadas apenas uma vez por turno, a menos que um efeito altere esta quantidade. Ao usar esta ação o personagem deverá ser girado 90° no sentido horário.
-As ações do personagem tem efeito de combate e devem ser utilizadas apenas na fase de combate. Após a utilização da ação ativa, o personagem não poderá utilizar mais nenhuma ação no turno, a menos que um efeito altere isso.
+As ações do personagem tem efeito de combate e devem ser utilizadas apenas na fase de combate. Após a utilização da ação ativa, o personagem não poderá utilizar mais nenhuma ação no turno, a menos que um efeito altere este comportamento.
 
-**Habiladade Passiva**  
-As habilidades passivas são ações que o personagem pode usar que geram algo no jogo, mas não utilizam energia. Diferente das ações ativas que não utilizam energia, as habilidades passivas deve ser utilizadas fora da fase de combate.  
-Uma habilidade passiva não tem efeito de combate e após a utilização de uma habilidade passiva o personagem só poderá utilizar ações ativas sem custo de energia.  
-As habilidades podem ser habilidades de liderança ou de hiper estado (quando o personagem está com o máximo de energia).
+**Ações Passiva**  
+As ações passivas são ações que o personagem pode usar que geram algo no jogo, mas não utilizam energia. Diferente das ações ativas que não utilizam energia, as ações passivas podem ser utilizadas fora da fase de combate.
+
 Após a utilização da habilidade passiva, o personagem deverá ser girado 45° no sentido anti-horário.
 
-**FX**  
-Esta característica está presente apenas em Personagens FX e diz quais os requisitos para este personagem entrar em jogo.
-
-### Personages FX
-
-Um Personagem FX tem cinco habilidades e para entrar em jogo, existe dois pré-requisitos. O primeiro é não haver mais de quatro personagens em cena - independente se um efeito altere isso.
-_Batman Azrael_ é um personagem FX que só pode entrar em jogo se um outro personagem com nome/alter-ego Azrael ou Jean Paul Valley. Para o Personagem FX entrar em jogo então, um dos personagens do pré-requisito deve ser descartado e o P.FX irá receber as cartas que estão anexadas ao personagem anterior.  
-O P.FX não conta como um personagem extra na contagem de time.
+**Estrelas**  
+As estrelas simulam a patente de um personagem. Um mesmo personagem pode ter mais de uma versão estrelas diferentes - por exemplo, o Avatar da Natureza tem duas versões, sendo a primeira com três estrelas e a segunda com quatro.
 
 ## Ações
 
-As ações são cartas não básicas que dão novas habilidades para um personagem e elas podem ser de dois tipos: Movimento ou Inventário.  
-Uma ação do tipo Movimento representa uma ação que o personagem utiliza o próprio corpo como meio - por exemplo, um soco especial é uma ação de movimento.  
-Uma ação do tipo Inventário representa uma ação que o personagem utiliza alguma outra coisa como meio - por exemplo, um golpe de katana ou uma pesquisa em um computador representam ações do tipo Inventário.
+As ações são cartas não básicas que dão novas habilidades para um personagem. Uma ação tem as seguintes características: Nome, Tipo de Habilidade, Custo de Ativação, Descrição da ação.
 
 Uma ação, indepentende de qual seja o tipo, tem alguns requisitos para utilização:
 
--   Tipo de Habilidade: uma ação tem uma habilidade específica ou ela é geral. Qualquer personagem pode utilizar uma ação geral, mas apenas se o personagem tiver aquela habilidade específica ele pode usar.
--   Custo de Ativação: Uma ação pode gerar, manter ou utilizar energia. Para utilizar a ação é necessário que a quantidade de energia esteja disponível.
+-   **Tipo de Habilidade**: uma ação tem uma habilidade específica ou ela é geral. Qualquer personagem pode utilizar uma ação geral, mas as ações que tem um tipo de habilidade específico, necessitam que o personagem a tenha para ser utilizada;
+-   **Custo de Ativação**: Uma ação pode gerar, manter ou utilizar energia. Para utilizar a ação é necessário que a quantidade de energia esteja disponível.
 
 ### Tipos de Habilidades
 
 Os tipos de habilidade são:
 
--   Rajada Energética - armas de fogo, rajadas de calor, laser, plasma;
+-   Energia - armas de fogo, rajadas de calor, laser, plasma;
 -   Elemental - fogo, vento, água, gelo, ar, trovão, poderes da natureza, terra, fator de cura;
--   CC (Armas Brancas) - espadas, adagas, facas, porretes, machados, clavas;
 -   Tóxico - veneno, radiação, toxinas, químicos;
 -   Ciência - computadores, cyber ataques, hacking, QI alto, experiências;
 -   Mentalismo - ataques psiquicos, ataques psionicos, ataques emocionais, leitura de mente;
--   Magia - Poder místico, poder dos deuses, magia, armas mágias, itens mágicos, cura;
--   Super Velocidade;
--   Agilidade;
+-   Magia - Poder místico, magia arcana, armas mágias, itens mágicos, cura;
+-   Força - força sobrehumana, superforça;
+-   Velocidade;
 -   Vôo;
 -   Cosmíca - multiverso, gravidade, universo, poder do cosmo - tipo cavaleiros do zodíaco;
--   Força - força sobrehumana, superforça;
-
-## Equipamentos
-
-Os equipamentos são cartas não básicas que buscam suportar as ações dos personagens, gerando uma ação no jogo, seja dano, seja um efeito, seja a geração de energia, entre outros.
-
-Um equipamento tem um custo para entrar em jogo e ações que ele pode gerar tem um custo de ativação (mesmo que seja 0).  
-Para entrar em jogo, o custo do equipamento deve ser pago através da energia gerada por Fontes de Energia, energia armazenada em Silos ou algum efeito que gere energia.
-As energias dissipadas são igual ao custo menos um. Esta última energia deve ser alocada no suporte, fazendo com que esta seja a energia inicial do equipamento.
-
-Um equipamento deve ser descartado caso a quantidade de energia no equipamento chegue a zero.
+-   Divino: Poder dos deuses, magia divina;
 
 ## Montando um Deck
 
@@ -153,12 +160,69 @@ O deck tem um limite mínimo de 30 cartas e máximo de 40 - a idéia é que as c
 
 Algumas cartas tem limites de quantidade dentro do deck:
 
--   Cada carta pode ter até três cópias, da mesma versão;
--   Até 8 Personagens Básicos e 4 Personagens FX - não ter personagens FX em seu deck, não aumenta os espaços para personagens básicos - limintando a 12 cartas de personagens (entre básicos e FX);
+-   Cada carta pode ter até três cópias, da mesma versão. Caso um personagem tenha mais de uma versão ele poderá ser
+-   Até 10 Personagens - personagens com cinco estrelas podem ter apenas uma cópia em seu deck;
 -   Até 8 Fontes de Energia (básicas ou avançadas);
 -   Cartas marcados como únicos, devem ter apenas uma cópia no deck. Pode haver apenas uma carta marcada como item único em jogo.
 
 As cartas descartadas são colocadas no fim do deck. Apenas os personagens que foram mortos devem ser retirados de jogo - uma carta retirada de jogo não volta ao jogo e nem volta ao deck.
+
+## Efeitos, Tokens & Habilidades Passivas
+
+Antes de entrar mais profundamente nas dinâmicas do jogo e em suas regras é importante conhecer um pouco mais de alguns componentes principais: os tokens, os efeitos e as habilidades passivas.
+
+Efeito, de maneria geral, é o resultado de alguma ação, habilidade ou outra interação dos jogadores - um token, uma ação de um personagem ou de uma carta de ação, um suporte... Baiscamente TUDO gera um efeito.
+
+Os Tokens e as Ações Passivas são conceitos essenciais do jogo e muito do que os personagens podem ou não fazer giram em torno deles - personagens que apenas causam dano são importantes, mas não desestabilizam a mesa sozinhos - os tokens e ações passivas adicionam outros efeitos as suas ações.
+
+### Tokens
+
+Os tokens são marcadores que geram algum efeito sobre o personagem que os recebeu. Eles podem ser recebidos de um em um ou em stacks - conjuntos de tokens que funcionam como um só.
+
+Os tokens podem ter durações diferentes, mas usualmente duram um turno. Caso mais de um token seja recebido, este serão retirados de um em um - caso sejam recebidos em stacks, as stacks são retiradas de uma vez e também duram um turno.
+
+Os tokens podem ser divididos da segunte forma:
+
+-   Tokens de Atributo (ou Buff para os tokens que adicionam e Debuff para os tokens que tiram): o efeito que eles geram é aplicado diretamente nos atributos de um personagem;
+-   Tokens de Dano Contínuo: o efeito destes tokens geram dano continuamente através dos turnos;
+-   Tokens de Buffs Especiais: Estes tokens geram capacidades especiais aos seus portadores;
+-   Tokens de Debuff Especiais: geram efeitos negativos que visam inabilitar o seu detentor;
+-   Tokens de Imunidade: geram imunidade a um determinado efeito ao seu detendor - eles podem ser considerados como uma sub-categoria dos tokens de atributo.
+
+Um token, em geral tem a duração de um turno e seu efeito também dura enquanto o personagem está com este token. Após ser retirado, apenas no próximo turno que o token irá surtir efeito sobre o personagem.
+Vamos utilizar o seguinte exemplo para explicar mais sobre como funciona
+
+Turno Zero: O personagem Estrelícia Veloz utilizou sua ação "Bicada Rápida" e realizou três vezes este ataque, assim recebeu três tokens de agilidade. O Token de Agilidade dá um bõnus de +1 para Velocidade - então a Estrilícia Veloz ficou com 12 de velocidade.
+Turno 1 (após o primeiro ataque): O personagem está com 12 de Velocidade e um token é retirado. O personagem recebe um token de lentidão.
+Turno 2: O personagem está com 10 de Velocidade. Um token de lentidão e um token de agilidade são retirados. O personagem recebe um novo token de Agilidade.
+Turno 3: O personagem está com 11 de Velocidade e outro token de Agilidade é retirado.
+Turno 4: O personagem está com 10 de Velocidade e o último token de Agilidade é retirado.
+Turno 5: O persoangem não recebeu nenhum novo token, nem positivo, nem negativo.
+
+#### Tokens de Atributo
+
+Os tokens de atributo visam aumentar ou diminuir os atributos básicos de um personagem: Saúde, Proteção, Velocidade ou Dano. Os tokens são:
+
+-   Agilidade/Lentidão: Cada token dá +/- 1 ponto de Velocidade. Este token dura um turno;
+-   Força/Fraqueza: Cada token dá +/- 1 ponto de dano as ações do personagem. Este token dura um turno;
+-   Mais Vida/Menos Vida: Cada token dá +/- 1 ponto de Saúde. Este token dura um turno;
+-   Escudo: Cada token dá + 1 ponto de Proteção. Este token fica sobre o personagem detentor até o momento do cálculo de dano e poderá ser retirado;
+
+-   Provocação: Todos as ações provenientes de personagens que tem um alvo, devem ser direcionadas a este personagem. Caso mais de um personagem tenha um token de Provocação, o atacante poderá selecionar qual o alvo do ataque. Este token dura um turno;
+
+-   Percepção: Mitiga todo o dano de um ataque. Este token fica sobre o personagem detentor até o momento do cálculo de dano e poderá ser retirado;
+
+-   Evasão: Se a velocidade do defensor for maior que a do defensor, o ataque é evitado - não haverá cálculo de dano, efeitos não podem ser aplicados e nem tokens podem ser colocados. Esta condição só é quebrada para ações que "não podem errar". Este token dura um turno;
+
+-   Imunidades: Dano, Silêncio, Morte, Confusão, Atordoamento, Fúria, Cura (ações de cura não tem efeito), Tokens de Atributo (+/-), Queimadura, Tokens Especiais (+/-), Debuff, Veneno, Sangramento, Doença, Buff, Debuff, Tokens Especiais (Buffs ou Debuffs Especiais);
+
+-   Visão Privilegiada: O personagem poderá sempre escolher o alvo de sua ação, mesmo se houverem personagens com tokens de Provocação ou Invisibilidade. Caso o portador deste token estiver com um token de Fúria, o efeito deste token será anualdo. Este token dura um turno.
+
+-   Invisibilidade: O personagem não pode ser alvo de ações - só poderá ser alvo se receber um token de provocação ou o atacante tiver um token de visão privilegiada. Este token dura um turno;
+
+-   Veneno: Causa 1 ponto de dano para cada token de veneno retirado. Este token é retirado durante a fase de resolução e o dano é calculado neste momento. Caso o portador deste token receber alguma ação que adicione pontos de saúde, este token será retirado na resolução daquele efeito e não causará dano;
+
+-   Queimadura: Causa 1 ponto de dano para cada token de queimadura retirado. Enquanto este personagem tiver um token de queimadura ele recebe -1 ponto de Velocidade e suas ações causam -1 ponto de dano. Este token dura um turno, porém tem 1/4 chance de ser mantido e 3/4 chances de ser retirado normalmente;
 
 ## Dinâmica do Jogo
 
