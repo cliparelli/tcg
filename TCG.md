@@ -227,6 +227,7 @@ Os tokens de atributo visam aumentar ou diminuir os atributos básicos de um per
 ## Dinâmica do Jogo
 
 O [PROJECT NAME] pode ser jogado com no mínimo dois jogadores portando seus decks. Porém as dinâmicas podem acontecer com mais de dois jogadores.
+
 **Modos Básicos**
 
 -   Tradicional - Dois jogadores, jogando o famoso 1 x 1;
