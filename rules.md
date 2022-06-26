@@ -387,12 +387,22 @@ Existem três condições de vitória possíveis que podem ser exploradas na con
 
 ## Palavras-Chave
 
+## Power System
+
+
+## Licença
+O sistema de regras está debaixo do licenciamento GNU AGPL v3.0 - link para o [texto completo do licenciamento](https://choosealicense.com/licenses/agpl-3.0/).
+
+Para utilização comercial do sistema de regras, o licenciamento deverá ser realizado a parte, através de contratos específicos.
+
 ## Revisão
-v0.0 - Construção as Regras;
+v0.0 [7334d7d730ee167975dadbae0f0424a886eb223c] - Construção as Regras;  
+v0.1 [] - Adição de Licenciamento;
 
 
 
 
+## Referências
 http://www.magicjebb.com.br/site/Manual_RegrasCompreensivas_Ed2-0_Rev201801.pdf
 http://dclegends.wiki/wiki/Effects
 http://dclegendsmobile.com/resources/buffs-and-debuffs/
