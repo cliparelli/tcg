@@ -32,6 +32,7 @@
             - [Cálculo de Dano Complexo](#cálculo-de-dano-complexo)
 - [Efeitos Negativos e Positivos](#efeitos-negativos-e-positivos)
 - [Condições de Vitória](#condições-de-vitórias)
+- [Power System](#power-system)
 
 ---
 
@@ -388,16 +389,64 @@ Existem três condições de vitória possíveis que podem ser exploradas na con
 ## Palavras-Chave
 
 ## Power System
+Apesar do conjunto de regras acima, o coração deste sistema é o Power System - que é a maneira para constriuir novas cartas de personagem. O Power System dita as diretrizes para a criação de novos personagens.
 
+O primeiro passo do Power System é a definição do universo. Mas porque isso? O universo onde os personagens estão é essencial para estabelecer um balanceamento entre eles. Os personagens de um mesmo universo devem se balancear entre si. 
+Personagens de outros universos podem parecer não balanceados se comparar com outro universo. Se temos um personagem humano e um divino no mesmo universo, eles serão parâmetros para a criação de todos os outros. Então vamos a um exemplo mais simples....
+No universo do Futebol, levando em consideração apenas a quantidade de vezes que as seleções são campeãs do mundo, o Brasil tem 5 - seria o "personagem" mais forte deste universo - e outros como Croácia, apesar de ter chegado em finais, será considerado um personagem mais fraco, mas não o mais fraco.
+
+A base do Power System são os seus universos (e multiversos, hehe), já que a história do jogo está ligada a egemonia de um multiverso sob os outros. Cada personagem tem sua história, sua evolução, seu nemesis e seu mentor, então todos estes itens contam para a criação de uma boa carta. Principalmente se estivermos falando de personagens que podem ter mais de uma versão no jogo, dentro do mesmo universo.
+
+Depois de estruturar os "limites" do universo, começamos a modelar os atributos dos personagens.
+
+A categoria, ou o a classificação do personagem, pode ser o Alter Ego de um herói, alguma patente, ou qualquer tipo de classificação/categoriazação que ele recebe em suas histórias.
+
+O tipo do personagem deve seguir o poder ou a energia que ele canaliza/utiliza em suas capacidades - na seção sobre a carta de [Personagem](#personagens), as explicações e os exemplos sobre cada um tipos está detalhado e pode ser utilizado como referência.
+
+O próximo atributo a ser definido é a vida. As seguintes instruções devem ser utilizadas:
+ - De 1 a 2: pessoas sedentárias, que ainda não atingiram idade adulta ou estão em condições sub humanas;
+ - De 3 a 4: Adultos;
+ - De 5 a 7: Esportistas, artistas marciais, pessoas com algum tipo de preparo físico;
+ - 8 a 10: Sobrehumano;
+ - de 11 a 12: Patamar divino.
+
+Para auxiliar neste cálculo, você pode pensar na capacidade física do personagem e vigor.
+
+A Defesa deve ser calculada pensando em atributos físicos - como destreza, as capacidades físicas e treinamentos do personagem - além de equipamentos, tecnologias, encantamentos ou mágicas de defesa. O ideal é que este valor passe entre 0 e 5 - para patamares sobre humanos e divinos, podemos usar entre 6 e 8... Ou até mais.
+
+Resistência e Fraqueza servem para balancear os outros atributos e capacidades do personagem.
+
+As ações ativas e passivas também tem suas diretrizes para serem criadas. Abaixo são diretrizes para nortear a criação - sempre existiram personagens que estão fora da curva e vão acabar distorcendo os limites ou referências.
+
+Para ficar mais de estabelecer os parâmetros, vamos utilizar como base um personagem que se desenvolve durante os arcos de sua história: Seiya de Pégasus do mangá Cavaleiros do Zodíaco. 
+Na Guerra Galática (primeiro arco), o personagem acabou de sair de seu treinamento, ainda não enfrentou tantas adversidades - é plausível que o dano causado por suas ações seja baixo (entre 1 e 2), com custos menores. Em comparação, quando vemos ele durante a Saga de Hades (último grande arco), ele está muito mais forte e poderoso, então necessitará de um balanceamento - custos mais altos, adição de custos variáveis ou recebimento de Debuffs.
+
+O dano pode ser considerado:
+ - Baixo: 1 a 2 pontos;
+ - Médio: de 3 a 4 pontos;
+ - Alto: 5 a 6 pontos;
+ - Divino: Acima de 7.
+
+Um bom cálculo é de 1 a 2 pontos de dano por energia energia anexada. Quando começamos a ter outros tipos de efeitos - como dano em outros personagens, acréscimo de dano ao valor inicial, adição de buffs ou debuffs, entre outros tipos de efeitos - é interessante balancear com um custo obrigatório mais alto e a necessidade de custos variáveis - por exemplo, a ação sidekick do Etrigan causa 3 pontos de dano e 1 ponto de dano em cada personagem do time e tem um custo obrigatório de 3 energias e seu custo variável é o descarte de uma energia.
+
+Uma ação Soco de Massa Infinito tem um custo obrigatório de 3 energias e pode causar 3 pontos de dano para cada energia anexada ao personagem - no fim do combate todas as energias anexadas aos personagens controlados por aquele jogador devem ser descartadas - o dano é alto, mas o custo também é. No cálculo original, este ataque pode causar 9 pontos de dano, mas se houver 5 energias anexadas ao personagem, o ataque causará 15 pontos de dano.
+
+As instruções desta seção servem para direcionar a criação dos personagens e quando necessário itens. Lembre-se que a ideia principal é a diversão, não criar a carta mais apelona ou o super-trunfo que irá vencer qualquer outra carta.
+
+## Outras formas de jogar
+ - Minions
+ - Master  of Dungeons
 
 ## Licença
 O sistema de regras está debaixo do licenciamento GNU AGPL v3.0 - link para o [texto completo do licenciamento](https://choosealicense.com/licenses/agpl-3.0/).
+
+A propriedade intelectual e os direitos sob elas continuam sendo de detenção de seus criadores. A utilização das propriedades intelectuais de terceiros devem ser apenas para diversão entre seus amigos, não para comercialização ou obtenção de lucros.
 
 Para utilização comercial do sistema de regras, o licenciamento deverá ser realizado a parte, através de contratos específicos.
 
 ## Revisão
 v0.0 [7334d7d730ee167975dadbae0f0424a886eb223c] - Construção as Regras;  
-v0.1 [] - Adição de Licenciamento;
+v0.1 [9cfa5ca4270d935b063780605724a3df698e6223] - Adição de Licenciamento;
 
 
 
