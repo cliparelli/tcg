@@ -362,6 +362,7 @@ Normalmente os efeitos positiovs e negativos são representados por tokens, para
 Os tipos de efeitos podem ser os seguintes - efeitos separados por barra representam o efeito positivo e o negativo para o mesmo atributo:
  - DefUp/DefDown: Aumento ou redução de defesa. Cada token aumenta ou reduz em 1 ponto a defesa;
  - AtkUp/AtkDown: Aumento ou redução do dano causado pelo personagem. Cada token aumenta ou reduz em 1 ponto a todo dano causado pelo personagem;
+ - LifeUp/LifeDown: Aumento ou redução da vida do Personagem. Cada token aumenta ou reduz em 1 ponto a vida do personagem;
  - Ataque Perfurante (+): Enquanto o personagem estiver com este token, todo o dano que ele causar irá desconsiderar a defesa e os tokens de escudo durante o cálculo de dano;
  - Escudo(+): Cada token mitiga um ponto de dano antes do cálculo de dano ao dano total recebido pelo personagem;
  - DOT (-): Dano contínuo. Este token adiciona um ponto de dano antes do cálculo de dano ao dano total recebido pelo personagem;
@@ -403,7 +404,7 @@ Existem três condições de vitória possíveis que podem ser exploradas na con
  - Transpassar: Todo o dano que o personagem alvo não absorver desta ação, poderá ser dividido em outros alvos a escolha do controlador deste personagem;
  - Alvos Múltiplos (X): Esta ação pode ter mais de um alvo. Caso haja um limite de alvos extras, este valor aparecerá entre parenteses;
  - Extinguir Fonte (X): Ações que necessitam de descarte de fontes de energia do personagem recebem esta palavra chave seguida do efeito que ela irá gerar. Esta palavra-chave será seguida de um valor ou ? para um valor variável e ela sempre descreverá um custo da ação - quando este custo for obrigatório, o texto da carta indicará que este descarte deve ser feito;
- - 
+ - Tipo Mutável (tipo): Considere a ação e seus efeitos como do tipo informado.
 
 
 ## Power System
