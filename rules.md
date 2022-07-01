@@ -32,6 +32,7 @@
             - [Cálculo de Dano Complexo](#cálculo-de-dano-complexo)
 - [Efeitos Negativos e Positivos](#efeitos-negativos-e-positivos)
 - [Condições de Vitória](#condições-de-vitórias)
+- [Palavras-Chave](#palavras-chave)
 - [Power System](#power-system)
 
 
@@ -80,7 +81,7 @@ Um personagem tem as seguintes características:
     - Passivas:
         - Efeito Lider: Este tipo de Passiva funciona apenas quando o personagem está na posição principal está com a quantidade indicada de energia atrelada a ela e se as outras condições forem cumpridas (por exemplo, descarte de energia ou de cartas da mão);
         - Ação Sidekick: Esta passiva funciona apenas quando o personagem está no time, ou seja, não é o personagem na posição principal. Esta passiva irá funcionar da mesma maneira, necessitando uma quantidade de energia atrelada e possíveis outras condições;
-        - Passivas Simples: Este tipo de passiva, normalmente não tem custo de ativação, que vai gerar algum efeito independente da posição do persaongem.
+        - Passivas Simples: Este tipo de passiva, normalmente não tem custo de ativação e vai gerar algum efeito independente da posição do personagem.
     - Ativas:
         - Ataque: As ações ativas sem discriminação, são ações de ataque comum, que necessitam uma quantidade de energia atrelada ao personagem para poder ser utilizada. Caso haja uma outras condições para seu uso, estas devem ser cumpridas;
         - Flaquear: Esta são ações especiais que podem ser utilizadas em combate pelos personagens do time. Elas sempre vão requerer uma quantidade um pouco mais alta de energia e também o descarte de energias do persoangem.
@@ -88,7 +89,8 @@ Um personagem tem as seguintes características:
 ### Itens
 Itens são cartas que servem para gerar efeitos durante a partida. Os itens podem ser:
  - Itens Permanentes: São itens que tem algum efeito perene durante a partida - seja alterando alguma regra, gerando algum efeito, trazendo algum benefício para o persoangem;
- - Itens Voláteis: São itens que vão gerar um efeito com tempo determinado, ou seja, vão terminar em algum momento.
+ - Itens Voláteis: São itens que vão gerar um efeito com tempo determinado, ou seja, vão terminar em algum momento;
+ - Item Anexável: São itens permanentes, mas para que seu efeito funcione, ele precisa estar anexada a um personagem, da mesma forma que uma Fonte de Energia.
 
 Os itens permanentes vão funcionar como um encantamento de Magic, um cenário de Battle Scenes ou um ginásio de Pokemon TCG. Já os itens voláteis iram funcionar como as mágicas ou feitiços de Magic.
 
@@ -96,6 +98,9 @@ Os itens permanentes vão funcionar como um encantamento de Magic, um cenário d
 E por fim, temos as Fontes de Energia que vão habilitar e dar a possibilidade para os jogadores utilizarem as ações dos personagens ou efeitos dos itens.
 
 As fontes podem ser básicas - gerando apenas uma energia ao personagem - ou podemos ter uma versão mais poderosa, as fontes de energia avançadas, gerando efeitos ou outras possiblidades, como gerar duas ou mais energias.
+
+Existe um tipo de fonte de energia chamada Fonte Prismática que também é considerada uma fonte básica. A diferença é que ela irá gerar duas energias para uma personagem do mesmo tipo da fonte de energia.
+
 
 ## Áreas do Jogo
 O campo de jogo tem duas grandes áreas - uma para você e outra para seu oponente. Cada uma dessas áreas é dividida nas seguintes regiões:
@@ -188,9 +193,9 @@ Apesar das ações serem dividas como ativas e passivas, e cada uma com suas sub
 Antes de começar a resolver os efeitos é importante entender alguns detalhes sobre as ações.
 
 O primeiro detalhe é sobre os custos de execução das ações. Eles podem funcionar da seguinte maneira:
- - Custos obrigatórios: O custo obrigatório é representado pela quantidade de energias que o personagem precisar ter anexadas para executar a ação;
+ - Custos Obrigatórios: O custo obrigatório é representado pela quantidade de energias que o personagem precisar ter anexadas para executar a ação;
  - Custos Variáveis: Este é um custo extra para realizar a ação e pode ser fixo (como descartar uma energia) ou variável (descartar X energias para causar X pontos de dano);
- - Custos opcionais: Algumas ações podem ter custos opcionais, que podem não ser pagos para execução da ação. Caso sejam pagos, a ação irá gerar outros efeitos além do principal.
+ - Custos Opcionais: Algumas ações podem ter custos opcionais, que podem não ser pagos para execução da ação. Caso sejam pagos, a ação irá gerar outros efeitos além do principal.
 
 Existem ações também que tem alvos aleatórios. Estes alvos devem ser selecionados através de sorteio - o método padrão para fazer este sorteio é através de um dado de quatro faces, respeitando a posição de cada personagem. Outras maneiras de fazer isso é através de dados de seis faces ou sorteando o número da posição.
 
@@ -357,7 +362,7 @@ Normalmente os efeitos positiovs e negativos são representados por tokens, para
 Os tipos de efeitos podem ser os seguintes - efeitos separados por barra representam o efeito positivo e o negativo para o mesmo atributo:
  - DefUp/DefDown: Aumento ou redução de defesa. Cada token aumenta ou reduz em 1 ponto a defesa;
  - AtkUp/AtkDown: Aumento ou redução do dano causado pelo personagem. Cada token aumenta ou reduz em 1 ponto a todo dano causado pelo personagem;
- - Ataque Perfurante (+): Enquanto o personagem estiver com este token, todo o dano que ele causar irá desconsiderar a defesa durante o cálculo de dano;
+ - Ataque Perfurante (+): Enquanto o personagem estiver com este token, todo o dano que ele causar irá desconsiderar a defesa e os tokens de escudo durante o cálculo de dano;
  - Escudo(+): Cada token mitiga um ponto de dano antes do cálculo de dano ao dano total recebido pelo personagem;
  - DOT (-): Dano contínuo. Este token adiciona um ponto de dano antes do cálculo de dano ao dano total recebido pelo personagem;
  - Confusão (-): Para utilizar um ataque, o personagem precisa tirar cara em um cara ou coroa ou um número par em um dado (de faces pares);
@@ -370,6 +375,7 @@ Os tipos de efeitos podem ser os seguintes - efeitos separados por barra represe
  - Imunidade a Efeitos negativos (+): Enquanto este token estiver sobre o personagem, este personagem é imune a efeitos negativos;
  - Imunidade a Efeitos Positivos (-): Enquanto este token estiver sobre o personagem, este personagem é imune a efeitos positivos;
  - Imunidade a Confusão, Silencio, Paralisia, Furia (+): Enquanto este token estiver sobre o personagem, este personagem é imune a efeitos que gerem confusãom, Silencio, Paralisia, Furia;
+ - Pacifista: Enquanto este token estiver sobre este personagem, não poderá utilizar ações de combate.
 
 Alguns tokens são permanentes, sendo retirados através de outros efeitos/condições: 
  - Imunidade a Dano (+): Este é um token permanente e não é retirado durante a fase de limpeza. Cada token previne todos os danos e efeitos (+/-) de uma fonte. Após o dano ser previnido, retire o token do personagem;
@@ -379,7 +385,10 @@ Alguns tokens são permanentes, sendo retirados através de outros efeitos/condi
  - Assistência (+): Este é um token permanente e não é retirado durante a fase de limpeza. Após o personagem utilizar sua ação, descarte este token para que um personagem a sua escolha cause 1 ponto de dano ao mesmo personagem alvo da ação original. Após o ataque, retire este token;
   - Refração (+): Este é um token permanente e não é retirado durante a fase de limpeza. Ao receber o dano de uma fonte, o persongem pode descarta este token para direcionar o dano para outro personagem controlado pelo mesmo jogador;
   - Reflexão (+): Este é um token permanente e não é retirado durante a fase de limpeza. Ao receber o dano de uma fonte, o persongem pode descarta este token para direcionar o dano para outro personagem controlado por um oponente;
- - Perdição (-): Este é um token permanente e não é retirado durante a fase de limpeza. Durante a fase de limpeza, adicione mais um token de Perdição sobre o personagem que tem este token. Quando este personagem estiver com três tokens de perdição, no início da fase de combate, este personagem irá receber uma quantidade de dano igual a sua vida - este dano poderá ser mitigado, mas não poderá ser mitigado através do efeito de refração ou reflexão;
+  - Perdição (-): Este é um token permanente e não é retirado durante a fase de limpeza. Quando este personagem adquirir um total de tokens igual sua vida, ele é nocauteado;
+
+Existe uma outra definição importante que são os tokens definitivos. Eles são tokens que não podem ser removidos por outros efeitos ou retirados durante a fase de limpeza.
+
 
 ## Condições de Vitória
 Existem três condições de vitória possíveis que podem ser exploradas na construção de decks e montagem de estratégias durante o jogo:
@@ -388,6 +397,14 @@ Existem três condições de vitória possíveis que podem ser exploradas na con
  - As cartas do deck do seu oponente terminarem.
 
 ## Palavras-Chave
+ - Ataque Expansível (X): O dano causado por essa ação, pode ser acrescido em 1 para cada fonte de energia anexada a essa personagem além das utilizadas para pagar seu custo de execução. Caso haja um limite de dano extra, este valor aparecerá entre parenteses;
+ - Ataque Perfurante: Este ataque ignora tokens de escudo e ignora defesa durante o cálculo de dano;
+ - Fazer uma Aposta: Jogue um moeda ou um dado (d4 ou d6) - se der cara na moeda ou par nos dados, você ganha a aposta;
+ - Transpassar: Todo o dano que o personagem alvo não absorver desta ação, poderá ser dividido em outros alvos a escolha do controlador deste personagem;
+ - Alvos Múltiplos (X): Esta ação pode ter mais de um alvo. Caso haja um limite de alvos extras, este valor aparecerá entre parenteses;
+ - Extinguir Fonte (X): Ações que necessitam de descarte de fontes de energia do personagem recebem esta palavra chave seguida do efeito que ela irá gerar. Esta palavra-chave será seguida de um valor ou ? para um valor variável e ela sempre descreverá um custo da ação - quando este custo for obrigatório, o texto da carta indicará que este descarte deve ser feito;
+ - 
+
 
 ## Power System
 Apesar do conjunto de regras acima, o coração deste sistema é o Power System - que é a maneira para constriuir novas cartas de personagem. O Power System dita as diretrizes para a criação de novos personagens.
