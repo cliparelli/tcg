@@ -19,15 +19,13 @@ Project Name: Heroes - The Contest
 
 ## Campo de Batalha
 
-Este jogo se passa em um campo de batalha entre dois ou mais jogadores. Este Campo de Batalha é dividido em três grandes áreas - o seu campo, o do oponente e a área de batalha, um campo comum para o confronto - e cada um deles tem as seguintes divisões:
+Este jogo se passa em um campo de batalha entre dois ou mais jogadores. Este Campo de Batalha é dividido em duas grandes áreas - o seu campo e o do oponente - e cada um deles tem as seguintes divisões:
 
 -   Deck: a pilha de cartas que serve como base de jogo;
--   Mão: As cartas que são retiradas do deck e são para o uso individual de cada jogador. Esta é uma área privada que pode ser mostrada para outros jogadores através de ações durante o jogo;
+-   Mão: As cartas que são retiradas do deck e são para o uso individual de cada jogador. Esta é uma área privada que pode ser mostrada para outros jogadores através de ações durante o jogo. Os jogadores não tem limites de quantas cartas eles tem na mão - o ideal é ficar com o menor número possível;
 -   Time de Heróis: Onde cada jogador prepara seus personagens para entrarem no campo de batalha;
 -   Usinas de Energia: Área onde as Fontes de Energia devem ficar durante o jogo;
 -   Zona Morta: Todas as cartas que vão para fora do jogo, devem ficar nesta área. Ela não é reembaralhada junto com o deck em momento algum.
-
-O Campo de Batalha é onde o personagem ativo fica e aonde as ações de combate são resolvidas.
 
 ## Cartas
 
@@ -38,7 +36,7 @@ As Cartas são divididas em cinco tipos, sendo que algumas delas podem ter sub-t
     -   Fontes de Energia Avançadas
 -   Eventos
 -   Personagens
-    -   Personagens 5 Stars
+    -   Características Básicas
     -   Mobs
 -   Ações
 -   Equipamentos
@@ -49,15 +47,17 @@ As Fontes de Energia são cartas básicas em todo o deck. Elas vão gerar energi
 
 As Fontes de Energia básica são os tipos comuns de fonte de energia, que geram apenas uma energia por turno. Elas não tem custo nenhum para serem colocadas em jogo.
 
-Por outro lado, as Fontes de Energia Avançadas podem produzir mais de uma energia por turno ou gerar outros efeitos. As Fontes Avançadas podem ter um custo extra para entrar em jogo ou gerar os efeitos especificados - por exemplo, _Mogo, O Planeta Vivo_ precisa que uma das Fontes de Energia Básicas em jogo seja **descartada**.
+Por outro lado, as Fontes de Energia Avançadas podem produzir mais de uma energia por turno ou gerar outros efeitos. As Fontes Avançadas podem ter um custo extra para entrar em jogo ou gerar os efeitos especificados - por exemplo, _Poongo, O Planeta Vivo_ precisa que uma das Fontes de Energia Básicas em jogo seja **descartada**.
 
-As Fontes Básicas disponibilizam automáticamente uma energia a cada turno, sem a necessidade de ativação, já as Fontes Avançadas obrigatóriamente necessitam de uma ativação do jogador.  
-As energias que foram geradas pelas fontes de energia que não forem alocadas em alvos adequados, irão se dissipar ao fim do turno.
+As Fontes Básicas disponibilizam automáticamente uma energia a cada turno, sem a necessidade de ativação, já as Fontes Avançadas obrigatóriamente necessitam de uma ativação do jogador.
 
-Quais tipos de carta podem receber energia? Apenas Personagens e Equipamentos podem ter energia alocado em si - eles podem receber até quatro energias. A menos que uma ação, equipamento ou habilidade gere um efeito altere essa quantidade ele não poderá ter mais que o limite definido anteriormente - este efeito é chamado de **Armazenamento**.  
-Ex.: _Soco de Massa Infinita_ tem um custo de ativação de 8 Energias e tem um efeito de Armazenamento (8), ou seja, o novo limite para que o personagem que esteja com esta ação anexada é de 8 energias.
+As energias que foram geradas pelas fontes de energia que não forem alocadas em alvos adequados, irão se dissipar ao fim do turno. Elas não causam nenhum dano ao jogador ou aos seus personagens.
 
-Existem tipos especiais de equipamentos chamados de Silos de Energia e servem para guardar energia que não foi alocada em nenhum outro personagem ou equipamento. Estes equipamentos também tem um limite de armazenamento e é definido pela passiva Armazenamento informado em seu texto.
+**Quais tipos de carta podem receber energia?**  
+Apenas Personagens e Equipamentos podem ter energia alocado em si - eles podem receber até quatro energias. A menos que uma ação, equipamento ou habilidade gere um efeito altere essa quantidade ele não poderá ter mais que o limite definido anteriormente - este efeito é chamado de **Armazenamento**.  
+Ex.: _Ação de Massa Infinita_ tem um custo de ativação de 8 Energias e tem um efeito de Armazenamento (8), ou seja, o novo limite para o personagem que esteja com esta ação anexada é de 8 energias.
+
+Existem tipos especiais de equipamentos chamados de Silos de Energia e servem para guardar energia que não foi alocada em nenhum outro personagem ou equipamento. Estes equipamentos também tem um limite de armazenamento e é definido pela passiva Armazenamento informado em seu texto. A energia armazenada em um Silo pode ser transferida para um personagem de acordo com as instruções do equipamento e será necessário ativar o equipamento para poder transferir a energia.
 
 Quando uma energia é gasta, utilizada ou "expirou", dizemos que ela foi dissipada.  
 Quando uma energia foi transferida de uma carta a outra, dizemos que ela está sendo alocada.
@@ -83,12 +83,11 @@ Um equipamento deve ser descartado caso a quantidade de energia no equipamento c
 ## Personagens
 
 Os personagens são cartas básicas de seu deck.  
-Podem haver no máximo quatro personagens em jogo (sejam básicos, sejam FX) por jogador. Estes quatro personagens forma o time do jogador e podem ter até duas substituições. Quando 4 personagens são nocauteados, o jogador controlador destes personagens perde o jogo.
+Podem haver no máximo quatro personagens em jogo por jogador. Estes quatro personagens formam o time do jogador e podem haver até duas substituições. Quando 4 personagens são nocauteados, o jogador controlador destes personagens perde o jogo.
 
-Apenas um personagem de cada nome ou alter-ego pode estar em jogo, a menos que um efeito ou habilidade passiva altere isso. A menos que um personagem tenha Terras diferentes, podem haver mais de um personagem com o mesmo nome. Ex.: Podem haver o _Superman, O Líder Supremo_ (Terra 30) e _Superman_ (Terra 1) em jogo ao mesmo tempo.  
-No primeiro turno até 3 personagens podem entrar em jogo, mas nos seguintes turnos apenas um personagem pode ser colocado em jogo. Não há custo para colocar um personagem em jogo.
+Apenas um personagem de cada nome ou alter-ego pode estar em jogo, a menos que um efeito ou habilidade passiva altere isso. No primeiro turno até 3 personagens podem entrar em jogo, mas nos seguintes turnos apenas um personagem pode ser colocado em jogo. Não há custo para colocar um personagem em jogo.
 
-Os Personagens devem ser retirados de jogo quando os pontos de saúde chegam a zero.
+Os Personagens devem ser retirados de jogo quando os pontos de saúde chegam a zero, ou seja, não são recolocados no deck.
 
 ### Características Básicas
 
@@ -128,6 +127,15 @@ Após a utilização da habilidade passiva, o personagem deverá ser girado 45°
 **Estrelas**  
 As estrelas simulam a patente de um personagem. Um mesmo personagem pode ter mais de uma versão estrelas diferentes - por exemplo, o Avatar da Natureza tem duas versões, sendo a primeira com três estrelas e a segunda com quatro.
 
+**Ordem de Ataque**
+A Ordem de Ataque apresenta em qual ordem as ações ativas serão utilizadas nos modos especiais de jogo.
+
+### Mobs
+
+Os Mobs são um tipo especial de personagem. Eles não podem ser utilizados para montar seu deck básico, ele é utilizado no formato Dungeon Master. A diferença entre um personagem e um mob é que o Mob SEMPRE irá utilizar a ordem de ataque e o seu controlador não poderá escolher qual ataque utilizará durante a fase de combate.
+
+Fora esta diferença, os Mobs seguem as mesmas regras de personagens.
+
 ## Ações
 
 As ações são cartas não básicas que dão novas habilidades para um personagem. Uma ação tem as seguintes características: Nome, Tipo de Habilidade, Custo de Ativação, Descrição da ação.
@@ -161,11 +169,13 @@ O deck tem um limite mínimo de 30 cartas e máximo de 40 - a idéia é que as c
 Algumas cartas tem limites de quantidade dentro do deck:
 
 -   Cada carta pode ter até três cópias, da mesma versão. Caso um personagem tenha mais de uma versão ele poderá ser
--   Até 10 Personagens - personagens com cinco estrelas podem ter apenas uma cópia em seu deck;
+-   Até 10 Personagens ou Mobs - personagens com cinco estrelas podem ter apenas uma cópia em seu deck;
 -   Até 8 Fontes de Energia (básicas ou avançadas);
 -   Cartas marcados como únicos, devem ter apenas uma cópia no deck. Pode haver apenas uma carta marcada como item único em jogo.
 
 As cartas descartadas são colocadas no fim do deck. Apenas os personagens que foram mortos devem ser retirados de jogo - uma carta retirada de jogo não volta ao jogo e nem volta ao deck.
+
+as regras para construção de deck para modos de jogo avançado, são explicadas em suas respectivas seções.
 
 ## Efeitos, Tokens & Habilidades Passivas
 
@@ -220,7 +230,7 @@ Os tokens de atributo visam aumentar ou diminuir os atributos básicos de um per
 
 -   Invisibilidade: O personagem não pode ser alvo de ações - só poderá ser alvo se receber um token de provocação ou o atacante tiver um token de visão privilegiada. Este token dura um turno;
 
--   Veneno: Causa 1 ponto de dano para cada token de veneno retirado. Este token é retirado durante a fase de resolução e o dano é calculado neste momento. Caso o portador deste token receber alguma ação que adicione pontos de saúde, este token será retirado na resolução daquele efeito e não causará dano;
+-   Veneno: Causa 1 ponto de dano para cada token de veneno retirado. Este token é retirado durante a fase de ajuste e o dano é calculado neste momento. Caso o portador deste token receber alguma ação que adicione pontos de saúde, este token será retirado na resolução daquele efeito e não causará dano;
 
 -   Queimadura: Causa 1 ponto de dano para cada token de queimadura retirado. Enquanto este personagem tiver um token de queimadura ele recebe -1 ponto de Velocidade e suas ações causam -1 ponto de dano. Este token dura um turno, porém tem 1/4 chance de ser mantido e 3/4 chances de ser retirado normalmente;
 
@@ -235,10 +245,70 @@ O [PROJECT NAME] pode ser jogado com no mínimo dois jogadores portando seus dec
 -   Times - quatro ou mais jogadores - times são definidos, onde um grupo batalha entre si. Os jogos com jogadores ímpares devem seguir a estrutura Arena ou mista;
 -   Mista - No mínimo três jogadores - a estrutura de arena e times funcionam juntas, onde os momentos devem ser pré-acordados entre os jogadores - exemplo: jogando com 6 jogadores, dois times de três jogadores e o time vencedor batalha entre si em formato Arena;
 
-## Modo Avançado - Desafiadores do Infinito
+Os modos avançados são cobertos pelas regras básicas do modo tradicional, porém trazem um desafio ou uma maneira diferente de jogar. Caso uma regra não seja declarada no modo avançado, ele utilizará a regra do modo tradicional.
 
-Ideal para dois jogadores, mas pode ser configurado para mais. Um personagem é escolhido como "Mob" e o objetivo do jogo é matá-lo.  
-O Mob tem seus atributos de Saúde aumentados por 5 x a quantidade de jogadores - se houverem dois jogadores, a saúde do Mob é aumentado por 10, se houverem três por 15 e assim por diante.
+**Modos Avançados**
+
+-   Desafiadores do Infinito: Dois ou mais jogadores lutam contra o Mob Master;
+-   Dungeon Master: Dois jogadores se enfrentam - um utilizará seu deck padrão e outro irá utizar o deck de mobs;
+
+### Regras Básicas
+
+As regras básicas demonstram a maneira como o modo básico do jogo deverá transcorrer. A difenreça entre os modos Tradicional, Arena, Times e Mista é a maneira como os jogadores vão interagir entre si.
+
+O objetivo das regras é manter o jogo funcional, equilibrado e divertido para todos os tipos de jogdores.
+
+#### 1. Deck
+
+O deck deverá seguir as orientações informadas no capítulo _Montando um Deck_, tendo no mínimo 30 cartas e no máximo 40. São permitidos ter 10 cartas de sideboard - cartas avulsas que podem ser trocadas por cartas do deck. O sideboard pode ser utilizado em qualquer tipo de deck.
+
+O sideboard poderá ser composto por até 2 personagens, 2 fontes de energia, 2 equipamentos, 1 evento e 3 ações. O limite de cartas não poderá ser ultrapassado - seja por tipo de cartas, seja do tamanho total do sideboard.
+
+#### 2. Início do Jogo
+
+Nesta fase, os jogadores irão se prerapara para o início do jogo.
+
+1. Cada um dos jogadores deverá embaralhar seu deck e entregar ao oponente para que ele seja cortado (pelo menos uma vez e no máximo três). Esta ação visa inibir (ou reduzir) maço e outros tipos de pré-preparo do deck. O oponente, neste momento, não poderá embaralhar o deck entregue.
+2. Os jogadores definem a ordem dos turnos - qualquer tipo de método pode ser utilizado, dados, moedas ou sorteio.
+3. Após os cortes nos decks, cada jogador posiciona seu respectivo deck e compra 10 cartas.
+4. Caso um jogador não tenha personagens na mão inicial, este jogador deverá mostrar as cartas e assim poderá reembaralhar as sua mão e seu deck e comprar novamente 10 cartas. Este caso não contará para o limite máximo de Mulligans.
+5. Caso o jogador ainda não tenha personagens ou não esteja satisfeito com sua mão (desde o primeiro momento), ele poderá reembaralhar sua mão e comprar novas cartas. Porém, ele poderá comprar apenas 9 cartas. Ele poderá repitir este processo até 3 vezes, ficando com no mínimo 7 cartas na mão.
+6. Assim que todos os jogadores estiverem com suas mãos formadas, o primeiro jogador da ordem irá iniciar o jogo seguindo as fases de turno - este jogador não poderá comprar uma carta durante a fase de ajuste do seu primeiro turno.
+7. Durante a primeira rodada, a fase de combate será pulada.
+
+#### 3. Fases do Turno
+
+Este jogo é baseado em turnos - cada jogador pode usar suas ações em cada um das fases descritas abaixo:
+
+##### A. Fase de Ajuste
+
+Durante a fase de ajuste o jogador:
+
+-   Pode comprar uma carta;
+-   Deverá revisar todos os tokens em seus personagens e aplicar seus efeitos caso necessário;
+-   Poderá gerar energia das fontes que estão em jogo - energia gerada por equipamentos devem ser geradas na fase principal;
+-   As ações passivas dos personagens que não tenham um momento específico de ativação, são ativadas neste momento - por exemplo, ações que ocorrem a cada turno são ativadas neste momento;
+
+##### B. Fase Principal
+
+Durante esta fase o jogador poderá executar as principais ações do jogo.
+
+-   Durante o primeiro turno até três personagens podem ser colocados no time do jogador e nos turnos seguintes, apenas um - sendo o limite quatro personagens. Os personagens que entram em jogo, podem utilizar ações no turno em que entram em jogo;
+-   Uma fonte de energia pode ser baixada, seja básica ou não básica;
+-   Poderá gerar energia de um equipamento;
+-   Equipamentos e Eventos poderão ser baixados. Equipamentos recebem baixados não podem gerar energia no turno em que entram em jogo;
+-   Gerenciar e realocar a energia gerada;
+-   As ações dos equipamentos também podem ser utilizadas;
+-   Cartas de Ações podem ser baixadas e anexadas a personagens.
+
+##### C. Fase de Combate
+
+Esta é a principal fase do turno - basicamente tudo que foi feito antes é a preparação para que o combate ocorra.
+
+### Modo Avançado - Desafiadores do Infinito
+
+Ideal para dois jogadores, mas pode ser configurado para mais. Um personagem é escolhido como "Mob Master" e o objetivo do jogo é matá-lo.  
+O Mob Master tem seus atributos de Saúde aumentados por 5 x a quantidade de jogadores - se houverem dois jogadores, a saúde do Mob é aumentado por 10, se houverem três por 15 e assim por diante.
 
 Uma nova área é adicionada a dinâmica do jogo - o Time Comum. Cada um dos jogadores terá seu time com quatro jogadores, mas em seus devidos turnos eles podem realocar um de seus personagens em jogo no Time Comum.
 O time comum tem quatro espaços, assim como os times individuais, e estes personagens que irão atacar o Mob.
