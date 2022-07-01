@@ -34,6 +34,7 @@
 - [Condições de Vitória](#condições-de-vitórias)
 - [Power System](#power-system)
 
+
 ---
 
 ## Intro
