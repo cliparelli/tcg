@@ -145,7 +145,9 @@ Para decidir quem irá iniciar o jogo, os jogadores deverão revelar a primeira 
 
 Se mais de dois jogadores irão participar da partida, a ordem dos jogadores será em sentido horário, à partir do primeiro jogador.
 
-Cada jogador deverá comprar dez cartas para sua mão inicial e deve seguir para o primeiro turno do jogador inicial.
+Cada jogador deverá comprar dez cartas para sua mão inicial e deve seguir para o primeiro turno do jogador inicial. Caso na mão inicial, não haja nenhum personagem ou fonte de energia, o jogador poderá trocar sua mão, embaralhando as cartas e comprando dez cartas novamente até ter peloe menos um personagem ou fonte de energia na mão.
+
+Caso o jogador queira trocar sua mão, ele poderá embaralhar as cartas no seu deck e comprar novamente a quantidade anterior de cartas menos uma. 
 
 ### Primeiro Turno
 No primeiro turno, algumas mudanças nas regras ocorrem:
@@ -387,6 +389,7 @@ Alguns tokens são permanentes, sendo retirados através de outros efeitos/condi
   - Refração (+): Este é um token permanente e não é retirado durante a fase de limpeza. Ao receber o dano de uma fonte, o persongem pode descarta este token para direcionar o dano para outro personagem controlado pelo mesmo jogador;
   - Reflexão (+): Este é um token permanente e não é retirado durante a fase de limpeza. Ao receber o dano de uma fonte, o persongem pode descarta este token para direcionar o dano para outro personagem controlado por um oponente;
   - Perdição (-): Este é um token permanente e não é retirado durante a fase de limpeza. Quando este personagem adquirir um total de tokens igual sua vida, ele é nocauteado;
+  - Sonolência (-): Este é um token permanente e não é retirado durante a fase de limpeza. No início de sua fase de limpeza, faça uma aposta, se ganhar, tire este token do personagem, senão este personagem não pode usar qualquer ação, trocar de posição ou ter cartas anexadas;
 
 Existe uma outra definição importante que são os tokens definitivos. Eles são tokens que não podem ser removidos por outros efeitos ou retirados durante a fase de limpeza.
 
@@ -406,6 +409,7 @@ Existem três condições de vitória possíveis que podem ser exploradas na con
  - Extinguir Fonte (X): Ações que necessitam de descarte de fontes de energia do personagem recebem esta palavra chave seguida do efeito que ela irá gerar. Esta palavra-chave será seguida de um valor ou ? para um valor variável e ela sempre descreverá um custo da ação - quando este custo for obrigatório, o texto da carta indicará que este descarte deve ser feito;
  - Tipo Mutável (tipo): Considere a ação e seus efeitos como do tipo informado;
  - Toque Mortal - se um personagem absorver pelo menos um ponto de dano causado por este personagem por sua vida, descarte todas as cartas anexadas a ele e embaralhe-o no deck de seu controlador. Este dano não é considerado como fatal ou um nocaute;
+ - Conexão Vital (Personagem): Após p cálculo, todo dano causado por este persongem como fonte que foi absorvido pela vida do alvo, irá gerar um token de sobrevida para cada ponto absorvido;
  - 
 
 

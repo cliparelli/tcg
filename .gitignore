@@ -1,3 +1,7 @@
 *.psd
 *.zip
 *.rar
+*.fbx
+*.ma
+*.mtl
+*.obj
