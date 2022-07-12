@@ -55,6 +55,8 @@ Este jogo é composto por três tipos de cartas:
  - Itens e;
  - Energias.
 
+Existe uma modalidade de carta que é chamada de lendária. Estas cartas podem ter apenas UMA cópia no deck por ter um efeito realmente poderoso.
+
 ### Personagens
 Os personagens são as cartas principais do jogo! São com elas que tudo acontece. Através deles que os combates acontecem e as Pedras de Recompensa são adquiridas.
 
@@ -90,7 +92,7 @@ Um personagem tem as seguintes características:
 Itens são cartas que servem para gerar efeitos durante a partida. Os itens podem ser:
  - Itens Permanentes: São itens que tem algum efeito perene durante a partida - seja alterando alguma regra, gerando algum efeito, trazendo algum benefício para o persoangem;
  - Itens Voláteis: São itens que vão gerar um efeito com tempo determinado, ou seja, vão terminar em algum momento;
- - Item Anexável: São itens permanentes, mas para que seu efeito funcione, ele precisa estar anexada a um personagem, da mesma forma que uma Fonte de Energia.
+ - Item Anexável: São itens permanentes, mas para que seu efeito funcione, ele precisa estar anexada a um personagem, da mesma forma que uma Fonte de Energia. O item anexável sempre deve receber um tipo de personagem, uma categoria ou o nome para que possa ser anexado em um alvo válido.
 
 Os itens permanentes vão funcionar como um encantamento de Magic, um cenário de Battle Scenes ou um ginásio de Pokemon TCG. Já os itens voláteis iram funcionar como as mágicas ou feitiços de Magic.
 
@@ -120,7 +122,8 @@ As regras para montagem de um deck são as seguintes:
  - Uma carta de Personagem ou de Item pode ter até quatro cópias;
  - Fontes de Energia básicas não tem limite de cópias no deck;
  - Fontes de Energia avançadas tem um limite de quatro cópias, assim como personagens;
- - Não há limitação em relação aos tipos de personagem, mas o indicado é que se mantenha uma sinergia entre as cartas selecionadas.
+ - Não há limitação em relação aos tipos de personagem, mas o indicado é que se mantenha uma sinergia entre as cartas selecionadas;
+ - As cartas lendárias devem ter apenas uma cópia de cada;
 
 Uma boa divisão para a proporção entre personagens, itens e fontes de energia:
  - 18 personagens (6 personagens x 3 cópias ou 4 Personagens x 4 Cópias + 1 Personagem 2 Cópias);
@@ -139,7 +142,7 @@ Para iniciar o jogo, ambos jogadores precisam de seus decks com 60 cartas com su
 
 Uma observação importante: é de bom grado que os jogadores troquem algumas informações entre si sobre seus decks - não em relação a estratégia, maneira de jogar ou os combos de seu deck, mas algumas informações básicas como os tipos de personagens utilizados para que a construção do sideboard seja adequada.
 
-Os decks devem ser embaralhados e colocados na posição do deck na área de jogo. As cartas de Pedra de Recompensas devem ser retiradas e colocadas em sua área.
+Os decks devem ser embaralhados e colocados na posição do deck na área de jogo - o corte do baralho pelo oponente não é obrigatório, mas é uma gentileza entre jogadores, demonstrando o farplay. As cartas de Pedra de Recompensas devem ser retiradas e colocadas em sua área.
 
 Para decidir quem irá iniciar o jogo, os jogadores deverão revelar a primeira carta do deck. O jogador com o personagem com mais pontos de vida irá iniciar o jogo - cartas de Item e Fontes de Energia contam como 0 - após este processo, Osos decks devem ser novamente embaralhados e cortados por seus respectivos oponentes.
 
@@ -147,7 +150,7 @@ Se mais de dois jogadores irão participar da partida, a ordem dos jogadores ser
 
 Cada jogador deverá comprar dez cartas para sua mão inicial e deve seguir para o primeiro turno do jogador inicial. Caso na mão inicial, não haja nenhum personagem ou fonte de energia, o jogador poderá trocar sua mão, embaralhando as cartas e comprando dez cartas novamente até ter peloe menos um personagem ou fonte de energia na mão.
 
-Caso o jogador queira trocar sua mão, ele poderá embaralhar as cartas no seu deck e comprar novamente a quantidade anterior de cartas menos uma. 
+Caso o jogador queira trocar sua mão, ele poderá embaralhar as cartas no seu deck e comprar novamente a quantidade anterior de cartas menos uma. Ao ato de "refazer a primeira" mão chamamos de Mulligan.
 
 ### Primeiro Turno
 No primeiro turno, algumas mudanças nas regras ocorrem:
@@ -169,10 +172,9 @@ Esta é a primeira parte do turno - neste momento efeitos contínuos, retirada d
  - Tokens de efeitos positivos ou negativos recebidos no turno anterior do jogador são retirados;
  - Tokens de efeitos positivos ou negativos recebidos durante o turno anterior do oponente também são retirados;
  - Efeitos temporários devem ser revistos - se necessários, alterados;
- - Descartas cartas de sua mão para que o limite de cinco cartas seja respeitado;
 
 ### Fase de Compra
-A fase de compra é o momento em que o jogador pode pegar uma carta de seu deck e colocar em sua mão. O limite de cartas na mão é cinco, caso seja ultrapassado, na próxima fase de limpeza será necessário descartar cartas de sua mão até chegar ao limite de cinco.
+A fase de compra é o momento em que o jogador pode pegar uma carta de seu deck e colocar em sua mão. Não há limite para quantidade de cartas em sua mão.
 
 ### Fase Principal
 Nesta fase é onde grande parte do jogo acontece - aqui os efeitos e toda a preparação para o combate acontece. Durante a fase principal, é possível fazer as seguintes coisas:
@@ -180,7 +182,8 @@ Nesta fase é onde grande parte do jogo acontece - aqui os efeitos e toda a prep
  - Se três personagens já estiverem nas posições do time, não será possível baixar um novo personagem;
  - Um novo personagem não poderá ser baixado diretamente na posição principal;
  - Alterar o personagem na posição principal por um personagem que já estava em uma das posições do time;
- - Utilizar itens;
+ - Utilizar dois itens;
+ - Descartar uma carta de sua mão para usar um terceiro item;
  - Gerar efeitos de ações passivas, que não causem dano;
  - Anexar uma fonte de energia (básica ou avançada) a um de seus personagens.
 
@@ -367,7 +370,6 @@ Os tipos de efeitos podem ser os seguintes - efeitos separados por barra represe
  - LifeUp/LifeDown: Aumento ou redução da vida do Personagem. Cada token aumenta ou reduz em 1 ponto a vida do personagem;
  - Ataque Perfurante (+): Enquanto o personagem estiver com este token, todo o dano que ele causar irá desconsiderar a defesa e os tokens de escudo durante o cálculo de dano;
  - Escudo(+): Cada token mitiga um ponto de dano antes do cálculo de dano ao dano total recebido pelo personagem;
- - DOT (-): Dano contínuo. Este token adiciona um ponto de dano antes do cálculo de dano ao dano total recebido pelo personagem;
  - Confusão (-): Para utilizar um ataque, o personagem precisa tirar cara em um cara ou coroa ou um número par em um dado (de faces pares);
  - Silencio (-): O personagem só pode utilizar ações básicas enquanto estiver com este token - qualquer passiva não pode ser utiliza também;
  - Paralisia (-): O personagem não poderá utilizar ações (ativas ou passivas) enquanto estiver com este token;
@@ -378,7 +380,7 @@ Os tipos de efeitos podem ser os seguintes - efeitos separados por barra represe
  - Imunidade a Efeitos negativos (+): Enquanto este token estiver sobre o personagem, este personagem é imune a efeitos negativos;
  - Imunidade a Efeitos Positivos (-): Enquanto este token estiver sobre o personagem, este personagem é imune a efeitos positivos;
  - Imunidade a Confusão, Silencio, Paralisia, Furia (+): Enquanto este token estiver sobre o personagem, este personagem é imune a efeitos que gerem confusãom, Silencio, Paralisia, Furia;
- - Pacifista: Enquanto este token estiver sobre este personagem, não poderá utilizar ações de combate.
+ - Pacifista: Enquanto este token estiver sobre este personagem, não participa da fase de combate neste turno;
 
 Alguns tokens são permanentes, sendo retirados através de outros efeitos/condições: 
  - Imunidade a Dano (+): Este é um token permanente e não é retirado durante a fase de limpeza. Cada token previne todos os danos e efeitos (+/-) de uma fonte. Após o dano ser previnido, retire o token do personagem;
@@ -386,13 +388,13 @@ Alguns tokens são permanentes, sendo retirados através de outros efeitos/condi
  - Sobrevida (+): Este é um token permanente e não é retirado durante a fase de limpeza. Cada token adiciona um ponto de vida extra para o personagem. Após o calculo de dano ser finalizado, os tokens que absorveram dano devem ser retirados; 
  - Reviver (+): Este é um token permanente e não é retirado durante a fase de limpeza. Quando um personagem receber um dano fatal, descarte este token e embaralhe o personagem e todas as cartas anexadas a ele em seu deck. Este personagem não será considerado nocauteado;
  - Assistência (+): Este é um token permanente e não é retirado durante a fase de limpeza. Após o personagem utilizar sua ação, descarte este token para que um personagem a sua escolha cause 1 ponto de dano ao mesmo personagem alvo da ação original. Após o ataque, retire este token;
-  - Refração (+): Este é um token permanente e não é retirado durante a fase de limpeza. Ao receber o dano de uma fonte, o persongem pode descarta este token para direcionar o dano para outro personagem controlado pelo mesmo jogador;
-  - Reflexão (+): Este é um token permanente e não é retirado durante a fase de limpeza. Ao receber o dano de uma fonte, o persongem pode descarta este token para direcionar o dano para outro personagem controlado por um oponente;
-  - Perdição (-): Este é um token permanente e não é retirado durante a fase de limpeza. Quando este personagem adquirir um total de tokens igual sua vida, ele é nocauteado;
-  - Sonolência (-): Este é um token permanente e não é retirado durante a fase de limpeza. No início de sua fase de limpeza, faça uma aposta, se ganhar, tire este token do personagem, senão este personagem não pode usar qualquer ação, trocar de posição ou ter cartas anexadas;
+ - Refração (+): Este é um token permanente e não é retirado durante a fase de limpeza. Ao receber o dano de uma fonte, o persongem pode descarta este token para direcionar o dano para outro personagem controlado pelo mesmo jogador;
+ - Reflexão (+): Este é um token permanente e não é retirado durante a fase de limpeza. Ao receber o dano de uma fonte, o persongem pode descarta este token para direcionar o dano para outro personagem controlado por um oponente;
+ - Perdição (-): Este é um token permanente e não é retirado durante a fase de limpeza. Quando este personagem adquirir um total de tokens igual sua vida, ele é nocauteado;
+ - Sonolência (-): Este é um token permanente e não é retirado durante a fase de limpeza. No início de sua fase de limpeza, faça uma aposta, se ganhar, tire este token do personagem, senão este personagem não pode usar qualquer ação, trocar de posição ou ter cartas anexadas;
+ - DOT (-): Este é um token permanente e não é retirado durante a fase de limpeza. Dano contínuo - este token adiciona um ponto de dano antes do cálculo de dano ao dano total recebido pelo personagem;
 
 Existe uma outra definição importante que são os tokens definitivos. Eles são tokens que não podem ser removidos por outros efeitos ou retirados durante a fase de limpeza.
-
 
 ## Condições de Vitória
 Existem três condições de vitória possíveis que podem ser exploradas na construção de decks e montagem de estratégias durante o jogo:
@@ -403,15 +405,22 @@ Existem três condições de vitória possíveis que podem ser exploradas na con
 ## Palavras-Chave
  - Ataque Expansível (X): O dano causado por essa ação, pode ser acrescido em 1 para cada fonte de energia anexada a essa personagem além das utilizadas para pagar seu custo de execução. Caso haja um limite de dano extra, este valor aparecerá entre parenteses;
  - Ataque Perfurante: Este ataque ignora tokens de escudo e ignora defesa durante o cálculo de dano;
- - Fazer uma Aposta: Jogue um moeda ou um dado (d4 ou d6) - se der cara na moeda ou par nos dados, você ganha a aposta;
+ - Aposte(X): Jogue X moedas ou X dados (d4, d6 ou um dado de faces pares) - se der cara na moeda ou par nos dados, você ganha a aposta;
  - Transpassar: Todo o dano que o personagem alvo não absorver desta ação, poderá ser dividido em outros alvos a escolha do controlador deste personagem;
  - Alvos Múltiplos (X): Esta ação pode ter mais de um alvo. Caso haja um limite de alvos extras, este valor aparecerá entre parenteses;
  - Extinguir Fonte (X): Ações que necessitam de descarte de fontes de energia do personagem recebem esta palavra chave seguida do efeito que ela irá gerar. Esta palavra-chave será seguida de um valor ou ? para um valor variável e ela sempre descreverá um custo da ação - quando este custo for obrigatório, o texto da carta indicará que este descarte deve ser feito;
  - Tipo Mutável (tipo): Considere a ação e seus efeitos como do tipo informado;
  - Toque Mortal - se um personagem absorver pelo menos um ponto de dano causado por este personagem por sua vida, descarte todas as cartas anexadas a ele e embaralhe-o no deck de seu controlador. Este dano não é considerado como fatal ou um nocaute;
  - Conexão Vital (Personagem): Após p cálculo, todo dano causado por este persongem como fonte que foi absorvido pela vida do alvo, irá gerar um token de sobrevida para cada ponto absorvido;
+ - Amedrontar: Quando o personagem é alvo de ações de combate, o controlador deste personagem pode alterar o personagem na posição principal por uma das posições do time;
+ - Afinidade (Especificação): Para que a ação aconteça, um determinado tipo ou categoria de personagem ou um determinado personagem;
+ - Extinguir Recurso (X): Descarte X cartas de sua mão;
+ - Duplicar(X) / Triplicar(X): Descarte X cartas de sua mão para usar a ação uma segunda e uma terceira vez;
+ - Devoção (X): Se o tipo ou categoria de personagem X ou o personagem X estiver em cena, você poderá utilizar a ação descrita;
+ - Rotação de Recursos (X): Descarte X cartas para comprar uma carta em seu deck;
+ - Triturar (X): Descarte as X primeiras cartas do topo do deck do jogador alvo;
+ - Prever (X): Olhe as X primeiras cartas do topo do deck do jogador alvo e organize da maneira que quiser;
  - 
-
 
 ## Power System
 Apesar do conjunto de regras acima, o coração deste sistema é o Power System - que é a maneira para constriuir novas cartas de personagem. O Power System dita as diretrizes para a criação de novos personagens.
@@ -461,6 +470,7 @@ As instruções desta seção servem para direcionar a criação dos personagens
 ## Outras formas de jogar
  - Minions
  - Master  of Dungeons
+ - Monoverse
 
 ## Licença
 O sistema de regras está debaixo do licenciamento GNU AGPL v3.0 - link para o [texto completo do licenciamento](https://choosealicense.com/licenses/agpl-3.0/).
