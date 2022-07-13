@@ -409,6 +409,8 @@ Existem três condições de vitória possíveis que podem ser exploradas na con
  - Transpassar: Todo o dano que o personagem alvo não absorver desta ação, poderá ser dividido em outros alvos a escolha do controlador deste personagem;
  - Alvos Múltiplos (X): Esta ação pode ter mais de um alvo. Caso haja um limite de alvos extras, este valor aparecerá entre parenteses;
  - Extinguir Fonte (X): Ações que necessitam de descarte de fontes de energia do personagem recebem esta palavra chave seguida do efeito que ela irá gerar. Esta palavra-chave será seguida de um valor ou ? para um valor variável e ela sempre descreverá um custo da ação - quando este custo for obrigatório, o texto da carta indicará que este descarte deve ser feito;
+ - Rotação de Recursos (X/Y): Descarte X cartas de qualquer tipo para comprar Y cartas em seu deck;
+ - Rotação de Fonte (X/Y): Descarte X cartas de Fonte de Energia para comprar Y cartas em seu deck;
  - Tipo Mutável (tipo): Considere a ação e seus efeitos como do tipo informado;
  - Toque Mortal - se um personagem absorver pelo menos um ponto de dano causado por este personagem por sua vida, descarte todas as cartas anexadas a ele e embaralhe-o no deck de seu controlador. Este dano não é considerado como fatal ou um nocaute;
  - Conexão Vital (Personagem): Após p cálculo, todo dano causado por este persongem como fonte que foi absorvido pela vida do alvo, irá gerar um token de sobrevida para cada ponto absorvido;
@@ -416,8 +418,7 @@ Existem três condições de vitória possíveis que podem ser exploradas na con
  - Afinidade (Especificação): Para que a ação aconteça, um determinado tipo ou categoria de personagem ou um determinado personagem;
  - Extinguir Recurso (X): Descarte X cartas de sua mão;
  - Duplicar(X) / Triplicar(X): Descarte X cartas de sua mão para usar a ação uma segunda e uma terceira vez;
- - Devoção (X): Se o tipo ou categoria de personagem X ou o personagem X estiver em cena, você poderá utilizar a ação descrita;
- - Rotação de Recursos (X): Descarte X cartas para comprar uma carta em seu deck;
+ - Devoção (X): Se o tipo ou categoria de personagem ou o personagem X estiver em cena, você poderá utilizar a ação descrita;
  - Triturar (X): Descarte as X primeiras cartas do topo do deck do jogador alvo;
  - Prever (X): Olhe as X primeiras cartas do topo do deck do jogador alvo e organize da maneira que quiser;
  - 
