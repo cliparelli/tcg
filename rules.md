@@ -421,7 +421,9 @@ Existem três condições de vitória possíveis que podem ser exploradas na con
  - Devoção (X): Se o tipo ou categoria de personagem ou o personagem X estiver em cena, você poderá utilizar a ação descrita;
  - Triturar (X): Descarte as X primeiras cartas do topo do deck do jogador alvo;
  - Prever (X): Olhe as X primeiras cartas do topo do deck do jogador alvo e organize da maneira que quiser;
- - 
+ - Ação Única: O jogador poderá efetuar essa ação apenas uma vez por turno;
+ - Clarividência (X): Procura a carta do tipo X ou a carta X em seu deck. Revele ao outro jogador e coloque em sua mão. Depois disso embaralhe seu deck;
+ 
 
 ## Power System
 Apesar do conjunto de regras acima, o coração deste sistema é o Power System - que é a maneira para constriuir novas cartas de personagem. O Power System dita as diretrizes para a criação de novos personagens.
