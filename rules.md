@@ -470,6 +470,97 @@ Uma ação Soco de Massa Infinito tem um custo obrigatório de 3 energias e pode
 
 As instruções desta seção servem para direcionar a criação dos personagens e quando necessário itens. Lembre-se que a ideia principal é a diversão, não criar a carta mais apelona ou o super-trunfo que irá vencer qualquer outra carta.
 
+### Arquetipos dos Tipos de Personagem
+Na construção de um personagem é sempre interessante suas capacidades, como elas foram obtidas, como são utilizadas, além de suas motivações, seus objetivos e aspirações, como o personagem age e toma decisões.
+Todas essas infrormações vão servir de base para definir as ações e também qual o tipo do personagem! Para facilitar esse tipo de escolha, preferi criar esta seção dentro do Power System para abordar apenas os tipos que temos no jogo e como é o comportamento "padrão" de cada um deles - lembrando que aqui são apenas referências para construção, não leis escritas na pedra ;P
+
+#### Natureza
+Os personagens neste tipo tem uma conexão com a natureza, mais especificamente com a Flora. Ele pode "conversar" com plantas se fizer sentido. Podemos encaixar o Monstro do Pântano, Homem Florônico e Capitão Planeta neste tipo.
+
+Existe uma gama de possibilidades para os poderes relacionadas a Natureza. Mas podemos concentrar nas seguintes possibilidades:
+ - Envenenamento, aprisionamento e provocação de sensações - dot, paralisia, sonolencia, toque mortal, imunidades;
+ - Controle corporal - aumento/redução de dano e defesa, Transpassar, imunidades;
+ - Cura e Regeneração - sobrevida, reviver.
+
+O tipo Natureza caminha numa estratégia mais Aggro, ou seja, menos conversa e mais porradaria. Isso não quer dizer que não possa existir um pouco de habilidades de controle e suporte.
+
+#### Vida
+Personagens do tipo Vida tem são ligados a força vital e também a Fauna. Um exemplo de categorias relacionadas a este tipo são Clérigos e Xamãs e por outro lado, temos o Homem-Animal que recebe seus poderes da Fauna ou a tropa dos lanternas brancos, que representam a própria vida.
+
+As principais possibilidades de estrutura destes personagens são:
+ - Cura, Regeneração, Conexão Vital, Life Up;
+ - Aquisição de recursos;
+ - Limpeza de efeitos negativos;
+ - Poderes advindos de animais;
+ - Escudos, Reflexão e Refração.
+
+A Vida é ligada a uma estratégia mais focada em suporte. Aliada a estruturas de força/controle pode criar possibilidades poderosas.
+
+#### Morte
+A Morte mostra o fim de um ciclo, mas nem sempre é assim. Zumbis, mortos-vivos e necromantes são categorias possíveis para personagens neste tipo. O Mão Negra, líder da tropa dos lanternas negros, comanda a morte.
+
+Possíveis poderes destes personagens são:
+ - Regeneração, estratégias de negação de morte, Perdição, Life Donw;
+ - Toque mortal, dot;
+ - Triturar e controle de recursos e fontes de energia; 
+
+Uma das principais estratégias do tipo Morte é a Stall, onde as condições de vitória do oponente são negadas.
+
+#### Divino
+Persongens do tipo Divino representão divindades, como deuses das mitologias, anjos, demônios ou personagens que recebem seus poderes de algum divindade, como por exemplo a Mulher-Maravilha ou a Saori Kido.
+
+Não há como delimitar um arquetipo para este tipo de personagem, pois eles iram variar de acordo com cada tipo de divindade - podemos ter a guerra de um lado e paz do outro, então vai variar.
+
+#### Elemental
+Canalizar os poderes elementais está presente em muitas culturas e histórias, como a própria Tempestade dos X-Men ou o Aquaman sendo uma grande representante deste tipo. Aqui podemos englobar todos os elementos possíveis (e suas possíveis sensações) - água, chuva, vento, eletricidade, luz, trevas, fogo, calor, frio e assim por diante.
+
+O tipo elemental irá seguir uma linha parecida com a do tipo Divino. O fogo está mais próximo do dano, do que da cura, por exemplo. O frio está mais próximo do controle do que a eletricidade, e assim seguimos.
+
+#### TecSci
+Personagens relacionados a tecnologia e ciência (ou ficção científica) entram aqui. Aliens, Robos, ciborgues, usuários de tecnologia avançada, cientistas malucos entra nesta categoria. Dois bons exemplos são Lex Luthor e Superman.
+
+Os possíveis poderes dos personagens vão depender bastante da abordagem. Por ser uma categoria generalista vamos ter muitos caso fora da curva. nas podemos nos concentrar nos seguintes caminhos:
+ - Poderes e capacidades sobrehumanos;
+ - Controle de recursos e fontes de energia - triturar, prever, clarividencia, extinguir e rotacionar fontes e recursos;
+ - Escudo, silencio;
+
+Em linhas gerais, a estratégia do TecSci é do controle do deck, em um estilo stall.
+
+#### Magia
+Poderes maǵicos de todos os tipos... Não falando de ilusionistas, mas personagens como o Doutor Estranho ou o Senhor Destino.
+
+As capacidades de personagens mágicos são bem extensas, mas podemos concentrar nos seguintes pontos:
+ - Cura;
+ - Controle de recursos e fontes de energia - triturar, prever, clarividencia, extinguir e rotacionar fontes e recursos;
+ - Imunidades e efeitos.
+
+A Magia serve como uma grande aliada, podendo funcionar como suporte ou DPS.
+
+#### Mental
+Sempre que pensamos em alguém com grandes poderes mentais lembramos do professor Xavier. O tipo mental engloba poderes de telepatas e psionicos em geral.
+
+Possíveis poderes destes personagens são:
+ - Controle de recursos e fontes de energia - triturar, prever, clarividencia, extinguir e rotacionar fontes e recursos;
+ - efeitos;
+ - Alteração de alvos.
+
+#### Físico
+Poderes relacionados a questões físicas - do corpo humano - como por exemplo, super-força, agilidade, elasticidade, habilidades acrobáticas, artes marciais são do tipo Físico. Temos muitos exemplos neste quesito... Homem-elástico, Ohko (o outro aprendiz do Mestre Ancião), Batman, Asa Noturna, Homem Formiga, etc.
+
+Os poderes vão ser mais simples, principalmente relacionados ao corpo:
+ - Alteração de Atk, Def, Vida;
+ - Algumas imunidades;
+ - Agilidade;
+
+#### Poder Energético
+As Tropas dos Lanternas na DC, parte do poder do Darkseid e o Ciclope podem ser personagens que se utilizam deste tipo de ferramenta.
+
+
+ 
+- Poder Enérgetico: Usuários de poderes relacionados com fontes de energia ou rajadas energéticas, como por exemplo os Lanternas Verdes e o Ciclope;
+- Fera: Portadores de poderes inumanos, como licantropos (qualquer tipo, não precisa ser só lobisomem), vampirismo e outros poderes parecidos entram aqui;
+- Cósmico: Personagens que receberam seus poderes de forças cósmicas - como Cavaleiros do Zodíaco ou Capitão Marvel;
+
 ## Outras formas de jogar
  - Minions
  - Master  of Dungeons
