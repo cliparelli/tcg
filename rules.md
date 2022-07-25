@@ -412,6 +412,7 @@ Existem três condições de vitória possíveis que podem ser exploradas na con
  - Transpassar: Todo o dano que o personagem alvo não absorver desta ação, poderá ser dividido em outros alvos a escolha do controlador deste personagem;
  - Toque Mortal - se um personagem absorver pelo menos um ponto de dano causado por este personagem por sua vida, descarte todas as cartas anexadas a ele e embaralhe-o no deck de seu controlador. Este dano não é considerado como fatal ou um nocaute;
  - Vampirismo: Após o cálculo, todo dano causado por este persongem como fonte que foi absorvido pela vida do alvo, irá gerar um token de sobrevida para cada ponto absorvido;
+ - Negar morte: Se o personagem recebeu um dano fatal, ele não será considerado como nocaute.
 
 ### Controle de Cartas
  - Clarividência (X): Procura a carta do tipo X ou a carta X em seu deck. Revele ao outro jogador e coloque em sua mão. Depois disso embaralhe seu deck;
@@ -564,12 +565,29 @@ Os poderes vão ser mais simples, principalmente relacionados ao corpo:
 #### Poder Energético
 As Tropas dos Lanternas na DC, parte do poder do Darkseid e o Ciclope podem ser personagens que se utilizam deste tipo de ferramenta.
 
+As principais características do poder energético são:
+ - Escudo;
+ - Melhoria de atributos de defesa;
+ - Imunidades;
+ - Grande poder de fogo.
 
+Este tipo de poder contribui a estratégia geral como tanks poderos.
+
+#### Fera
+Portadores de poderes inumanos, como licantropos (qualquer tipo, não precisa ser só lobisomem), vampirismo e outros poderes parecidos entram aqui;
+
+Suas principais características são:
+ - Poderes sobre humanos;
+ - Cura;
+ - Imunidades e aplicações de efeitos;
+#### Cósmico
+Os personagens que receberam seus poderes de forças cósmicas - como Cavaleiros do Zodíaco ou Capitão Marvel.
+
+Suas principais características são:
+ - Alto poder de fogo;
+ - Ataques expansíveis;
+ - Alteração de tipos (devoção);
  
-- Poder Enérgetico: Usuários de poderes relacionados com fontes de energia ou rajadas energéticas, como por exemplo os Lanternas Verdes e o Ciclope;
-- Fera: Portadores de poderes inumanos, como licantropos (qualquer tipo, não precisa ser só lobisomem), vampirismo e outros poderes parecidos entram aqui;
-- Cósmico: Personagens que receberam seus poderes de forças cósmicas - como Cavaleiros do Zodíaco ou Capitão Marvel;
-
 ## Outras formas de jogar
  - Minions
  - Master  of Dungeons
