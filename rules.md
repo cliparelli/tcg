@@ -101,7 +101,7 @@ E por fim, temos as Fontes de Energia que vão habilitar e dar a possibilidade p
 
 As fontes podem ser básicas - gerando apenas uma energia ao personagem - ou podemos ter uma versão mais poderosa, as fontes de energia avançadas, gerando efeitos ou outras possiblidades, como gerar duas ou mais energias.
 
-Existe um tipo de fonte de energia chamada Fonte Prismática que também é considerada uma fonte básica. A diferença é que ela irá gerar duas energias para uma personagem do mesmo tipo da fonte de energia.
+Existe um tipo de fonte de energia chamada Fonte Prismática que também é considerada uma fonte avançada. A diferença é que ela irá gerar duas energias para uma personagem do mesmo tipo da fonte de energia.
 
 
 ## Áreas do Jogo
@@ -393,6 +393,7 @@ Alguns tokens são permanentes, sendo retirados através de outros efeitos/condi
  - Perdição (-): Este é um token permanente e não é retirado durante a fase de limpeza. Quando este personagem adquirir um total de tokens igual sua vida, ele é nocauteado;
  - Sonolência (-): Este é um token permanente e não é retirado durante a fase de limpeza. No início de sua fase de limpeza, faça uma aposta, se ganhar, tire este token do personagem, senão este personagem não pode usar qualquer ação, trocar de posição ou ter cartas anexadas;
  - DOT (-): Este é um token permanente e não é retirado durante a fase de limpeza. Dano contínuo - este token adiciona um ponto de dano antes do cálculo de dano ao dano total recebido pelo personagem;
+ - Infecção (-): Este é um token permanente e não é retirado durante a fase de limpeza. No início de sua fase de limpeza, aposte (1): retire este token / coloque outro token de infecção neste personagem. Se este personagem estiver com mais tokens de infecção que sua vida, coloque um token de Perdição sobre este personagem.
 
 Existe uma outra definição importante que são os tokens definitivos. Eles são tokens que não podem ser removidos por outros efeitos ou retirados durante a fase de limpeza.
 
@@ -426,14 +427,17 @@ Existem três condições de vitória possíveis que podem ser exploradas na con
 
 ### Dinâmicas de Jogo
  - Afinidade (Especificação): Para que a ação aconteça, um determinado tipo ou categoria de personagem ou um determinado personagem;
+ - Anexar: Colocar uma carta de item ou fonte de energia junto a um personagem;
  - Aposte(X): Jogue X moedas ou X dados (d4, d6 ou um dado de faces pares) - se der cara na moeda ou par nos dados, você ganha a aposta;
-
+ - Desanexar: Colocar uma carta que está junto a um personagem na pilha de descarte;
+    
 ### Efeitos
  - Ação Única: O jogador poderá efetuar essa ação apenas uma vez por turno;
  - Amedrontar: Quando o personagem é alvo de ações de combate, o controlador deste personagem pode alterar o personagem na posição principal por uma das posições do time;
  - Devoção (X): Se o tipo ou categoria de personagem ou o personagem X estiver em cena, você poderá utilizar a ação descrita;
  - Duplicar(X) / Triplicar(X): Descarte X cartas de sua mão para usar a ação uma segunda e uma terceira vez;
  - Pelotão: pode haver qualquer quantidade de cartas com este nome em seu deck;
+ - Bando (X): Todos os personagens do tipo, classe ou nome X estarão sobre o efeito desta ação;
 
 ## Power System
 Apesar do conjunto de regras acima, o coração deste sistema é o Power System - que é a maneira para constriuir novas cartas de personagem. O Power System dita as diretrizes para a criação de novos personagens.
