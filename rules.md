@@ -422,8 +422,8 @@ Existem três condições de vitória possíveis que podem ser exploradas na con
  - Extinguir Recurso (X): Descarte X cartas de sua mão;
  - Fonte Estéril: esta fonte não gera energia e não pode ser utilizada para pagar custos de ação;
  - Prever (X): Olhe as X primeiras cartas do topo do deck do jogador alvo e organize da maneira que quiser;
- - Rotação de Fonte (X/Y): Descarte X cartas de Fonte de Energia para comprar Y cartas em seu deck;
- - Rotação de Recursos (X/Y): Descarte X cartas de qualquer tipo para comprar Y cartas em seu deck;
+ - Reciclar Fonte (X/Y): Descarte X cartas de Fonte de Energia para comprar Y cartas em seu deck;
+ - Reciclar Recursos (X/Y): Descarte X cartas de qualquer tipo para comprar Y cartas em seu deck;
  - Triturar (X): Descarte as X primeiras cartas do topo do deck do jogador alvo;
 
 ### Dinâmicas de Jogo
