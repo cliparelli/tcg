@@ -405,7 +405,7 @@ Existem três condições de vitória possíveis que podem ser exploradas na con
 
 ## Palavras-Chave
 ### Combate
- - Alvos Múltiplos (X): Esta ação pode ter mais de um alvo. Caso haja um limite de alvos extras, este valor aparecerá entre parenteses;
+ - Alvos Múltiplos (X): Esta ação pode ter mais de um alvo. Caso haja um limite de alvos extras, este valor aparecerá entre parenteses. O dano e os efeitos da ação são calculados para todos os alvos de maneira igual;
  - Ataque Expansível (X): O dano causado por essa ação, pode ser acrescido em 1 para cada fonte de energia anexada a essa personagem além das utilizadas para pagar seu custo de execução. Caso haja um limite de dano extra, este valor aparecerá entre parenteses;
  - Ataque Perfurante: Este ataque ignora tokens de escudo e ignora defesa durante o cálculo de dano;
  - Conexão Vital (Personagem): Após o cálculo, todo dano sofrido por este persongem, irá gerar um token de sobrevida para cada ponto absorvido para ele mesmo ou o personagem indicado;
@@ -413,7 +413,8 @@ Existem três condições de vitória possíveis que podem ser exploradas na con
  - Transpassar: Todo o dano que o personagem alvo não absorver desta ação, poderá ser dividido em outros alvos a escolha do controlador deste personagem;
  - Toque Mortal - se um personagem absorver pelo menos um ponto de dano causado por este personagem por sua vida, descarte todas as cartas anexadas a ele e embaralhe-o no deck de seu controlador. Este dano não é considerado como fatal ou um nocaute;
  - Vampirismo: Após o cálculo, todo dano causado por este persongem como fonte que foi absorvido pela vida do alvo, irá gerar um token de sobrevida para cada ponto absorvido;
- - Negar morte: Se o personagem recebeu um dano fatal, ele não será considerado como nocaute.
+ - Negar morte: Se o personagem recebeu um dano fatal, ele não será considerado como nocaute;
+ - Quebra de Defesa: Quando a defesa do personagem alvo chega a zero;
 
 ### Controle de Cartas
  - Clarividência (X): Procura a carta do tipo X ou a carta X em seu deck. Revele ao outro jogador e coloque em sua mão. Depois disso embaralhe seu deck;
@@ -612,6 +613,8 @@ v0.1 [9cfa5ca4270d935b063780605724a3df698e6223] - Adição de Licenciamento;
 
 
 ## Referências
+https://docs.google.com/spreadsheets/d/1aO8JKKSFTcdeChzrNcvQBR2B0iLL3dSM/edit#gid=1071446485
+
 http://www.magicjebb.com.br/site/Manual_RegrasCompreensivas_Ed2-0_Rev201801.pdf
 http://dclegends.wiki/wiki/Effects
 http://dclegendsmobile.com/resources/buffs-and-debuffs/
