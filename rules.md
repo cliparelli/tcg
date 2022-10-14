@@ -55,7 +55,7 @@ Este jogo é composto por três tipos de cartas:
  - Itens e;
  - Energias.
 
-Existe uma modalidade de carta que é chamada de lendária. Estas cartas podem ter apenas UMA cópia no deck por ter um efeito realmente poderoso.
+Essas cartas podem ter dois outros subtipos: Lendária e Épica. Cartas lendárias normalmente tem efeitos poderosos e por isso só podem ter uma cópia no deck. As cartas épicas compartilham essas mesmas características, mas se elas forem colocadas na pilha de descarte, devem ser removidas do jogo. 
 
 ### Personagens
 Os personagens são as cartas principais do jogo! São com elas que tudo acontece. Através deles que os combates acontecem e as Pedras de Recompensa são adquiridas.
@@ -224,6 +224,8 @@ Ao utilizar qualquer efeito - seja de uma ação ativa, passiva, efeito de um It
  2. Após os custos e condições serem cumpridas o efeito irá inciar a ser resolvido;
  3. Antes da conclusão da resoluçaõ do efeito o oponente poderá utilizar um outro efeito como resposta;
  4. Após a conclusão do efeito ele deixará de gerar consequencias no jogo.
+
+Custos e efeitos que precisam ser resolvidos antes da ação principal ser definida são sepadors por traços e devem ser resolvidos na ordem em que aparecem. Assim que estes custos/efeitos forem realizados, a ação principal e os efeitos desencadeados por ela, podem ser resolvidos.
 
 Lembrando que a conclusão de um efeito pode demorar mais de um turno e sempre estará descrita na carta.
 
@@ -415,6 +417,8 @@ Existem três condições de vitória possíveis que podem ser exploradas na con
  - Vampirismo: Após o cálculo, todo dano causado por este persongem como fonte que foi absorvido pela vida do alvo, irá gerar um token de sobrevida para cada ponto absorvido;
  - Negar morte: Se o personagem recebeu um dano fatal, ele não será considerado como nocaute;
  - Quebra de Defesa: Quando a defesa do personagem alvo chega a zero;
+ - Posição Estratégia: A ação descrita só pode ser utilizada nas posições do time;
+ - Posição Vantajosa: A ação descrita pode ser utilizada em qualquer posição do campo;
 
 ### Controle de Cartas
  - Clarividência (X): Procura a carta do tipo X ou a carta X em seu deck. Revele ao outro jogador e coloque em sua mão. Depois disso embaralhe seu deck;
@@ -427,11 +431,14 @@ Existem três condições de vitória possíveis que podem ser exploradas na con
  - Triturar (X): Descarte as X primeiras cartas do topo do deck do jogador alvo;
 
 ### Dinâmicas de Jogo
+ - Ação Etérea: A ação só pode ser utilizada uma vez durante o jogo;
+ - Ação Expansível (x) - efeito extra qdo o personagem estiver com X fontes de energia a mais anexadas a ele, além do custo original da ação;
  - Afinidade (Especificação): Para que a ação aconteça, um determinado tipo ou categoria de personagem ou um determinado personagem;
  - Anexar: Colocar uma carta de item ou fonte de energia junto a um personagem;
  - Aposte(X): Jogue X moedas ou X dados (d4, d6 ou um dado de faces pares) - se der cara na moeda ou par nos dados, você ganha a aposta;
+ - Concentração (Condição): A ação só pode ser usada se a condição for alcançada;
  - Desanexar: Colocar uma carta que está junto a um personagem na pilha de descarte;
-    
+ 
 ### Efeitos
  - Ação Única: O jogador poderá efetuar essa ação apenas uma vez por turno;
  - Amedrontar: Quando o personagem é alvo de ações de combate, o controlador deste personagem pode alterar o personagem na posição principal por uma das posições do time;
