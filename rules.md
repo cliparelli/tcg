@@ -435,9 +435,14 @@ Existem três condições de vitória possíveis que podem ser exploradas na con
  - Ação Expansível (x) - efeito extra qdo o personagem estiver com X fontes de energia a mais anexadas a ele, além do custo original da ação;
  - Afinidade (Especificação): Para que a ação aconteça, um determinado tipo ou categoria de personagem ou um determinado personagem;
  - Anexar: Colocar uma carta de item ou fonte de energia junto a um personagem;
- - Aposte(X): Jogue X moedas ou X dados (d4, d6 ou um dado de faces pares) - se der cara na moeda ou par nos dados, você ganha a aposta;
+ - Aposte (X): Jogue X moedas ou X dados (d4, d6 ou um dado de faces pares) - se der cara na moeda ou par nos dados, você ganha a aposta;
  - Concentração (Condição): A ação só pode ser usada se a condição for alcançada;
  - Desanexar: Colocar uma carta que está junto a um personagem na pilha de descarte;
+ - Starter (X): Dinâmica introduzida no Set de Tekken, para utilização de combos. A palavra-chave starter representa o início de um combo e tem a seguinte definição: Starter (X) - Aposte (1) - Procure o item X e utilize a ação descrita pela palavra chave Starter. Após a resolução dos efeitos aquela carta deve ser colocada no fundo de seu deck;
+ - Combo (X):  Dinâmica introduzida no Set de Tekken, para utilização de combos. Esta palavra-chave indica que o item pode ter seu efeito utilizado mais de uma vez e sua definição é a seguinte: Combo (X) - Aposte (X) para usar a ação novamente, sem a necessidade de pagar seus custos;
+ - Stance (X) - Dinâmica introduzida no Set de Tekken, para utilização de combos. Esta palavra-chave indica que o personagem tem mais de uma posição de combate. Sua definção é: Stance (X) - O personagem recebe um token de Stance (X) e poderá utilizar itens com a marcação Stance (X). Em uma Stance o personagem não pode usar outros golpes, apenas os de stance. Você pode tirar o token de stance a qualuqer momento e caso outro token de stance seja colocado no personagem, descarte o anterior. Itens marcados como Stance são anexáveis e dão uma outra ação para o personagem;
+ - Finisher (X): Dinâmica introduzida no Set de Tekken, para utilização de combos. A palavra-chave Finisher representa o fim de um combo e tem a seguinte definição: Finisher (X) - Aposte (1) - Procure o item X e utilize a ação descrita pela palavra chave Finisher. Após a resolução dos efeitos aquela carta deve ser colocada no fundo de seu deck;
+ - Tag (X) - Dinâmica introduzida no Set de Tekken, para utilização de combos. A palavra-chave representa alternância entre personagens. Sua definição é: Tag (X) - Altere o personagem X para a posição principal e procure um item com tag do personagem X e use o efeito descrito pela palavra chave Tag. Após a resolução dos efeitos aquela carta deve ser colocada no fundo de seu deck;
  
 ### Efeitos
  - Ação Única: O jogador poderá efetuar essa ação apenas uma vez por turno;
