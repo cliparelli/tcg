@@ -7,14 +7,19 @@ Utilizando cartas como Doze Casas, Mestre e Aprendiz, Queime seu Cosmo e Cosmo A
 
 ## Personagens (17)
  - Líderes
+	- 1x Saga de Gêmeos Divino (SS) *
 	- 3x Saga de Gêmeos (SS)
-	- 2x Dohko de Libra (SS)
- - Time
-	- 4x Milo de Escorpião (SS)
-	- 4x Afrodite de Peixes (SS)
-	- 4x Shura de Capricórnio (SS)
+	- 1x Dohko de Libra Divino (SS) *
 
-## Itens (25)
+ - Time
+ 	- 1x Milo de Escorpião Divino (SS) *
+	- 3x Milo de Escorpião (SS)
+	- 1x Afrodite de Peixes Divino (SS) *
+	- 3x Afrodite de Peixes (SS)
+	- 1x Shura de Capricórnio Divino (SS) *
+	- 3x Shura de Capricórnio (SS)
+
+## Itens (23)
 - Permanente
 	- 2x Mestre e Aprendiz (Basic) - Buff
 	- 1x Arayashiki - Lendária (SS) - Control *
@@ -32,17 +37,21 @@ Utilizando cartas como Doze Casas, Mestre e Aprendiz, Queime seu Cosmo e Cosmo A
 	- 1x Satã Imperial - Lendária (SS) - Control
 	- 2x Queime seu Cosmo (SS) - Buff
 	- 2x Cosmo Agressivo (SS) - Dmg
-	- 2x Convocação Divinia V2 (SS) - Search
+	- 2x Convocação Divina V2 (SS) - Search
 	- 2x Banimento (SS) - Control
 
 ## Fontes de Energia (20)
-- Básica
-	- 4x Rio (Minecraft)
-	- 4x Floresta Coberta (Minecraft)
-	- 4x Costa Rochosa (Minecraft)
+- Básica	
+	- 3x Colina (Minecraft)	
+	- 3x Terras Áridas (Minecraft)
+	- 2x Costa Rochosa (Minecraft)
+	- 2x Rio (Minecraft)
+
 - Prismática
 	- 4x Nebulosa Cósmica (Basic)
+
 - Avançada
 	- 1x Relógio de Fogo (SS)
 	- 1x Fonte de Jandhara (SS)
 	- 2x Doze Casas (SS)
+	- 2x Caminho de Rosas (SS)
