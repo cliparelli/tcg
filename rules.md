@@ -19,7 +19,7 @@
         - [Executando Ações](#executando-ações)
         - [Resolvendo Efeitos](#resolvendo-efeitos)
 - [Combate](#combate)
-    - [Pilha de Combate](#pilha-de-combate)
+    - [Fila de Combate](#fila-de-combate)
     - [Passivas de Combate](#passivas-de-combate)
     - [Ações de Flanquear](#ações-de-flanquear)
     - [Ações Ativas](#ações-ativas)
@@ -79,7 +79,7 @@ Um personagem tem as seguintes características:
     - Cósmico: Personagens que receberam seus poderes de forças cósmicas - como Cavaleiros do Zodíaco ou Capitão Marvel;
  - Vida: Um personagem pode sofre uma quantidade limitada de dano antes de ser nocauteado. Esta quantidade é definida pelos pontos de vida que variam de 1 à 12;
  - Defesa: Para mitigar o dano sofrido, um personagem pode usar seu atributo de defesa;
- - Resitência/Fraqueza: Além da vida e da defase, a resitência e a fraqueza podem ser utilizadas para mitigar ou aumentar o dano recebido po um personagem. Um personagem com resistência a determinado tipo, terá o dobro de defesa durante o cálculo de dano, enquanto um personagem com fraqueza, irá receber o dobro do dano durante o combate;
+ - Resistência/Fraqueza: Além da vida e da defase, a resistência e a fraqueza podem ser utilizadas para mitigar ou aumentar o dano recebido po um personagem. Um personagem com resistência a determinado tipo, terá o dobro de defesa durante o cálculo de dano, enquanto um personagem com fraqueza, irá receber o dobro do dano durante o combate;
  - Ações: Um personagem pode ter até duas ações, uma passiva e outra ativa.
     - Passivas:
         - Efeito Lider: Este tipo de Passiva funciona apenas quando o personagem está na posição principal está com a quantidade indicada de energia atrelada a ela e se as outras condições forem cumpridas (por exemplo, descarte de energia ou de cartas da mão);
@@ -232,51 +232,35 @@ Lembrando que a conclusão de um efeito pode demorar mais de um turno e sempre e
 
 ## Combate
 A fase de combate é um pouco mais complexa, por isso ela terá uma seção inteira para ela.
- - Passivas de Combate;
- - Ações do tipo Flanquear;
- - Ações ativas;
+ - Acionamento de Passivas;
+ - Executando ações de combate;
  - Cálculo de Dano;
  - Resolução de efeitos temporários.
 
 Cada uma das fases acima serão desdobradas para um melhor entendimento nas próximas seções!
 
-### Pilha de Combate
-Antes de entrar nos meandros do combate, entender o conceito da pilha de combate é essencial para poder jogar tranquilamente.
+### Fila de Combate
+Antes de entrar nos meandros do combate, entender o conceito da fila de combate é essencial para poder jogar tranquilamente.
 
-Para facilitar a resolução das coisas cada ação entra na Pilha de Combate, que nada mais é que a fila de ações que foram feitas durante o combate. Vamos a um exemplo de combate simples...
+Para facilitar a resolução das coisas cada ação entra na fila de Combate, que nada mais é que a fila de ações que foram feitas durante o combate. Vamos a um exemplo de combate simples...
 
-1. O jogador ativo utiliza a passiva do personagem A que causa dois pontos de dano no alvo B;
-2. O oponente utiliza a passiva do personagem B que previne o dano do personagem A;
-3. O jogador ativo responde com o Item C que desativa temporariamente a passiva do personagem B;
-4. O jogador ativo utiliza a ação de flaquear do personagem D, que causa dois pontos no personagem principal e um ponto de dano em cada personagem do time;
-5. O oponente decide não utilizar nenhum efeito;
-6. O jogador ativo utiliza a ação de seu personagem principal que causa 4 pontos de dano no persongem E - que é o personagem principal do oponente;
-7. O oponente utiliza o Item F que reflete o dano causado pelo personagem principal para o peronsagem G, o nocautenado.
+1. Os jogadores ativam as passivas de efeito comum;
+2. O jogador ativo executa suas ações de combate;
+3. O jogador não-ativo responde, se houver alguma ação possível;
+4. O dano deve ser calculado;
+5. Efeitos temporários devem ser resolvidos.
 
-A pilha de combate vai ser resolvida na ordem inversa:
- - A ação 7 irá refletir o dano causado na ação 6, e nocauteará o personagem G;
- - A ação 5 não tem efeito;
- - A ação 4 causa dois pontos de dano no personagem principal e um ponto em outros personagens;
- - A ação 3 desativa a passiva do Personagem B (ação 2) e o dois pontos de dano são causados no alvo B.
+Exemplo de combate:
+1. O jogador ativo aciona a passiva de seu personagem na posição principal, adicionando 2 tokens de dot no personagem na posição principal do oponente;
+2. O jogador não-ativo aciona a passiva de seu personagem na posição principal, adicionando 1 token de escudo em cada um dos seus personagens;
+3. O jogador ativo ataca com seu personagem principal que causa 3 pontos de dano em todos os personagens do oponente;
+4. O jogador não-ativo responde com um Item que gera um token de reflexão para o personagem na posição principal;
+5. O jogador não-ativo seleciona o Personagem 2 como alvo da ação refletida.
+
+Cada personagem pode utilizar apenas UMA ação de combate por turno, porém poderá usar as suas passivas o quanto for possível. 
+Sempre que uma ação de combate acontece (passo 2), essa ação poderá ser respondida (passo 3) e isso sempre acontecerá concatenado para cada ação.
 
 Basicamente este é um conjunto de ações que podem acontecer durante o combate - aqui também não entramos em outro conceito importante que é o calculo de dano, que será abordado a seguir.
-
-### Passivas de Combate
-A primeira parte do combate, é o momento onde o jogador ativo irá ativar as passivas que gerem dano. 
-
-Após o jogador ativo pagar os custos envolvidos, ele deve declarar os alvos da ação. O oponente defensor, poderá utilizar Itens, efeitos de tokens ou passivas para mitigar o dano.
-
-Após a resolução dos efeitos e o cálculo do dano, as ações de flanquear tomam a vez.
-
-### Ações de Flanquear
-A segunda parte do combate é a utilização de ações de flanquear. Ações de flanquear são ações ativas de personagens do time. Estas ações podem ter um custo de ativação obrigatório e um segundo variável, que usualmente é o descarte de energia.
-
-Após o jogador ativo pagar todos os custos envolvidos e declarar os alvos das ações, o oponente defensor poderá responder a esta ação da mesma forma que respondeu às passivas de combate.
-
-Após a resolução dos efeitos e o cálculo de dano, a última parte do combate chega.
-
-### Ações Ativas
-A última parte do combate é a utilização das ações ativas, que são as ações do personagem na posição principal. O fluxo deverá serguir da mesma forma que nas outras fases: o jogador ativo pagará os custos envolvidos, declarar os alvos das ações e o oponente defensor poderá responder as ações com Itens, efeitos de tokens ou passivas para mitigar o dano.
 
 ### Dano
 E agora o conceito principal de todo combate... o DANO. Dano é o valor que um efeito ou ação reduzirá da quantidade de vida de um personagem.
@@ -304,14 +288,14 @@ Alguns do Buff de escudo, temos outros buffs permanentes que podem ser utilizado
  - Imunidade a Morte: Quando o personagem receber um dano fatal de uma fonte, todo o dano será prevenido. Porém se esta ação gerar efeitos, eles serão aplicados;
  - Sobrevida: A sobrevida funciona parecido com o escudo - cada token de sobrevida funcionará como um ponto de vida extra. Cada token poderá absorver um ponto de dano; 
  - Reviver: Este efeito é parecido com a imunidade a morte, porém ao invés de previnir o dano fatal, o personagem e suas cartas anexadas serão embaralhados de volta no deck. Este personagem não contará como um personagem nocauteado; 
- - Refração: O efeito de refração irá alterar o alvo da fonte de dano para um outro personagem controlado pelo mesmo jogador;
+ - Desviar: O efeito de refração irá alterar o alvo da fonte de dano para um outro personagem controlado pelo mesmo jogador;
  - Reflexão: O efeito de reflexão irá alterar o alvo da fonte de dano para um outro personagem controlado pelo oponente que gerou o ação.
 
 A ordem da mitigação do dano é a seguinte:
  0. DOT;
  1. Tokens temporários;
  2. Imunidade a dano; 
- 3. Refração/Reflexão;
+ 3. Desviar/Reflexão;
  4. Sobrevida;
  5. Imunidade a Morte;
  6. Reviver;
@@ -391,7 +375,7 @@ Alguns tokens são permanentes, sendo retirados através de outros efeitos/condi
  - Sobrevida (+): Este é um token permanente e não é retirado durante a fase de limpeza. Cada token adiciona um ponto de vida extra para o personagem. Após o calculo de dano ser finalizado, os tokens que absorveram dano devem ser retirados; 
  - Reviver (+): Este é um token permanente e não é retirado durante a fase de limpeza. Quando um personagem receber um dano fatal, descarte este token e embaralhe o personagem e todas as cartas anexadas a ele em seu deck. Este personagem não será considerado nocauteado;
  - Assistência (+): Este é um token permanente e não é retirado durante a fase de limpeza. Após o personagem utilizar sua ação, descarte este token para que um personagem a sua escolha cause 1 ponto de dano ao mesmo personagem alvo da ação original. Após o ataque, retire este token;
- - Refração (+): Este é um token permanente e não é retirado durante a fase de limpeza. Ao receber o dano de uma fonte, o persongem pode descarta este token para direcionar o dano para outro personagem controlado pelo mesmo jogador;
+ - Desviar (+): Este é um token permanente e não é retirado durante a fase de limpeza. Ao receber o dano de uma fonte, o persongem pode descarta este token para direcionar o dano para outro personagem controlado pelo mesmo jogador;
  - Reflexão (+): Este é um token permanente e não é retirado durante a fase de limpeza. Ao receber o dano de uma fonte, o persongem pode descarta este token para direcionar o dano para outro personagem controlado por um oponente;
  - Perdição (-): Este é um token permanente e não é retirado durante a fase de limpeza. Quando este personagem adquirir um total de tokens igual sua vida, ele é nocauteado;
  - Sonolência (-): Este é um token permanente e não é retirado durante a fase de limpeza. No início de sua fase de limpeza, faça uma aposta, se ganhar, tire este token do personagem, senão este personagem não pode usar qualquer ação, trocar de posição ou ter cartas anexadas;
@@ -520,7 +504,7 @@ As principais possibilidades de estrutura destes personagens são:
  - Aquisição de recursos;
  - Limpeza de efeitos negativos;
  - Poderes advindos de animais;
- - Escudos, Reflexão e Refração.
+ - Escudos, Reflexão e Desviar.
 
 A Vida é ligada a uma estratégia mais focada em suporte. Aliada a estruturas de força/controle pode criar possibilidades poderosas.
 
