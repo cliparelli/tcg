@@ -55,7 +55,8 @@ Este jogo é composto por três tipos de cartas:
  - Itens e;
  - Energias.
 
-Essas cartas podem ter dois outros subtipos: Lendária e Épica. Cartas lendárias normalmente tem efeitos poderosos e por isso só podem ter uma cópia no deck. As cartas épicas compartilham essas mesmas características, mas se elas forem colocadas na pilha de descarte, devem ser removidas do jogo. 
+Essas cartas podem ter dois outros subtipos: Lendária e Épica. 
+Cartas Lendárias normalmente tem efeitos poderosos e por isso só podem ter uma cópia no deck. As cartas Épicas compartilham essas mesmas características, mas se elas forem colocadas na pilha de descarte, devem ser removidas do jogo. 
 
 ### Personagens
 Os personagens são as cartas principais do jogo! São com elas que tudo acontece. Através deles que os combates acontecem e as Pedras de Recompensa são adquiridas.
@@ -123,7 +124,7 @@ As regras para montagem de um deck são as seguintes:
  - Fontes de Energia básicas não tem limite de cópias no deck;
  - Fontes de Energia avançadas tem um limite de quatro cópias, assim como personagens;
  - Não há limitação em relação aos tipos de personagem, mas o indicado é que se mantenha uma sinergia entre as cartas selecionadas;
- - As cartas lendárias devem ter apenas uma cópia de cada;
+ - As cartas lendárias e/ou épicas devem ter apenas uma cópia de cada;
 
 Uma boa divisão para a proporção entre personagens, itens e fontes de energia:
  - 18 personagens (6 personagens x 3 cópias ou 4 Personagens x 4 Cópias + 1 Personagem 2 Cópias);
@@ -395,7 +396,7 @@ Alguns tokens são permanentes, sendo retirados através de outros efeitos/condi
  - Perdição (-): Este é um token permanente e não é retirado durante a fase de limpeza. Quando este personagem adquirir um total de tokens igual sua vida, ele é nocauteado;
  - Sonolência (-): Este é um token permanente e não é retirado durante a fase de limpeza. No início de sua fase de limpeza, faça uma aposta, se ganhar, tire este token do personagem, senão este personagem não pode usar qualquer ação, trocar de posição ou ter cartas anexadas;
  - DOT (-): Este é um token permanente e não é retirado durante a fase de limpeza. Dano contínuo - este token adiciona um ponto de dano antes do cálculo de dano ao dano total recebido pelo personagem;
- - Infecção (-): Este é um token permanente e não é retirado durante a fase de limpeza. No início de sua fase de limpeza, aposte (1): retire este token / coloque outro token de infecção neste personagem. Se este personagem estiver com mais tokens de infecção que sua vida, coloque um token de Perdição sobre este personagem.
+ - Infecção (-): Infecção (-): Este é um token permanente e não é retirado durante a fase de limpeza. No início de sua fase de limpeza, Aposte (1): retire este token / coloque outro token de infecção neste personagem. Se este personagem estiver com mais tokens de infecção que sua vida, coloque um token de Perdição sobre este personagem para cada token de infecção extra
 
 Existe uma outra definição importante que são os tokens definitivos. Eles são tokens que não podem ser removidos por outros efeitos ou retirados durante a fase de limpeza.
 
