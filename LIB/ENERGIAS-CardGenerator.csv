@@ -1,0 +1,61 @@
+Nome;Versão;Mídia;Universo;Tipo;Energia;Descrição;Texto Final
+Fontes Renováveis;1;Básica;Básica;Avançado;1;Quando esta Fonte de Energia for descartada de um personagem, embaralhe esta carta de volta em seu baralho;
+Deltas de Basalto;;Game;Minecraft;Avançado;1;Quando o personagem que esta com este card anexado causar dano, ele causará 2 pontos adicionais. Conte este dano adicional como Elemental.;Rotação de Recursos (1) – Coloque 2 atkUp sobre o personagem alvo.
+Floresta Carmesim;;Game;Minecraft;Avançado;1;Descarte uma carta para colocar 2 AtkUp sobre o personagem alvo;
+Floresta de Flores;;Game;Minecraft;Avançado;1;Rotação de Recurso (3) - Coloque um token de Pacifista no personagem alvo;Extinguir Recurso (1) – Prever (3)
+Floresta Distorcida;;Game;Minecraft;Avançado;1;Descarte uma carta para reordenar as 3 primeiras cartas do seu deck;Quando esta Fonte de Energia for descartada de um personagem, embaralhe esta carta de volta em seu baralho
+Mega Taiga;;Game;Minecraft;Avançado;3;Ao anexar esta fonte de energia a um persoangem, descarte duas carta de sua mão.;Extingua 3 recursos para anexar esta Fonte de Energia a um Personagem.
+O Fim;;Game;Minecraft;Avançado;1;Extinguir esta Fonte: Causa 3 pontos de dano a um personagem alvo.;
+Templo do Deserto;;Game;Minecraft;Avançado;1;Extinguir esta Fonte: Aposte (1): Compre 1 Carta / Causa 3 pontos de dano a uma criatura que vc controla.;Se o personagem que estiver com essa fonte de energia anexada for nocauteado, Aposte (1): Embaralhe este personagem e todas as cartas anexadas em seu deck e o dano fatal não será contado como nocaute.
+Vale das Almas;;Game;Minecraft;Avançado;1;"Quando um personagem é nocauteado, coloque um marcador de almas obre o personagem que está com este card anexado.
+Se o personagem estiver com dois ou mais marcadores, todos ataques dele recebem Amedrontar.";"Extinguir esta Fonte -  Aposte (1):
+Compre 1 Carta/Causa 3 pontos de dano a um personagem que você controla."
+Vila;;Game;Minecraft;Avançado;1;Rotação de Recurso (2) - Clarividência (Item).;
+Ilha de Kanon;1;Manga;Saint Seiya;Avançado;1;Reciclar Energia (1): Coloque 2 toks de sobrevida neste personagem.;
+Portal para Yomotsu;1;Mangá;Saint Seiya;Avançado;1;Se o personagem que estiver com essa fonte de energia anexada for nocauteado, faça uma aposta. Se ganhar embaralhe este personagem e todas as cartas anexadas em seu deck e o dano fatal não será contado como nocaute.;
+Relógio de Fogo;1;Manga;Saint Seiya;Avançado Lendário;0;"Quando esta Fonte de Energia entrar em jogo, coloque 12 tokens de fogo nela.
+
+Descarte 2 marcadores para anular o último efeito gerado por um item.";
+Colinas;;Game;Minecraft;Basica;1;;
+Costa Rochosa;;Game;Minecraft;Basica;1;;
+Deserto;;Game;Minecraft;Basica;1;;
+Floresta;;Game;Minecraft;Basica;1;;
+Floresta Coberta;;Game;Minecraft;Basica;1;;
+Ilha dos Cogumelos;;Game;Minecraft;Basica;1;;
+Mesa;;Game;Minecraft;Basica;1;;
+Oceano;;Game;Minecraft;Basica;1;;
+Pântano;;Game;Minecraft;Basica;1;;
+Picos de Gelo;;Game;Minecraft;Basica;1;;
+Planicie;;Game;Minecraft;Basica;1;;
+Praia;;Game;Minecraft;Basica;1;;
+Rio;;Game;Minecraft;Basica;1;;
+Ruínas do Nether;;Game;Minecraft;Basica;1;;
+Savana;;Game;Minecraft;Basica;1;;
+Selva;;Game;Minecraft;Basica;1;;
+Selva de Bambu;;Game;Minecraft;Basica;1;;
+Terras Áridas;;Game;Minecraft;Basica;1;;
+Nebulosa Cósmica;1;Básica;;Prismático;1;Cósmico;
+Cavernas de Espeleotemas;;Game;Minecraft;Prismático;1;Afinidade Natureza;
+Cavernas;;Game;Minecraft;Prismático;1;Afinidade Fera;
+Cavernas Verdejantes;;Game;Minecraft;Prismático;1;Afinidade Vida;
+Nether;;Game;Minecraft;Prismático;1;Afinidade Morte;
+Oceano Congelado;;Game;Minecraft;Prismático;1;Afinidade Elemental;
+Planicie de Girassóis;;Game;Minecraft;Prismático;1;Afinidade Natureza;
+Taiga;;Game;Minecraft;Prismático;1;Afinidade Fera;
+Tundra;;Game;Minecraft;Prismático;1;Afinidade Elemental/Natureza;
+Berçario;;Básica;;Prismático;1;Afinidade Vida;
+Cemitério;;Básica;;Prismático;1;Afinidade Morte;
+Partenon;;Básica;;Prismático;1;Afinidade Divina;
+Lan House;;Básica;;Prismático;1;Afinidade TecSci;
+Espaço Esotérico;;Básica;;Prismático;1;Afinidade Magia;
+Ambiente Místico;;Básica;;Prismático;1;Afinidade Magia;
+Biblioteca;;Básica;;Prismático;1;Afinidade Mental;
+Academia;;Básica;;Prismático;1;Afinidade Física;
+Bateria Laser;;Básica;;Prismático;1;Afinidade Poder Energético;
+Poço de Lázaro;1;Comics;DC;Avançada;0;"Fonte Estéril
+Quando este personagem receber um dano fatal, Aposte (1):
+Embaralhe este personagem com todas as suas cartas em seu deck e o dano fatal não contará como um nocaute.";
+Pantanos ds Louisiana;1;Comics;DC;Avançada;1;Afinidade Monstro do Pantano - gera 1 extra;
+Casa de Áries;1;Manga;Saint Seiya;Avançada;1;"Extinguir este recurso: Coloque 3 tokens de escudo sobre o personagem que carregava esta fonte de energia.
+
+Afinidade Mu de Aries: Gera uma 1 extra";

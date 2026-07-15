@@ -1,0 +1,169 @@
+{
+  "$schema": "multiversity-conquest-card-template-instructions-v1",
+  "descricao_geral": "Instrucoes para geracao de templates (molduras) de carta via IA de imagem, para o TCG fan-made MULTIVERSITY CONQUEST. Cada template e uma moldura vazia (frame), sem arte de personagem nem texto, pronta para receber a arte no viewport preto e o texto nas caixas brancas via composicao posterior (Photoshop/editor de cartas). Baseado na V5, a versao mais recente do template, encontrada em CARDS/ASSETS/STRUCTURES/V5/.",
+  "referencia_de_regras": "rules.md - secoes 'Tipos de Carta' (Personagens, Itens, Fontes de Energia) e 'Power System' (tipos de personagem e arquetipos).",
+  "especificacoes_compartilhadas": {
+    "proporcao": "63mm x 88mm (proporcao padrao de TCG, ex. Magic/Pokemon) - canvas de referencia observado em ~822x1132px",
+    "resolucao_recomendada": "2480x3468px (300dpi) ou superior para impressao",
+    "formato_saida": "PNG com fundo transparente APENAS na area do viewport de arte (retangulo preto solido serve de placeholder/mascara para a arte, que sera posicionada atras ou nesse recorte); o restante da moldura e opaco",
+    "estilo_visual_base": "Moldura no estilo 'janela de sistema operacional / browser retro' (semelhante a uma janela macOS antiga): barra de titulo superior com botao circular a esquerda e dois botoes ovais a direita (simulando semaforo de janela), viewport de conteudo (arte) abaixo em preto solido, barra de status intermediaria e caixa de texto inferior em textura de marmore branco",
+    "fundo_externo": "Todas as bordas usam um fundo cosmico/espacial comum (nebulosa roxa-azul-laranja com estrelas) por baixo da textura colorida do tipo - visualmente conecta todas as cartas ao mesmo multiverso",
+    "paleta_marmore_neutro": "Os elementos de UI (barra de titulo, barra de status, caixa de texto) sao sempre em marmore branco/cinza claro com veios sutis cinza, independente do tipo de personagem - garante legibilidade do texto",
+    "iconografia_barra_status": {
+      "esquerda": "pilula/capsula em marmore contendo dois icones: um coracao preto (Vida) e um escudo (Defesa), lado a lado, separados por uma linha vertical fina",
+      "direita": "pilula/capsula em marmore contendo um triangulo apontando para cima (Custo/Acao Ativa - use de energia), uma linha vertical divisoria, e um triangulo apontando para baixo (indicador secundario, ex. resistencia/fraqueza ou dano da acao)"
+    },
+    "nao_incluir": [
+      "Nome do personagem/carta (sera adicionado depois na barra de titulo)",
+      "Numeros de vida/defesa/custo (adicionados depois nos icones da barra de status)",
+      "Texto de regras/efeito (adicionado depois na caixa de marmore inferior)",
+      "Arte do personagem/item (adicionada depois no viewport preto)",
+      "Simbolos de raridade, copyright ou numero de colecao"
+    ]
+  },
+  "tipos_de_template": [
+    {
+      "id": "CHAR-NTZ",
+      "nome_arquivo_base": "CHAR-NTZ.png / CHAR-NTZ-FULL.png",
+      "tipo_personagem": "Natureza",
+      "descricao_tema": "Personagens ligados a flora, plantas, vegetacao selvagem",
+      "prompt_estilo": "Borda e moldura com textura organica de folhas verdes entrelacadas (estilo vinha/trepadeira), tons de verde floresta e verde-limao, levemente iluminada como se a luz passasse entre as folhas. O botao circular da barra de titulo tem uma textura de folha/musgo verde.",
+      "cor_predominante": "#2E7D32 (verde floresta) com destaques #7CB342 (verde-lima)"
+    },
+    {
+      "id": "CHAR-LIF",
+      "nome_arquivo_base": "CHAR-LIF.png / CHAR-LIF-FULL.png",
+      "tipo_personagem": "Vida",
+      "descricao_tema": "Forca vital, poderes animais, regeneracao",
+      "prompt_estilo": "Borda em marmore branco/prata claro e liso, com veios finos cinza-claro, transmitindo pureza e vitalidade. Sem cor saturada - contraste dado pelo fundo cosmico ao redor. O botao circular tem uma textura de marmore com um leve brilho perolado.",
+      "cor_predominante": "#F5F5F5 (branco marmore) com veios #B0B0B0"
+    },
+    {
+      "id": "CHAR-DTH",
+      "nome_arquivo_base": "CHAR-DTH.png / CHAR-DTH-FULL.png",
+      "tipo_personagem": "Morte",
+      "descricao_tema": "Zumbis, necromantes, mortos-vivos",
+      "prompt_estilo": "Borda em marmore branco-acinzentado com respingos e filetes de tinta roxa vibrante escorrendo como sangue espectral, sobre fundo quase preto. O botao circular e um orbe escuro com um filete roxo cruzando-o, como uma racha de energia necrotica.",
+      "cor_predominante": "#8E24AA (roxo) sobre base #0A0A0A (preto) com marmore #E8E8E8"
+    },
+    {
+      "id": "CHAR-DVN",
+      "nome_arquivo_base": "CHAR-DVN.png / CHAR-DVN-FULL.png",
+      "tipo_personagem": "Divino",
+      "descricao_tema": "Divindades, anjos, demonios, emanacoes do divino",
+      "prompt_estilo": "Borda em marmore dourado/champagne, com veios de ouro liquido entremeados a cinza claro, transmitindo luxo e sacralidade. O botao circular e uma esfera dourada polida como um sol em miniatura.",
+      "cor_predominante": "#C9A96A (dourado champagne) com veios #8A7440"
+    },
+    {
+      "id": "CHAR-ELM",
+      "nome_arquivo_base": "CHAR-ELM.png / CHAR-ELM-FULL.png",
+      "tipo_personagem": "Elemental",
+      "descricao_tema": "Controladores de forcas elementais (agua, eletricidade, fogo, vento)",
+      "prompt_estilo": "Borda em marmore azul-turquesa translucido, como agua profunda com veios dourados de minerais, remetendo a diversos elementos da natureza fundidos. O botao circular parece uma bolha de agua ou um olho de tempestade.",
+      "cor_predominante": "#1B7A8C (azul-turquesa) com veios dourados #C79A3D"
+    },
+    {
+      "id": "CHAR-TEC",
+      "nome_arquivo_base": "CHAR-TEC.png / CHAR-TEC-FULL.png",
+      "tipo_personagem": "TecSci",
+      "descricao_tema": "Tecnologia, ciencia, ficcao cientifica, aliens, robos, ciborgues",
+      "prompt_estilo": "Borda escura quase preta com filetes de energia eletrica verde-neon percorrendo como circuitos ou raios de laboratorio, estilo high-tech/cyberpunk. O botao circular e uma esfera de plasma verde crepitante.",
+      "cor_predominante": "#39FF14 (verde neon) sobre base #0D0D0D (preto)"
+    },
+    {
+      "id": "CHAR-MGC",
+      "nome_arquivo_base": "CHAR-MGC.png / CHAR-MGC-FULL.png",
+      "tipo_personagem": "Magia",
+      "descricao_tema": "Usuarios de magia",
+      "prompt_estilo": "Borda escura acinzentada com respingos e filetes de tinta magenta/rosa-choque vibrante, como um feitico borrando as bordas da realidade. O botao circular e um orbe escuro com um brilho magenta.",
+      "cor_predominante": "#E91E8C (magenta/rosa vibrante) sobre base #1A1A1A (cinza escuro quase preto)"
+    },
+    {
+      "id": "CHAR-MENTAL",
+      "nome_arquivo_base": "CHAR-MTL.png / CHAR-MTL-FULL.png (sigla sugerida MTL - nao encontrada em CARDS/ASSETS/STRUCTURES/V5 no momento desta instrucao)",
+      "tipo_personagem": "Mental",
+      "descricao_tema": "Telepatas e portadores de poderes psionicos",
+      "prompt_estilo": "Borda escura com ondas concentricas sutis em tom violeta-azulado muito claro, como ondas cerebrais/psionicas se propagando, efeito levemente desfocado/onirico. O botao circular tem uma textura de nebulosa mental, como uma mente em espiral.",
+      "cor_predominante": "#7E57C2 (violeta) sobre base #12101A",
+      "observacao": "ATENCAO: nao ha asset existente para o tipo Mental em CARDS/ASSETS/STRUCTURES/V5 (nem CHAR nem CHAR-FULL). Confirmar com o usuario a sigla de 3 letras antes de gerar - o CLAUDE.md lista as siglas conhecidas (NTZ, LIF, DTH, DVN, ELM, TEC, MGC, FSC, ENG, FRL, CSM) mas Mental nao tem sigla definida ainda."
+    },
+    {
+      "id": "CHAR-FSC",
+      "nome_arquivo_base": "CHAR-FSC.png / CHAR-FSC-FULL.png",
+      "tipo_personagem": "Físico",
+      "descricao_tema": "Poderes fisicos do corpo humano - forca, agilidade, artes marciais",
+      "prompt_estilo": "Borda escura acinzentada com filetes de energia laranja-avermelhada, como calor/friccao muscular ou trilhas de velocidade. O botao circular e um orbe escuro com uma marca de garra/impacto laranja.",
+      "cor_predominante": "#FF6D28 (laranja) sobre base #1C1C1C"
+    },
+    {
+      "id": "CHAR-ENG",
+      "nome_arquivo_base": "CHAR-ENG.png / CHAR-ENG-FULL.png",
+      "tipo_personagem": "Poder Energético",
+      "descricao_tema": "Usuarios de fontes de energia ou rajadas energeticas",
+      "prompt_estilo": "Borda escura com relampagos/filamentos de energia amarelo-dourada vibrante e brilhante percorrendo toda a moldura, como um campo de forca eletrico pulsante. O botao circular e uma esfera de energia amarela crepitante.",
+      "cor_predominante": "#F4D03F (amarelo energia) sobre base #141414"
+    },
+    {
+      "id": "CHAR-FRL",
+      "nome_arquivo_base": "CHAR-FRL.png / CHAR-FRL-FULL.png",
+      "tipo_personagem": "Fera",
+      "descricao_tema": "Licantropos, vampirismo e poderes inumanos",
+      "prompt_estilo": "Borda em marmore acinzentado com filetes de tinta vermelho-sangue escorrendo, remetendo a garras e instinto selvagem. O botao circular e um orbe escuro com uma racha vermelha, como uma garra riscando a superficie.",
+      "cor_predominante": "#C62828 (vermelho sangue) sobre marmore cinza #B5B5B5 e base #0F0F0F"
+    },
+    {
+      "id": "CHAR-CSM",
+      "nome_arquivo_base": "CHAR-CSM.png / CHAR-CSM-FULL.png",
+      "tipo_personagem": "Cósmico",
+      "descricao_tema": "Personagens com poderes de forcas cosmicas",
+      "prompt_estilo": "Borda em marmore branco/prata com filetes de tinta verde-agua/teal metalizado e pontos de brilho como poeira estelar, remetendo ao espaco profundo e constelacoes. O botao circular e uma esfera prateada com reflexo de galaxia.",
+      "cor_predominante": "#26A69A (verde-agua/teal) sobre marmore prata #D8D8D8"
+    },
+    {
+      "id": "CHAR-NO",
+      "nome_arquivo_base": "CHAR-NO.png / CHAR-NO-FULL.png",
+      "tipo_personagem": "Sem tipo definido / generico (placeholder ou personagem sem afinidade classificada)",
+      "descricao_tema": "Template neutro, usado como base estrutural ou para personagens sem tipo de poder classificado",
+      "prompt_estilo": "Borda em metal escovado cinza-chumbo uniforme, sem cor tematica, minimalista. A barra de titulo e a caixa de texto perdem os icones de vida/defesa/acao da barra de status (versao mais 'crua', estrutural). Serve de referencia neutra para variacoes de outros tipos.",
+      "cor_predominante": "#4A4A4A (cinza chumbo) sobre base #0A0A0A",
+      "observacao": "Esta variante nao exibe a pilula de status inferior com coracao/escudo/triangulos - confirmar se e intencional (template estrutural de referencia) antes de reusar para um personagem jogavel."
+    },
+    {
+      "id": "ITEM",
+      "nome_arquivo_base": "ITEM.png",
+      "tipo_carta": "Item",
+      "descricao_tema": "Itens Permanentes, Volateis ou Anexaveis (rules.md secao 'Itens')",
+      "prompt_estilo": "Mesma estrutura de janela do template de personagem (barra de titulo com botao circular e semaforo, viewport de arte, barra de status, caixa de texto), mas em marmore branco/cinza-prata puro com veios metalicos sutis e respingos de tinta verde-agua/teal, sem tema de tipo de personagem - remete a um objeto neutro e universal. Botao circular liso em prata polida.",
+      "cor_predominante": "#C0C0C0 (prata) com veios teal #1FA6A0",
+      "observacao": "Nao gerar versao FULL para Item, a menos que solicitado - nao existe FULL de ITEM nos assets atuais."
+    },
+    {
+      "id": "LAND",
+      "nome_arquivo_base": "LAND.png",
+      "tipo_carta": "Fonte de Energia",
+      "descricao_tema": "Fontes de Energia Basicas, Avancadas e Prismaticas (rules.md secao 'Fontes de Energia')",
+      "prompt_estilo": "Mesma moldura cosmica externa, mas SEM a barra de status inferior com icones de vida/defesa/acao (fontes de energia nao tem esses atributos) - apenas barra de titulo (sem botao circular colorido, mantendo neutro) no topo, viewport de arte grande ocupando quase toda a carta, e uma barra fina de texto na base (sem caixa de marmore expandida) para o efeito da fonte, quando houver.",
+      "cor_predominante": "Moldura em cinza-metal escuro #2B2B2B, sem cor tematica - fundo cosmico como unico elemento decorativo",
+      "observacao": "Confirmar se fontes de energia terao variacao de cor por tipo elemental (para sinergia visual com o tipo de personagem que elas alimentam) ou se permanecem neutras como no asset atual."
+    },
+    {
+      "id": "ENERGY-ICON",
+      "nome_arquivo_base": "ENERGY.png",
+      "tipo_asset": "Icone de simbolo de energia (nao e um template de carta completo)",
+      "descricao_tema": "Simbolo hexagonal usado para representar o custo de energia em textos/acoes, provavelmente inserido dentro dos triangulos da barra de status ou no texto de custo",
+      "prompt_estilo": "Icone hexagonal solido preto com contorno branco fino, estilo 'diamante de energia' simplificado, legivel em tamanho pequeno (assets de 32-64px). Deve funcionar como glifo de texto inline.",
+      "cor_predominante": "#000000 preenchimento com contorno #FFFFFF",
+      "observacao": "Este e um icone utilitario, nao uma moldura de carta - gerar em alta resolucao vetorial/PNG com fundo transparente para reuso em qualquer tamanho."
+    }
+  ],
+  "variantes_por_tipo": {
+    "padrao": "Layout completo: barra de titulo + viewport de arte + barra de status (vida/defesa/acao) + caixa de texto em marmore ocupando a parte inferior (~35% da altura da carta)",
+    "FULL": "Mesmo frame, mas sem a caixa de texto em marmore inferior - o viewport de arte se estende até a barra de status, deixando mais area visivel para a ilustracao (usado para cartas de arte estendida/alternativa). Gerar FULL para todos os 12 tipos de personagem (NTZ, LIF, DTH, DVN, ELM, TEC, MGC, Mental, FSC, ENG, FRL, CSM) e para o generico NO, seguindo o padrao ja existente."
+  },
+  "pendencias_para_o_usuario": [
+    "Definir a sigla de 3 letras oficial para o tipo 'Mental' (unico tipo listado em rules.md sem asset e sem sigla mapeada em CLAUDE.md) antes de gerar seu template.",
+    "Confirmar se LAND (Fontes de Energia) deve ganhar variacoes de cor por tipo elemental ou permanecer com moldura neutra unica.",
+    "Confirmar se ITEM deve ganhar uma versao FULL como os personagens.",
+    "Confirmar o significado exato dos dois triangulos (cima/baixo) na pilula direita da barra de status - por regras (custo de acao ativa = energia anexada; possivelmente resistencia/fraqueza ou dano da acao) para instruir a IA a manter espaco correto para os numeros."
+  ]
+}
