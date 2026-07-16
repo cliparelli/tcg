@@ -146,7 +146,7 @@ body {
     width: 91%;
     height: 50.3%;
     background: #000;
-    z-index: 1;
+    z-index: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -164,10 +164,10 @@ body {
 
 .card-preview__title {
     position: absolute;
-    top: 3.5%;
-    left: 29%;
-    width: 47%;
-    height: 6%;
+    top: 4.7%;
+    left: 29.5%;
+    width: 53%;
+    height: 5.5%;
     z-index: 2;
     display: flex;
     align-items: center;
@@ -180,20 +180,69 @@ body {
     overflow: hidden;
 }
 
-.card-preview__status {
+.card-preview__heart {
+    position: absolute;
+    top: 5.9%;
+    left: 10.5%;
+    width: 6%;
+    height: 3.6%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 12px;
+    color: black;
+}
+
+.card-preview__shield {
+    position: absolute;
+    top: 5.9%;
+    left: 22%;
+    width: 6%;
+    height: 3.6%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 12px;
+    color: black;
+}
+
+.card-preview__type-badge {
+    position: absolute;
+    top: 5.1%;
+    left: 85.1%;
+    width: 7%;
+    height: 4.6%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-preview__type-badge .card-preview__dot {
+    width: 30px;
+    height: 30px;
+}
+
+.card-preview__classification {
     position: absolute;
     top: 61.5%;
     left: 8%;
     width: 84%;
-    height: 7.3%;
+    height: 6.5%;
     z-index: 2;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    font-size: 12px;
+    justify-content: center;
+    text-align: center;
+    font-size: 13px;
     font-weight: 600;
     color: black;
     padding: 0 6%;
+    overflow: hidden;
 }
 
 .card-preview__text {
@@ -201,7 +250,7 @@ body {
     top: 69.5%;
     left: 9%;
     width: 82%;
-    height: 27.5%;
+    height: 24%;
     z-index: 2;
     overflow-y: auto;
     font-size: 11px;
@@ -212,9 +261,8 @@ body {
 
 .card-preview__text h4 {
     margin: 6px 0 2px;
-    font-size: 10.5px;
-    text-transform: uppercase;
-    letter-spacing: .03em;
+    font-size: 11px;
+    font-weight: 700;
     color: black;
 }
 
@@ -227,9 +275,58 @@ body {
     white-space: pre-line;
 }
 
+.card-preview__action + .card-preview__action {
+    margin-top: 8px;
+}
+
 .card-preview__flavor {
     font-style: italic;
     color: black;
+}
+
+.card-preview__footer {
+    position: absolute;
+    top: 89.5%;
+    left: 70%;
+    width: 24%;
+    height: 4%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.card-preview__dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.3);
+}
+
+.card-preview__dot--magia {
+    background: #2f6fed;
+}
+
+.card-preview__dot--tec {
+    background: #22c55e;
+}
+
+.card-preview__dot--fisico {
+    background: #e0342f;
+}
+
+.card-preview__dot--divino {
+    background: #f4c521;
+}
+
+.card-preview__dot--cosmico {
+    background: #9333ea;
+}
+
+.card-preview__dot--neutro {
+    background: #8a8a8a;
 }
 
 .card-raw {
@@ -261,4 +358,61 @@ body {
 
 .card-raw td:last-child {
     white-space: pre-wrap;
+}
+
+.card-raw__field {
+    width: 100%;
+    padding: 6px 8px;
+    background: #262530;
+    border: 1px solid var(--panel-border);
+    border-radius: 6px;
+    color: var(--text);
+    font-size: 12px;
+    font-family: inherit;
+    resize: vertical;
+}
+
+textarea.card-raw__field {
+    min-height: 60px;
+}
+
+.card-raw__actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.card-raw__actions button {
+    padding: 8px 18px;
+    background: var(--accent);
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.card-raw__actions button:hover {
+    filter: brightness(1.1);
+}
+
+.card-raw__actions button:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.card-raw__status {
+    font-size: 12px;
+    color: var(--text-dim);
+}
+
+.card-raw__status--ok {
+    color: #4ade80;
+}
+
+.card-raw__status--error {
+    color: #f87171;
 }

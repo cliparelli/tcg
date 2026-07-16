@@ -5,3 +5,8 @@
 *.ma
 *.mtl
 *.obj
+
+scripts/.chatgpt-profile/
+scripts/__pycache__/
+
+EXPANSIONS/

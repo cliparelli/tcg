@@ -45,9 +45,9 @@ Como uma aranha que aguarda a presa cair em sua teia, os PlaneWatchers deixaram 
 
 Os PlaneWatchers, deixando seu posto passivo de vigias da história, se tornaram os BuntWalkers - caçadores de recompensas multiversais buscando a hegemonia de seu multiverso perante os outros.
 
-Multiversity Conquest é um TCG "Open Source" de Batalha entre heróis de universos e mídias diferentes - só aqui você conseguirá usar o seu pet para batalhar com um Balrogue ou usar o Death Note para matar o Superman, ou fazer com que o tal de João de Santo Cristo se resolva com o General de 10 Estrelas.
+Multiversity Conquest é um TCG "Open Source" de Batalha entre heróis de universos e mídias diferentes - aqui você pode reunir personagens de origens completamente diferentes em um mesmo confronto, testando o quão fortes eles são quando colocados lado a lado.
 
-Este é um sistema feito de fãs para fãs! Todas as propriedades intelectuais são de propriedade de seus detenteores, o que fazemos aqui é uma maneira de nos divertimos entre amigos. Então manter o respeito aos criadores, sua obra e legado são essenciais para manter a diversão para todos :)
+Este é um sistema feito de fãs para fãs! Caso você utilize personagens de propriedades intelectuais de terceiros em suas cartas, lembre-se que todas essas propriedades intelectuais continuam pertencendo a seus respectivos detentores, e este uso deve se manter apenas para diversão entre amigos, sem fins comerciais. Manter o respeito aos criadores, sua obra e legado são essenciais para manter a diversão para todos :)
 
 ## Tipos de Carta
 Este jogo é composto por três tipos de cartas:
@@ -63,26 +63,27 @@ Os personagens são as cartas principais do jogo! São com elas que tudo acontec
 
 Um personagem tem as seguintes características:
  - Nome: que é o nome do personagem e fica disposto no box superior da carta;
- - Categoria: O "tipo" de personagem - pode ser um alter ego, um vocativo, a qual categoria ele pertence. Por exemplo, a Saori Kido possui a categoria "Deusa Atena". Mais de um personagem pode ter a mesma categoria, mesmo sendo de universos diferentes;
+ - Categoria: O "tipo" de personagem - pode ser um alter ego, um vocativo, a qual categoria ele pertence. Por exemplo, uma personagem pode possuir a categoria "Avatar de uma Deusa". Mais de um personagem pode ter a mesma categoria, mesmo sendo de universos diferentes;
  - Tipo: De qual tipo de energia ou poder que o personagem canaliza suas capacidades. Os tipos são os seguintes:
-    - Natureza: Todos os personagens que conversem com a Flora - exemplo Monstro do Pântano;
-    - Vida: Aqueles que estão ligados a força vital, com poderes relacionados a animais, regeneração, etc - exemplo: Homem-animal;
+    - Natureza: Todos os personagens que conversem com a Flora - exemplo um monstro humanoide feito de vegetação e pântano;
+    - Vida: Aqueles que estão ligados a força vital, com poderes relacionados a animais, regeneração, etc - exemplo: um personagem com poderes e características animalescas;
     - Morte: Zumbis, Necromantes, mortos-vivos e todas as coisas que se manifestem através da morte estão neste tipo;
-    - Divino: Emanações do Divino, Divindades, anjos, demônios ou personagens que representem deuses se encaixam nesta categoria. Por exemplo, a Saori é uma deusa, e os cavaleiros de bronze recebem o poder por venerá-la, então podemos encaixá-los na categoria divina também;
-    - Elemental: Qualquer controlador de forças elementais (água, eletricidade, fogo, vento, chuva, etc) se encaixa neste tipo - exemplo Tempestade e Aquaman;
-    - TecSci: Personagens relacionados a tecnologia e ciência (ou ficção científica) entram aqui. Aliens, Robos, ciborgues, usuários de tecnologia avançada, cientistas malucos entra nesta categoria. Dois bons exemplos são Lex Luthor e Superman;
+    - Divino: Emanações do Divino, Divindades, anjos, demônios ou personagens que representem deuses se encaixam nesta categoria. Por exemplo, uma deusa e seus guerreiros que recebem o poder por venerá-la também podem ser encaixados na categoria divina;
+    - Elemental: Qualquer controlador de forças elementais (água, eletricidade, fogo, vento, chuva, etc) se encaixa neste tipo - exemplo um controlador do clima e um controlador de eletricidade;
+    - TecSci: Personagens relacionados a tecnologia e ciência (ou ficção científica) entram aqui. Aliens, Robôs, ciborgues, usuários de tecnologia avançada, cientistas malucos entram nesta categoria. Bons exemplos são um cientista genial e um super-humano de origem tecnológica ou científica;
     - Magia: Usuários de Magia;
-    - Mental: Telepatas e outros portadores de poderes psionicos são deste tipo, como por exemplo, Professor Xavier;
-    - Físico: Poderes relacionados a questões físicas - do corpo humano - como por exemplo, super-força, agilidade, elasticidade, habilidades acrobáticas, artes marciais são do tipo Físico - exemplo: homem-elástico;
-    - Poder Enérgetico: Usuários de poderes relacionados com fontes de energia ou rajadas energéticas, como por exemplo os Lanternas Verdes e o Ciclope;
+    - Mental: Telepatas e outros portadores de poderes psiônicos são deste tipo;
+    - Físico: Poderes relacionados a questões físicas - do corpo humano - como por exemplo, super-força, agilidade, elasticidade, habilidades acrobáticas, artes marciais são do tipo Físico;
+    - Poder Enérgetico: Usuários de poderes relacionados com fontes de energia ou rajadas energéticas;
     - Fera: Portadores de poderes inumanos, como licantropos (qualquer tipo, não precisa ser só lobisomem), vampirismo e outros poderes parecidos entram aqui;
-    - Cósmico: Personagens que receberam seus poderes de forças cósmicas - como Cavaleiros do Zodíaco ou Capitão Marvel;
+    - Cósmico: Personagens que receberam seus poderes de forças cósmicas;
  - Vida: Um personagem pode sofrer uma quantidade limitada de dano antes de ser nocauteado. Esta quantidade é definida pelos pontos de vida que variam de 1 a 12;
  - Defesa: Para mitigar o dano sofrido, um personagem pode usar seu atributo de defesa;
  - Resistência/Fraqueza: Além da vida e da defesa, a resistência e a fraqueza podem ser utilizadas para mitigar ou aumentar o dano recebido por um personagem. Um personagem com resistência a determinado tipo, terá o dobro de defesa durante o cálculo de dano, enquanto um personagem com fraqueza, irá receber o dobro do dano durante o combate;
- - Ações: Um personagem pode ter até duas ações, sendo elas passivas ou ativas, e podem ser utilizadas em qualquer posição (principal ou time):
+ - Ações: Um personagem pode ter até duas ações, sendo elas passivas ou ativas, e podem ser utilizadas em qualquer posição (principal ou time) - uma ação sem custo pode ser considerada uma ação básica:
     - Passiva: Normalmente não tem custo de ativação e vai gerar algum efeito independente da posição do personagem;
     - Ativa: É uma ação de ataque, que necessita uma quantidade de energia atrelada ao personagem para poder ser utilizada. Caso haja outras condições para seu uso, estas devem ser cumpridas. Uma ação ativa pode ter a palavra-chave [Flanquear](#combate), que restringe seu uso à posição de time - ver a seção [Combate](#combate) para a sequência de resolução;
+
 
 #### Power System
 Apesar do conjunto de regras acima, o coração deste sistema é o Power System - que é a maneira para construir novas cartas de personagem. O Power System dita as diretrizes para a criação de novos personagens.
@@ -114,8 +115,8 @@ Resistência e Fraqueza servem para balancear os outros atributos e capacidades 
 
 As ações ativas e passivas também tem suas diretrizes para serem criadas. Abaixo são diretrizes para nortear a criação - sempre existiram personagens que estão fora da curva e vão acabar distorcendo os limites ou referências.
 
-Para ajudar a estabelecer os parâmetros, vamos utilizar como base um personagem que se desenvolve durante os arcos de sua história: Seiya de Pégasus do mangá Cavaleiros do Zodíaco. 
-Na Guerra Galática (primeiro arco), o personagem acabou de sair de seu treinamento, ainda não enfrentou tantas adversidades - é plausível que o dano causado por suas ações seja baixo (entre 1 e 2), com custos menores. Em comparação, quando vemos ele durante a Saga de Hades (último grande arco), ele está muito mais forte e poderoso, então necessitará de um balanceamento - custos mais altos, adição de custos variáveis ou recebimento de Debuffs.
+Para ajudar a estabelecer os parâmetros, vamos utilizar como base um personagem fictício que se desenvolve durante os arcos de sua história.
+No primeiro arco, o personagem acabou de sair de seu treinamento, ainda não enfrentou tantas adversidades - é plausível que o dano causado por suas ações seja baixo (entre 1 e 2), com custos menores. Em comparação, quando vemos ele durante o último grande arco, ele está muito mais forte e poderoso, então necessitará de um balanceamento - custos mais altos, adição de custos variáveis ou recebimento de Debuffs.
 
 O dano pode ser considerado:
  - Baixo: 1 a 2 pontos;
@@ -123,9 +124,9 @@ O dano pode ser considerado:
  - Alto: 5 a 6 pontos;
  - Divino: Acima de 7.
 
-Um bom cálculo é de 1 a 2 pontos de dano por energia anexada. Quando começamos a ter outros tipos de efeitos - como dano em outros personagens, acréscimo de dano ao valor inicial, adição de buffs ou debuffs, entre outros tipos de efeitos - é interessante balancear com um custo obrigatório mais alto e a necessidade de custos variáveis - por exemplo, uma ação do Etrigan causa 3 pontos de dano e 1 ponto de dano em cada personagem do time e tem um custo obrigatório de 3 energias e seu custo variável é o descarte de uma energia.
+Um bom cálculo é de 1 a 2 pontos de dano por energia anexada. Quando começamos a ter outros tipos de efeitos - como dano em outros personagens, acréscimo de dano ao valor inicial, adição de buffs ou debuffs, entre outros tipos de efeitos - é interessante balancear com um custo obrigatório mais alto e a necessidade de custos variáveis - por exemplo, uma ação causa 3 pontos de dano e 1 ponto de dano em cada personagem do time e tem um custo obrigatório de 3 energias e seu custo variável é o descarte de uma energia.
 
-Uma ação Soco de Massa Infinito tem um custo obrigatório de 3 energias e pode causar 3 pontos de dano para cada energia anexada ao personagem - no fim do combate todas as energias anexadas aos personagens controlados por aquele jogador devem ser descartadas - o dano é alto, mas o custo também é. No cálculo original, este ataque pode causar 9 pontos de dano, mas se houver 5 energias anexadas ao personagem, o ataque causará 15 pontos de dano.
+Uma ação de dano expansível tem um custo obrigatório de 3 energias e pode causar 3 pontos de dano para cada energia anexada ao personagem - no fim do combate todas as energias anexadas aos personagens controlados por aquele jogador devem ser descartadas - o dano é alto, mas o custo também é. No cálculo original, este ataque pode causar 9 pontos de dano, mas se houver 5 energias anexadas ao personagem, o ataque causará 15 pontos de dano.
 
 As instruções desta seção servem para direcionar a criação dos personagens e quando necessário itens. Lembre-se que a ideia principal é a diversão, não criar a carta mais apelona ou o super-trunfo que irá vencer qualquer outra carta.
 
@@ -163,7 +164,7 @@ Itens são cartas que servem para gerar efeitos durante a partida. Os itens pode
  - Itens Voláteis: São itens que vão gerar um efeito com tempo determinado, ou seja, vão terminar em algum momento;
  - Item Anexável: São itens permanentes, mas para que seu efeito funcione, ele precisa estar anexada a um personagem, da mesma forma que uma Fonte de Energia. O item anexável sempre deve receber um tipo de personagem, uma categoria ou o nome para que possa ser anexado em um alvo válido.
 
-Os itens permanentes vão funcionar como um encantamento de Magic, um cenário de Battle Scenes ou um ginásio de Pokemon TCG. Já os itens voláteis iram funcionar como as mágicas ou feitiços de Magic.
+Os itens permanentes vão funcionar como um encantamento ou cenário de efeito contínuo em outros TCGs. Já os itens voláteis irão funcionar como mágicas ou feitiços de efeito único.
 
 ### Fontes de Energia
 E por fim, temos as Fontes de Energia que vão habilitar e dar a possibilidade para os jogadores utilizarem as ações dos personagens ou efeitos dos itens.
@@ -281,7 +282,7 @@ Caso a ação abranja personagens de ambos os jogadores, primeiro sorteie qual j
 #### Resolvendo Efeitos
 Nesta seção iremos abordar situações naturais de jogo e como resolver os efeitos de ações realizadas pelos jogadores.
 
-Um ponto importante sobre os textos das cartas é em relação a utilização do Negrito e do Itálico. Efeitos que tem como alvo personagens específicos, o nome deste personagem estará em Negrito, quando o efeito visa como alvo uma categoria de personagem, ele estará em Itálico. Por exemplo, a personagem Saori Kido tem uma passiva que tem como alvo personagens da categoria "Cavaleiros de Bronze" - este texto deverá estar em Itálico na carta.
+Um ponto importante sobre os textos das cartas é em relação a utilização do Negrito e do Itálico. Efeitos que tem como alvo personagens específicos, o nome deste personagem estará em Negrito, quando o efeito visa como alvo uma categoria de personagem, ele estará em Itálico. Por exemplo, uma personagem tem uma passiva que tem como alvo personagens de uma categoria específica de guerreiros que a servem - este texto deverá estar em Itálico na carta.
 
 Quando uma carta entra em cena, alguns pontos devem ser levados em consideração:
  1. Todos os custos de ativação (diretos e indiretos) para que esta carta fosse colocada em jogo devem ter sido pagos;
@@ -359,8 +360,9 @@ Note que o defensor precisou declarar sua ação com Flanquear (passo 2 da decla
 Ver a palavra-chave [Flanquear](#combate) em [Palavras-Chave](#palavras-chave) para as regras completas sobre quem pode usá-la e com que frequência.
 
 ### Dano
-E agora o conceito principal de todo combate... o DANO. Dano é o valor que um efeito ou ação reduzirá da quantidade de vida de um personagem.
-Porém este dano pode ter mais de um tipo e pode ser mitigado antes de reduzir a vida do personagem.
+Dano indica a quantidade de vida que um personagem perde como resultado de uma ação de combate. O Dano não é considerado como um efeito. O dano pode ser afetado por Imunidade a Dano ou outra habilidades, como as que redirecionam dano. Dano não pode ser anulado, como um efeito de uma ação pode ser anulado/prevenido, mas pode ser mitigado por várias mecânicas do jogo.
+
+O Dano tem mais de um tipo:
 
 #### Tipos de Dano
 Temos alguns tipos de dano no jogo.
@@ -469,9 +471,9 @@ Os tipos de efeitos podem ser os seguintes - efeitos separados por barra represe
  - Ignorar Defesa (+): Enquanto o personagem estiver com este token, todo o dano que ele causar irá desconsiderar a defesa do alvo e os tokens de escudo durante o cálculo de dano - diferente da categoria de dano [Dano Perfurante](#tipos-de-dano), que ignora apenas a defesa e não afeta o escudo;
  - Escudo (+): Cada token mitiga um ponto de dano antes do cálculo de dano ao dano total recebido pelo personagem;
  - Confusão (-): Para utilizar um ataque, o personagem precisa tirar cara em um cara ou coroa ou um número par em um dado (de faces pares);
- - Silêncio (-): O personagem só pode utilizar ações básicas enquanto estiver com este token - qualquer passiva não pode ser utilizada também;
+ - Silêncio (-): O personagem só pode utilizar ações sem custo enquanto estiver com este token - qualquer passiva não pode ser utilizada também;
  - Paralisia (-): O personagem não poderá utilizar ações (ativas ou passivas) enquanto estiver com este token;
- - Fúria (-): O personagem irá causar +2 pontos de dano, mas só poderá utilizar ações básicas ou passivas sem custo de ativação;
+ - Fúria (-): O personagem irá causar +2 pontos de dano, mas só poderá utilizar ações sem custo básicas ou passivas sem custo de ativação;
  - Invisibilidade (+): O personagem não pode ser alvo de ações ou efeitos do oponente. Um personagem não pode receber este token se já estiver com um token de Provocação, e vice-versa - o token que o personagem já tiver bloqueia o recebimento do outro. Ver regras de precedência de alvo em Provocação;
  - Provocação (+): Um personagem com este token deverá ser o alvo de todas as ações e efeitos enquanto estiver com este token. Um personagem não pode receber este token se já estiver com um token de Invisibilidade, e vice-versa. Regras de precedência de alvo, quando há Provocação e/ou Invisibilidade em cena:
     - Se algum personagem do time-alvo tiver Provocação, a ação deve mirar um personagem com Provocação - se houver mais de um, todos eles são elegíveis. Em ações com múltiplos alvos, pelo menos um dos alvos escolhidos deve ser um personagem com Provocação;
@@ -517,6 +519,7 @@ Existem três condições de vitória possíveis que podem ser exploradas na con
  - Toque Mortal - se um personagem absorver pelo menos um ponto de dano causado por este personagem por sua vida, descarte todas as cartas anexadas a ele e embaralhe-o no deck de seu controlador. Este dano não é considerado como fatal ou um nocaute;
  - Vampirismo: Após o cálculo, todo dano causado por este personagem como fonte que foi absorvido pela vida do alvo, irá gerar um token de sobrevida para cada ponto absorvido;
  - Negar morte: Se o personagem recebeu um dano fatal, ele não será considerado como nocaute;
+ - Ponto Fraco(X): Esta ação causa X pontos de dano. Ao resolver o efeito desta ação, o defensor recebe tokens de DefDown na proporção de 2:1 em relação ao dano causado pela ação - se uma ação causa 4 pontos de dano, o defensor recebe 2 tokens de DefDown - se o número for ímpar, vai ser arredondado para baixo (ex.: Ponto Fraco 3, recebe 1 token). Os tokens de DefDown são colocados como resolução do efeito da ação, ou seja, não influenciam no cálculo de dano da própria ação que os gerou - apenas ações subsequentes sofrem a defesa reduzida;
  - Quebra de Defesa: Quando a defesa do personagem alvo chega a zero;
  - Posição Estratégia: A ação descrita só pode ser utilizada nas posições do time;
  - Posição Vantajosa: A ação descrita pode ser utilizada em qualquer posição do campo;
@@ -530,6 +533,7 @@ Existem três condições de vitória possíveis que podem ser exploradas na con
  - Reciclar Fonte (X/Y): Descarte X cartas de Fonte de Energia para comprar Y cartas em seu deck;
  - Reciclar Recursos (X/Y): Descarte X cartas de qualquer tipo para comprar Y cartas em seu deck;
  - Triturar (X): Descarte as X primeiras cartas do topo do deck do jogador alvo;
+ - Reaproveitar Recurso (X): Devolva X cartas da sua pilha de descarte para sua mão;
 
 ### Dinâmicas de Jogo
  - Ação Etérea: A ação só pode ser utilizada uma vez durante o jogo;
@@ -539,11 +543,12 @@ Existem três condições de vitória possíveis que podem ser exploradas na con
  - Aposte (X): Jogue X moedas ou X dados (d4, d6 ou um dado de faces pares) - se der cara na moeda ou par nos dados, você ganha a aposta;
  - Concentração (Condição): A ação só pode ser usada se a condição for alcançada;
  - Desanexar: Colocar uma carta que está junto a um personagem na pilha de descarte;
- - Starter (X): Dinâmica introduzida no Set de Tekken, para utilização de combos. A palavra-chave Starter representa o início de um combo e tem a seguinte definição: Starter (X) - Aposte (1) - Procure o item X e utilize a ação descrita pela palavra chave Starter. Após a resolução dos efeitos aquela carta deve ser colocada no fundo de seu deck;
- - Combo (X): Dinâmica introduzida no Set de Tekken, para utilização de combos. Esta palavra-chave indica que o item pode ter seu efeito utilizado mais de uma vez e sua definição é a seguinte: Combo (X) - Aposte (X) para usar a ação novamente, sem a necessidade de pagar seus custos;
- - Stance (X) - Dinâmica introduzida no Set de Tekken, para utilização de combos. Esta palavra-chave indica que o personagem tem mais de uma posição de combate. Sua definição é: Stance (X) - O personagem recebe um token de Stance (X) e poderá utilizar itens com a marcação Stance (X). Em uma Stance o personagem não pode usar outros golpes, apenas os de Stance. Você pode tirar o token de Stance a qualquer momento e caso outro token de Stance seja colocado no personagem, descarte o anterior. Itens marcados como Stance são anexáveis e dão uma outra ação para o personagem;
- - Finisher (X): Dinâmica introduzida no Set de Tekken, para utilização de combos. A palavra-chave Finisher representa o fim de um combo e tem a seguinte definição: Finisher (X) - Aposte (1) - Procure o item X e utilize a ação descrita pela palavra chave Finisher. Após a resolução dos efeitos aquela carta deve ser colocada no fundo de seu deck;
- - Tag (X) - Dinâmica introduzida no Set de Tekken, para utilização de combos. A palavra-chave representa alternância entre personagens. Sua definição é: Tag (X) - Altere o personagem X para a posição principal e procure um item com tag do personagem X e use o efeito descrito pela palavra chave Tag. Após a resolução dos efeitos aquela carta deve ser colocada no fundo de seu deck;
+ - Dependência (Condição): O efeito de uma carta só será liberado se uma condição for alcançada. Diferente da Concentração, a dependência é no efeito e não na ação.
+ - Starter (X): Dinâmica de combos. A palavra-chave Starter representa o início de um combo e tem a seguinte definição: Starter (X) - Aposte (1) - Procure o item X e utilize a ação descrita pela palavra chave Starter. Após a resolução dos efeitos aquela carta deve ser colocada no fundo de seu deck;
+ - Combo (X): Dinâmica de combos. Esta palavra-chave indica que o item pode ter seu efeito utilizado mais de uma vez e sua definição é a seguinte: Combo (X) - Aposte (X) para usar a ação novamente, sem a necessidade de pagar seus custos;
+ - Stance (X) - Dinâmica de combos. Esta palavra-chave indica que o personagem tem mais de uma posição de combate. Sua definição é: Stance (X) - O personagem recebe um token de Stance (X) e poderá utilizar itens com a marcação Stance (X). Em uma Stance o personagem não pode usar outros golpes, apenas os de Stance. Você pode tirar o token de Stance a qualquer momento e caso outro token de Stance seja colocado no personagem, descarte o anterior. Itens marcados como Stance são anexáveis e dão uma outra ação para o personagem;
+ - Finisher (X): Dinâmica de combos. A palavra-chave Finisher representa o fim de um combo e tem a seguinte definição: Finisher (X) - Aposte (1) - Procure o item X e utilize a ação descrita pela palavra chave Finisher. Após a resolução dos efeitos aquela carta deve ser colocada no fundo de seu deck;
+ - Tag (X) - Dinâmica de combos. A palavra-chave representa alternância entre personagens. Sua definição é: Tag (X) - Altere o personagem X para a posição principal e procure um item com tag do personagem X e use o efeito descrito pela palavra chave Tag. Após a resolução dos efeitos aquela carta deve ser colocada no fundo de seu deck;
  
 ### Efeitos
  - Ação Única: O jogador poderá efetuar essa ação apenas uma vez por turno;
@@ -578,13 +583,15 @@ Lista alfabética de todas as palavras-chave do jogo, com uma breve descrição 
  - [Combo (X)](#dinâmicas-de-jogo): permite repetir o efeito de um item pagando uma aposta;
  - [Concentração (Condição)](#dinâmicas-de-jogo): a ação só pode ser usada se a condição for cumprida;
  - [Conexão Vital (Personagem)](#combate): gera Sobrevida para si ou para outro personagem por dano absorvido;
+ - [Dano](#combate): Indica a quantidade de vida que um personagem perde como resultado de uma ação de combate. O Dano não é considerado como um efeito.
+ - [Dependência (Condição)](#dinâmicas-de-jogo): o efeito só acontece se a condição for cumprida;
  - [Desanexar](#dinâmicas-de-jogo): colocar uma carta anexada na pilha de descarte;
  - [Desviar](#combate): redireciona dano recebido para outro personagem do mesmo controlador;
  - [Devoção (X)](#efeitos): libera uma ação se um tipo, categoria ou personagem X estiver em cena;
  - [Duplicar (X) / Triplicar (X)](#efeitos): descarta cartas da mão para repetir a ação;
  - [Extinguir Fonte (X)](#controle-de-cartas): custo de descarte de fontes de energia;
  - [Extinguir Recurso (X)](#controle-de-cartas): descarta X cartas da mão;
- - [Finisher (X)](#dinâmicas-de-jogo): encerra um combo (Tekken), buscando e usando um item marcado;
+ - [Finisher (X)](#dinâmicas-de-jogo): encerra um combo, buscando e usando um item marcado;
  - [Flanquear](#combate): ação com Flanquear, exclusiva da posição de time, resolvida antes do ataque principal;
  - [Fonte Estéril](#controle-de-cartas): fonte de energia que não gera energia nem paga custos;
  - [Ignorar Defesa](#combate): ignora defesa e escudo do alvo durante o cálculo de dano;
@@ -599,9 +606,9 @@ Lista alfabética de todas as palavras-chave do jogo, com uma breve descrição 
  - [Reciclar Recursos (X/Y)](#controle-de-cartas): descarta X cartas de qualquer tipo para comprar Y cartas;
  - [Reflexão](#combate): redireciona dano recebido para um personagem do oponente;
  - [Sidekick](#efeitos): a ação só pode ser usada com o personagem em uma posição de time;
- - [Stance (X)](#dinâmicas-de-jogo): dá ao personagem uma posição de combate alternativa (Tekken);
- - [Starter (X)](#dinâmicas-de-jogo): inicia um combo (Tekken), buscando e usando um item marcado;
- - [Tag (X)](#dinâmicas-de-jogo): troca o personagem principal e usa um item marcado do personagem convocado (Tekken);
+ - [Stance (X)](#dinâmicas-de-jogo): dá ao personagem uma posição de combate alternativa;
+ - [Starter (X)](#dinâmicas-de-jogo): inicia um combo, buscando e usando um item marcado;
+ - [Tag (X)](#dinâmicas-de-jogo): troca o personagem principal e usa um item marcado do personagem convocado;
  - [Tipo Mutável (tipo)](#combate): trata a ação e seus efeitos como sendo de outro tipo;
  - [Toque Mortal](#combate): descarta as cartas anexadas do alvo e o embaralha no deck ao absorver dano;
  - [Transpassar](#combate): divide o dano não absorvido entre outros alvos;
@@ -634,11 +641,3 @@ v0.9 [pendente] - Mudança de licenciamento de GNU AGPL v3.0 para Creative Commo
 
 ## Referências
 https://docs.google.com/spreadsheets/d/1aO8JKKSFTcdeChzrNcvQBR2B0iLL3dSM/edit#gid=1071446485
-
-http://www.magicjebb.com.br/site/Manual_RegrasCompreensivas_Ed2-0_Rev201801.pdf
-http://dclegends.wiki/wiki/Effects
-http://dclegendsmobile.com/resources/buffs-and-debuffs/
-https://magic.wizards.com/pt-BR/rules
-https://blogs.magicjudges.org/translatedrules/files/2019/05/MagicCompRules_20190503_PT.pdf
-https://media.wizards.com/2014/docs/PT_M15_QckStrtBklt_LR_Crop.pdf
-https://mtg.fandom.com/wiki/Phasing#:~:text=Phasing%20is%20a%20mechanic%20where,temporarily%20disable%20an%20opponent's%20permanents.

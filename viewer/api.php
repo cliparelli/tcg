@@ -28,6 +28,31 @@ try {
             echo json_encode(['file' => $relPath, 'cards' => $rows], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
             break;
 
+        case 'save-card':
+            if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+                throw new InvalidArgumentException('Ação "save-card" requer método POST.');
+            }
+
+            $body = json_decode(file_get_contents('php://input') ?: '', true);
+            if (!is_array($body)) {
+                throw new InvalidArgumentException('Corpo da requisição inválido.');
+            }
+
+            $relPath = (string) ($body['file'] ?? '');
+            $id = (string) ($body['id'] ?? '');
+            $fields = $body['fields'] ?? null;
+
+            if ($relPath === '' || $id === '' || !is_array($fields)) {
+                throw new InvalidArgumentException('Parâmetros "file", "id" e "fields" são obrigatórios.');
+            }
+
+            $stringFields = array_map(static fn ($v): string => (string) $v, $fields);
+            $library->updateRow($relPath, $id, $stringFields);
+
+            $rows = $library->readByRelPath($relPath);
+            echo json_encode(['file' => $relPath, 'cards' => $rows], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+            break;
+
         default:
             http_response_code(400);
             echo json_encode(['error' => 'Ação desconhecida.'], JSON_UNESCAPED_UNICODE);

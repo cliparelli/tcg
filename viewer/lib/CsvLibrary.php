@@ -165,6 +165,130 @@ final class CsvLibrary
     }
 
     /**
+     * Atualiza os campos de uma linha existente (identificada por _id) e regrava o CSV.
+     *
+     * @param array<string, string> $fields
+     */
+    public function updateRow(string $relPath, string $id, array $fields): void
+    {
+        $csvPath = realpath($this->libDir . DIRECTORY_SEPARATOR . $relPath);
+        $libReal = realpath($this->libDir);
+
+        if ($csvPath === false || $libReal === false || !str_starts_with($csvPath, $libReal)) {
+            throw new InvalidArgumentException('Arquivo não encontrado dentro de LIB/.');
+        }
+
+        $type = $this->detectType(basename($csvPath));
+        if ($type === null) {
+            throw new InvalidArgumentException('CSV não reconhecido (esperado PERSONAGENS, ITENS ou ENERGIAS no nome).');
+        }
+
+        $readHandle = fopen($csvPath, 'r');
+        if ($readHandle === false) {
+            throw new InvalidArgumentException('Não foi possível abrir o arquivo para leitura.');
+        }
+
+        $header = [];
+        $lines = [];
+        $found = false;
+
+        try {
+            $header = fgetcsv($readHandle, 0, ';');
+            if ($header === false || $header === null) {
+                throw new InvalidArgumentException('CSV sem cabeçalho.');
+            }
+            $header = array_map(
+                static fn (?string $col): string => str_replace("\n", ' ', trim((string) $col)),
+                $header
+            );
+
+            $index = 0;
+            while (($row = fgetcsv($readHandle, 0, ';')) !== false) {
+                if ($row === [null] || $this->isBlankRow($row)) {
+                    $lines[] = ['raw' => $row, 'blank' => true];
+                    continue;
+                }
+
+                $record = [];
+                foreach ($header as $i => $colName) {
+                    if ($colName === '') {
+                        continue;
+                    }
+                    $record[$colName] = trim((string) ($row[$i] ?? ''));
+                }
+
+                if (($record['Nome'] ?? '') === '') {
+                    $lines[] = ['raw' => $row, 'blank' => true];
+                    continue;
+                }
+
+                $rowId = $type . '-' . $index;
+                if ($rowId === $id) {
+                    foreach ($fields as $key => $value) {
+                        if ($key === '' || str_starts_with($key, '_') || !in_array($key, $header, true)) {
+                            continue;
+                        }
+                        $record[$key] = $value;
+                    }
+                    $found = true;
+                }
+
+                $lines[] = ['raw' => $row, 'blank' => false, 'record' => $record];
+                $index++;
+            }
+        } finally {
+            fclose($readHandle);
+        }
+
+        if (!$found) {
+            throw new InvalidArgumentException('Carta não encontrada para atualização.');
+        }
+
+        $writeHandle = fopen($csvPath, 'w');
+        if ($writeHandle === false) {
+            throw new InvalidArgumentException('Não foi possível abrir o arquivo para escrita.');
+        }
+
+        try {
+            fwrite($writeHandle, $this->csvLine($header) . "\n");
+            foreach ($lines as $line) {
+                if ($line['blank']) {
+                    fwrite($writeHandle, $this->csvLine($line['raw']) . "\n");
+                    continue;
+                }
+                $out = [];
+                foreach ($header as $colName) {
+                    $out[] = $colName === '' ? '' : ($line['record'][$colName] ?? '');
+                }
+                fwrite($writeHandle, $this->csvLine($out) . "\n");
+            }
+        } finally {
+            fclose($writeHandle);
+        }
+    }
+
+    /**
+     * Monta uma linha CSV com ";" como delimitador, citando campos apenas quando
+     * necessário (contêm ";", aspas ou quebra de linha), no mesmo estilo dos CSVs existentes.
+     *
+     * @param array<int, string|null> $fields
+     */
+    private function csvLine(array $fields): string
+    {
+        $parts = [];
+        foreach ($fields as $field) {
+            $value = (string) ($field ?? '');
+            if (preg_match('/[";,\n\r]/', $value) === 1) {
+                $parts[] = '"' . str_replace('"', '""', $value) . '"';
+            } else {
+                $parts[] = $value;
+            }
+        }
+
+        return implode(';', $parts);
+    }
+
+    /**
      * @param array<int, string|null> $row
      */
     private function isBlankRow(array $row): bool

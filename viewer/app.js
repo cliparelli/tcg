@@ -14,8 +14,22 @@
 
     const TYPE_ASSET_MODEL = {
         personagem: 'card',
-        item: 'card',
+        item: 'land',
         energia: 'land',
+    };
+
+    const TYPE_INITIAL_OVERRIDES = {
+        tecsci: 'T',
+    };
+
+    const TYPE_COLOR_SLUG = {
+        magia: 'magia',
+        tecsci: 'tec',
+        'físico': 'fisico',
+        fisico: 'fisico',
+        divino: 'divino',
+        'cósmico': 'cosmico',
+        cosmico: 'cosmico',
     };
 
     init();
@@ -117,31 +131,112 @@
         }
         cardPreview.appendChild(art);
 
+        if (card._type !== 'energia') {
+            const heart = document.createElement('div');
+            heart.className = 'card-preview__heart';
+            heart.textContent = card.Vida || '-';
+            cardPreview.appendChild(heart);
+
+            const shield = document.createElement('div');
+            shield.className = 'card-preview__shield';
+            shield.textContent = card.Defesa || '-';
+            cardPreview.appendChild(shield);
+        }
+
         const title = document.createElement('div');
         title.className = 'card-preview__title';
         title.textContent = card.Nome || '';
         cardPreview.appendChild(title);
 
-        if (card._type !== 'energia') {
-            const status = document.createElement('div');
-            status.className = 'card-preview__status';
-            status.innerHTML = `
-                <span>❤ ${escapeHtml(card.Vida || '-')}</span>
-                <span>🛡 ${escapeHtml(card.Defesa || '-')}</span>
-            `;
-            cardPreview.appendChild(status);
+        const elementalType = card._type !== 'item' ? extractTypeName(card.Tipo) : '';
+        if (elementalType) {
+            const typeBadge = document.createElement('div');
+            typeBadge.className = 'card-preview__type-badge';
+            const typeDot = document.createElement('span');
+            typeDot.className = `card-preview__dot ${typeColorClass(elementalType)}`;
+            typeDot.title = elementalType;
+            typeBadge.appendChild(typeDot);
+            cardPreview.appendChild(typeBadge);
         }
+
+        const classification = document.createElement('div');
+        classification.className = 'card-preview__classification';
+        classification.textContent = card._type === 'personagem'
+            ? extractClassification(card)
+            : (card._type === 'item' ? (card.Tipo || '').trim() : elementalType);
+        cardPreview.appendChild(classification);
 
         const text = document.createElement('div');
         text.className = 'card-preview__text';
         text.innerHTML = buildTextBlocks(card);
         cardPreview.appendChild(text);
 
+        if (card._type !== 'energia' && (card.Resistência || card.Fraqueza)) {
+            const footer = document.createElement('div');
+            footer.className = 'card-preview__footer';
+            footer.innerHTML = `
+                <span class="card-preview__dot ${typeColorClass(card.Resistência)}" title="Resistência: ${escapeHtml(card.Resistência || '')}"></span>
+                <span class="card-preview__dot ${typeColorClass(card.Fraqueza)}" title="Fraqueza: ${escapeHtml(card.Fraqueza || '')}"></span>
+            `;
+            cardPreview.appendChild(footer);
+        }
+
         const frame = document.createElement('img');
         frame.className = 'card-preview__frame';
         frame.src = frameSrc;
         frame.alt = 'moldura';
         cardPreview.appendChild(frame);
+    }
+
+    function extractTypeName(tipo) {
+        const value = (tipo || '').trim();
+        if (!value) {
+            return '';
+        }
+        const parts = value.split('-');
+        return parts.length > 1 ? parts.slice(1).join('-').trim() : value;
+    }
+
+    function typeInitialLetter(tipo) {
+        const value = (tipo || '').trim();
+        if (!value) {
+            return '';
+        }
+        const key = value.toLowerCase();
+        return TYPE_INITIAL_OVERRIDES[key] || value.charAt(0).toUpperCase();
+    }
+
+    function typeColorClass(tipo) {
+        const key = (tipo || '').trim().toLowerCase();
+        const slug = TYPE_COLOR_SLUG[key];
+        return slug ? `card-preview__dot--${slug}` : 'card-preview__dot--neutro';
+    }
+
+    function extractClassification(card) {
+        const raw = (card.Classificação || '').trim();
+        if (!raw) {
+            return '';
+        }
+        const parts = raw.split(' - ');
+        return parts.length > 1 ? parts.slice(1).join(' - ').trim() : raw;
+    }
+
+    function costToSymbols(cost, tipo) {
+        const n = parseInt(cost, 10);
+        if (!n || n <= 0) {
+            return '';
+        }
+        const initial = typeInitialLetter(tipo) || '?';
+        return initial.repeat(n);
+    }
+
+    function splitTitledDescription(value) {
+        const text = (value || '').trim();
+        const match = text.match(/^\*\*(.+?)\*\*\s*—\s*([\s\S]*)$/);
+        if (match) {
+            return { title: match[1].trim(), body: match[2].trim() };
+        }
+        return { title: '', body: text };
     }
 
     function resolveArtSrc(card) {
@@ -160,8 +255,8 @@
         const blocks = [];
 
         if (card._type === 'personagem') {
-            const meta = [card.Classificação, card.Tipo, card.Universo].filter(Boolean).join(' · ');
-            if (meta) blocks.push(`<h4>${escapeHtml(meta)}</h4>`);
+            addActionBlock(blocks, card['Custo P'], card.Tipo, card['Descrição P']);
+            addActionBlock(blocks, card['Custo A'], card.Tipo, card['Descrição A']);
 
             addBlock(blocks, 'Sidekick', card['Descrição Sidekick']);
             addBlock(blocks, 'Líder', card['Descrição Líder']);
@@ -169,11 +264,11 @@
             addBlock(blocks, 'Ataque', card['Descrição Ataque']);
             addBlock(blocks, null, card['Texto Final 2']);
         } else if (card._type === 'item') {
-            const meta = [card.Tipo, card.Dinâmica, card.Universo].filter(Boolean).join(' · ');
+            const meta = [card.Dinâmica, card.Universo].filter(Boolean).join(' · ');
             if (meta) blocks.push(`<h4>${escapeHtml(meta)}</h4>`);
             addBlock(blocks, null, card['Descrição']);
         } else if (card._type === 'energia') {
-            const meta = [card.Tipo, card.Energia ? `Energia ${card.Energia}` : ''].filter(Boolean).join(' · ');
+            const meta = card.Energia ? `Energia ${card.Energia}` : '';
             if (meta) blocks.push(`<h4>${escapeHtml(meta)}</h4>`);
             addBlock(blocks, null, card['Descrição']);
             if (card['Texto Final'] && !isUrl(card['Texto Final'])) {
@@ -194,12 +289,139 @@
         blocks.push(`<p>${escapeHtml(value)}</p>`);
     }
 
+    function addActionBlock(blocks, cost, tipo, description) {
+        if (!description || isUrl(description)) {
+            return;
+        }
+        const { title, body } = splitTitledDescription(description);
+        const isPassive = !parseInt(cost, 10);
+        const symbols = costToSymbols(cost, tipo);
+
+        const headingParts = [];
+        if (isPassive) {
+            headingParts.push('<em>Passiva</em>');
+        }
+        if (symbols) {
+            headingParts.push(`[${escapeHtml(symbols)}]`);
+        }
+        if (title) {
+            headingParts.push(`<strong>${escapeHtml(title)}</strong>`);
+        }
+        const heading = headingParts.join(' ');
+
+        blocks.push('<div class="card-preview__action">');
+        if (heading) {
+            blocks.push(`<h4>${heading}</h4>`);
+        }
+        blocks.push(`<p>${escapeHtml(body)}</p>`);
+        blocks.push('</div>');
+    }
+
     function renderRaw(card) {
-        const rows = Object.entries(card)
-            .filter(([key]) => !key.startsWith('_'))
-            .map(([key, value]) => `<tr><td>${escapeHtml(key)}</td><td>${escapeHtml(value || '')}</td></tr>`)
-            .join('');
-        cardRaw.innerHTML = `<table>${rows}</table>`;
+        cardRaw.innerHTML = '';
+
+        const form = document.createElement('form');
+        form.className = 'card-raw__form';
+        form.addEventListener('submit', (ev) => {
+            ev.preventDefault();
+            saveCard(card, form);
+        });
+
+        const table = document.createElement('table');
+        const tbody = document.createElement('tbody');
+
+        for (const [key, value] of Object.entries(card)) {
+            if (key.startsWith('_')) {
+                continue;
+            }
+            const tr = document.createElement('tr');
+
+            const th = document.createElement('td');
+            th.textContent = key;
+            tr.appendChild(th);
+
+            const td = document.createElement('td');
+            const isLong = String(value || '').length > 60 || /\n/.test(String(value || ''));
+            const field = document.createElement(isLong ? 'textarea' : 'input');
+            if (!isLong) {
+                field.type = 'text';
+            } else {
+                field.rows = 3;
+            }
+            field.name = key;
+            field.value = value || '';
+            field.className = 'card-raw__field';
+            td.appendChild(field);
+            tr.appendChild(td);
+
+            tbody.appendChild(tr);
+        }
+
+        table.appendChild(tbody);
+        form.appendChild(table);
+
+        const actions = document.createElement('div');
+        actions.className = 'card-raw__actions';
+
+        const status = document.createElement('span');
+        status.className = 'card-raw__status';
+        actions.appendChild(status);
+
+        const saveBtn = document.createElement('button');
+        saveBtn.type = 'submit';
+        saveBtn.textContent = 'Salvar';
+        actions.appendChild(saveBtn);
+
+        form.appendChild(actions);
+        cardRaw.appendChild(form);
+    }
+
+    async function saveCard(card, form) {
+        const status = form.querySelector('.card-raw__status');
+        const saveBtn = form.querySelector('button[type="submit"]');
+        const fields = {};
+        for (const el of form.elements) {
+            if (el.name) {
+                fields[el.name] = el.value;
+            }
+        }
+
+        saveBtn.disabled = true;
+        status.textContent = 'Salvando...';
+        status.className = 'card-raw__status';
+
+        try {
+            const res = await fetch('api.php?action=save-card', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    file: fileSelect.value,
+                    id: card._id,
+                    fields,
+                }),
+            });
+            const data = await res.json();
+            if (!res.ok || data.error) {
+                throw new Error(data.error || 'Falha ao salvar.');
+            }
+
+            currentCards = data.cards || [];
+            const updated = currentCards.find((c) => c._id === card._id);
+            applyFilter();
+            if (updated) {
+                activeCardId = updated._id;
+                renderList();
+                renderPreview(updated);
+                renderRaw(updated);
+                const refreshedStatus = cardRaw.querySelector('.card-raw__status');
+                refreshedStatus.textContent = 'Salvo.';
+                refreshedStatus.className = 'card-raw__status card-raw__status--ok';
+            }
+        } catch (err) {
+            status.textContent = err.message || 'Erro ao salvar.';
+            status.className = 'card-raw__status card-raw__status--error';
+            saveBtn.disabled = false;
+        }
     }
 
     function isUrl(value) {
