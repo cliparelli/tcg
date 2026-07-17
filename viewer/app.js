@@ -2,6 +2,7 @@
     'use strict';
 
     const fileSelect = document.getElementById('file-select');
+    const cardSelect = document.getElementById('card-select');
     const searchInput = document.getElementById('search');
     const cardList = document.getElementById('card-list');
     const cardPreview = document.getElementById('card-preview');
@@ -45,6 +46,12 @@
         populateFileSelect(data.collections || []);
         fileSelect.addEventListener('change', () => loadFile(fileSelect.value));
         searchInput.addEventListener('input', applyFilter);
+        cardSelect.addEventListener('change', () => {
+            const card = filteredCards.find((c) => c._id === cardSelect.value);
+            if (card) {
+                selectCard(card);
+            }
+        });
 
         if (fileSelect.options.length > 0) {
             loadFile(fileSelect.value);
@@ -89,8 +96,13 @@
 
     function renderList() {
         cardList.innerHTML = '';
+        cardSelect.innerHTML = '';
+
         if (filteredCards.length === 0) {
             cardList.innerHTML = '<li>Nenhuma carta encontrada.</li>';
+            const opt = document.createElement('option');
+            opt.textContent = 'Nenhuma carta encontrada';
+            cardSelect.appendChild(opt);
             return;
         }
 
@@ -108,6 +120,14 @@
 
             li.addEventListener('click', () => selectCard(card));
             cardList.appendChild(li);
+
+            const opt = document.createElement('option');
+            opt.value = card._id;
+            opt.textContent = card.Nome || '(sem nome)';
+            if (card._id === activeCardId) {
+                opt.selected = true;
+            }
+            cardSelect.appendChild(opt);
         }
     }
 

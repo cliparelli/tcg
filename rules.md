@@ -82,7 +82,7 @@ Um personagem tem as seguintes características:
  - Resistência/Fraqueza: Além da vida e da defesa, a resistência e a fraqueza podem ser utilizadas para mitigar ou aumentar o dano recebido por um personagem. Um personagem com resistência a determinado tipo, terá o dobro de defesa durante o cálculo de dano, enquanto um personagem com fraqueza, irá receber o dobro do dano durante o combate;
  - Ações: Um personagem pode ter até duas ações, sendo elas passivas ou ativas, e podem ser utilizadas em qualquer posição (principal ou time) - uma ação sem custo pode ser considerada uma ação básica:
     - Passiva: Normalmente não tem custo de ativação e vai gerar algum efeito independente da posição do personagem;
-    - Ativa: É uma ação de ataque, que necessita uma quantidade de energia atrelada ao personagem para poder ser utilizada. Caso haja outras condições para seu uso, estas devem ser cumpridas. Uma ação ativa pode ter a palavra-chave [Flanquear](#combate), que restringe seu uso à posição de time - ver a seção [Combate](#combate) para a sequência de resolução;
+    - Ativa: É uma ação de ataque, que necessita uma quantidade de energia atrelada ao personagem para poder ser utilizada. Caso haja outras condições para seu uso, estas devem ser cumpridas. Uma ação ativa pode ter a palavra-chave [Flanquear](#combate), que restringe seu uso à posição de time - ver a seção [Combate](#combate) para a sequência de resolução. Os custos de ativação de uma ação ativa, estão relacionados diretamente as fontes de energia anexadas ao personagem - por exemplo, uma ação com custo de 3 Fontes Incolores, precisa de pelo menos 3 cartas de fontes de energia básicas anexadas a ela ou fontes avançadas que geram mais de uma energia.
 
 
 #### Power System

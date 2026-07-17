@@ -11,12 +11,17 @@
     <aside class="sidebar">
         <h1>Visualizador de Cartas</h1>
 
-        <div class="field">
+        <div class="field field--file">
             <label for="file-select">Arquivo CSV</label>
             <select id="file-select"></select>
         </div>
 
-        <div class="field">
+        <div class="field field--card-select">
+            <label for="card-select">Carta</label>
+            <select id="card-select"></select>
+        </div>
+
+        <div class="field field--search">
             <label for="search">Buscar</label>
             <input type="search" id="search" placeholder="Nome da carta...">
         </div>
@@ -26,7 +31,7 @@
 
     <main class="preview-pane">
         <div id="card-preview" class="card-preview">
-            <div class="card-preview__placeholder">Selecione uma carta na lista ao lado.</div>
+            <div class="card-preview__placeholder">Selecione uma carta na lista ou no combo acima.</div>
         </div>
         <div id="card-raw" class="card-raw"></div>
     </main>

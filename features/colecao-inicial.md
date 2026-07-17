@@ -7,6 +7,7 @@ Documento de design para o primeiro set de uma **propriedade intelectual própri
 ## INDEX
 - [Por que este documento existe](#por-que-este-documento-existe)
 - [Lore — premissa do universo](#lore--premissa-do-universo)
+    - [Lore expandida do universo](#lore-expandida-do-universo)
 - [Os 5 tipos (afinidades) do set inicial](#os-5-tipos-afinidades-do-set-inicial)
     - [Triângulo — os três mundos do Torneio](#triângulo--os-três-mundos-do-torneio)
         - [Lore de cada tipo do triângulo](#lore-de-cada-tipo-do-triângulo)
@@ -42,6 +43,11 @@ Documento de design para o primeiro set de uma **propriedade intelectual própri
 - [Itens e Fontes de Energia — estrutura simplificada](#itens-e-fontes-de-energia--estrutura-simplificada)
 - [Convenções herdadas de `rules.md` (sem mudança)](#convenções-herdadas-de-rulesmd-sem-mudança)
 - [Em aberto / próximos passos](#em-aberto--próximos-passos)
+- [Inspirações adicionais](#inspirações-adicionais)
+    - [Por tipo (referências originais)](#por-tipo-referências-originais)
+    - [Por tipo (referências complementares)](#por-tipo-referências-complementares)
+    - [Interações entre tipos](#interações-entre-tipos)
+    - [Lore geral do set (para itens genéricos)](#lore-geral-do-set-para-itens-genéricos)
 - [Listagem completa de cartas](#listagem-completa-de-cartas)
 
 ---
@@ -57,6 +63,27 @@ Existe um pequeno multiverso de **três mundos rivais**, cada um dominado por um
 O equilíbrio se rompe com a **Fratura do Multiverso**: um evento que rasga a fronteira entre esse pequeno multiverso e o resto da existência, introduzindo dois novos mundos que não faziam parte do ciclo do Torneio — **Divino** (o **Destacamento Interregno**) e **Cósmico** (a **Astraca Primordial**). Eles não são rivais naturais dos três primeiros; são forças externas, mais antigas ou mais vastas, que agora intervêm no conflito com motivações próprias. Isso muda o Torneio para sempre e é o gancho narrativo natural para expansões futuras (mais mundos podem ter vazado pela Fratura).
 
 Este pano de fundo é deliberadamente enxuto: poucos nomes próprios de "mundos", uma tradição central (o Torneio), um evento de virada (a Fratura) e espaço aberto para personagens, categorias e novos mundos em sets seguintes.
+
+### Lore expandida do universo
+
+O parágrafo acima permanece a premissa oficial e resumida do set; esta subseção só adiciona textura e detalhe por cima dela, sem contradizer nem substituir nada já fechado em "Passos finalizados". Serve tanto para embasar futuras cartas de sabor/flavor text quanto para dar mais contexto de criação de arte além do que já existe em "Inspirações adicionais".
+
+**Mecânica do Torneio.** O Torneio não é uma guerra corrida nem uma disputa de eliminação única — é sazonal e cíclico, encerrando-se e recomeçando a cada rodada ("temporada"), o que explica por que gerações inteiras de Silenteia, Detritônia e Solar Comum cresceram conhecendo apenas essa rotina como normalidade. Cada temporada é decidida por uma série de confrontos entre representantes dos três mundos — não um único combate decisivo — e o resultado acumulado redistribui prestígio, recursos e território até a temporada seguinte. Por isso "perder o Torneio" nunca é catastrófico para um mundo (não há conquista territorial permanente nem extermínio): é mais próximo de perder uma disputa comercial/esportiva de longo prazo, com consequências reais mas reversíveis na rodada seguinte. Essa reversibilidade é o que sustenta séculos de rivalidade sem que nenhum dos três mundos jamais tenha vencido "de vez".
+
+**Natureza da Fratura.** A Fratura não é um portal, uma invasão ou uma guerra — é descrita pelos que a testemunharam como um "rasgo" repentino e sem aviso na fronteira que sempre separou o pequeno multiverso do Torneio do resto da existência. Não teve gatilho conhecido dentro do próprio ciclo do Torneio (não foi causada por nenhum dos três mundos rivais); é tratada mais como um acidente cósmico ou uma erosão que finalmente cedeu do que como um ataque. O efeito imediato foi duplo: (1) abriu caminho para que o Destacamento Interregno e a Astraca Primordial chegassem ao Torneio, e (2) deixou marcas físicas duradouras — fissuras residuais que ainda aparecem esporadicamente no céu ou na paisagem dos três mundos originais, sem padrão previsível, como lembretes de que a fronteira que os isolava não é mais absoluta. Ninguém, em nenhum dos cinco mundos, sabe dizer com certeza se a Fratura foi um evento único e encerrado ou se pode voltar a acontecer.
+
+**Vida cotidiana nos 5 mundos.** Para a população comum (não os personagens-carta, que são a exceção notável, não a regra) o Torneio é tradição cultural antes de ser conflito: em Silenteia, é observado com o mesmo silêncio contemplativo que rege o resto da vida monástica — poucos monges realmente lutam, a maioria só mantém a tradição viva através de meditação e histórico oral; na Detritônia, o Torneio é motivo de aposta, negócio e orgulho comunitário, com bairros inteiros torcendo e financiando seus "Engenheiros da Queda" com sucata e favores; em Solar Comum, é o evento cultural mais importante do calendário, celebrado com a mesma pompa esportiva/nacional de uma final internacional, mas sem que isso crie desigualdade entre as nações que participam. Desde a Fratura, a população dos três mundos originais também aprendeu a conviver com a presença ocasional e discreta do Destacamento Interregno (visto como um agouro respeitoso, quase religioso) e com rumores — raramente confirmados diretamente — de que "algo antigo e furioso" (a Astraca) desperta em algum canto do céu sempre que uma fissura nova se abre.
+
+**Ganchos para expansões futuras.** O documento já registra que "mais mundos podem ter vazado pela Fratura" (ver acima) — os pontos abaixo são sementes específicas para explorar isso sem comprometer nada do set atual:
+- As fissuras residuais mencionadas em "Natureza da Fratura" podem ser o gancho mecânico/narrativo direto para um mundo novo em uma expansão futura: uma fissura que finalmente "termina de abrir".
+- Nem o Destacamento Interregno nem a Astraca Primordial vieram sozinhos por escolha própria — abre espaço para uma futura terceira força externa que tenha atravessado a mesma Fratura por outro motivo (fugindo, caçando, ou simplesmente arrastada), com uma relação própria (não necessariamente sinergia) com as duas já existentes.
+- A pergunta em aberto no fim de "Natureza da Fratura" (evento único vs. recorrente) é deliberadamente deixada sem resposta — uma segunda Fratura, menor ou parcial, é um gancho natural de expansão "arco 2".
+- O "Interregno" no nome do Destacamento sugere um período suspenso com fim implícito — uma expansão futura pode explorar o que acontece quando esse período "termina" oficialmente.
+
+**Notas de apoio à criação de arte.** Além do vocabulário visual já descrito em "Inspirações adicionais" (por tipo e nas interações entre tipos), esta lore expandida sugere alguns elementos adicionais a considerar em arte de ambientação/cena (não de personagem/item individual):
+- Cenas de "vida cotidiana" (torcida na Detritônia, celebração pública em Solar Comum, vigília silenciosa em Silenteia) como contraponto às cenas de combate — úteis para arte de Fonte de Energia ou de capa de expansão, que já tendem a retratar lugares em vez de conflito direto.
+- Fissuras residuais como elemento de fundo recorrente e sutil em qualquer arte ambientada nos três mundos originais pós-Fratura — não o foco da composição, mas um detalhe de continuidade (uma rachadura pequena e distante no céu, por exemplo), reforçando que a Fratura já aconteceu e deixou marca permanente sem precisar reafirmar isso em texto.
+- Rumores/"agouro" do Destacamento e da Astraca podem ser retratados indiretamente — uma sombra de asas cruzando a cena ao fundo, uma distorção sutil no horizonte — como forma de presença sem exigir a entidade em si na composição.
 
 ## Os 5 tipos (afinidades) do set inicial
 
@@ -600,11 +627,44 @@ Vazio
 
 
 ## Inspirações adicionais
+
+### Por tipo (referências originais)
 Magia — mundo desértico onírico (Moebius)
 TecSci — mundo caótico, sucata (Druillet / Kirby Quarto Mundo / Grampá)
 Físico — nosso mundo, mas nórdico/igualitário globalmente
 Divino — Estação das Brumas (anjos que ficaram)
 Cósmico — Quarto Mundo do Kirby
+
+### Por tipo (referências complementares)
+
+Mantendo a mesma lógica de citar autores/obras como atalho visual, não como lore adicional:
+
+- **Magia (Silenteia)** — paleta ocre/areia quase monocromática, linhas finas e espaçadas ao estilo Moebius; arquitetura de barro compactado (Dune, ksars do Marrocos real) em vez de pedra ou metal; figuras humanas alongadas e esguias, quase esculpidas pelo vento, nunca musculosas — reforça "abandonaram o corpo". Vazio como elemento de composição: muito espaço negativo/areia, poucos elementos por quadro.
+- **TecSci (Reino da Detritônia)** — colagem visual de sucata heterogênea (Kirby Krackle nas fontes de energia residual dos contratos rompidos); paleta enferrujada com faíscas de dourado/roxo (restos da antiga realeza arcana ainda visíveis sob a lama de metal); silhuetas assimétricas, remendadas, nada simétrico ou industrial-limpo — o oposto de um visual "sci-fi polido". Textura de rabisco denso (Druillet) em estruturas grandes (a Fossa, o Trono Enferrujado).
+- **Físico (Solar Comum)** — luz solar alta e uniforme, sem sombras dramáticas; paleta de cores nacionais/têxteis variadas coexistindo lado a lado sem hierarquia visual (reforça "nações distintas, nenhuma em desvantagem"); corpos atléticos realistas, sem armadura ou exagero de proporção — o "super-humano" aqui é físico plausível, não fantástico. Cenários de arena/praça pública, nunca de campo de batalha.
+- **Divino (Destacamento Interregno)** — névoa e contraluz constantes (o "Interregno" como estado permanente de nascer do dia); asas tratadas como objeto físico desgastável (penas caindo, faltando, remendadas), nunca ornamento limpo; roupagem entre uniforme militar e vestimenta litúrgica, sugerindo "destacamento" mais que "hierarquia celestial". Composição estática, quase de retrato — o Destacamento observa, não corre.
+- **Cósmico (Astraca Primordial)** — Kirby Krackle literal como linguagem de energia crua escapando de rachaduras no corpo/armadura das entidades; escala deliberadamente errada dentro do próprio quadro (a entidade nunca cabe inteira, sempre maior que o espaço ao redor); paleta de contraste extremo (negro do vácuo + uma cor primária saturada única por carta) em vez de gradientes — sugere algo que acabou de ser arrancado do sono, não desenhado com cuidado.
+
+### Interações entre tipos
+
+O triângulo (Magia/TecSci/Físico) tem vantagem/fraqueza mecânica entre si; a dupla de topo (Divino/Cósmico) interage por sinergia. Referências visuais para cartas ou artes que retratem esses cruzamentos diretamente (ex. arte de ação, arte de item usado por um tipo contra outro, ilustrações de decklist/capa de expansão):
+
+- **Magia vence Físico** — o monge imóvel lendo o guerreiro em pleno movimento; composição de contraste entre um corpo hiper-atlético "travado" a meio gesto e uma figura esguia parada, quase entediada. O momento visual é o do golpe que nunca chega a acontecer.
+- **TecSci vence Magia** — sucata e sensores improvisados "desmontando" visualmente um efeito mágico — o rabisco/traço onírico de Silenteia sendo literalmente capturado ou canalizado por fiação exposta e ímãs de gambiarra, como um feitiço que virou amostra de laboratório de fundo de quintal.
+- **Físico vence TecSci** — o impacto bruto de um corpo contra uma estrutura mecânica remendada, com estilhaços de metal (não sangue) voando; o "erro de cálculo" da engenhosidade da Detritônia diante de uma força que não segue nenhuma fórmula.
+- **Divino + Cósmico (sinergia, não rivalidade)** — a testemunha parada ao lado do titã que acabou de acordar; um observa, o outro reage — nunca lado a lado com a mesma pose. Contraste de temperatura de cor: névoa fria do Destacamento contra o Kirby Krackle quente/saturado da Astraca, sem se misturar, só coexistindo no mesmo quadro.
+- **Triângulo + dupla de topo (irrupção da Fratura)** — qualquer arte que mostre um mundo do triângulo com uma rachadura ao fundo — não uma porta ou portal desenhado, mas uma fenda irregular no próprio céu/horizonte da cena, como um vidro trincado, de onde vaza névoa (Divino) ou energia crua (Cósmico). É a imagem-âncora sugerida para capa de expansão ou verso alternativo de carta, reforçando o nome do set sem depender de texto.
+
+Essas referências servem de guia de arte para futuras gerações de imagem (`new-card`/pipeline de assets) — não introduzem lore nova nem mudam mecânica; são vocabulário visual para manter consistência entre ilustradores/gerações de IA diferentes.
+
+### Lore geral do set (para itens genéricos)
+
+Os **Itens genéricos** (ver "Itens genéricos" acima) não têm afinidade de tipo, então não devem puxar visualmente para nenhum dos 5 mundos — precisam de um vocabulário próprio, ancorado no que é comum a todos eles: o Torneio como tradição e a própria Fratura como fenômeno, não como lore de um mundo específico.
+
+- **O Torneio (tradição, não um dos 5 mundos)** — referência a rituais esportivos/cerimoniais antigos e neutros: arenas de terra batida, arquibancadas improvisadas, bandeiras e insígnias genéricas (sem escudo de nação específica), objetos de arbitragem (ampulhetas, cordas, marcações de chão) — o equivalente visual de "regra do jogo" antes de "poder de um mundo". Paleta neutra, terrosa/acinzentada, que não compete com a paleta de nenhum dos 5 tipos.
+- **A Fratura como fenômeno (não-lugar)** — não é um mundo, é uma ruptura: vidro/espaço trincado, bordas irregulares que vazam uma luz sem cor definida (nem a névoa do Divino, nem o Krackle do Cósmico — algo anterior a isso, "cru" e indefinido), como o instante exato antes de a energia de qualquer mundo específico preencher a fenda. Essa referência é a base para os 5 Épicos "Fratura XPTO" quando aparecerem lado a lado (ex. arte de capa, verso alternativo) e para qualquer Item genérico que mencione a Fratura em texto de sabor.
+- **Objetos utilitários sem dono** — itens genéricos tendem a representar equipamento "de qualquer competidor" (cinto, capa, amuleto, escudo comum): a referência visual é o objeto encontrado/emprestado, sem brasão ou adorno de mundo específico — superfícies neutras (couro cru, metal sem gravação, tecido sem estampa), reforçando que servem a qualquer tipo sem entregar identidade de nenhum.
+- **Composição de "arena compartilhada"** — quando um item genérico precisar de cenário de fundo (ex. arte de ação), usar a arena do Torneio genérica descrita acima, nunca o território de um dos 5 mundos — isso preserva o item como peça "neutra" tanto mecânica quanto visualmente.
 
 ## Listagem completa de cartas
 
