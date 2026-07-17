@@ -9,7 +9,7 @@ Uso:
     python3 scripts/gerar_imagens_chatgpt.py "Fratura do Multiverso"
     python3 scripts/gerar_imagens_chatgpt.py "Fratura do Multiverso" --pular-existentes
     python3 scripts/gerar_imagens_chatgpt.py "Fratura do Multiverso" --somente PERSONAGENS
-
+    python3 scripts/gerar_imagens_chatgpt.py "Fratura do Multiverso" --somente ITENS --pular-existentes
 Requer Playwright:
     pip3 install playwright
     python3 -m playwright install chromium

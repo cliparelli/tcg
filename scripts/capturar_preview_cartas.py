@@ -4,11 +4,14 @@ Sobe o viewer PHP localmente, abre cada carta de uma colecao no navegador
 (via Playwright) e tira um screenshot do preview renderizado (#card-preview),
 salvando em EXPANSIONS/<colecao>/. So captura cartas cujo arquivo de arte
 (coluna "Arte", ou "IMAGEM" no caso de Itens) existe de fato em LIB/<colecao>/.
+Com --sem-imagem, inverte o filtro: captura somente as cartas cujo arquivo
+de arte NAO existe em disco (util para ver o placeholder e planejar artes).
 
 Uso:
     python3 scripts/capturar_preview_cartas.py "Fratura do Multiverso"
     python3 scripts/capturar_preview_cartas.py "Fratura do Multiverso" --somente PERSONAGENS
     python3 scripts/capturar_preview_cartas.py "Fratura do Multiverso" --porta 8010
+    python3 scripts/capturar_preview_cartas.py "Fratura do Multiverso" --sem-imagem
 
 Requer Playwright:
     pip3 install playwright
@@ -59,8 +62,13 @@ def slugify(nome: str) -> str:
     return slug or "sem-nome"
 
 
-def carregar_cartas_com_arte(csv_path: Path, colecao_dir: Path, tipo: str):
-    """Le um CSV ';' e retorna as linhas cujo arquivo de arte existe em disco."""
+def carregar_cartas_com_arte(csv_path: Path, colecao_dir: Path, tipo: str, sem_imagem: bool = False):
+    """Le um CSV ';' e retorna as linhas cujo arquivo de arte existe em disco.
+
+    Com sem_imagem=True, inverte o filtro: retorna as linhas cujo arquivo de
+    arte esta referenciado no CSV mas NAO existe em disco (ou sem arte alguma
+    referenciada).
+    """
     cartas = []
     with csv_path.open("r", encoding="utf-8-sig", newline="") as f:
         leitor = csv.DictReader(f, delimiter=";")
@@ -85,6 +93,12 @@ def carregar_cartas_com_arte(csv_path: Path, colecao_dir: Path, tipo: str):
                 arquivo_arte = arte
             elif imagem and not eh_url(imagem):
                 arquivo_arte = imagem
+
+            if sem_imagem:
+                if arquivo_arte and (colecao_dir / arquivo_arte).is_file():
+                    continue
+                cartas.append({"id": f"{tipo}-{indice}", "nome": nome, "tipo": tipo})
+                continue
 
             if not arquivo_arte:
                 continue
@@ -120,6 +134,11 @@ def main():
     parser.add_argument("colecao", help="Nome da pasta dentro de LIB/ (ex.: 'Fratura do Multiverso')")
     parser.add_argument("--somente", help="Filtra so os CSVs cujo nome contem este texto (ex.: PERSONAGENS)")
     parser.add_argument("--porta", type=int, default=8000, help="Porta do servidor PHP embutido (padrao: 8000)")
+    parser.add_argument(
+        "--sem-imagem",
+        action="store_true",
+        help="Inverte o filtro: captura somente as cartas cujo arquivo de arte NAO existe em disco",
+    )
     args = parser.parse_args()
 
     try:
@@ -146,12 +165,15 @@ def main():
         if tipo is None:
             continue
         rel_path = f"{args.colecao}/{csv_path.name}"
-        cartas = carregar_cartas_com_arte(csv_path, colecao_dir, tipo)
+        cartas = carregar_cartas_com_arte(csv_path, colecao_dir, tipo, sem_imagem=args.sem_imagem)
         for carta in cartas:
             fila.append({**carta, "rel_path": rel_path})
 
     if not fila:
-        print("Nenhuma carta com arte existente em disco foi encontrada.")
+        if args.sem_imagem:
+            print("Nenhuma carta sem arte foi encontrada — todas ja tem imagem.")
+        else:
+            print("Nenhuma carta com arte existente em disco foi encontrada.")
         sys.exit(0)
 
     print(f"{len(fila)} carta(s) na fila de captura.\n")
@@ -197,12 +219,24 @@ def main():
                 item_li.click()
                 pagina.wait_for_selector("#card-preview img.card-preview__frame")
                 pagina.wait_for_load_state("networkidle")
-                pagina.wait_for_function(
-                    "Array.from(document.querySelectorAll('#card-preview img'))"
-                    ".every(img => img.complete && img.naturalWidth > 0)"
-                )
+                try:
+                    pagina.wait_for_function(
+                        "Array.from(document.querySelectorAll('#card-preview img'))"
+                        ".every(img => img.complete && img.naturalWidth > 0)",
+                        timeout=5_000,
+                    )
+                except Exception:
+                    if not args.sem_imagem:
+                        raise
+                    # Arte ausente propositalmente: aguarda so o "complete"
+                    # (carregou OU falhou com 404) em vez de exigir naturalWidth > 0.
+                    pagina.wait_for_function(
+                        "Array.from(document.querySelectorAll('#card-preview img'))"
+                        ".every(img => img.complete)"
+                    )
 
-                nome_arquivo = f"{item['tipo']}-{slugify(item['nome'])}.png"
+                sufixo = "-sem-imagem" if args.sem_imagem else ""
+                nome_arquivo = f"{item['tipo']}-{slugify(item['nome'])}{sufixo}.png"
                 destino = destino_dir / nome_arquivo
 
                 try:

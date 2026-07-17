@@ -111,7 +111,10 @@ python3 scripts/capturar_preview_cartas.py "Fratura do Multiverso"
 python3 scripts/capturar_preview_cartas.py "Fratura do Multiverso" --somente PERSONAGENS
 
 # Usa outra porta local (caso 8000 já esteja ocupada)
-python3 scripts/capturar_preview_cartas.py "Fratura do Multiverso" --porta 8010
+python3 scripts/capturar_preview_cartas.py "Fratura do Multiverso" --porta 8087
+
+# Captura as cartas SEM IMAGEM gerada
+python3 scripts/capturar_preview_cartas.py "Fratura do Multiverso" --porta 8087 --sem-imagem
 ```
 
 ### Observações

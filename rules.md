@@ -177,7 +177,7 @@ Existe um tipo de fonte de energia chamada Fonte Prismática que também é cons
 O campo de jogo tem duas grandes áreas - uma para você e outra para seu oponente. Cada uma dessas áreas é dividida nas seguintes regiões:
 - Posição Principal: Onde apenas um personagem é colocado para poder atacar ou gerar efeitos de suas ações passivas. Esta é considerada a posição UM;
 - Posições do Time: Aqui até três outros personagens podem ser colocados como "reservas", podendo ser colocados na posição principal durante a "fase principal". Estas três outras posições são consideradas respectivamente DOIS, TRÊS e QUATRO;
-- Pedras de Recompensa: De quatro a seis cartas são separadas no início da partida e são colocadas em uma pilha viradas para baixo. Cada vez que um personagem é nocauteado, uma dessas cartas pode ser retirada desta pilha e colocada em sua mão;
+- Pedras de Recompensa: De quatro a oito cartas são separadas no início da partida e são colocadas em uma pilha viradas para baixo. Cada vez que um personagem é nocauteado, uma dessas cartas pode ser retirada desta pilha e colocada em sua mão;
 - Deck: Todas as suas cartas nascem deste local. As cartas devem ser embaralhadas e colocadas viradas para baixo antes do início da partida;
 - Pilha de Descarte: Todas as cartas que não são mais utilizadas devem ser colocadas aqui.
 
@@ -268,7 +268,7 @@ Antes de começar a resolver os efeitos é importante entender alguns detalhes s
 
 O primeiro detalhe é sobre os custos de execução das ações. Eles podem funcionar da seguinte maneira:
  - Custos Obrigatórios: O custo obrigatório é representado pela quantidade de energias que o personagem precisar ter anexadas para executar a ação;
- - Custos Variáveis: Este é um custo extra para realizar a ação e pode ser fixo (como descartar uma energia) ou variável (descartar X energias para causar X pontos de dano);
+ - Custos Extra: Este é um custo extra para realizar a ação e pode ser fixo (como descartar uma energia) ou variável (descartar X energias para causar X pontos de dano). Ele será representado após o nome da ação, em negrito na mesma linha;
  - Custos Opcionais: Algumas ações podem ter custos opcionais, que podem não ser pagos para execução da ação. Caso sejam pagos, a ação irá gerar outros efeitos além do principal.
 
 Existem ações também que tem alvos aleatórios. Estes alvos devem ser selecionados através de sorteio.
@@ -295,10 +295,26 @@ Ao anexar ou desanexar uma carta a um personagem, devemos levar em consideraçã
  3. Após a conclusão das condições o efeito não irá mais gerar nenhuma consequência de jogo.
 
 Ao utilizar qualquer efeito - seja de uma ação ativa, passiva, efeito de um Item ou de uma fonte de energia, devemos levar em consideração:
- 1. Todos os custos e condições para ativação do efeito devem ser cumpridos;
+ 1. Todos os custos e condições para ativação do efeito devem ser cumpridos - caso haja um custo extra ele deve ser cumprido e se o jogador quiser ativar uma ação opcional, os custos opcionais devem ser pagos;
  2. Após os custos e condições serem cumpridas o efeito irá iniciar a ser resolvido;
  3. Antes da conclusão da resolução do efeito o oponente poderá utilizar um outro efeito como resposta;
  4. Após a conclusão do efeito ele deixará de gerar consequências no jogo.
+
+Os efeitos podem ser encadeados. Vamos usar dois exemplos:
+Situação A: 
+`Reciclar Recursos (2) - Compre 3 Cartas - Esta ação causa 2 pontos de dano no alvo`
+Nesta situação, é necessário que as ações aconteçam e sejam resolvidas de maneira encadeada. Para que a ação cause 2 pontos de dano, é necessário que a condição anterior seja resolvida (ou seja comprar 3 cartas) e caso o usuário não possa descartar 2 cartas de sua mão, ele não poderá comprar 3 cartas.
+
+Situação B - podendo ter duas grafias:
+`Reciclar Recursos (2). Compre 3 Cartas.`
+
+OU
+
+```
+Reciclar Recursos (2).
+Compre 3 Cartas.
+```
+Neste caso, comprar 3 cartas não está atrelado a Reciclar Recursos.
 
 Custos e efeitos que precisam ser resolvidos antes da ação principal ser definida são separados por traços e devem ser resolvidos na ordem em que aparecem. Assim que estes custos/efeitos forem realizados, a ação principal e os efeitos desencadeados por ela podem ser resolvidos.
 
@@ -487,6 +503,7 @@ Os tipos de efeitos podem ser os seguintes - efeitos separados por barra represe
  - Imunidade a Morte (+): Quando um personagem receber um dano fatal, descarte este token para prevenir todo o dano recebido de uma fonte. Apenas um token deste tipo é permitido por personagem em jogo;
  - Sobrevida (+): Cada token adiciona um ponto de vida extra para o personagem. Após o cálculo de dano ser finalizado, os tokens que absorveram dano devem ser retirados;
  - Reviver (+): Quando um personagem receber um dano fatal, descarte este token e embaralhe o personagem e todas as cartas anexadas a ele em seu deck. Este personagem não será considerado nocauteado;
+ - Espinhos(X) (+): Todo dano que o personagem recebeu durante a fase de combate, ele causará para o personagem atacante na proporção de X:1, arredondado para baixo. Ex.: O personagem recebeu 10 pontos de dano este turno e tem Espinhos (3) - espinhos irá causar 3 pontos de dano 10/3 = 3,333, arredondado para baixo 3. A tendência deste tipo de efeito é ter um valor mais alto.
 
 Todos os tokens acima seguem a regra geral de temporalidade: são removidos na próxima fase de limpeza do controlador do personagem que os recebeu, mesmo que ainda não tenham sido consumidos por seu gatilho.
 
@@ -506,7 +523,7 @@ Existem três condições de vitória possíveis que podem ser exploradas na con
 
 ## Palavras-Chave
 ### Combate
- - Alvos Múltiplos (X): Esta ação pode ter mais de um alvo. Caso haja um limite de alvos extras, este valor aparecerá entre parênteses. O dano e os efeitos da ação são calculados para todos os alvos de maneira igual;
+ - Alvos Múltiplos (X): Esta ação pode ter mais de um alvo. Caso haja um limite de alvos extras, este valor aparecerá entre parênteses. O dano e os efeitos da ação são calculados para todos os alvos de maneira igual - se uma ação causa 2 pontos de dano e coloque um debuff, irá fazer isso para cada um dos alvos;
  - Ataque Expansível (X): Usada em ações que causam dano - o dano causado por essa ação pode ser acrescido em 1 para cada fonte de energia anexada a esse personagem além das utilizadas para pagar seu custo de execução. Caso haja um limite de dano extra, este valor aparecerá entre parênteses. Não confundir com [Ação Expansível](#dinâmicas-de-jogo), usada para ações que geram outros tipos de efeito;
  - Assistência: Após o personagem utilizar sua ação, um personagem a escolha de seu controlador causa 1 ponto de dano ao mesmo personagem alvo da ação original;
  - Conexão Vital (Personagem): Após o cálculo, todo dano sofrido por este personagem, irá gerar um token de sobrevida para cada ponto absorvido para ele mesmo ou o personagem indicado;
@@ -526,6 +543,7 @@ Existem três condições de vitória possíveis que podem ser exploradas na con
 
 ### Controle de Cartas
  - Clarividência (X): Procura a carta do tipo X ou a carta X em seu deck. Revele ao outro jogador e coloque em sua mão. Depois disso embaralhe seu deck;
+ - Sondar (X): Olhe as X primeiras cartas do topo do deck alvo e decida se irá deixar ou colocar no fundo do deck. As cartas podem ser colocadas em qualquer ordem e não precisam ser revelada para os outros jogadores - apenas o controlador do efeito poderá ver as cartas. Caso o alvo não seja descrito, sempre será no deck do controlador do efeito.
  - Extinguir Fonte (X): Ações que necessitam de descarte de fontes de energia do personagem recebem esta palavra chave seguida do efeito que ela irá gerar. Esta palavra-chave será seguida de um valor ou ? para um valor variável e ela sempre descreverá um custo da ação - quando este custo for obrigatório, o texto da carta indicará que este descarte deve ser feito;
  - Extinguir Recurso (X): Descarte X cartas de sua mão;
  - Fonte Estéril: esta fonte não gera energia e não pode ser utilizada para pagar custos de ação;
@@ -540,7 +558,7 @@ Existem três condições de vitória possíveis que podem ser exploradas na con
  - Ação Expansível (X): Usada em ações que geram algum efeito (não dano) - efeito extra quando o personagem estiver com X fontes de energia a mais anexadas a ele, além do custo original da ação. Não confundir com [Ataque Expansível](#combate), usada para ações que causam dano;
  - Afinidade (Especificação): Para que a ação aconteça, um determinado tipo ou categoria de personagem ou um determinado personagem;
  - Anexar: Colocar uma carta de item ou fonte de energia junto a um personagem;
- - Aposte (X): Jogue X moedas ou X dados (d4, d6 ou um dado de faces pares) - se der cara na moeda ou par nos dados, você ganha a aposta;
+ - Aposte (X): Jogue X moedas ou X dados (d4, d6 ou um dado de faces pares) - se der cara na moeda ou par nos dados, você ganha a aposta. Quando X for maior que 1, o jogador desafiante deverá ganhar mais apostas do que perder;
  - Concentração (Condição): A ação só pode ser usada se a condição for alcançada;
  - Desanexar: Colocar uma carta que está junto a um personagem na pilha de descarte;
  - Dependência (Condição): O efeito de uma carta só será liberado se uma condição for alcançada. Diferente da Concentração, a dependência é no efeito e não na ação.
@@ -554,7 +572,7 @@ Existem três condições de vitória possíveis que podem ser exploradas na con
  - Ação Única: O jogador poderá efetuar essa ação apenas uma vez por turno;
  - Amedrontar: Quando o personagem é alvo de ações de combate, o controlador deste personagem pode alterar o personagem defensor na posição principal por uma das posições do time - este efeito deverá acontecer no fim da fase de combate, se o personagem não for nocauteado. Amedrontar não é afetado pelas regras de precedência de alvo entre Provocação e Invisibilidade (ver [Palavras-Chave → Combate](#combate)), pois seu gatilho não envolve escolha de alvo - o defensor troca de posição em reação a já ter sido alvo, e o único personagem elegível a se beneficiar é sempre o que estava na posição principal;
  - Devoção (X): Se o tipo ou categoria de personagem ou o personagem X estiver em cena, você poderá utilizar a ação descrita;
- - Duplicar(X) / Triplicar(X): Descarte X cartas de sua mão para usar a ação uma segunda e uma terceira vez;
+ - Duplicar(X) ou Triplicar(X): Descarte X cartas de sua mão para usar a ação uma segunda ou uma terceira vez. Os efeitos podem ser escalados - primeiro duplicar e depois triplicar ou simples (triplicar, por exemplo). A alvo da ação não irá mudar, a menos que o texto da carta indique;
  - Pelotão: pode haver qualquer quantidade de cartas com este nome em seu deck;
  - Bando (X): Todos os personagens do tipo, classe ou nome X estarão sobre o efeito desta ação;
  - Liderança: Esta ação poderá ser utilizada somente se o personagem estiver na posição principal;
@@ -589,6 +607,7 @@ Lista alfabética de todas as palavras-chave do jogo, com uma breve descrição 
  - [Desviar](#combate): redireciona dano recebido para outro personagem do mesmo controlador;
  - [Devoção (X)](#efeitos): libera uma ação se um tipo, categoria ou personagem X estiver em cena;
  - [Duplicar (X) / Triplicar (X)](#efeitos): descarta cartas da mão para repetir a ação;
+ - [Espinhos (X)](#combate): Toda dano recebido no turno é causada ao atacante, na proporção X:1;
  - [Extinguir Fonte (X)](#controle-de-cartas): custo de descarte de fontes de energia;
  - [Extinguir Recurso (X)](#controle-de-cartas): descarta X cartas da mão;
  - [Finisher (X)](#dinâmicas-de-jogo): encerra um combo, buscando e usando um item marcado;

@@ -18,10 +18,6 @@
         energia: 'land',
     };
 
-    const TYPE_INITIAL_OVERRIDES = {
-        tecsci: 'T',
-    };
-
     const TYPE_COLOR_SLUG = {
         magia: 'magia',
         tecsci: 'tec',
@@ -30,6 +26,16 @@
         divino: 'divino',
         'cósmico': 'cosmico',
         cosmico: 'cosmico',
+        natureza: 'natureza',
+        vida: 'vida',
+        morte: 'morte',
+        elemental: 'elemental',
+        mental: 'mental',
+        'poder energético': 'energetico',
+        'poder energetico': 'energetico',
+        energético: 'energetico',
+        energetico: 'energetico',
+        fera: 'fera',
     };
 
     init();
@@ -197,15 +203,6 @@
         return parts.length > 1 ? parts.slice(1).join('-').trim() : value;
     }
 
-    function typeInitialLetter(tipo) {
-        const value = (tipo || '').trim();
-        if (!value) {
-            return '';
-        }
-        const key = value.toLowerCase();
-        return TYPE_INITIAL_OVERRIDES[key] || value.charAt(0).toUpperCase();
-    }
-
     function typeColorClass(tipo) {
         const key = (tipo || '').trim().toLowerCase();
         const slug = TYPE_COLOR_SLUG[key];
@@ -226,8 +223,8 @@
         if (!n || n <= 0) {
             return '';
         }
-        const initial = typeInitialLetter(tipo) || '?';
-        return initial.repeat(n);
+        const dot = `<span class="card-preview__dot card-preview__dot--cost ${typeColorClass(tipo)}" title="${escapeHtml(extractTypeName(tipo))}"></span>`;
+        return dot.repeat(n);
     }
 
     function splitTitledDescription(value) {
@@ -302,7 +299,7 @@
             headingParts.push('<em>Passiva</em>');
         }
         if (symbols) {
-            headingParts.push(`[${escapeHtml(symbols)}]`);
+            headingParts.push(`<span class="card-preview__cost">${symbols}</span>`);
         }
         if (title) {
             headingParts.push(`<strong>${escapeHtml(title)}</strong>`);

@@ -337,6 +337,11 @@ Para equilibrar o poder relativo de cada tipo, o número de Fontes de Energia **
 
 Isso reforça que a dupla de topo já concentra poder decisivo nos próprios personagens e em `Aposte (X)` — dar a eles também fartura de Fontes Avançadas quebraria o balanceamento. O triângulo, por ser o "chão" competitivo do set, tem mais espaço de Fontes Avançadas para sustentar arquétipos internos (ex. Magia-controle vs. Magia-cura).
 
+**Adição pós-revisão de staples (2026-07-16):** as 11 Fontes Avançadas de tipo têm efeito ao **entrar em jogo** (via `Devoção (Tipo)`), mas nenhuma alterava regra básica de forma **contínua** para os dois jogadores enquanto em campo — a definição literal de "Efeitos de Estádio/Encantamento" (`staple-info.md`, Modificação de Regras). Para cobrir essa lacuna sem alterar a cota já fechada por tipo, foram criadas **2 Fontes de Energia Avançadas genéricas** (sem afinidade de tipo, categoria nova análoga aos Itens genéricos), com efeito simétrico contínuo:
+
+- **Arena Neutra do Torneio** — enquanto em jogo, o custo de ações de Combate de ambos os jogadores é reduzido em 1 (mínimo 1).
+- **Relógio de Areia Partilhado** — enquanto em jogo, no início da fase de compra de cada jogador, esse jogador olha a carta do topo do próprio deck antes de decidir se compra normalmente.
+
 ### Nomes das Fontes de Energia Avançadas por tipo
 
 Cada Fonte Avançada representa um lugar de poder reconhecível dentro do mundo do tipo, coerente com sua lore.
@@ -477,9 +482,26 @@ Com a Onda do Vácuo, as 4 palavras-chave de assinatura do tipo (ataque expansí
 
 ## Itens genéricos
 
-Sem afinidade de tipo, encaixáveis em qualquer estratégia (ver "Itens — cota por tipo" acima). Cobrem lacunas de gameplay que os itens temáticos — todos amarrados à assinatura de um tipo — não endereçam: energia genérica/fixing, proteção e anti-remoção, filtragem de mão e deck sem amarra de tipo, interação de posição (Flanquear/Amedrontar/Desviar/Reflexão/Liderança/Sidekick), Escudo puro, e suporte a combos genéricos (Aposte, Duplicar, Tag) — todas palavras-chave já existentes em `rules.md` (seção Palavras-Chave).
+Sem afinidade de tipo, encaixáveis em qualquer estratégia (ver "Itens — cota por tipo" acima). Cobrem lacunas de gameplay que os itens temáticos — todos amarrados à assinatura de um tipo — não endereçam: energia genérica/fixing, proteção e anti-remoção, filtragem de mão e deck sem amarra de tipo, interação de posição (Flanquear/Amedrontar/Desviar/Reflexão/Liderança/Sidekick), Escudo puro, suporte a combos genéricos (Aposte, Duplicar, Tag), aceleração de recursos, reciclagem de mão, tutores (Clarividência) e disrupção do descarte/mão do oponente — todas palavras-chave já existentes em `rules.md` (seção Palavras-Chave).
 
-**Balanceamento Permanente/Volátil:** os 43 itens temáticos por tipo (Lendários + Temáticos, excluindo os 5 Épicos "Fratura XPTO") somam 14 Permanentes e 29 Voláteis (~33%/67%), puxados para Volátil pela natureza dos efeitos de assinatura (dano, debuff pontual). Para não agravar esse desequilíbrio nem tentar corrigi-lo à força nos genéricos, os **28 Itens genéricos seguem isoladamente uma proporção de 45% Permanente / 55% Volátil**: **13 Permanentes** e **15 Voláteis**.
+**Balanceamento Permanente/Volátil:** os 43 itens temáticos por tipo (Lendários + Temáticos, excluindo os 5 Épicos "Fratura XPTO") somam 14 Permanentes e 29 Voláteis (~33%/67%), puxados para Volátil pela natureza dos efeitos de assinatura (dano, debuff pontual). Para não agravar esse desequilíbrio nem tentar corrigi-lo à força nos genéricos, os **28 Itens genéricos originais seguiam isoladamente uma proporção de 45% Permanente / 55% Volátil**: 13 Permanentes e 15 Voláteis.
+
+**Adição pós-revisão de staples (2026-07-16):** 6 novos Itens genéricos foram criados para cobrir lacunas de mecânicas padrão (`staple-info.md`) ainda não representadas no set — Aceleração de recursos, Reciclagem de Mão, Busca Universal e Busca de Peças-Chave (Clarividência), Exclusão de descarte do oponente e Disrupção da mão do oponente:
+
+- **Sobrecarga de Núcleo** (Permanente) — uma vez por turno, anexe 1 Fonte de Energia além do limite padrão do turno. Cobre: Aceleração de recursos.
+- **Descarte Completo** (Volátil) — descarte toda a sua mão e compre 3 cartas. Cobre: Reciclagem de Mão.
+- **Compasso do Caçador** (Permanente) — uma vez por partida, **Clarividência (X)**: busca uma carta específica no próprio deck. Cobre: Busca Universal (Tutor).
+- **Mapa de Categoria** (Volátil) — **Clarividência (X)**: busca um Personagem, Item ou Fonte de Energia à escolha no próprio deck. Cobre: Busca de Peças-Chave (Tutor).
+- **Corrente Quebra-Elo** (Volátil) — remove do jogo até 2 cartas à escolha do descarte do oponente. Cobre: Exclusão de Recursos (Gestão de Descarte).
+- **Assalto à Mão** (Volátil) — o oponente descarta 2 cartas à escolha dele da própria mão. Cobre: Disrupção da mão do oponente (pedido adicional do usuário, fora da lista original de `staple-info.md`).
+
+Em seguida, mais uma lacuna foi identificada na mesma revisão — **Scoopup/Retorno à mão** (Manipulação de Posicionamento) não tinha nenhuma carta representando-a. Mais 3 Itens genéricos foram criados:
+
+- **Retirada Completa** (Volátil) — devolve um personagem controlado por você à mão, junto com todas as cartas anexadas a ele. Cobre: Scoopup próprio, variante "limpa" (preserva o investimento).
+- **Retirada Forçada** (Volátil) — devolve um personagem controlado por você à mão; as cartas anexadas vão para o descarte. Cobre: Scoopup próprio, variante mais barata (descarta o investimento).
+- **Laço do Impostor** (Volátil) — `Aposte (3)`: se ganhar, devolve o personagem alvo do oponente à mão dele, e os recursos anexados vão para o descarte; se perder, nada acontece. Cobre: Scoopup ofensivo (alvo é personagem do oponente), com salvaguarda de balanceamento via Aposte.
+
+Com essas 9 adições, os **37 Itens genéricos** somam **16 Permanentes** e **21 Voláteis** (~43%/57%, ainda puxado para Volátil, coerente com o restante do set).
 
 **Permanentes (13):**
 1. **Cinto de Utilidade** — o personagem equipado ganha +1 de Defesa.
@@ -538,8 +560,8 @@ Todo o resto — custos de ativação, dano, buffs/debuffs — permanece 100% de
 
 ## Tamanho do set
 
-- **16+ personagens por tipo × 5 tipos = 80+ cartas de personagem** no set completo (robusto o bastante para variedade de curva e algum arquétipo dentro do próprio tipo, ex. Magia-controle vs. Magia-cura).
-- Segue as regras de deck já existentes em `rules.md` (mínimo 12 personagens, até 4 cópias por carta, 60 cartas por deck) — 80+ cartas de personagem é o **pool do set**, não o tamanho de um deck individual.
+- **203 cartas efetivamente criadas** (ver "Listagem completa de cartas" — todas as linhas já marcadas com `X` em "Carta Gerada"): **80 Personagens** (16 por tipo × 5 tipos) + **85 Itens** (temáticos, Lendários, Épicos "Fratura XPTO" e genéricos, incluindo os 9 genéricos adicionados na revisão de staples de 2026-07-16) + **38 Fontes de Energia** (13 Avançadas — 11 de tipo + 2 genéricas — + 25 Básicas).
+- Segue as regras de deck já existentes em `rules.md` (mínimo 12 personagens, até 4 cópias por carta, 60 cartas por deck) — 80 cartas de personagem é o **pool do set**, não o tamanho de um deck individual.
 - Um jogador iniciante deve conseguir montar um deck competitivo mono-tipo (dentro do triângulo) só com cartas do set inicial, ou combinar dois tipos vizinhos do triângulo, ou puxar 1 tipo do triângulo + 1 tipo da dupla de topo como "splash" de poder.
 
 ## Itens e Fontes de Energia — estrutura simplificada
@@ -592,15 +614,15 @@ Tabela mestra de todas as cartas planejadas para "Fratura do Multiverso" — con
 
 | Nome | Tipo da Carta | Mundo | Descrição | Carta Gerada | Arte Gerada |
 |---|---|---|---|---|---|
-| Aridan, o Último Suspiro | Personagem (Sobre-humano) | Silenteia | O monge mais antigo ainda vivo; dizem que não respira mais, só existe. | X | - |
-| Yemira das Mil Dunas | Personagem (Sobre-humano) | Silenteia | Cada duna do deserto guarda uma lembrança que ela absorveu ao meditar sobre ela; lê o ponto fraco de qualquer guerreiro. | X | - |
-| Kaelen, Punho Sem Sombra | Personagem (Esportista) | Silenteia | O guardião mais rápido dos templos; move-se tão silenciosamente que nem sua própria sombra o acompanha. | X | - |
+| Aridan, o Último Suspiro | Personagem (Sobre-humano) | Silenteia | O monge mais antigo ainda vivo; dizem que não respira mais, só existe. | X | X |
+| Yemira das Mil Dunas | Personagem (Sobre-humano) | Silenteia | Cada duna do deserto guarda uma lembrança que ela absorveu ao meditar sobre ela; lê o ponto fraco de qualquer guerreiro. | X | X |
+| Kaelen, Punho Sem Sombra | Personagem (Esportista) | Silenteia | O guardião mais rápido dos templos; move-se tão silenciosamente que nem sua própria sombra o acompanha. | X | X |
 | Sora do Vento Contido | Personagem (Esportista) | Silenteia | Respira no ritmo exato do deserto; prevê o próximo golpe do oponente antes que ele saiba que vai desferi-lo. | X | - |
 | Dorhen, Guarda da Última Miragem | Personagem (Esportista) | Silenteia | Protege a fronteira entre Silenteia e o resto do multiverso; poucos o viram de fato. | X | - |
 | Ilyah das Mãos Frias | Personagem (Esportista) | Silenteia | Renunciou até ao calor do próprio corpo; seu toque neutraliza a força de quem ousa golpeá-la. | X | - |
 | Temuris, o Andarilho Jovem | Personagem (Adulto) | Silenteia | O mais promissor dos Andarilhos do Silêncio, ainda cruzando o deserto sozinho pela primeira vez. | X | - |
 | Andarilho Silêncioso | Personagem (Adulto, genérico) | Silenteia | Monge itinerante que já deixou os templos para trás, cruzando dunas sozinho em jornadas de meditação sem destino fixo. | X | - |
-| Deserto Andante | Personagem (Adulto, genérico) | Silenteia | Percorre as rotas comerciais entre os templos, servindo de guia silenciosa para peregrinos. | X | - |
+| Deserto Andante | Personagem (Adulto, genérico) | Silenteia | Percorre as rotas comerciais entre os templos, servindo de guia silenciosa para peregrinos. | X | X |
 | Sem Voz Andante | Personagem (Adulto, genérico) | Silenteia | Abandonou um posto fixo em um templo para testar em campo o que só aprendera em teoria. | X | - |
 | Andarilha | Personagem (Adulto, genérico) | Silenteia | Vive nas rotas entre oásis, comerciando silêncio por silêncio com quem cruza seu caminho. | X | - |
 | Anui, Aprendiz da Primeira Areia | Personagem (Sedentário) | Silenteia | O mais novo Aprendiz introduzido no set; potencial de evolução em expansões futuras. | X | - |
@@ -613,8 +635,8 @@ Tabela mestra de todas as cartas planejadas para "Fratura do Multiverso" — con
 
 | Nome | Tipo da Carta | Mundo | Descrição | Carta Gerada | Arte Gerada |
 |---|---|---|---|---|---|
-| Vharek, o Sábio Remanescente | Personagem (Sobre-humano) | Reino da Detritônia | Único sobrevivente direto da antiga corte de sábios arcanos; carrega a culpa e o conhecimento do pacto que destruiu o reino. | X | - |
-| Ishara da Coroa Fundida | Personagem (Sobre-humano) | Reino da Detritônia | Forjou uma coroa com os cacos derretidos do trono original; a única capaz de "ler" contratos arcanos antigos sem ativar armadilhas. | X | - |
+| Vharek, o Sábio Remanescente | Personagem (Sobre-humano) | Reino da Detritônia | Único sobrevivente direto da antiga corte de sábios arcanos; carrega a culpa e o conhecimento do pacto que destruiu o reino. | X | X |
+| Ishara da Coroa Fundida | Personagem (Sobre-humano) | Reino da Detritônia | Forjou uma coroa com os cacos derretidos do trono original; a única capaz de "ler" contratos arcanos antigos sem ativar armadilhas. | X | X |
 | Bruk Sete-Mãos | Personagem (Esportista) | Reino da Detritônia | Construiu tantos braços mecânicos improvisados que ninguém sabe mais quantos são realmente dele. | X | - |
 | Nyssa Solda-Fria | Personagem (Esportista) | Reino da Detritônia | Engenheira lendária por nunca precisar de fogo para soldar — usa energia residual dos próprios contratos rompidos. | X | - |
 | Drommel, o Recicla-Ossos | Personagem (Esportista) | Reino da Detritônia | Apelido cruel, mas literal: reaproveita até os restos dos que caíram em combate para construir suas máquinas. | X | - |
@@ -634,8 +656,8 @@ Tabela mestra de todas as cartas planejadas para "Fratura do Multiverso" — con
 
 | Nome | Tipo da Carta | Mundo | Descrição | Carta Gerada | Arte Gerada |
 |---|---|---|---|---|---|
-| Bragan, o Recorde Imbatível | Personagem (Sobre-humano) | Solar Comum | Nenhum feito atlético dele foi superado em três gerações; seu corpo é tratado quase como patrimônio compartilhado. | X | - |
-| Ilenya do Sol a Pino | Personagem (Sobre-humano) | Solar Comum | Treinou sob o calor mais intenso do mundo até seu corpo suportar cargas que nenhum outro atleta resiste. | X | - |
+| Bragan, o Recorde Imbatível | Personagem (Sobre-humano) | Solar Comum | Nenhum feito atlético dele foi superado em três gerações; seu corpo é tratado quase como patrimônio compartilhado. | X | X |
+| Ilenya do Sol a Pino | Personagem (Sobre-humano) | Solar Comum | Treinou sob o calor mais intenso do mundo até seu corpo suportar cargas que nenhum outro atleta resiste. | X | X |
 | Doran Punho-de-Nação | Personagem (Esportista) | Solar Comum | Representa oficialmente sua região natal em todo confronto; carrega uma bandeira tatuada no punho. | X | - |
 | Mireia Passo-Rápido | Personagem (Esportista) | Solar Comum | Corredora cuja velocidade quebrou recordes considerados definitivos. | X | - |
 | Kassian, o Escudo do Vale | Personagem (Esportista) | Solar Comum | Defensor lendário da região da Têmpera; nunca perdeu um combate defensivo em toda sua carreira. | X | - |
@@ -649,7 +671,7 @@ Tabela mestra de todas as cartas planejadas para "Fratura do Multiverso" — con
 | Comerciante do Bairro | Personagem (Sedentário, genérico) | Solar Comum | Comerciante de bairro que carrega sozinho cargas que exigiriam duas pessoas em qualquer outro mundo. | X | - |
 | Visitante da Praça | Personagem (Sedentário, genérico) | Solar Comum | Mora nos arredores da Praça Comum; nunca treinou formalmente, mas cresceu forte só por viver em Solar Comum. | X | - |
 | Familiar Comum | Personagem (Sedentário, genérico) | Solar Comum | Cuida da família e da vizinhança; força física é só mais um traço cotidiano, não uma vocação de guerreiro. | X | - |
-| Manualidade e Esmero | Personagem (Sedentário, genérico) | Solar Comum | Um casal de trabalhadores que atuaram a vida inteira com um ofício manual comum. | X | - |
+| Manualidade e Esmero | Personagem (Sedentário, genérico) | Solar Comum | Um casal de trabalhadores que atuaram a vida inteira com um ofício manual comum. | X | X |
 
 ### Personagens — Destacamento Interregno (Divino)
 
@@ -697,7 +719,7 @@ Tabela mestra de todas as cartas planejadas para "Fratura do Multiverso" — con
 
 | Nome | Tipo da Carta | Mundo | Descrição | Carta Gerada | Arte Gerada |
 |---|---|---|---|---|---|
-| Fratura do Silêncio | Item (Épico) | Silenteia | Revela de forma permanente cartas ocultas do oponente (mão e/ou topo do deck) enquanto a carta está em jogo. | X | - |
+| Fratura do Silêncio | Item (Épico) | Silenteia | Revela de forma permanente cartas ocultas do oponente (mão e/ou topo do deck) enquanto a carta está em jogo. | X | X |
 | Cântaro da Última Água | Item (Lendário, Volátil) | Silenteia | Cura 3 pontos de Vida ao personagem equipado. | X | - |
 | Cajado do Vento Parado | Item (Lendário, Permanente) | Silenteia | Uma vez por turno, olhe a mão do oponente. | X | - |
 | Máscara do Sem-Rosto | Item (Lendário, Permanente) | Silenteia | Enquanto equipado, o personagem não pode ser alvo de efeitos que revelem sua Defesa/Resistência. | X | - |
@@ -712,7 +734,7 @@ Tabela mestra de todas as cartas planejadas para "Fratura do Multiverso" — con
 
 | Nome | Tipo da Carta | Mundo | Descrição | Carta Gerada | Arte Gerada |
 |---|---|---|---|---|---|
-| Fratura do Contrato | Item (Épico) | Reino da Detritônia | Recicla um Item ou Fonte do próprio descarte a custo reduzido, ou anula um efeito contínuo do oponente. | X | - |
+| Fratura do Contrato | Item (Épico) | Reino da Detritônia | Recicla um Item ou Fonte do próprio descarte a custo reduzido, ou anula um efeito contínuo do oponente. | X | X |
 | Alicate de Contrato Roto | Item (Lendário, Volátil) | Reino da Detritônia | Destrua uma Fonte de Energia do oponente. | X | - |
 | Cofre Arrombado da Dívida | Item (Lendário, Volátil) | Reino da Detritônia | Extingua uma Fonte de Energia do oponente e compre 1 carta. | X | - |
 | Bobina Reaproveitada | Item (Lendário, Permanente) | Reino da Detritônia | Sempre que você reciclar (trazer de volta) um Item ou Fonte do descarte, cure 1 ponto de Vida ao personagem equipado. | X | - |
@@ -798,6 +820,15 @@ Tabela mestra de todas as cartas planejadas para "Fratura do Multiverso" — con
 | Reforço de Retaguarda | Item (Genérico, Volátil) | Genérico | Um personagem no time ganha +2 de Defesa até o fim do turno. | X | - |
 | Chamado Inesperado | Item (Genérico, Volátil) | Genérico | Altere um personagem do time para a posição principal. | X | - |
 | Grito de Combate Neutro | Item (Genérico, Volátil) | Genérico | Todo o seu time ganha +1 de Atk até o fim do combate atual. | X | - |
+| Sobrecarga de Núcleo | Item (Genérico, Permanente) | Genérico | Uma vez por turno, anexe 1 Fonte de Energia além do limite padrão do turno. | X | - |
+| Descarte Completo | Item (Genérico, Volátil) | Genérico | Descarte toda a sua mão e compre 3 cartas. | X | - |
+| Compasso do Caçador | Item (Genérico, Permanente) | Genérico | Uma vez por partida, **Clarividência (X)**: busca uma carta específica em seu deck. | X | - |
+| Mapa de Categoria | Item (Genérico, Volátil) | Genérico | **Clarividência (X)**: busca um Personagem, Item ou Fonte de Energia à escolha em seu deck. | X | - |
+| Corrente Quebra-Elo | Item (Genérico, Volátil) | Genérico | Remove do jogo até 2 cartas à escolha do descarte do oponente. | X | - |
+| Assalto à Mão | Item (Genérico, Volátil) | Genérico | O oponente descarta 2 cartas à escolha dele da própria mão. | X | - |
+| Retirada Completa | Item (Genérico, Volátil) | Genérico | Devolve um personagem controlado por você à mão, junto com todas as cartas anexadas a ele. | X | - |
+| Retirada Forçada | Item (Genérico, Volátil) | Genérico | Devolve um personagem controlado por você à mão; as cartas anexadas vão para o descarte. | X | - |
+| Laço do Impostor | Item (Genérico, Volátil) | Genérico | **Aposte (3)**: se ganhar, devolve o personagem alvo do oponente à mão dele, sem os recursos anexados (vão para o descarte); se perder, nada acontece. | X | - |
 
 ### Fontes de Energia — Avançadas
 
@@ -814,6 +845,8 @@ Tabela mestra de todas as cartas planejadas para "Fratura do Multiverso" — con
 | Arena do Recorde Eterno | Fonte de Energia (Avançada) | Solar Comum | Lugar de poder reconhecível de Solar Comum. | X | - |
 | Jardim do Véu das Plumas | Fonte de Energia (Avançada) | Destacamento Interregno | Lugar de poder reconhecível do Destacamento Interregno. | X | - |
 | Vórtice da Tempestade | Fonte de Energia (Avançada) | Astraca Primordial | Lugar de poder reconhecível da Astraca Primordial. | X | - |
+| Arena Neutra do Torneio | Fonte de Energia (Avançada, Genérica) | Genérico | Enquanto em jogo, o custo de ações de Combate de ambos os jogadores é reduzido em 1 (mínimo 1). | X | - |
+| Relógio de Areia Partilhado | Fonte de Energia (Avançada, Genérica) | Genérico | Enquanto em jogo, no início da fase de compra de cada jogador, esse jogador olha a carta do topo do próprio deck antes de decidir se compra normalmente. | X | - |
 
 ### Fontes de Energia — Básicas
 

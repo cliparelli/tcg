@@ -305,6 +305,17 @@ body {
     box-shadow: 0 0 0 1px rgba(0,0,0,.3);
 }
 
+.card-preview__cost {
+    display: inline-flex;
+    gap: 2px;
+    vertical-align: middle;
+}
+
+.card-preview__dot--cost {
+    width: 12px;
+    height: 12px;
+}
+
 .card-preview__dot--magia {
     background: #2f6fed;
 }
@@ -323,6 +334,34 @@ body {
 
 .card-preview__dot--cosmico {
     background: #9333ea;
+}
+
+.card-preview__dot--natureza {
+    background: #4d7c0f;
+}
+
+.card-preview__dot--vida {
+    background: #ec4899;
+}
+
+.card-preview__dot--morte {
+    background: #1f2937;
+}
+
+.card-preview__dot--elemental {
+    background: #06b6d4;
+}
+
+.card-preview__dot--mental {
+    background: #4338ca;
+}
+
+.card-preview__dot--energetico {
+    background: #f97316;
+}
+
+.card-preview__dot--fera {
+    background: #78350f;
 }
 
 .card-preview__dot--neutro {
