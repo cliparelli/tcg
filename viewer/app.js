@@ -4,6 +4,7 @@
     const fileSelect = document.getElementById('file-select');
     const cardSelect = document.getElementById('card-select');
     const searchInput = document.getElementById('search');
+    const sortSelect = document.getElementById('sort-select');
     const cardList = document.getElementById('card-list');
     const cardPreview = document.getElementById('card-preview');
     const cardRaw = document.getElementById('card-raw');
@@ -17,6 +18,16 @@
         personagem: 'card',
         item: 'land',
         energia: 'land',
+    };
+
+    const RARITY_OPTIONS = ['Comum', 'Incomum', 'Rara', 'Super-rara', 'Ultra-rara'];
+
+    const RARITY_INITIAL = {
+        comum: 'C',
+        incomum: 'I',
+        rara: 'R',
+        'super-rara': 'S',
+        'ultra-rara': 'U',
     };
 
     const TYPE_COLOR_SLUG = {
@@ -46,6 +57,7 @@
         populateFileSelect(data.collections || []);
         fileSelect.addEventListener('change', () => loadFile(fileSelect.value));
         searchInput.addEventListener('input', applyFilter);
+        sortSelect.addEventListener('change', applyFilter);
         cardSelect.addEventListener('change', () => {
             const card = filteredCards.find((c) => c._id === cardSelect.value);
             if (card) {
@@ -90,8 +102,38 @@
         const term = searchInput.value.trim().toLowerCase();
         filteredCards = term
             ? currentCards.filter((c) => (c.Nome || '').toLowerCase().includes(term))
-            : currentCards;
+            : currentCards.slice();
+        sortCards(filteredCards);
         renderList();
+    }
+
+    function sortCards(cards) {
+        const mode = sortSelect.value;
+        const collator = new Intl.Collator('pt-BR', { sensitivity: 'base' });
+
+        cards.sort((a, b) => {
+            if (mode === 'tipo') {
+                const diff = collator.compare(extractTypeName(a.Tipo) || '', extractTypeName(b.Tipo) || '');
+                if (diff !== 0) return diff;
+            } else if (mode === 'faccao') {
+                const diff = collator.compare(extractFaction(a), extractFaction(b));
+                if (diff !== 0) return diff;
+            }
+            return collator.compare(a.Nome || '', b.Nome || '');
+        });
+    }
+
+    function extractFaction(card) {
+        if (card._type === 'personagem') {
+            const raw = (card.Classificação || '').trim();
+            if (!raw) return '';
+            const parts = raw.split(' - ')[0].trim().split(/\s+/);
+            return parts.length > 1 ? parts.slice(1).join(' ') : parts[0] || '';
+        }
+        if (card._type === 'item') {
+            return (card.Dinâmica || '').trim() || (card.Tipo || '').trim();
+        }
+        return (card.Tipo || '').trim();
     }
 
     function renderList() {
@@ -115,7 +157,9 @@
 
             const tag = document.createElement('span');
             tag.className = 'tag';
-            tag.textContent = card.Tipo || card.Classificação || '';
+            tag.textContent = sortSelect.value === 'faccao'
+                ? (extractFaction(card) || card.Tipo || card.Classificação || '')
+                : (card.Tipo || card.Classificação || '');
             li.appendChild(tag);
 
             li.addEventListener('click', () => selectCard(card));
@@ -150,7 +194,11 @@
         if (artSrc) {
             const img = document.createElement('img');
             img.src = artSrc;
-            img.alt = card.Nome || '';
+            img.alt = '';
+            img.addEventListener('error', () => {
+                img.remove();
+                art.textContent = 'Sem arte';
+            });
             art.appendChild(img);
         } else {
             art.textContent = 'Sem arte';
@@ -187,9 +235,13 @@
 
         const classification = document.createElement('div');
         classification.className = 'card-preview__classification';
-        classification.textContent = card._type === 'personagem'
+        const classificationText = card._type === 'personagem'
             ? extractClassification(card)
             : (card._type === 'item' ? (card.Tipo || '').trim() : elementalType);
+        const rarityInitial = rarityInitialFor(card.Raridade);
+        classification.textContent = rarityInitial
+            ? `${classificationText} ${rarityInitial}`
+            : classificationText;
         cardPreview.appendChild(classification);
 
         const text = document.createElement('div');
@@ -227,6 +279,11 @@
         const key = (tipo || '').trim().toLowerCase();
         const slug = TYPE_COLOR_SLUG[key];
         return slug ? `card-preview__dot--${slug}` : 'card-preview__dot--neutro';
+    }
+
+    function rarityInitialFor(raridade) {
+        const key = (raridade || '').trim().toLowerCase();
+        return RARITY_INITIAL[key] || '';
     }
 
     function extractClassification(card) {
@@ -358,15 +415,31 @@
             tr.appendChild(th);
 
             const td = document.createElement('td');
-            const isLong = String(value || '').length > 60 || /\n/.test(String(value || ''));
-            const field = document.createElement(isLong ? 'textarea' : 'input');
-            if (!isLong) {
-                field.type = 'text';
+            let field;
+            if (key === 'Raridade') {
+                field = document.createElement('select');
+                const emptyOpt = document.createElement('option');
+                emptyOpt.value = '';
+                emptyOpt.textContent = '—';
+                field.appendChild(emptyOpt);
+                for (const rarity of RARITY_OPTIONS) {
+                    const opt = document.createElement('option');
+                    opt.value = rarity;
+                    opt.textContent = rarity;
+                    field.appendChild(opt);
+                }
+                field.value = value || '';
             } else {
-                field.rows = 3;
+                const isLong = String(value || '').length > 60 || /\n/.test(String(value || ''));
+                field = document.createElement(isLong ? 'textarea' : 'input');
+                if (!isLong) {
+                    field.type = 'text';
+                } else {
+                    field.rows = 3;
+                }
+                field.value = value || '';
             }
             field.name = key;
-            field.value = value || '';
             field.className = 'card-raw__field';
             td.appendChild(field);
             tr.appendChild(td);

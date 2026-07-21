@@ -173,6 +173,18 @@ As fontes podem ser básicas - gerando apenas uma energia ao personagem - ou pod
 
 Existe um tipo de fonte de energia chamada Fonte Prismática que também é considerada uma fonte avançada. A diferença é que ela irá gerar duas energias para um personagem do mesmo tipo da fonte de energia.
 
+### Raridade
+Cada carta tem uma raridade, não só para balancear seu poder, mas também a quantidade de cópias disponíveis em um pool.
+
+As raridades são:
+- **Comum**: Cartas mais simples e com maior disponibilidade no pool. Formam a base numérica de qualquer deck, com efeitos diretos e sem muita complexidade;
+- **Incomum**: Um degrau acima da Comum, com efeitos um pouco mais elaborados ou situacionais, mas ainda com boa disponibilidade no pool;
+- **Rara**: Cartas com efeitos mais fortes ou versáteis, com disponibilidade reduzida no pool em relação às raridades anteriores;
+- **Super-rara**: Cartas de alto impacto, com efeitos poderosos ou combinações relevantes de mecânicas, disponíveis em quantidade limitada no pool;
+- **Ultra-rara**: A raridade mais alta e de menor disponibilidade no pool, reservada às cartas de maior impacto no jogo.
+
+Classificação é diferente de raridade: "Épico" e "Lendário" são classificações especiais de carta, não raridades por si só, mas cada uma está atrelada a uma raridade específica. Uma carta Épica é sempre Ultra-rara. Uma carta Lendária pode ser Super-rara ou Ultra-rara, a depender do seu impacto.
+
 ## Áreas do Jogo
 O campo de jogo tem duas grandes áreas - uma para você e outra para seu oponente. Cada uma dessas áreas é dividida nas seguintes regiões:
 - Posição Principal: Onde apenas um personagem é colocado para poder atacar ou gerar efeitos de suas ações passivas. Esta é considerada a posição UM;
@@ -551,7 +563,8 @@ Existem três condições de vitória possíveis que podem ser exploradas na con
  - Reciclar Fonte (X/Y): Descarte X cartas de Fonte de Energia para comprar Y cartas em seu deck;
  - Reciclar Recursos (X/Y): Descarte X cartas de qualquer tipo para comprar Y cartas em seu deck;
  - Triturar (X): Descarte as X primeiras cartas do topo do deck do jogador alvo;
- - Reaproveitar Recurso (X): Devolva X cartas da sua pilha de descarte para sua mão;
+ - Reaproveitar Recurso (X/Tipo): Devolva X cartas da sua pilha de descarte para sua mão. Se tipo for definido, as cartas escolhidas devem ser do tipo solicitado;
+ - Renovar Rercursos (X): Embaralhe X cartas da sua pilha de descarte em seu deck. Se tipo for definido, as cartas escolhidas devem ser do tipo solicitado;
 
 ### Dinâmicas de Jogo
  - Ação Etérea: A ação só pode ser utilizada uma vez durante o jogo;

@@ -70,21 +70,34 @@ Cada expansão gera seus próprios CSVs, um por tipo de carta, em **`LIB/{Nome d
 
 Preencher essas colunas é geração de **texto/metadado**, não de imagem — não gere o arquivo de imagem em si (ver seção 4 abaixo e `CLAUDE.md`, "Cuidado com assets grandes").
 
-## 4. Nomenclatura de arquivo de asset (se for gerar imagem/estrutura, não só o texto da carta)
+## 4. Raridade da carta
+
+Toda carta (Personagem, Item ou Fonte de Energia) precisa de uma raridade, conforme a seção `Raridade` de `rules.md`:
+
+- **Comum**, **Incomum**, **Rara**, **Super-rara**, **Ultra-rara** — em ordem crescente de impacto/poder e decrescente de disponibilidade no pool.
+
+`Épico` e `Lendário` **não são raridades** — são classificações especiais de carta, cada uma atrelada a uma raridade fixa:
+
+- Carta **Épica** → sempre **Ultra-rara**.
+- Carta **Lendária** → **Super-rara** ou **Ultra-rara**, a depender do impacto do efeito.
+
+Respeite a cota de Épico/Lendário já fechada pelo documento de design da coleção (ex. 1 Épico e até 3 Lendários por tipo, conforme `colecao-inicial.md`) — não promova uma carta a Épica/Lendária só porque o efeito "parece forte"; siga a cota. Registre a raridade final da carta na coluna `Observação` do CSV quando não houver coluna dedicada a isso.
+
+## 5. Nomenclatura de arquivo de asset (se for gerar imagem/estrutura, não só o texto da carta)
 
 Cartas usam as siglas de 3 letras já mapeadas em `CLAUDE.md` (`NTZ`, `LIF`, `DTH`, `DVN`, `ELM`, `TEC`, `MGC`, Mental, `FSC`, `ENG`, `FRL`, `CSM`, mais quaisquer siglas de tipos novos criados via `new-card-type`). Não gere novos assets de imagem sem necessidade (ver `CLAUDE.md`, seção "Cuidado com assets grandes") — o foco desta skill é o **conteúdo textual/mecânico** da carta, não a arte; as colunas `Arte`/`Prompt Arte` só registram o nome de arquivo e o prompt, não o asset em si.
 
-## 5. Validação antes de entregar
+## 6. Validação antes de entregar
 
 Antes de apresentar a(s) carta(s) geradas, confira:
 
 - O efeito é determinístico por padrão (custo pago → efeito garantido); só use `Aposte (X)` se o documento de design da coleção reservar essa mecânica para aquele tipo/raridade (ver seção "Mecânica de assinatura: Aposte (X)" em `colecao-inicial.md`, quando aplicável).
 - O texto reforça pelo menos uma das palavras-chave de assinatura já definidas para o tipo do personagem/item (se o documento de design tiver essa lista) — não crie um efeito genérico desconectado da identidade do tipo sem avisar que é uma escolha deliberada.
-- Raridade (Lendária/Épica) só em cartas de efeito forte, respeitando a cota já fechada por tipo (1 Épico, até 3 Lendários, ver documento de design).
+- Raridade atribuída conforme a seção 4 acima; classificação Lendária/Épica só em cartas de efeito forte, respeitando a cota já fechada por tipo (1 Épico, até 3 Lendários, ver documento de design).
 - Números de Atk/Def/Vida/custo são coerentes com o patamar de Power System escolhido (não dar Vida 10 a um personagem "Adulto", por exemplo).
 - Nenhuma IP de terceiros é usada a menos que o próprio universo do set already a utilize (ver `CLAUDE.md` sobre licenciamento).
 - Caso o documento de design, tenha uma listagem de cartas, utilize as colunas "Carta Gerada" e "Arte Gerada" para marcar a evolução da criação do set.
 
-## 6. Pergunte antes de escrever em massa
+## 7. Pergunte antes de escrever em massa
 
 Se o pedido for “gere as 16 cartas do tipo X”, prefira gerar em lotes menores (ex. por patamar de Power System, do mais poderoso ao menos, replicando a ordem já usada nas conversas de design) e confirmar com o usuário antes de seguir para o próximo lote — o mesmo padrão iterativo usado para itens/personagens em `features/colecao-inicial.md`.

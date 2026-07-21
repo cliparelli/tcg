@@ -530,6 +530,25 @@ Em seguida, mais uma lacuna foi identificada na mesma revisão — **Scoopup/Ret
 
 Com essas 9 adições, os **37 Itens genéricos** somam **16 Permanentes** e **21 Voláteis** (~43%/57%, ainda puxado para Volátil, coerente com o restante do set).
 
+**Adição — Reaproveitar Recurso e Renovar Recursos (2026-07-20):** o pool genérico já cobria reciclagem via descarte-para-comprar (**Filtragem de Baralho**/**Reserva de Emergência**, que usam `Reciclar Recursos`/`Reciclar Fonte`), mas não tinha nenhuma carta usando **Reaproveitar Recurso (X/Tipo)** (devolve cartas do próprio descarte à mão) nem **Renovar Recursos (X)** (embaralha cartas do próprio descarte de volta ao deck) — duas palavras-chave de Controle de Cartas já existentes em `rules.md` sem representação no set. Foram criadas 12 novas cartas genéricas, 2 por combinação de mecânica × tipo-alvo (Personagem/Item/Fonte de Energia), para não depender de um único tipo de recurso recuperado:
+
+- **Retorno do Campeão** (Volátil) — **Reaproveitar Recurso (1/Personagem)**: devolva 1 carta de Personagem da sua pilha de descarte para sua mão.
+- **Chamado dos Caídos** (Volátil) — **Reaproveitar Recurso (2/Personagem)**: devolva 2 cartas de Personagem da sua pilha de descarte para sua mão; descarte 1 carta da mão ao resolver.
+- **Baú de Reservas** (Volátil) — **Reaproveitar Recurso (1/Item)**: devolva 1 carta de Item da sua pilha de descarte para sua mão.
+- **Arsenal Recuperado** (Volátil) — **Reaproveitar Recurso (2/Item)**: devolva 2 cartas de Item da sua pilha de descarte para sua mão; descarte 1 carta da mão ao resolver.
+- **Poço sem Fundo** (Volátil) — **Reaproveitar Recurso (1/Fonte de Energia)**: devolva 1 Fonte de Energia da sua pilha de descarte para sua mão.
+- **Veia de Recursos** (Volátil) — **Reaproveitar Recurso (2/Fonte de Energia)**: devolva 2 Fontes de Energia da sua pilha de descarte para sua mão; descarte 1 carta da mão ao resolver.
+- **Ciclo do Torneio** (Volátil) — **Renovar Recursos (2/Personagem)**: embaralhe 2 cartas de Personagem da sua pilha de descarte em seu deck.
+- **Retorno ao Ciclo** (Permanente) — uma vez por partida, **Renovar Recursos (1/Personagem)**: embaralhe 1 carta de Personagem da sua pilha de descarte em seu deck.
+- **Rescaldo de Arsenal** (Volátil) — **Renovar Recursos (2/Item)**: embaralhe 2 cartas de Item da sua pilha de descarte em seu deck.
+- **Retorno ao Arsenal** (Permanente) — uma vez por partida, **Renovar Recursos (1/Item)**: embaralhe 1 carta de Item da sua pilha de descarte em seu deck.
+- **Maré de Recursos** (Volátil) — **Renovar Recursos (2/Fonte de Energia)**: embaralhe 2 Fontes de Energia da sua pilha de descarte em seu deck.
+- **Fluxo Perene** (Permanente) — uma vez por partida, **Renovar Recursos (1/Fonte de Energia)**: embaralhe 1 Fonte de Energia da sua pilha de descarte em seu deck.
+
+As 6 cartas de `Reaproveitar Recurso` usam a variante X=2 com um pequeno custo de descarte (1 carta da mão) como salvaguarda de balanceamento, já que devolver 2 cartas direto à mão sem custo seria forte demais para uma carta genérica de baixa raridade; as de `Renovar Recursos` seguem a lógica inversa (recurso mais distante, pois a carta recuperada precisa ser comprada de novo) e por isso ganham uma segunda variante Permanente de baixo custo (X=1, uma vez por partida) em vez de custo de descarte, dando ao pool genérico mais uma opção Permanente e ajudando a equilibrar a proporção Permanente/Volátil do conjunto.
+
+Com essas 12 adições, os **49 Itens genéricos** somam **19 Permanentes** e **30 Voláteis** (~39%/61%).
+
 **Permanentes (13):**
 1. **Cinto de Utilidade** — o personagem equipado ganha +1 de Defesa.
 2. **Amuleto Neutro** — gera 1 energia de qualquer tipo à escolha ao ser anexado (fixing genérico, sem afinidade).
@@ -587,7 +606,7 @@ Todo o resto — custos de ativação, dano, buffs/debuffs — permanece 100% de
 
 ## Tamanho do set
 
-- **203 cartas efetivamente criadas** (ver "Listagem completa de cartas" — todas as linhas já marcadas com `X` em "Carta Gerada"): **80 Personagens** (16 por tipo × 5 tipos) + **85 Itens** (temáticos, Lendários, Épicos "Fratura XPTO" e genéricos, incluindo os 9 genéricos adicionados na revisão de staples de 2026-07-16) + **38 Fontes de Energia** (13 Avançadas — 11 de tipo + 2 genéricas — + 25 Básicas).
+- **215 cartas efetivamente criadas** (ver "Listagem completa de cartas" — todas as linhas já marcadas com `X` em "Carta Gerada"): **80 Personagens** (16 por tipo × 5 tipos) + **97 Itens** (temáticos, Lendários, Épicos "Fratura XPTO" e genéricos, incluindo os 9 genéricos adicionados na revisão de staples de 2026-07-16 e os 12 genéricos de Reaproveitar Recurso/Renovar Recursos adicionados em 2026-07-20) + **38 Fontes de Energia** (13 Avançadas — 11 de tipo + 2 genéricas — + 25 Básicas).
 - Segue as regras de deck já existentes em `rules.md` (mínimo 12 personagens, até 4 cópias por carta, 60 cartas por deck) — 80 cartas de personagem é o **pool do set**, não o tamanho de um deck individual.
 - Um jogador iniciante deve conseguir montar um deck competitivo mono-tipo (dentro do triângulo) só com cartas do set inicial, ou combinar dois tipos vizinhos do triângulo, ou puxar 1 tipo do triângulo + 1 tipo da dupla de topo como "splash" de poder.
 
@@ -889,6 +908,18 @@ Tabela mestra de todas as cartas planejadas para "Fratura do Multiverso" — con
 | Retirada Completa | Item (Genérico, Volátil) | Genérico | Devolve um personagem controlado por você à mão, junto com todas as cartas anexadas a ele. | X | - |
 | Retirada Forçada | Item (Genérico, Volátil) | Genérico | Devolve um personagem controlado por você à mão; as cartas anexadas vão para o descarte. | X | - |
 | Laço do Impostor | Item (Genérico, Volátil) | Genérico | **Aposte (3)**: se ganhar, devolve o personagem alvo do oponente à mão dele, sem os recursos anexados (vão para o descarte); se perder, nada acontece. | X | - |
+| Retorno do Campeão | Item (Genérico, Volátil) | Genérico | **Reaproveitar Recurso (1/Personagem)**: devolva 1 carta de Personagem da sua pilha de descarte para sua mão. | X | - |
+| Chamado dos Caídos | Item (Genérico, Volátil) | Genérico | **Reaproveitar Recurso (2/Personagem)**: devolva 2 cartas de Personagem da sua pilha de descarte para sua mão; descarte 1 carta da mão ao resolver. | X | - |
+| Baú de Reservas | Item (Genérico, Volátil) | Genérico | **Reaproveitar Recurso (1/Item)**: devolva 1 carta de Item da sua pilha de descarte para sua mão. | X | - |
+| Arsenal Recuperado | Item (Genérico, Volátil) | Genérico | **Reaproveitar Recurso (2/Item)**: devolva 2 cartas de Item da sua pilha de descarte para sua mão; descarte 1 carta da mão ao resolver. | X | - |
+| Poço sem Fundo | Item (Genérico, Volátil) | Genérico | **Reaproveitar Recurso (1/Fonte de Energia)**: devolva 1 Fonte de Energia da sua pilha de descarte para sua mão. | X | - |
+| Veia de Recursos | Item (Genérico, Volátil) | Genérico | **Reaproveitar Recurso (2/Fonte de Energia)**: devolva 2 Fontes de Energia da sua pilha de descarte para sua mão; descarte 1 carta da mão ao resolver. | X | - |
+| Ciclo do Torneio | Item (Genérico, Volátil) | Genérico | **Renovar Recursos (2/Personagem)**: embaralhe 2 cartas de Personagem da sua pilha de descarte em seu deck. | X | - |
+| Retorno ao Ciclo | Item (Genérico, Permanente) | Genérico | Uma vez por partida, **Renovar Recursos (1/Personagem)**: embaralhe 1 carta de Personagem da sua pilha de descarte em seu deck. | X | - |
+| Rescaldo de Arsenal | Item (Genérico, Volátil) | Genérico | **Renovar Recursos (2/Item)**: embaralhe 2 cartas de Item da sua pilha de descarte em seu deck. | X | - |
+| Retorno ao Arsenal | Item (Genérico, Permanente) | Genérico | Uma vez por partida, **Renovar Recursos (1/Item)**: embaralhe 1 carta de Item da sua pilha de descarte em seu deck. | X | - |
+| Maré de Recursos | Item (Genérico, Volátil) | Genérico | **Renovar Recursos (2/Fonte de Energia)**: embaralhe 2 Fontes de Energia da sua pilha de descarte em seu deck. | X | - |
+| Fluxo Perene | Item (Genérico, Permanente) | Genérico | Uma vez por partida, **Renovar Recursos (1/Fonte de Energia)**: embaralhe 1 Fonte de Energia da sua pilha de descarte em seu deck. | X | - |
 
 ### Fontes de Energia — Avançadas
 

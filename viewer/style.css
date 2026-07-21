@@ -229,6 +229,7 @@ body {
 .card-preview__type-badge .card-preview__dot {
     width: 30px;
     height: 30px;
+	opacity: 0.5;
 }
 
 .card-preview__classification {

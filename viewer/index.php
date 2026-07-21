@@ -26,6 +26,15 @@
             <input type="search" id="search" placeholder="Nome da carta...">
         </div>
 
+        <div class="field field--sort">
+            <label for="sort-select">Ordenar por</label>
+            <select id="sort-select">
+                <option value="nome">Nome (A-Z)</option>
+                <option value="tipo">Tipo</option>
+                <option value="faccao">Facção / Tribo</option>
+            </select>
+        </div>
+
         <ul id="card-list" class="card-list"></ul>
     </aside>
 

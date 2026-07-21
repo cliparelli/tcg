@@ -4,12 +4,18 @@ declare(strict_types=1);
 
 /**
  * Serve os templates de moldura (CARD-MODEL / LAND-MODEL) de CARDS/ASSETS/STRUCTURES/V6,
- * ou (com ?art=1) a arte de uma carta em LIB/{Coleção}/ARTE/{arquivo}, apontada
- * pela coluna "Arte" do CSV.
+ * (com ?art=1) a arte de uma carta em LIB/{Coleção}/ARTE/{arquivo}, apontada
+ * pela coluna "Arte" do CSV, ou (com ?expansion=1) a carta já renderizada em
+ * EXPANSIONS/{Coleção}/{arquivo}.
  */
 
 if (($_GET['art'] ?? '') !== '') {
     serveArt();
+    exit;
+}
+
+if (($_GET['expansion'] ?? '') !== '') {
+    serveExpansionImage();
     exit;
 }
 
@@ -71,6 +77,29 @@ function serveArt(): void
     };
 
     header('Content-Type: ' . $mime);
+    header('Cache-Control: no-cache');
+    readfile($path);
+}
+
+function serveExpansionImage(): void
+{
+    $file = (string) ($_GET['file'] ?? '');
+
+    if ($file === '') {
+        http_response_code(400);
+        exit;
+    }
+
+    $expansionsDir = dirname(__DIR__) . '/EXPANSIONS';
+    $expansionsReal = realpath($expansionsDir);
+
+    $path = realpath($expansionsDir . '/' . $file);
+    if ($path === false || $expansionsReal === false || !str_starts_with($path, $expansionsReal) || !is_file($path)) {
+        http_response_code(404);
+        exit;
+    }
+
+    header('Content-Type: image/png');
     header('Cache-Control: no-cache');
     readfile($path);
 }
