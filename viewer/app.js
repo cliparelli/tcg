@@ -8,6 +8,7 @@
     const cardList = document.getElementById('card-list');
     const cardPreview = document.getElementById('card-preview');
     const cardRaw = document.getElementById('card-raw');
+    const shareBtn = document.getElementById('share-btn');
 
     let currentCards = [];
     let filteredCards = [];
@@ -64,9 +65,23 @@
                 selectCard(card);
             }
         });
+        shareBtn.addEventListener('click', shareCard);
 
         if (fileSelect.options.length > 0) {
-            loadFile(fileSelect.value);
+            const queryParams = window.appQueryParams || {};
+            if (queryParams.collection) {
+                fileSelect.value = queryParams.collection;
+                await loadFile(queryParams.collection);
+                if (queryParams.card) {
+                    await new Promise(r => setTimeout(r, 100));
+                    const card = currentCards.find((c) => c._id === queryParams.card);
+                    if (card) {
+                        selectCard(card);
+                    }
+                }
+            } else {
+                loadFile(fileSelect.value);
+            }
         }
     }
 
@@ -180,6 +195,57 @@
         renderList();
         renderPreview(card);
         renderRaw(card);
+        shareBtn.hidden = false;
+    }
+
+    function shareCard() {
+        const collection = fileSelect.value;
+        const cardId = activeCardId;
+
+        if (!collection || !cardId) {
+            return;
+        }
+
+        const url = new URL(window.location);
+        url.searchParams.set('collection', collection);
+        url.searchParams.set('card', cardId);
+
+        const shareUrl = url.toString();
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(shareUrl).then(() => {
+                showCopySuccess();
+            }).catch(() => {
+                fallbackCopy(shareUrl);
+            });
+        } else {
+            fallbackCopy(shareUrl);
+        }
+    }
+
+    function showCopySuccess() {
+        const textSpan = shareBtn.querySelector('.share-btn__text');
+        const originalText = textSpan.textContent;
+        textSpan.textContent = '✓ Copiado!';
+        shareBtn.classList.add('share-btn--copied');
+        setTimeout(() => {
+            textSpan.textContent = originalText;
+            shareBtn.classList.remove('share-btn--copied');
+        }, 2000);
+    }
+
+    function fallbackCopy(text) {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+            document.execCommand('copy');
+            showCopySuccess();
+        } catch (err) {
+            alert('Erro ao copiar link: ' + text);
+        }
+        document.body.removeChild(textarea);
     }
 
     function renderPreview(card) {

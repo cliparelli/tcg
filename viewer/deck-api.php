@@ -17,7 +17,9 @@ $action = $_GET['action'] ?? 'list';
 try {
     switch ($action) {
         case 'list':
-            echo json_encode(['decks' => listDecks($decksDir)], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+            $library = new CsvLibrary($libDir);
+            $resolver = new CardResolver($library, $expansionsDir);
+            echo json_encode(['decks' => listDecks($decksDir, $resolver)], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
             break;
 
         case 'deck':
@@ -80,9 +82,9 @@ try {
 }
 
 /**
- * @return array<int, array{file: string, title: string}>
+ * @return array<int, array{file: string, title: string, style: string, type: string}>
  */
-function listDecks(string $decksDir): array
+function listDecks(string $decksDir, CardResolver $resolver): array
 {
     if (!is_dir($decksDir)) {
         return [];
@@ -94,12 +96,67 @@ function listDecks(string $decksDir): array
     $decks = [];
     foreach ($files as $path) {
         $contents = file_get_contents($path) ?: '';
+        $file = basename($path);
         $title = basename($path, '.md');
         if (preg_match('/^#\s+(.+)$/m', $contents, $m) === 1) {
             $title = trim($m[1]);
         }
-        $decks[] = ['file' => basename($path), 'title' => $title];
+
+        $deck = DeckParser::parse($contents);
+        $decks[] = [
+            'file' => $file,
+            'title' => $title,
+            'style' => deckStyle($title),
+            'type' => deckType($deck, $resolver),
+        ];
     }
 
     return $decks;
+}
+
+/**
+ * Extrai o "estilo" do deck a partir da primeira palavra do título
+ * (padrão observado nas decklists: "Mono", "Bi", "Tri", "Splash", "Aggro"...).
+ */
+function deckStyle(string $title): string
+{
+    if (preg_match('/^([A-Za-zÀ-ÿ]+)/u', $title, $m) === 1) {
+        return $m[1];
+    }
+
+    return '';
+}
+
+/**
+ * @param array{sections: array<int, array{groups: array<int, array{entries: array<int, array{name: string, tags: array<int, string>}>}>}>} $deck
+ */
+function deckType(array $deck, CardResolver $resolver): string
+{
+    $counts = [];
+
+    foreach ($deck['sections'] as $section) {
+        foreach ($section['groups'] as $group) {
+            foreach ($group['entries'] as $entry) {
+                $match = $resolver->resolve($entry['name'], $entry['tags']);
+                if ($match === null || $match['type'] !== 'personagem') {
+                    continue;
+                }
+
+                $tipo = trim($match['record']['Tipo'] ?? '');
+                if ($tipo === '') {
+                    continue;
+                }
+
+                $counts[$tipo] = ($counts[$tipo] ?? 0) + 1;
+            }
+        }
+    }
+
+    if ($counts === []) {
+        return '';
+    }
+
+    arsort($counts);
+
+    return array_key_first($counts);
 }

@@ -7,9 +7,19 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<nav class="top-nav">
+    <span class="top-nav__brand">MULTIVERSITY CONQUEST</span>
+    <a class="top-nav__link active" href="index.php">Card Viewer</a>
+    <a class="top-nav__link" href="deck.php">Deck Viewer</a>
+</nav>
 <div class="app">
     <aside class="sidebar">
         <h1>Visualizador de Cartas</h1>
+
+        <button type="button" id="share-btn" class="share-btn" title="Copiar link desta carta" hidden>
+            <span class="share-btn__icon">🔗</span>
+            <span class="share-btn__text">Compartilhar</span>
+        </button>
 
         <div class="field field--file">
             <label for="file-select">Arquivo CSV</label>
@@ -46,6 +56,15 @@
     </main>
 </div>
 
+<script>
+(function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    window.appQueryParams = {
+        collection: urlParams.get('collection'),
+        card: urlParams.get('card')
+    };
+})();
+</script>
 <script src="app.js"></script>
 </body>
 </html>

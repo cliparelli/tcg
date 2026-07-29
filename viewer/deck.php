@@ -8,9 +8,55 @@
 <link rel="stylesheet" href="deck.css">
 </head>
 <body>
+<nav class="top-nav">
+    <span class="top-nav__brand">MULTIVERSITY CONQUEST</span>
+    <a class="top-nav__link" href="index.php">Card Viewer</a>
+    <a class="top-nav__link active" href="deck.php">Deck Viewer</a>
+</nav>
 <div class="deck-app">
     <aside class="sidebar">
         <h1>Visualizador de Decks</h1>
+
+        <button type="button" id="share-btn" class="share-btn" title="Copiar link deste deck" hidden>
+            <span class="share-btn__icon">🔗</span>
+            <span class="share-btn__text">Compartilhar</span>
+        </button>
+
+        <div class="field field--type-filter">
+            <label>Filtrar por tipo</label>
+            <div class="type-filter" id="type-filter">
+                <label class="type-filter__option"><input type="checkbox" value="Natureza" checked> Natureza</label>
+                <label class="type-filter__option"><input type="checkbox" value="Vida" checked> Vida</label>
+                <label class="type-filter__option"><input type="checkbox" value="Morte" checked> Morte</label>
+                <label class="type-filter__option"><input type="checkbox" value="Divino" checked> Divino</label>
+                <label class="type-filter__option"><input type="checkbox" value="Elemental" checked> Elemental</label>
+                <label class="type-filter__option"><input type="checkbox" value="TecSci" checked> TecSci</label>
+                <label class="type-filter__option"><input type="checkbox" value="Magia" checked> Magia</label>
+                <label class="type-filter__option"><input type="checkbox" value="Mental" checked> Mental</label>
+                <label class="type-filter__option"><input type="checkbox" value="Físico" checked> Físico</label>
+                <label class="type-filter__option"><input type="checkbox" value="Poder Energético" checked> Poder Energético</label>
+                <label class="type-filter__option"><input type="checkbox" value="Fera" checked> Fera</label>
+                <label class="type-filter__option"><input type="checkbox" value="Cósmico" checked> Cósmico</label>
+            </div>
+        </div>
+
+        <div class="field field--sort">
+            <label for="sort-field">Ordenar por</label>
+            <select id="sort-field">
+                <option value="title">Ordem alfabética (título)</option>
+                <option value="file">Nome do arquivo</option>
+                <option value="style">Estilo (Mono/Bi/Tri/Splash...)</option>
+                <option value="type">Tipo (Físico, Cósmico...)</option>
+            </select>
+        </div>
+
+        <div class="field field--sort-dir">
+            <label for="sort-direction">Direção</label>
+            <select id="sort-direction">
+                <option value="asc">Crescente</option>
+                <option value="desc">Decrescente</option>
+            </select>
+        </div>
 
         <div class="field field--deck">
             <label for="deck-select">Deck</label>
@@ -18,7 +64,6 @@
         </div>
 
         <p class="sidebar__hint">Arquivos lidos de <code>public/decks/</code>.</p>
-        <a class="sidebar__link" href="index.php">&larr; Visualizador de cartas</a>
     </aside>
 
     <main class="deck-pane" id="deck-pane">
@@ -34,6 +79,14 @@
     </div>
 </div>
 
+<script>
+(function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    window.deckQueryParams = {
+        deck: urlParams.get('deck')
+    };
+})();
+</script>
 <script src="deck.js"></script>
 </body>
 </html>

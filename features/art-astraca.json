@@ -1,0 +1,188 @@
+{
+  "style_profile": {
+    "name": "Cosmic Fractured Hyperdetail",
+    "purpose": "Captura exclusivamente o estilo visual, iluminação e linguagem artística, sem definir assunto ou elementos específicos.",
+
+    "visual_identity": {
+      "genre": [
+        "epic cosmic fantasy",
+        "high fantasy",
+        "dark sci-fi",
+        "mythic surrealism"
+      ],
+
+      "mood": [
+        "grandioso",
+        "transcendental",
+        "misterioso",
+        "apocalíptico",
+        "divino",
+        "atemporal"
+      ],
+
+      "scale": "colossal",
+      "energy": "extremamente alta"
+    },
+
+    "composition": {
+      "symmetry": "fortemente centralizada",
+      "focus": "um único ponto focal dominante",
+      "camera": [
+        "ângulo baixo",
+        "perspectiva heroica",
+        "sensação monumental"
+      ],
+      "depth": "muito profunda",
+      "negative_space": "mínimo",
+      "visual_density": "extremamente alta",
+      "layering": "múltiplas camadas de partículas, brilho e fragmentos"
+    },
+
+    "lighting": {
+      "type": [
+        "cinematic",
+        "volumetric",
+        "god rays",
+        "rim light intenso"
+      ],
+      "contrast": "muito alto",
+      "glow": "forte emissão de luz interna",
+      "highlights": "especulares extremamente brilhantes",
+      "backlight": "predominante",
+      "ambient_occlusion": "forte"
+    },
+
+    "color_palette": {
+      "primary": [
+        "#2B103D",
+        "#5B1FFF",
+        "#9C4DFF",
+        "#FFFFFF"
+      ],
+      "secondary": [
+        "#2D6CFF",
+        "#3CF7FF",
+        "#FFAA00",
+        "#FF4040",
+        "#4CFF8E"
+      ],
+      "background": [
+        "preto profundo",
+        "violeta espacial",
+        "azul escuro"
+      ],
+      "saturation": "alta",
+      "vibrance": "muito alta"
+    },
+
+    "materials": {
+      "surfaces": [
+        "cristalino",
+        "obsidiana",
+        "energia sólida",
+        "matéria cósmica"
+      ],
+      "texture": [
+        "rachaduras luminosas",
+        "fragmentação",
+        "superfícies facetadas",
+        "energia interna pulsante"
+      ],
+      "reflectivity": "alta"
+    },
+
+    "effects": {
+      "particles": "abundantes",
+      "energy": [
+        "emissão luminosa",
+        "faíscas",
+        "fragmentos suspensos",
+        "poeira cósmica",
+        "névoa energética"
+      ],
+      "distortion": [
+        "distorção espacial",
+        "ondas gravitacionais",
+        "camadas de luz"
+      ],
+      "motion": "sensação constante de expansão e explosão controlada"
+    },
+
+    "detail_level": {
+      "complexity": "extrema",
+      "micro_details": true,
+      "sharpness": "muito alta",
+      "noise": "baixo",
+      "texture_density": "muito alta"
+    },
+
+    "rendering": {
+      "quality": "ultra detailed",
+      "finish": "digital painting premium",
+      "realism": "semi-realista",
+      "fantasy_ratio": 0.75,
+      "realism_ratio": 0.25
+    },
+
+    "brushwork": {
+      "edges": "afiados",
+      "soft_areas": "somente em brilho e atmosfera",
+      "lineart": "quase inexistente",
+      "painting_style": "pintura digital altamente refinada"
+    },
+
+    "atmosphere": {
+      "fog": "leve névoa luminosa",
+      "space": "profundo",
+      "volumetrics": "intensos",
+      "ambient_particles": "sempre presentes"
+    },
+
+    "shape_language": {
+      "dominant": [
+        "pontas",
+        "facetas",
+        "formas geométricas",
+        "linhas radiais"
+      ],
+      "avoid": [
+        "formas arredondadas simples",
+        "design minimalista",
+        "superfícies lisas sem textura"
+      ]
+    },
+
+    "visual_keywords": [
+      "ultra detailed",
+      "epic composition",
+      "volumetric lighting",
+      "high contrast",
+      "cosmic atmosphere",
+      "cinematic",
+      "sharp focus",
+      "glowing energy",
+      "fractal textures",
+      "crystalline reflections",
+      "dynamic lighting",
+      "depth",
+      "mythic scale",
+      "hyper detailed digital painting"
+    ],
+
+    "negative_keywords": [
+      "cartoon",
+      "anime",
+      "cel shading",
+      "flat colors",
+      "minimalism",
+      "low detail",
+      "pixel art",
+      "watercolor",
+      "comic lineart",
+      "low contrast",
+      "simple background",
+      "empty composition",
+      "matte lighting"
+    ]
+  }
+}

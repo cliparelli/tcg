@@ -7,6 +7,7 @@
     --text: #ece9f4;
     --text-dim: #a29dbb;
     --accent: #8a6de9;
+    --nav-h: 49px;
 }
 
 body {
@@ -16,9 +17,50 @@ body {
     color: var(--text);
 }
 
+.top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    height: var(--nav-h);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 16px;
+    background: var(--panel);
+    border-bottom: 1px solid var(--panel-border);
+}
+
+.top-nav__brand {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    color: var(--text-dim);
+    margin-right: 12px;
+    white-space: nowrap;
+}
+
+.top-nav__link {
+    font-size: 13px;
+    color: var(--text-dim);
+    text-decoration: none;
+    padding: 5px 12px;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+.top-nav__link:hover {
+    color: var(--text);
+    background: #262530;
+}
+
+.top-nav__link.active {
+    color: #fff;
+    background: var(--accent);
+}
+
 .app {
     display: flex;
-    height: 100vh;
+    height: calc(100vh - var(--nav-h));
 }
 
 .sidebar {
@@ -36,6 +78,11 @@ body {
     font-size: 16px;
     margin: 0 0 16px;
     color: var(--text);
+}
+
+.sidebar .share-btn {
+    width: 100%;
+    margin-bottom: 16px;
 }
 
 .field {
@@ -109,6 +156,34 @@ body {
     padding: 32px;
     overflow: auto;
     align-items: flex-start;
+}
+
+.share-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: var(--accent);
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: filter 200ms;
+}
+
+.share-btn:hover {
+    filter: brightness(1.1);
+}
+
+.share-btn__icon {
+    font-size: 14px;
+}
+
+.share-btn--copied {
+    background: #4ade80;
 }
 
 .card-preview {

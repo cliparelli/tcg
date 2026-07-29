@@ -526,7 +526,7 @@ Em seguida, mais uma lacuna foi identificada na mesma revisão — **Scoopup/Ret
 
 - **Retirada Completa** (Volátil) — devolve um personagem controlado por você à mão, junto com todas as cartas anexadas a ele. Cobre: Scoopup próprio, variante "limpa" (preserva o investimento).
 - **Retirada Forçada** (Volátil) — devolve um personagem controlado por você à mão; as cartas anexadas vão para o descarte. Cobre: Scoopup próprio, variante mais barata (descarta o investimento).
-- **Laço do Impostor** (Volátil) — `Aposte (3)`: se ganhar, devolve o personagem alvo do oponente à mão dele, e os recursos anexados vão para o descarte; se perder, nada acontece. Cobre: Scoopup ofensivo (alvo é personagem do oponente), com salvaguarda de balanceamento via Aposte.
+- **Laço do Impostor** (Volátil) — devolve o personagem alvo do oponente à mão dele; as cartas anexadas a ele vão para o descarte. Para resolver, exige `Aposte (3)`: se perder a aposta, nada acontece. Cobre: Scoopup ofensivo (alvo é personagem do oponente) — o Scoop é o efeito principal da carta; o Aposte é apenas a salvaguarda de balanceamento.
 
 Com essas 9 adições, os **37 Itens genéricos** somam **16 Permanentes** e **21 Voláteis** (~43%/57%, ainda puxado para Volátil, coerente com o restante do set).
 
@@ -684,6 +684,17 @@ Os **Itens genéricos** (ver "Itens genéricos" acima) não têm afinidade de ti
 - **A Fratura como fenômeno (não-lugar)** — não é um mundo, é uma ruptura: vidro/espaço trincado, bordas irregulares que vazam uma luz sem cor definida (nem a névoa do Divino, nem o Krackle do Cósmico — algo anterior a isso, "cru" e indefinido), como o instante exato antes de a energia de qualquer mundo específico preencher a fenda. Essa referência é a base para os 5 Épicos "Fratura XPTO" quando aparecerem lado a lado (ex. arte de capa, verso alternativo) e para qualquer Item genérico que mencione a Fratura em texto de sabor.
 - **Objetos utilitários sem dono** — itens genéricos tendem a representar equipamento "de qualquer competidor" (cinto, capa, amuleto, escudo comum): a referência visual é o objeto encontrado/emprestado, sem brasão ou adorno de mundo específico — superfícies neutras (couro cru, metal sem gravação, tecido sem estampa), reforçando que servem a qualquer tipo sem entregar identidade de nenhum.
 - **Composição de "arena compartilhada"** — quando um item genérico precisar de cenário de fundo (ex. arte de ação), usar a arena do Torneio genérica descrita acima, nunca o território de um dos 5 mundos — isso preserva o item como peça "neutra" tanto mecânica quanto visualmente.
+
+#### Lore geral simplificada
+
+Lore do Mundo que este card faz parte: Este card não pertence a nenhum dos cinco mundos — pertence ao que existe entre eles. Seu pano de fundo é o próprio Torneio: a tradição sazonal de combate que há gerações une e rivaliza Silenteia, o Reino da Detritônia e Solar Comum, decidindo prestígio, recursos e território a cada temporada, e que desde a Fratura do Multiverso também convive com a presença do Destacamento Interregno e da Astraca Primordial. O que é retratado aqui é o terreno comum a todos os cinco povos — a arena, a regra, o ritual, o espaço compartilhado onde os mundos se encontram — e nunca o poder ou a identidade de um deles em particular. Quando a Fratura aparece, ela não é um lugar nem um portal: é uma ruptura no próprio céu, uma fenda irregular como vidro trincado, vazando uma luz crua e sem cor definida, anterior à energia de qualquer mundo.
+ 
+Referência de arte base: vocabulário visual neutro e cerimonial, sem filiação a nenhum dos cinco mundos — arenas de terra batida, arquibancadas improvisadas, bandeiras e insígnias genéricas sem escudo de nação, marcações rituais de chão, superfícies sem gravação ou estampa. Paleta neutra, terrosa/acinzentada, que não compete com a paleta de nenhum dos 5 tipos. Cenários sempre do espaço compartilhado do Torneio, nunca do território de um mundo específico; a Fratura, quando presente, aparece como detalhe distante — uma trinca no céu — e não como foco da composição.
+
+
+GERE APENAS A ARTE, NÃO ADICIONE TEXTOS OU ESTRUTURAS DA CARTA. APENAS A ARTE.
+Proporção 1:1
+
 
 ## Listagem completa de cartas
 
@@ -907,7 +918,7 @@ Tabela mestra de todas as cartas planejadas para "Fratura do Multiverso" — con
 | Assalto à Mão | Item (Genérico, Volátil) | Genérico | O oponente descarta 2 cartas à escolha dele da própria mão. | X | - |
 | Retirada Completa | Item (Genérico, Volátil) | Genérico | Devolve um personagem controlado por você à mão, junto com todas as cartas anexadas a ele. | X | - |
 | Retirada Forçada | Item (Genérico, Volátil) | Genérico | Devolve um personagem controlado por você à mão; as cartas anexadas vão para o descarte. | X | - |
-| Laço do Impostor | Item (Genérico, Volátil) | Genérico | **Aposte (3)**: se ganhar, devolve o personagem alvo do oponente à mão dele, sem os recursos anexados (vão para o descarte); se perder, nada acontece. | X | - |
+| Laço do Impostor | Item (Genérico, Volátil) | Genérico | Devolve o personagem alvo do oponente à mão dele; as cartas anexadas vão para o descarte. Para resolver, exige **Aposte (3)**: se perder a aposta, nada acontece. | X | - |
 | Retorno do Campeão | Item (Genérico, Volátil) | Genérico | **Reaproveitar Recurso (1/Personagem)**: devolva 1 carta de Personagem da sua pilha de descarte para sua mão. | X | - |
 | Chamado dos Caídos | Item (Genérico, Volátil) | Genérico | **Reaproveitar Recurso (2/Personagem)**: devolva 2 cartas de Personagem da sua pilha de descarte para sua mão; descarte 1 carta da mão ao resolver. | X | - |
 | Baú de Reservas | Item (Genérico, Volátil) | Genérico | **Reaproveitar Recurso (1/Item)**: devolva 1 carta de Item da sua pilha de descarte para sua mão. | X | - |

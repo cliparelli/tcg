@@ -24,7 +24,7 @@ O combo central usa **Bragan, o Recorde Imbatível** como Líder e **Doran Punho
 
 - Volátil
 	- 1x Grito de Guerra do Povo - Lendária (Fratura do Multiverso) - Buff em massa *
-	- 1x Fratura do Sol - Épica (Fratura do Multiverso) - Buff em massa *
+	- 1x Fratura do Sol (Fratura do Multiverso) - Buff em massa *
 	- 2x Golpe do Sol a Pino (Fratura do Multiverso) - Dmg
 	- 3x Lança da Aurora Comum (Fratura do Multiverso) - Transpassar
 

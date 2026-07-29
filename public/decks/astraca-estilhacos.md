@@ -21,10 +21,10 @@ Os Itens dobram a aposta em dano recíproco e em área: **Implosão Compartilhad
 	- 1x Núcleo em Expansão - Lendária (Fratura do Multiverso) - Ataque expansível
 
 - Volátil
-	- 1x Fratura do Descanso - Épica (Fratura do Multiverso) - Dmg em área com recoil *
-	- 1x Chifre do Titã Adormecido - Lendária (Fratura do Multiverso) - Ataque expansível coletivo
+	- 1x Fratura do Descanso (Fratura do Multiverso) - Dmg em área com recoil *
+	- 1x Chifre do Titã Adormecido (Fratura do Multiverso) - Ataque expansível coletivo
 	- 2x Implosão Compartilhada (Fratura do Multiverso) - Recoil/Custo colateral *
-	- 2x Grito do Vácuo Desperto (Fratura do Multiverso) - Recoil não-Vida
+	- 2x Grito do Vácuo Desperto (Fratura do Multiverso)
 	- 2x Onda do Vácuo (Fratura do Multiverso) - Dano em área
 	- 3x Tempestade sem Fim (Fratura do Multiverso) - Ataque expansível em área *
 
