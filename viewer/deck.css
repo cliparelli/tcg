@@ -25,6 +25,29 @@
     cursor: pointer;
 }
 
+.style-filter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 8px;
+    margin-top: 8px;
+}
+
+.style-filter__option {
+    display: flex !important;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--text);
+    cursor: pointer;
+    margin-bottom: 0 !important;
+}
+
+.style-filter__option input {
+    width: auto !important;
+    padding: 0 !important;
+    cursor: pointer;
+}
+
 .sidebar__hint {
     font-size: 11px;
     color: var(--text-dim);

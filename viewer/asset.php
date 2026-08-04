@@ -19,7 +19,7 @@ if (($_GET['expansion'] ?? '') !== '') {
     exit;
 }
 
-$structuresDir = dirname(__DIR__) . '/CARDS/ASSETS/STRUCTURES/V6';
+$structuresDir = __DIR__;
 
 $allowed = [
     'card' => 'CARD-MODEL.png',

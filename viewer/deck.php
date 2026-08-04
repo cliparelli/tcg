@@ -25,18 +25,21 @@
         <div class="field field--type-filter">
             <label>Filtrar por tipo</label>
             <div class="type-filter" id="type-filter">
-                <label class="type-filter__option"><input type="checkbox" value="Natureza" checked> Natureza</label>
-                <label class="type-filter__option"><input type="checkbox" value="Vida" checked> Vida</label>
-                <label class="type-filter__option"><input type="checkbox" value="Morte" checked> Morte</label>
-                <label class="type-filter__option"><input type="checkbox" value="Divino" checked> Divino</label>
-                <label class="type-filter__option"><input type="checkbox" value="Elemental" checked> Elemental</label>
-                <label class="type-filter__option"><input type="checkbox" value="TecSci" checked> TecSci</label>
                 <label class="type-filter__option"><input type="checkbox" value="Magia" checked> Magia</label>
-                <label class="type-filter__option"><input type="checkbox" value="Mental" checked> Mental</label>
+                <label class="type-filter__option"><input type="checkbox" value="TecSci" checked> TecSci</label>
                 <label class="type-filter__option"><input type="checkbox" value="Físico" checked> Físico</label>
-                <label class="type-filter__option"><input type="checkbox" value="Poder Energético" checked> Poder Energético</label>
-                <label class="type-filter__option"><input type="checkbox" value="Fera" checked> Fera</label>
+                <label class="type-filter__option"><input type="checkbox" value="Divino" checked> Divino</label>
                 <label class="type-filter__option"><input type="checkbox" value="Cósmico" checked> Cósmico</label>
+            </div>
+        </div>
+
+        <div class="field field--style-filter">
+            <label>Filtrar por estilo</label>
+            <div class="style-filter" id="style-filter">
+                <label class="style-filter__option"><input type="checkbox" value="MONO" checked> MONO</label>
+                <label class="style-filter__option"><input type="checkbox" value="DUAL" checked> DUAL</label>
+                <label class="style-filter__option"><input type="checkbox" value="TRIPLE" checked> TRIPLE</label>
+                <label class="style-filter__option"><input type="checkbox" value="RAINBOW" checked> RAINBOW</label>
             </div>
         </div>
 

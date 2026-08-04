@@ -6,6 +6,8 @@
     const sortDirection = document.getElementById('sort-direction');
     const typeFilter = document.getElementById('type-filter');
     const typeFilterInputs = Array.from(typeFilter.querySelectorAll('input[type="checkbox"]'));
+    const styleFilter = document.getElementById('style-filter');
+    const styleFilterInputs = styleFilter ? Array.from(styleFilter.querySelectorAll('input[type="checkbox"]')) : [];
     const deckPane = document.getElementById('deck-pane');
     const shareBtn = document.getElementById('share-btn');
 
@@ -28,12 +30,16 @@
     init();
 
     async function init() {
-        const data = await fetchJson('deck-api.php?action=list');
+        // Carrega os dados dos decks do arquivo JSON
+        const data = await fetchJson('../decks/decks.json');
         decks = data.decks || [];
 
         sortField.addEventListener('change', renderDeckSelect);
         sortDirection.addEventListener('change', renderDeckSelect);
         for (const input of typeFilterInputs) {
+            input.addEventListener('change', renderDeckSelect);
+        }
+        for (const input of styleFilterInputs) {
             input.addEventListener('change', renderDeckSelect);
         }
         deckSelect.addEventListener('change', () => loadDeck(deckSelect.value));
@@ -55,7 +61,8 @@
 
     function renderDeckSelect() {
         const previous = deckSelect.value;
-        const filtered = filterDecksByType(decks, getSelectedTypes());
+        let filtered = filterDecksByType(decks, getSelectedTypes());
+        filtered = filterDecksByStyle(filtered, getSelectedStyles());
         populateDeckSelect(sortDecks(filtered, sortField.value, sortDirection.value));
 
         if (previous && Array.from(deckSelect.options).some((opt) => opt.value === previous)) {
@@ -64,7 +71,7 @@
             loadDeck(deckSelect.value);
         } else {
             deckPane.innerHTML = '';
-            deckPane.appendChild(placeholderMessage('Nenhum deck corresponde aos tipos selecionados.'));
+            deckPane.appendChild(placeholderMessage('Nenhum deck corresponde aos filtros selecionados.'));
         }
     }
 
@@ -72,11 +79,25 @@
         return typeFilterInputs.filter((input) => input.checked).map((input) => input.value);
     }
 
+    function getSelectedStyles() {
+        return styleFilterInputs.filter((input) => input.checked).map((input) => input.value);
+    }
+
     function filterDecksByType(list, selectedTypes) {
         if (selectedTypes.length === typeFilterInputs.length) {
             return list;
         }
-        return list.filter((deck) => selectedTypes.includes(deck.type));
+        return list.filter((deck) => {
+            const deckTypes = deck.types || [];
+            return deckTypes.some((type) => selectedTypes.includes(type));
+        });
+    }
+
+    function filterDecksByStyle(list, selectedStyles) {
+        if (selectedStyles.length === styleFilterInputs.length || selectedStyles.length === 0) {
+            return list;
+        }
+        return list.filter((deck) => selectedStyles.includes(deck.style));
     }
 
     function sortDecks(list, field, direction) {

@@ -178,7 +178,7 @@ def main():
 
     print(f"{len(fila)} carta(s) na fila de captura.\n")
 
-    destino_dir = EXPANSIONS_DIR / args.colecao
+    destino_dir = EXPANSIONS_DIR / args.colecao / "imgs"
     destino_dir.mkdir(parents=True, exist_ok=True)
 
     servidor = subprocess.Popen(
