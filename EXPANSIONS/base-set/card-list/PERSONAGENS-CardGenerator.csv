@@ -1,0 +1,311 @@
+Nome;Versão;Mídia;Universo;Classificação;Tipo;Fraqueza;Resitência;Vida;Defesa;"Custo
+Sidekick";"Ativação
+Sidekick";Descrição Sidekick;"Custo
+Líder";"Ativação
+Líder";Descrição Líder;"Custo
+Flanquear";"Dano
+Flanquear";Descrição Flanquear;"Custo
+Ataque";"Dano
+Ataque";Descrição Ataque;Texto Final 1;Texto Final 2
+Super Apocalypse;1;HQ;8u-pl;Clark Kent - Kriptoniano;TecSci;;;8;5;;;;;1;"Campo de Morte
+Todos os personagens que atacarem ou forem atacados por Super Apocalipse recebem um tk de DOT e um de Doom no fim do combate.";;;;3;;"Poder Devastador - Aposte (3): 
+Se seu oponente tiver outros personagens em seu time, embaralhe o personagem alvo junto com todas as suas cartas no deck de seu controlador / Cause 5 pontos de dano no alvo.";https://hqultimate.site/leitor/hq/Superman%20-%20Condenado%20(2014)/18/05.jpg;
+Superman;1;HQ;DC;Clark Kent - Kriptoniano;TecSci;Magia;;7;6;;;;;;"Passiva Simples
+Fisiologia Kriptoniana - Aposte (1): Retire 3 Debuffs deste personagem / Coloque 1 tk de AtkUp e 1 de Mend sobre este personagem.";;;;1;3;Super Força - Aposte (1) - Coloque 1 tks de Confusão no alvo;;
+Superman;2;HQ;DC;Clark Kent - Kriptoniano;TecSci;Magia;;6;7;;;;;;"Assumo a Frente
+No início de sua fase principal, Aposte (1) - Coloque 1 tk de Provocação sobre este personagem e 3 tks de DefUp / Coloque 2 tks de AtkUp sobre este personagem.";;;;2;4;"Visão de Calor
+Aposte (1) - Coloque 1 tk de Dot";https://hqultimate.site/leitor/hq/Superman%20-%20Condenado%20(2014)/21/01.jpg;
+Homem Borracha;1;HQ;DC;Eel O’Brian;Físico;Elemental;Mental;4+;4+;;;;;;"Passiva Simples
+Fisiologia Maleável: Durante sua fase principal coloque um toquem de Reviver e também coloque um token LifeUp e um token de DefUp para cada Fonte de Energia anexada a este personagem.";;;;3;2;"Martelo de Borracha:
+Ataque Expansível (2)";;
+Lanterna Verde;1;HQ;DC;Hal Jordan - Terráqueo;Poder Energético;Mental;;3;5;;;;;3;"Maior Lanterna Verde
+No ínicio de sua fase principal, coloque 3 token de escudo em cada um de seus personagens ativos.";;;;2;3;"Marreta de Energia
+Aposte (1) - Remova 3 Buffs e coloque um tk de confusão no alvo desta ação";;
+Supegirl;1;HQ;DC;"Kara Zor El - 
+Kriptoniana";TecSci;;;6;5;1;2;"Casa de El
+Aposte (1) - Clarividência (Kriptoniano (a)) / Bando (Kriptoniano) - Coloque 1 tk de defUp.";;;;4;3;"Visão de Calor - 
+Alvos Múltiplos";;;;https://hqultimate.site/leitor/hq/Superman%20-%20Condenado%20(2014)/21/01.jpg;
+Etrigan;1.1;HQ;DC;Kirby's Demon;Divino;Morte;;7;3;2;;Guia Infernal: Descarte um energia para evitar todos os efeitos de um ataque fatal ao personagem alvo.;;;;3;3;Baforada Infernal: Causa 1 ponto de dano em cada personagem do time do oponente.;;;;;
+Louis Lane Possuída;1;HQ;DC;Louis Lane - Repórter;Mental;;;2;3;;;;;;"Passiva Simples
+Espiã Infiltrada - Seus oponentes jogam com suas mãos abertas.";;;;1;;"Acesso livre a mente
+Escolha uma carta da mão do oponente alvo. Ele deverá descartar aquela carta.";https://hqultimate.site/leitor/hq/Superman%20-%20Condenado%20(2014)/16/17.jpg;
+Aquaman;1;HQ;DC;Rei de Atlântida;Elemental;;;5;7;;;;;2;"Rei de Atlântida
+Bando (Elemental) - No início da sua fase de principal, coloque um tk de sobrecura sobre cada um de seus personagens ativos.";;;;1;2;"Fúria do Oceano
+Aposte (1) - O personagem alvo desta ação não poderá atacar Aquaman no próximo turno.";;
+Light Yagami;1;Mangá;Death Note;Estudante;Morte;Morte;;3;0;2;1;Um Passo a Frente: Extinguir Fonte (2): Compre duas cartas.;;;;3;0;Hora da Morte: Descarte uma energia e coloque um token definitivo de perdição no personagem alvo.;;;;;
+Mendel Esteves;1;Comics;Indie;Sonhonauta;Mental;Magia;;2;0;;;;1;;"Passiva Simples:
+Sonhonauta: Este personagem tem imunidade a sonolência, paralisia, confusão e silêncio. Toda vez que este personagem for alvo de ações que gerem qualquer um destes efeitos, coloque um token de sobrecura sobre ele.";2;;Busca Implacável - Rotação de Recurso (2) - Clarividência (Personagem);;;;;
+June de Camaleão;1;Mangá;Saint Seiya;Amazona de Bronze;Cósmico;;;2;2;;;;0;;;;;;1;1;Chicote do Camaleão - Visão Verdadeira;;
+Cassius;1;Mangá;Saint Seiya;Aprendiz de Cavaleiro;Físico;;;3;1;;;;;2;"Passiva Simples:
+Vou arrancar sua orelha: Aposte (1) - O próximo ataque ganha Amedrontar";;;;2;3;;;
+Cassius;2;Mangá;Saint Seiya;Aprendiz de Cavaleiro;Fisico;;;3;1;;;;;;;;;;1;;Vou arrancar sua orelha - Aposte (1): Causa 3 pontos de dano no alvo / causa 2 pontos de dano neste personagem;;
+Kiki de Apêndice;1;Mangá;Saint Seiya;Aprendiz de Cavaleiro;Cósmico;;;2;0;1;1;Telecinese: Descarte uma energia deste personagem para descarta uma energia do personagem alvo.;;;;0;0;Trazer armaduras: Descarte 2 energias deste personagem para procurar um Item em seu deck. Revele-o e coloque em sua mão.;;;;;
+Saori Kido;1;Mangá;Saint Seiya;Athena;Divino;;;6;2;;;;0;;Aura de Atena: Todo dano recebido por Saori Kido pode ser redirecionado para um Cavaleiro de Bronze. Saori Kido e todos os Cavaleiros de Bronze se tornam imunes a Debuffs;;;;2;0;Benção de Nike: A próxima ação que cause dano do Cavaleiro de Bronze alvo irá causar 3 pontos extras.;;Aqui é a Saori com Bàculo só :|
+Saori Kido, Deusa Athena;3;Mangá;Saint Seiya;Athena;Divino;;;7;10;;;;2;;"Deusa da Sabedoria:
+Extinguir Fonte (2): Procure uma carta de Cavaleiro de Bronze em seu deck – revele-a e coloque em sua mão.";;;;2;3;"Deusa da Guerra:
+Extingiuir Fonte (2): Se o fizer, causar 3 pontos de dano em um segundo alvo.";;Aqui vai ser a Saori com armadura de Athena
+Saori Kido, Encarnação de Athena;2;Mangá;Saint Seiya;Athena;Divino;;;7;8;;;;0;;"Domínio de Athena: 
+No início da sua fase principal, coloque 2 tks de Sobrecura e 1 DefUp sobre todos os Cavaleiros de Bronze sobre seu domínio.";;;;3;0;"Ira de Athena: 
+A próxima ação que cause dano do Cavaleiro de Bronze alvo irá causar 2 pontos extras, ganha Expansível (3) e coloca um token de Sonolência sobre o alvo.";;Aqui é a Saori semi com armadura
+Ban de Leonete;1;Mangá;Saint Seiya;Cavaleiro de Bronze;Cósmico;;;1;1;3;;"Bombardeio do Leonete
+Aposte (até vencer) - Coloque 1 tk de DOT para cada perda.";;;;2;2;"Soco Flamejante
+Aposte (1) - Coloque 1 DOT no alvo desta ação.";;;;;
+Geki de Urso;1;Mangá;Saint Seiya;Cavaleiro de Bronze;Cósmico;;;2;3;;;;;;"Passiva Simples
+Guerra Galática: Se Seiya de Pégasus estiver em jogo, você pode colocar 2 tks de AtkUp e 1 Def Up em Geki";2;1;"Abraço de Urso
+Aposte (1) - O oponente não pode atacar no próximo turno";;;;;
+Hyoga de Cisne;1;Mangá;Saint Seiya;Cavaleiro de Bronze;Cósmico;;;2;3;;;;0;;"Passiva Simples
+Guerra Galática: Se Ichi de Hydra estiver em jogo, durante a fase principal coloque um token de Imunidade a DOT neste personagem.";;;;0;?;"Cosmo Congelante:
+Coloque um token de Paralisia no personagem alvo desta ação.
+
+Extinguir Fonte (X):
+Se o fizer, esta ação causa 1 ponto de dano para cada energia descartada – Tipo Mutável (Elemental).";;
+Hyoga de Cisne;2;Mangá;Saint Seiya;Cavaleiro de Bronze;Cósmico;;;3;4;;;;0;;"Passiva Simples
+Cosmo Dourado:
+Você pode descartar uma energia deste personagem. Se o fizer, coloque um token de Paralisia no personagem alvo.";;;;2;2;"Pó de Diamante:
+Faça uma Aposta: Se ganhar, o personagem não pode atacar no próximo turno.";"Cosmo Dourado:
+Extinguir Fonte (1): Se o fizer, coloque um token de Paralisia no personagem alvo";"Pó de Diamante:
+Aposte (1): O personagem alvo não pode atacar no próximo turno."
+Hyoga de Cisno Divino;1;Mangá;Saint Seiya;Cavaleiro de Bronze;Divino;;;5;5;;;;;;"Passiva Simples
+Armadura Divina: Se Athena estiver em jogo, durante a sua fase principal, se Hyoga for alvo de uma ação, coloque tk de paralisia no personagem que gerou a ação.";;;;3;5;"Execução Aurora
+Coloque um tk de paralisa sobre o personagem alvo
+
+Extinguir Recurso (1) - Coloque 1 tk de paralisia em um segundo alvo.";;
+Hyoga, O Matador de Mestres;3;Mangá;Saint Seiya;Cavaleiro de Bronze;Cósmico;;;2;3;;;;0;;"Passiva Simples
+Matador de Mestres:
+Hyoga, O Matador de Mestres causa o dobro de dano em Kamus de Aquário e Mestre Cristal.";;;;2;2;"Turbilhão de Gelo:
+Ataque Expasível (3)
+
+Se este personagem estiver com mais de 4 energias anexadas, coloque 1 token de Paralisia no personagem alvo desta ação.";;
+Ichi de Hidra;1;Mangá;Saint Seiya;Cavaleiro de Bronze;Cósmico;;;2;2;;;;;;"Passiva Simples
+Guerra Galática: Se Hyoga de Cisne estiver em jogo, este personagem tem imunidade a paralisia.";1;1;"Presas Venenosas
+Descarte uma carta - adicione 2 Dot";;;;;
+Ikki de Fênix;1;Mangá;Saint Seiya;Cavaleiro de Bronze;Cósmico;;;3;2;;;;0;;"Passiva Simples
+Guerra Galática: Quando este personagem entrar em jogo, coloque um token de Provocação nele. Se outro Cavaleiro de Bronze estiver em jogo, durante a fase principal coloque um token de Provovação neste personagem.";;;;1;2;"Comandante dos Cavaleiros Negros:
+Faça uma aposta, se ganhar, procure no seu deck um personagem da Categoria Cavaleiro Negro, revele o card aos outros jogadores e coloque em sua mão.";;
+Ikki de Fênix;2;Mangá;Saint Seiya;Cavaleiro de Bronze;Cósmico;;;3;3;2;;"Golpe Fantásma de Fênix
+Extinguir Recursos (1): O personagem não poderá usar ações no próximo turno. Após este turno, coloque um token de confusão sobre o alvo";;;;;;;2;3;"Ave Fenix
+Alvos Múltiplos (2)";;
+Ikki de Fênix;3;Mangá;Saint Seiya;Cavaleiro de Bronze;Cósmico;;;6;5;;;;;;;;;;"2
+3";"2
+3";"Golpe Fantásma de Fênix
+Extinguir Recursos (1): O personagem não poderá usar ações no próximo turno. Após este turno, coloque um token de confusão sobre o alvo
+
+Ave Fenix
+Alvos Múltiplos (3)";;
+Ikki de Fênix Divino;1;Mangá;Saint Seiya;Cavaleiro de Bronze;Divino;;;7;6;;;;0;;"Passiva Simples
+Armadura Divina: Se Athena estiver em jogo, durante a sua fase principal, se Ikki for alvo de uma ação, coloque dois tks de dot no personagem que gerou a ação.";;;;3;4;"Avê Fenix
+Alvos Múltplos - Coloque 3 tks de Dot sobre cada personagem atingido por este golpe
+";;
+Ikki, O Rebelde;4;Mangá;Saint Seiya;Cavaleiro de Bronze;Cósmico;;;3;2;;;;;;"Passiva Simples
+Ikki, O Rebelde, causa dano dobrado a personagens que tem Efeito Líder.";;;;3;4;"Ave Fenix
+Alvos Múltiplos (2)";;
+Jabu de Unicórnio;1;Mangá;Saint Seiya;Cavaleiro de Bronze;Cósmico;;;2;1;;;;;;"Passiva Simples
+Guerra Galática: Se Shun de Andromeda estiver em jogo, durante sua fase principal, vc pode colocar um token de furia";;;;1;2;"Galope do Unicórnio
+Aposte (1) - Retira um buff do alvo";;
+Nachi de Lobo;1;Mangá;Saint Seiya;Cavaleiro de Bronze;Cósmico;;;2;1;;;;;;"Passiva Simples
+Guerra Galática: Se Ikki de Fênix estiver em jogo, você pode colocar 1 tk de Mend neste personagem.";;;;1;2;"Uivo do Lobo
+Se o personagem for nocaute, coloque um tk permanente de AtkUp sobre ele.";;
+Seiya de Pégasus;1;Mangá;Saint Seiya;Cavaleiro de Bronze;Cósmico;;;2;2;;;;0;;"Passiva Simples
+Guerra Galática: Se Shiryu de Dragão estiver em jogo, durante a fase principal coloque um token de AtkUp neste personagem.";;;;1;1;"Meteóro de Pégasus:
+Ataque Expansível (3)";;
+Seiya de Pégasus;2;Mangá;Saint Seiya;Cavaleiro de Bronze;Cósmico;;;3;2;;;;0;;"Passiva Simples
+Por Athena?:
+Se Saori Kido estiver em jogo, em sua fase principal você pode fazer uma aposta.
+Se ganhar, coloque 2 Tokens de AtkUp neste personagem, senão coloque 1 Token de AtkDown.";;;;3;2;"Turbilhão de Pégaso:
+Faça uma aposta, se ganhar, coloque um token de Confusão sobre o alvo, senão, coloque um token de paralisia.";"Por Athena? Passiva
+Afinidade (Saori Kido) – Aposte (1)Coloque 2 AtkUp / Coloque 1 AtkDown";Turbilhão de PegasusAposte (1) – Coloque 1 Confusion sobre o alvo / Coloque 1 Paralyse sobre o alvo
+Seiya de Pégasus;3;Mangá;Saint Seiya;Cavaleiro de Bronze;Cósmico;;;4;2;;;;0;;"Passiva Simples
+Cosmo Dourado:
+Você pode descartar uma energia deste personagem. Se o fizer, coloque 2 tokens de AtkUp neste personagem.";;;;3;2;"Cometa de Pégaso:
+Ataque perfurante";;
+Seiya de Pégasus;4;Mangá;Saint Seiya;Cavaleiro de Bronze;Cósmico;;;4;3;;;;;;;;;;1 | 3;2 | 3;"Meteóro de Pégasus:
+Este ataque causa um ponto de dano a mais para cada energia vinculada a este personagem, além da utilizada para pagar o custo desta ação. Esta ação não pode causa mais de 5 pontos de dano desta forma.
+
+Cometa de Pégaso:
+Ataque perfurante.
+Se este personagem estiver com mais de 4 energias anexadas, coloque 2 tokens de DefDown no personagem alvo desta ação.";;
+Seiya de Pégasus Divino;1;Mangá;Saint Seiya;Cavaleiro de Bronze;Divino;;;4;5;;;;0;;"Passiva Simples
+Armadura Divina: Se Deusa Athena estiver em jogo, todos os ataques deste persoangens são considerados como Ataques Perfurantes.";;;;2;3;"Meteoro de Pégasus Divino:
+Este ataque causa um ponto de dano a mais para cada energia vinculada a este personagem, além da utilizada para pagar o custo desta ação.";;
+Seiya, O Matador de Deuses;5;Mangá;Saint Seiya;Cavaleiro de Bronze;Cósmico;;;;;;;;;;;;;;;;;;
+Shiryu de Dragão;1;Mangá;Saint Seiya;Cavaleiro de Bronze;Cósmico;;;3;3;;;;0;;"Passiva Simples
+Guerra Galática: Se Seiya de Pégasus estiver em jogo, durante a fase principal coloque um token de DefUp neste personagem.";;;;2;3;"Cólera do Dragão:
+Transpassar";;
+Shiryu de Dragão;2;Mangá;Saint Seiya;Cavaleiro de Bronze;Cósmico;;;3;4;;;;0;;"Passiva Simples:
+Por Athena? Se Saori Kido estiver em jogo, em sua fase pricipal você pode fazer uma aposta. Se vencer coloque 2 tokens DefUp neste personagem, senão coloque 2 tokens AtkDwn";;;;3;3;Dragão Voador: Escolha um personagem do time do oponente e cause 2 pontos de dano.;;
+Shiryu de Dragão;3;Mangá;Saint Seiya;Cavaleiro de Bronze;Cósmico;;;4;5;;;;0;;"Passiva Simples
+Cosmo Dourado:
+Você pode descartar uma energia deste personagem. Se o fizer, coloque 2 tokens de DefUp neste personagem.";;;;2;3;"Excalibur:
+Ataque Perfurante, Transpassar";;
+Shiryu de Dragão;4;Mangá;Saint Seiya;Cavaleiro de Bronze;Cósmico;;;5;6;;;;;;;;;;2 | 4;3 | X;"Cólera do Dragão:
+Transpassar
+
+Último Dragão:
+Nocautei este personagem para causar 2x a quantidade de energias anexadas a ele no personagem alvo.";;
+Shiryu de Dragão Divino;1;Mangá;Saint Seiya;Cavaleiro de Bronze;Divino;;;5;8;;;;0;;"Passiva Simples
+Armadura Divina: Se Deusa Athena estiver em jogo, todos os ataques deste personagem recebem o efeito de Transpassar.";;;;3;5;"Cólera dos Cem Dragões:
+Ataque Expansível, Alvos Múltiplos";;
+Shiryu, O Aprendiz Prodígio;5;Mangá;Saint Seiya;Cavaleiro de Bronze;Cósmico;;;3;3;1;;"Novas maneiras de lutar
+Faça uma aposta - Compre 2 cartas / Descarte 1 carta";;;;2;0;"Dragão Voador:
+Transpassar
+Aposte (2) - Causa 2 pontos de dano para vez que ganhou.
+";;;;;
+Shun de Andrômeda;1;Mangá;Saint Seiya;Cavaleiro de Bronze;Cósmico;;;1;2;;;;0;;"Passiva Simples
+Guerra Galática: Se Jabu de Unicórnio estiver em jogo, durante a fase principal coloque dois tokens de DefUp neste personagem.";;;;3;1;"Nebulosa de Andromeda:
+Se este personagem for atacado no próximo turno, causará 2 pontos de dano em cada um dos personagens atacantes.";;
+Shun de Andrômeda;2;Mangá;Saint Seiya;Cavaleiro de Bronze;Cósmico;;;1;3;;;;0;;"Passiva Simples
+Ikkiiiiii: Se Ikki de Fênix estiver em jogo, toda vez que Shun for alvo de uma ação de um personagem, Ikki de Fênix irá causar 2 pontos de dano naquele personagem. Considere este dano como Elemental e perfurante. ";;;;1;2;"Onda Relâmpago:
+Visão Verdadeira
+Se o personagem estiver com um token de Provocação ou Invisibilidade este ataque causará 2 pontos de dano extra.";;
+Shun de Andrômeda;3;Mangá;Saint Seiya;Cavaleiro de Bronze;Cósmico;;;2;4;;;;0;;"Passiva Simples
+Cosmo Dourado:
+Você pode descartar uma carta para procurar duas cartas de item em seu deck e colocar em sua mão.
+Revele as cartas e embaralhe o deck.";;;;2;0;"Defesa Circular
+Coloque dois tokens de Reflexão sobre este personagem ";;
+Shun de Andrômeda;4;Mangá;Saint Seiya;Cavaleiro de Bronze;Cósmico;;;3;5;;;;0;;;;;;"2
+3";"2
+4";"Corrente Nebulosa:
+Coloque um token de Paralisia no alvo desta ação.
+---
+Tempestade Nebulosa:
+Ataque Expansível";;
+"Shun de Andrômeda
+Divino";1;Mangá;Saint Seiya;Cavaleiro de Bronze;Divino;;;4;7;;;;0;;"Passiva Simples
+Armadura Divina: Se Deusa Athena estiver em jogo, durante a sua fase principal, coloque dois tokens de reflexão sobre este personagem.";;;;3;3;"Onda Relâmpago:
+Visão Verdadeira
+Se o personagem estiver com um token de Provocação ou Invisibilidade este ataque causará 3 pontos de dano extra.
+
+Descarte 1 carta de sua mão, para causar mais 3 pontos de dano extra.";;
+Shun, O Pacifista;5;Mangá;Saint Seiya;Cavaleiro de Bronze;Cósmico;;;1;2;1;;"Pacifista
+Faça uma aposta - Tkn Pacifista no alvo / Tkn Silencio no alvo";;;;2;;"Corrente Circular
+Coloque um tk de reflexão.  descarte 1 cartas para causar 2 pontos de dano no atacante";;;;;
+Aioria de Leão;1;Mangá;Saint Seiya;Cavaleiro de Ouro;Cósmico;;;7;7;;;"Aura Curativa
+Reciclar Recurso (1) - Coloque 3 mends sobre o personagem alvo.";;;;;;;3;6;"Capsula do Poder
+Ataque Expansível";;
+Aldebaran de Touro;1;Mangá;Saint Seiya;Cavaleiro de Ouro;Cósmico;;;8;6;;;;3;;"Passiva Simples
+Posição de Iai: Toda vez que Aldebaran sobre dano, Aposte - reduza 3 pontos de dano / cause 3 pontos de dano no alvo";;;;3;6;"Grande Chifre
+Transpassar";;
+Hyoga de Aquário;1;Mangá;Saint Seiya;Cavaleiro de Ouro;Cósmico;;;4;5;;;;0;;"Líder
+Cosmo Congelante: Toda vez que anexar uma energia a este personagem aposte (1) - descarte uma energia anexada ao personagem alvo / coloque um token de paralisia sobre o personagem alvo";;;;4;3;"Execução Aurora
+Alvos Múltiplos (2) - coloque um token de paralisia em cada alvo
+
+Rotação de Recuros (2): 
+Expansível
+
+Rotação de Energia (2):
+Altere o limite de alvos múltiplos para 4.";;
+Ikki de Leão;1;Mangá;Saint Seiya;Cavaleiro de Ouro;Cósmico;;;6;6;;;;0;;"Líder
+Poder da Fênix: No início da sua fase principal, coloque um tk de imunidade a morte neste personagem.";;;;3;4;"Avê Fenix
+Coloque 3 tks de Dot em cada alvo. Se Ikki de Leão estiver com um token de imd a morte sobre ele, est aação recebe amedrontar;
+
+Rotação de Energia (2):
+Alvos Múlitplos";;
+Kamus de Aquário;1;Mangá;Saint Seiya;Cavaleiro de Ouro;Cósmico;;;7;6;2;;"Pó de Diamante
+Aposte (1) - Causa 2 pontos de dano no alvo / Tk de Paralisia";;;;;;;3;5;"Execução Aurora
+Coloque um tk de paralisa sobre o personagem alvo
+
+Extinguir Recurso (1) - Coloque 1 tk de paralisia em um segundo alvo.";;
+Máscara da Morte de Câncer;1;Mangá;Saint Seiya;Cavaleiro de Ouro;Morte;;;6;6;;;;2;;"Passiva Simples
+Absorção de Almas - Toda vez que um personagem for nocaute, coloque 3 mends sobre MM";;;;3;4;"Onda do Inferno
+Coloque 2 Doom sobre o alvo";;
+Mú de Áries;1;Mangá;Saint Seiya;Cavaleiro de Ouro;Cósmico;;;6;8;2;;"Muralha de Cristal
+Ação Única - Extinguir Recurso (3) - Previne todo o dano e os efeitos neste turo pelo oponente alvo.";;;;;;;3;5;"Extinção Estelar
+Aposte (1) - Silêncio / Compre 2 card";;
+Saga de Gêmeos;1;Mangá;Saint Seiya;Cavaleiro de Ouro;Cósmico;;;8;8;;;;2;;"Líder
+Outra Dimensão - Se um Cavaleiro de Ouro receber um dano fatal, Aposte (3) - Evite todo o dano e os efeitos recebidos pelo personagem. Embaralhe o personagem que gerou o efeito com todas as cartas anexadas no deck de seu controlador.";;;;4;6;"Explosão Galática
+Alvos Múltiplos";;
+Seiya de Sagitário;1;Mangá;Saint Seiya;Cavaleiro de Ouro;Cósmico;;;5;5;;;;0;;"Líder
+Última esperança: Se vc tem menos pedras de recompensa que seu oponente, os ataques deste personagem causam dano dobrado e recebem atropelar.";;;;2;3;"Flecha de Ouro
+Visão Verdadeira
+
+Rotação de Recurso (2): Atropelar
+
+Rotação de Energia (2): Expansível";;
+Shaka de Virgem;1;Mangá;Saint Seiya;Cavaleiro de Ouro;Divino;;;9;9;;;;2;;"Passiva Simples:
+Ohm - 
+Clarividência (Item Volátil).
+Shaka de Virgem pode usar essa habilidade em qualquer posição do campo.";;;;2;7;"Kahn
+Coloque um token de Imunidade a dano neste personagem";;
+Shiryu de Dragão Divino;1;Mangá;Saint Seiya;Cavaleiro de Bronze;Cósmico;;;5;7;;;;0;;"Líder
+Armas de Libra: Durante sua fase principal você pode Apostar (1): coloque 1 tk de reflexão / coloque 1 tk de atkUp";;;;3;5;"Cólera dos Cem Dragões:
+Ataque Expansível, Alvos Múltiplos
+
+Rotação de Recursos (2): Atropelar";;
+Shun de Virgem;1;Mangá;Saint Seiya;Cavaleiro de Ouro;Cósmico;;;3;6;;;;0;;"Líder
+Defesa Circular: Toda vez que este personagem for alvo de uma ação, vc pode extinguir energia (1) - o controlador do personagem Aposta (1), se perder todo o dano e os efeitos deste ataque são prevenidos.";;;;2;4;"Tempestade Nebulosa
+
+Rotação de Recursos (2): 
+Descarte uma carta de energia do alvo
+
+Aposte (2) - Considere este ataque como perfurante.
+";;
+Shura de Capricórnio;1;Mangá;Saint Seiya;Cavaleiro de Ouro;Cósmico;;;6;6;1;;"Pedras Saltitantes
+Causa 2 pontos de dano no Alvo.
+Aposte (1) - Coloque um tk de confusão no alvo.";;;;;;;2;5;"Excalibur:
+Ataque Perfurante, Transpassar, Vampirismo";;
+Algethi de Hércules;1;Mangá;Saint Seiya;Cavaleiro de Prata;Cósmico;;;5;7;;;;2;;"Passiva Simples:
+Força da Hércules: No início de sua fase principal Aposte (1) - Coloque 1 atk up neste personagem";;;;2;0;"Poder Supremo de Hércules
+Aposte (até perder) - Esta ação causa 1 ponto de dano para cada vitória.
+
+Se foi feita mais de 3 apostas, coloque 2 Dots sobre o alvo.";;
+Algol de Perseu;1;Mangá;Saint Seiya;Cavaleiro de Prata;Cósmico;;;5;6;2;;;2;;"Passiva Simples:
+Este personagem é imune a paralisia.
+
+Escudo da Medusa:
+Aposte (1)  - Coloque 1 tk de paralisia em dois personagens alvo.";;;;2;3;"Górgona Demoniaca:
+Remova uma buff do alvo.";;
+Asterion de Cães de Caça;1;Mangá;Saint Seiya;Cavaleiro de Prata;Cósmico;;;4;5;3;;"Leitura da Mente
+O jogador alvo joga com sua mão revelada.";;;;2;;"Ataque de Um Milhão de Fantasmas
+
+Extinguir Fonte (X) - Aposte (X) - Causa 2 pontos de Dano";;;;;
+Babel de Centáuro;1;Mangá;Saint Seiya;Cavaleiro de Prata;Cósmico;;;4;4;2;;"Bombas Incendiárias:
+Recicle Energia (X) - Causa 1 ponto de dano para cada energia reciclada.";;;;1;2;"Turbilhão de Chamas
+Expansível (3)
+
+Reciclar Energia (1) - Atropelar";;;;;
+Capella de Auriga;1;Mangá;Saint Seiya;Cavaleiro de Prata;Cósmico;;;3;4;;;;1;;"Passiva Simples:
+Escudo de Discos: 
+Aposte (1)  - Coloque um toquem de Reflexão neste personagem";;;;1;2;"Discos Mortais
+Alvos Múltiplos (2)
+
+Duplicar (2) - Esta ação ganha Ação Única até o fim do turno.";;
+Dante de Cérbero;1;Mangá;Saint Seiya;Cavaleiro de Prata;Cósmico;;;3;4;;;;2;;"Passiva Simples:
+Mordida do Cerberus
+Todas ações de combate deste personagem, recebem Vampirismo.";1;2;"Maça Infernal
+Tipo Mutável (Elemental)";;;;;
+Dio de Mosca;1;Mangá;Saint Seiya;Cavaleiro de Prata;Cósmico;;;2;4;;;;;;"Passiva Simples
+Quando este personagem entrar em jogo, coloque um token de alvo sobre um personagem que vc não controla. Toda vez que Dio de Mosca causar dano ao personagem com este token, será acrescido em 2.";;;;1;2;"Voo Mortal:
+Aposte (1) - confusão no alvo
+";;
+Jamain de Corvo;1;Mangá;Saint Seiya;Cavaleiro de Prata;Cósmico;;;3;4;1;;"Proteção dos Corvos
+Thorns (2)";;;;;;;2;2;"Flecha de Pluma Negra:
+Coloque um token de Pena Negra sobre o alvo desta ação.
+
+Você pode trocar dois tokes de Penas Negras, por um token de paralisia durante sua fase de limpeza.";;
+Marin de Águia;1;Mangá;Saint Seiya;Cavaleiro de Prata;Cósmico;;;4;3;;;"Ilusão Mental:
+Aposte (1) - Coloque 1 tk de invisibilidade / Próxima ação ganha amedrontar.";;;;1;2;"Lampejo da Águia:
+Extinguir Fonte (X) - Utilize este ataque novamente. X é a quantidade de vezes que esta ação já foi utilizada neste turno.";;;;;
+Misty de Lagarto;1;Mangá;Saint Seiya;Cavaleiro de Prata;Cósmico;;;4;5;2;;"Paredão de ar
+Ação Única - Extinguir Recurso (1) - Previne todo o dano e os efeitos causados por uma fonte.";;;;;;;2;3;"Rajada de Ar
+Se o alvo não tiver buffs, coloque um tk de paralisia e tk de confusão sobre ele, senão este ataque causa 1 ponto de dano adicional.";;
+Moses de Baleia;1;Mangá;Saint Seiya;Cavaleiro de Prata;Cósmico;;;3;6;;;;2;;"Passiva Simples:
+Vitalidade da Baleia: No início de sua fase de limpeza Aposte (1) - retire um debuff deste personagem";;;;2;4;"Força Explosiva de Kaitos
+Aposte (1) - Coloque um tk de confusão no alvo";;
+Shina de Ofiucus;1;Mangá;Saint Seiya;Cavaleiro de Prata;Cósmico;;;3;4;1;;"Rastrear  Fraquezas:
+Aposte (1) - Coloque 2 Def Down e cause 1 ponto de dano elemental / Coloque 1 imun Dmg";;;;1;3;"Garras de Trovão:
+Aposte (1) - Coloque um token de Paralisia";;; ;;
+Sírius de Cão Maior;1;Mangá;Saint Seiya;Cavaleiro de Prata;Cósmico;;;4;4;1;;"Golpe Antecipado
+Extinguir Recursos (2) - Descarte uma energia do personagem alvo.";;;;;;;1;2;"Grande Punho Esmagador
+Aposte (1) - Coloque um token de Confusão / Causa 1 ponto de dano extra";;
+Tremy de Sagitta;1;Mangá;Saint Seiya;Cavaleiro de Prata;Cósmico;;;3;4;2;;"Flecha Dourada
+Extinguir Recurso (3) - Coloque um token permanente de Flecha Dourada no personagem alvo. Todas as ações daquele personagem tem um custo extra de duas energias. Em seu próximo turno, vc não poderá usar esta ação e deverá retirar o token do personagem.";;;;3;;"Flechas Fantasmas
+Aposte (1x para cada ponto de Vida do Personagem alvo) - Cause 1 ponto de dano para cada perda.";;;;;
+Shun Possuído;3;Mangá;Saint Seiya;Encarnação de Hades;Divino;;;6;2;;;;0;;"Passiva Simples
+Corpo de Hades: Você pode descartar uma carta de sua mão, para buscar um Espectro. Mostre para seu oponente a carta e coloque na sua mão.";;;;1;3;Poder de Hades;;
+Seiya, Armadura de Odin;1;Mangá;Saint Seiya;Guerreiro Deus;Divino;;;5;3;;;;2;;"Benção de Odin:
+Todos os Cavaleiros de Bronze causam 2 pontos de dano a mais contra Guerreiros Deuses.";;;;1;3;"Espada de Odin:
+Ataque perfurante.";;
+Mestre Ares;1;Mangá;Saint Seiya;Mestre do Santuário;Cósmico;;;6;4;;3;"Satã Imperial -
+Rotação Recurso (1) - Escolha o Alvo da próxima ação do personagem alvo.";;;;;;;3;0;"Outra Dimensão:
+Aposte (3) - Descarte todas as cartas do personagem alvo e embaralhe-o no deck de seu controlador.";;
+Mestre do Santuário;1;Mangá;Saint Seiya;Mestre do Santuário;Cósmico;;;4;6;;;;;2;Líder dos Cavaleiros: Aposte (1) - Clarividência (Cavaleiro);;;;3;0;Prever (5) - Aposte (1) - Compre 2 Cartas / Compre 1 Carta;;

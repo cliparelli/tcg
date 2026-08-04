@@ -1,0 +1,275 @@
+{
+  "style_name": "Techno-Arcane Ruin Illustration",
+  "style_summary": "Ilustração altamente detalhada que funde fantasia sombria, arqueologia industrial e tecnologia decadente. Predominância de line art extremamente densa sobre pintura digital texturizada, com sensação de gravura, metais envelhecidos e arquitetura monumental. Cada superfície conta uma história através de desgaste, ferrugem, inscrições e mecanismos antigos.",
+  "visual_language": {
+    "genre": [
+      "dark science fantasy",
+      "industrial fantasy",
+      "techno-occult",
+      "ruined megastructures",
+      "dieselpunk arqueológico",
+      "tecnoarqueologia"
+    ],
+    "mood": [
+      "ancestral",
+      "monumental",
+      "decadente",
+      "opressivo",
+      "místico",
+      "solene",
+      "melancólico",
+      "atemporal"
+    ],
+    "emotional_feeling": "Tudo transmite a sensação de uma civilização extremamente avançada que existe apenas em ruínas, onde tecnologia e magia tornaram-se indistinguíveis."
+  },
+  "line_art": {
+    "priority": "extremely_high",
+    "description": [
+      "Traço extremamente fino.",
+      "Contornos orgânicos porém precisos.",
+      "Grande quantidade de microdetalhes.",
+      "Linhas sobrepostas formando textura.",
+      "Crosshatching leve.",
+      "Contornos nunca perfeitamente retos.",
+      "Desenho dominante sobre pintura."
+    ],
+    "avoid": [
+      "linhas grossas",
+      "formas limpas",
+      "superfícies lisas",
+      "minimalismo"
+    ]
+  },
+  "rendering": {
+    "technique": [
+      "digital painting",
+      "ink illustration",
+      "gravura moderna",
+      "concept art altamente detalhada"
+    ],
+    "surface_detail": "Muito alta.",
+    "microdetail_density": "Extrema.",
+    "edge_definition": "Alta.",
+    "noise": "Controlado e artístico."
+  },
+  "materials": {
+    "primary": [
+      "bronze antigo",
+      "latão envelhecido",
+      "ferro oxidado",
+      "aço gasto",
+      "pedra antiga",
+      "concreto rachado",
+      "cristais translúcidos",
+      "vidro antigo",
+      "cabos",
+      "correntes",
+      "engrenagens"
+    ],
+    "surface_characteristics": [
+      "ferrugem",
+      "oxidação",
+      "rachaduras",
+      "poeira",
+      "fuligem",
+      "marcas de uso",
+      "arranhões",
+      "corrosão",
+      "pátina"
+    ]
+  },
+  "architecture": {
+    "scale": "Gigantesca.",
+    "style": [
+      "industrial monumental",
+      "gótico mecânico",
+      "brutalismo tecnológico",
+      "megaestruturas verticais"
+    ],
+    "composition": [
+      "muitos níveis",
+      "passarelas",
+      "torres",
+      "poços",
+      "tubulações",
+      "pontes",
+      "plataformas",
+      "estruturas sobrepostas"
+    ]
+  },
+  "technology": {
+    "design_language": [
+      "tecnologia antiga",
+      "circuitos ornamentais",
+      "máquinas ritualísticas",
+      "engenharia monumental",
+      "componentes enormes",
+      "mecanismos parcialmente destruídos"
+    ],
+    "visual_principles": [
+      "tecnologia parece arqueologia",
+      "máquinas parecem templos",
+      "circuitos funcionam como runas"
+    ]
+  },
+  "magic_system_visualization": {
+    "appearance": [
+      "geometria sagrada",
+      "círculos arcanos",
+      "símbolos técnicos",
+      "runas mecânicas",
+      "diagramas",
+      "inscrições"
+    ],
+    "energy": {
+      "color": [
+        "turquesa",
+        "verde-esmeralda",
+        "ciano"
+      ],
+      "behavior": [
+        "brilho interno",
+        "energia vazando por rachaduras",
+        "partículas luminosas",
+        "fissuras energéticas"
+      ]
+    }
+  },
+  "lighting": {
+    "type": [
+      "volumetric light",
+      "god rays",
+      "contraluz suave",
+      "iluminação cinematográfica"
+    ],
+    "contrast": "Alto.",
+    "ambient": "Escuro porém legível.",
+    "light_sources": [
+      "aberturas superiores",
+      "cristais energéticos",
+      "núcleos tecnológicos",
+      "energia arcana"
+    ]
+  },
+  "color_palette": {
+    "dominant": [
+      "#4d4036",
+      "#66503c",
+      "#7d643d",
+      "#8d734b",
+      "#2f2f30",
+      "#3d3b39"
+    ],
+    "accent": [
+      "#55d9c2",
+      "#3ccf7a",
+      "#2fe6ff"
+    ],
+    "highlight": [
+      "#b98b42",
+      "#d2b06a"
+    ],
+    "saturation": "Baixa, exceto nas energias."
+  },
+  "composition": {
+    "camera": [
+      "wide angle",
+      "low angle",
+      "hero shot",
+      "vertical depth",
+      "perspectiva dramática"
+    ],
+    "depth": "Muito profunda.",
+    "foreground": "Objetos ricos em detalhes.",
+    "midground": "Elemento principal.",
+    "background": "Arquitetura gigantesca repleta de microdetalhes."
+  },
+  "texture": {
+    "density": "Muito alta.",
+    "characteristics": [
+      "cada centímetro possui detalhes",
+      "desgaste natural",
+      "camadas de materiais",
+      "imperfeições reais"
+    ]
+  },
+  "environment_effects": {
+    "include": [
+      "poeira",
+      "fumaça",
+      "névoa",
+      "partículas",
+      "faíscas",
+      "fragmentos",
+      "cristais",
+      "cabos pendentes"
+    ]
+  },
+  "character_design": {
+    "if_present": {
+      "integration": "O personagem faz parte da arquitetura, nunca parece destacado artificialmente.",
+      "costume": [
+        "armaduras ornamentadas",
+        "roupas pesadas",
+        "adornos mecânicos",
+        "coroas industriais",
+        "artefatos tecnológicos"
+      ],
+      "detail_level": "Igual ao cenário."
+    }
+  },
+  "object_design": {
+    "principles": [
+      "objetos parecem relíquias",
+      "formas robustas",
+      "grande peso visual",
+      "mistura de engenharia e ritual",
+      "ornamentos funcionais"
+    ]
+  },
+  "detail_distribution": {
+    "important_rule": "Não concentrar detalhes apenas no foco principal. Toda a imagem deve manter altíssimo nível de complexidade visual."
+  },
+  "influences": {
+    "visual": [
+      "Philippe Druillet",
+      "John Blanche",
+      "Wayne Barlowe",
+      "Warhammer 40K concept art",
+      "Dark Souls environmental art",
+      "Blame!",
+      "Moebius (apenas na liberdade estrutural, não no acabamento)",
+      "gravuras técnicas antigas",
+      "manuscritos alquímicos"
+    ],
+    "without_copying": true
+  },
+  "negative_prompt": [
+    "anime",
+    "cartoon",
+    "pixar",
+    "low poly",
+    "minimalism",
+    "clean surfaces",
+    "plastic appearance",
+    "smooth rendering",
+    "flat colors",
+    "cel shading",
+    "simple composition",
+    "modern sci-fi",
+    "cyberpunk neon",
+    "empty backgrounds",
+    "low detail",
+    "oversaturated colors",
+    "sterile environments"
+  ],
+  "quality_targets": {
+    "detail_level": "ultra",
+    "texture_complexity": "ultra",
+    "architectural_complexity": "ultra",
+    "object_complexity": "ultra",
+    "material_realism": "high",
+    "linework_quality": "museum illustration",
+    "cinematic": true
+  }
+}

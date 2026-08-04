@@ -1,0 +1,121 @@
+Nome;Versão;Mídia;Universo;Tipo;Dinâmica;Descrição;IMAGEM
+Aura Cibernetica;1;Basic;Basic;perm;Deck Control;Anex Tec - Antes de comprar a carta, Prever (2).;
+Aura Cracker;1;Basic;Basic;perm;Deck Control;Anexável (TecSci): Antes de seu oponente comprar qualquer quantidade de cartas - Prever (2 X a quantidade de Cartas) em seu oponente.;
+Aura Elétrica;1;Basic;Basic;perm;Crowd Control / Dmg;Anx Elemental - Antes de iniciar o combate faça uma aposta para cada perssonagem em jogo do oponente. Se ganhar coloque um token de paralisia no personagem, senão cause 2 pontos de dano nele.;
+Aura Putrida;1;Basic;Basic;perm;FX;Anx Morte - No fim do combate, coloque token de infecção em.todos os personagens que atacaram este.personagem;
+Aura Selvagem;1;Basic;Basic;perm;Support & Dmg;Anex Fera - este personagem ganha imunidade a furia e todos seus ataques recebem 3 de bonua;
+Aura de Cura;1;Basic;Basic;permanente;Support;Anexavel Vida - Extinguir Fonte 1 - Coloque 2 tokens de sobrevida no.personagem alvo;
+Aura Floral;1;Basic;Basic;Permanente;Crowd Control;Anexavel Natureza - No fim do combate, coloque um token de pacifista nos personagens que atacaram o personagem com esta carta anexada.;
+Aura Mortal;1;Basic;Basic;permanente;FX;Anexavel.Morte - Este personagem ganha toque mortal;
+Aura Vegetal;1;Basic;Basic;Permanente;Support;Anexavel Natureza - Durante sua fase principla, vc pode colocar um token de Reviver neste personagem.;
+Aura Vital;1;Basic;Basic;permanente;FX;Anexavel Vida - Este personagem ganha Lifelink;
+Mestre e Aprendiz;1;Basic;Basic;Permanente;FX;Selecione  2 personagens. O segundo personagem recebe lifelink (personagem 1);https://cdn.mangayabu.top/mangas/saint-seiya-os-cavaleiros-do-zodiaco/capitulo-01/29.jpg
+Revisando o Checkilst;1;Basic;Basic;Volatil;Deck Control;Aposte (1): Embarelhe sua mão em seu deck. Se ganhar, compre 7 cartas senão compre 1.;
+Arrombador de Covas;1;Basic;Basic;Volátil;;Afinidade (Morte) - Extinguir fonte (3) - Embaralhe até 5 cartas da sua pilha de descarte em seu deck.;
+Contramágica;1;Basic;Basic;Volátil;Control;Extiguir Recurso (2): Anula o efeito gerado por uma ação ou item.;
+Corredores Organizados;1;Basic;Basic;Volátil;;Aposte (1) - Clarividência (Item) / Prever (3);
+De volta dos mortos;1;Basic;Basic;Volátil;;Afinidade (Vida) - Extinguri Recursos (2) - Embaralhe até 3 cartas em seu deck. Compre uma carta;
+Desbastar;1;Basic;Basic;Volátil;Item Control;Descarte o Item alvo.;
+Desencantar;1;Basic;Basic;Volátil;;Extinguir Recursos (1) - Coloque o item permanente alvo na pilha de descarte;
+Mudança de Foco;1;Basic;Basic;Volátil;Item Control;Selecione um Item anexado ao personagem alvo e anexo-o em outro personagem. Se não houver um alvo válido, descarte este item.;
+Novo Paradigma;1;Basic;Basic;Volátil;Item Control;Descarte 3 energias de seus personagens e descarte todos os itens permanentes em jogo.;
+Profecia Revelada;1;Basic;Basic;Volátil;Deck Control;Olhe as 3 primeiras cartas de seu deck e reorganize da maneira que quiser. Descarte uma carta - ao invés de olhar as 3 prkmeicas cartas, olhe 5 cartas e depois compre uma carta.;
+Singualridade Temporal;1;Basic;Basic;Volátil Lendária;Control;"Extinguir Recursos (3) - Extinguri Fontes (4) 
+Altere a ordem dos turnos.";
+1001 Noites;1;Basic;Literatura;Permanente Lendário;Crowd Control ;"Quando este item entrar em jogo, selecione um personagem que você controla. Este personagem não pode ser alvo de ações controladas pelo oponente alvo, porém ela poderá usar ações que não sejam de combate.
+Selecione também um personagem controlado pelo jogador alvo. No inicio da sua fase de limpesa faça uma aposta - adicione um token de sonolência no personagem do oponente / nocauteie o seu personagem.
+
+Se o personagem que você não controla estiver com uma quantidade de tokens de sonoloencia igual a sua vida, nocautei-o.
+
+Se este item ou um dos personagens sair de jogo, descarte todos os tokens de sonolencia em todos persoangens ativos no jogo.";
+Máscara do Caçador de Demônios ;1;Basic;Música;Permanente Anex Lendário ;Dmg;Anexavel: todo dano causado por este personagem a demonios ou personagens do tipo morte é dobrado após o cálculo de resistência e fraqueza.;
+Calor tá de Matar;1;Basic;Música;Volátil;Dmg;Descarte uma carta de sua mão para causar 2 pontos de dano em cada personagem do time do oponente alvo. Considere este dano do tipo Elemental.;
+MV Bill;1;Basic;Música;Volátil;Deck Control;Compre duas cartas;
+Sou eu Bola de Fogo;1;Basic;Música;Volátil;Dmg;Descarte uma carta de sua mão para causar 5 pontos de dano no personagem alvo. Considere este dano do tipo Elemental.;
+Velha Escola de Hollywood;1;Basic;Música;Volátil;Deck Control;Fale três nomes próprios da música Old School Hollywood do System Of A Down para comprar duas cartas de seu deck.;
+Professor Earl;1;Basic;Pokemon;Volátil;Deck Control;Embaralhe as cartas de sua mão em seu deck e compre 7 cartas.;
+Dorme, Dorme, Dorme;1;Basic;Televisão;Volátil;Fx;Faça uma aposta - Coloquem um token de Sonolência no personagem alvo;
+É Fantástico;1;Basic;Televisão;Volátil;Deck Control;"Faça uma aposta - Se ganhar, compre 5 cartas, se perder descarte todas as cartas de sua mão.
+Você não pode utilizar esse item se tiver menos de duas cartas em sua mão.";
+Corrida Maluca;1;Cartoon;Hanna Barbera;Volátil;;"Todos os jogadores reembaralham suas mãos, as cartas em jogo, suas pedras de recompensa e também as cartas da pilha de descarte em seu deck e recomeçam o jogo.
+
+Cada jogador deverá fazer seis apostas. Para cada aposta que perder, uma pedra de recompensa a menos deverá ser colocada em jogo. Pelo menos uma pedra de recompensa deverá ser colocada para cada jogador.";
+Visão Além do Alcance;1;Cartoon;Thunder Cats;Permanente;;Seu oponente joga com a mão revelada.;
+Esporos do Apocalypse;1;comic;DC;Permanente;;"Anexável: No início de sua fase principal, coloque um token de Apocalypse. Para cada marcador o personagem causa dois pontos de dano extra e recebe um ponto de defesa extra.
+Quando a quantidade de tokens de Apocalypse for igual a vida do personagem, faça uma aposta.
+Se ganhar, procure uma carta de Apolypse em seu deck, e coloque em jogo com o personagem e todas as outras cartas anexadas a ele.
+Se perder, nocautei o personagem.";
+Raio na Manga;1;comic;dc;volatil;;Causa 2 pontos de dano no alvo - Devoção Mulher Maravilha aposte 1 - causa mais 2 pontos de dano no alvo;
+Tropa dos Lanternas Verdes;1;Comic;DC ;Volátil;;Extinguir Recursos (1) - Clarividência (Lanterna Verde);https://wikiimg.tojsiabtv.com/wikipedia/en/thumb/f/f4/Green_Lantern_Corps.jpg/1280px-Green_Lantern_Corps.jpg
+Amardura Energética;1;Comics;DC;Permanente;;"Quando anexar esta carta neste personagem coloque uma token de escudo para cada ponto de defesa que este persoangem tem. 
+
+No início de sua fase de limpeza, você pode colocar um token de escudo sobre este personagem.
+
+Se este personagem não estiver com tokens de escudo sobre ele ou sem energias anexadas, descarte esta carta.";https://i.pinimg.com/originals/a3/70/e3/a370e3d7402cb0e39f20d259b08f11d9.jpg
+Constructo Militar;1;Comics;DC;Permanente;;"Toda vez que este personagem causar dano, ele irá causar dois pontos extras.
+
+Afinidade (Lanterna Verde) - Aposte (2): Este personagem irá causar mais um ponto extra para cada energia anexada a ele";https://qph.fs.quoracdn.net/main-qimg-8a2d98ae867813763dc272dbe59eb276-pjlq
+Veículo de Energia;1;Comics;DC;Permanente;;Toda vez que este personagem for alvo de uma ação, Aposte (1): evite todo o dano e os efeitos daquela ação / descarte esta carta.;https://comicvine.gamespot.com/a/uploads/scale_super/6/67344/2872384-green_lantern__8299.jpg
+Braços Fortes;1;Comics;DC;Volátil;;Coloque 4 tks de AtkUp sobre o personagem. No próximo turno ele não pode usar ações.;https://hqultimate.site/leitor/hq/Superman%20-%20Condenado%20(2014)/15/23.jpg
+Visão de Calor na Potência Total;1;Comics;DC;Volátil;;Extinguir Recursos (3) - Causa 8 pontos de dano no personagem alvo.;https://hqultimate.site/leitor/hq/Superman%20-%20Condenado%20(2014)/15/16.jpg
+Anel de Nibelungo;1;Manga;CDZ;Permanente;;Nocauteie um personagem para ganhar controle de dois personagens alvos não controlados por você.;
+Báculo de Athena;1;Manga;CDZ;Permanente;2;"Ao colocar este Item em jogo, anexe-o a Deusa Athena. O personagem ganha a seguinte ação ativa:
+Custo 2 Energias: Báculo de Atena: Causa 5 pontos de Dano no personagem alvo.";
+Constelação de Pégasus;1;Manga;Cdz;Permanente;;Anexável Seiya - Aposte (1) - Próximo ataque ganhar Expansível (3).;
+Esquife de Gelo;1;Manga;CDZ;Permanente;;"Anexável: Enquanto este item estiver anexado ao personagem, ele não poderá utilizar ações, ter outras cartas anexadas ou retiradas. Ele ainda poderá ser alvo de outras ações e pode ser nocauteado.
+
+Devoção Kamus de Aquario - Quando esta carta for desanexada de seu portador, coloque 1 tk de sonolencia sobre aquele personagem.";
+Armaduras Renovadas;1;Manga;CDZ;Volátil;;Distribua 3 tokens de escudo em até 3 personagens. Coloque 2 DefUp em cada um destes personagens;
+Caixa de Pandora;1;Manga;Cdz;Volátil;;"Embaralhe os cards de sua mão em seu deck.
+Aposte (1) - Procure uma carta de personagem e compre 5 cartas / Compre 3 cartas.";
+Cosmo Energia;1;Manga;Cdz;Volátil;;Afinidade (Cósmico) - Aposte (2) - O próximo ataque ganha Amedrontar e Expansível (2);https://cdn.mangayabu.top/mangas/saint-seiya-os-cavaleiros-do-zodiaco/capitulo-01/56.jpg
+Estátua de Atena;1;Manga;Cdz;Volátil;;Rotação de Recursos (2) - Clarividência (Soari Kido);
+Labirinto da Casa de Gemeos;1;Manga;Cdz;Volátil;;Coloque 1 toks de conf sobre dois personagens alvo;Cav Bronze passando pela casa de gemeos, preto e branco, preto e branco
+Meteóro de Pégasus;1;Manga;Cdz;Volátil;;"Aposte (3): Causa 2 pontos de dano para cada vez que ganhou.
+
+Extinguir Recursos (X): Esta ação ganha Alvos Múltiplos (X)";https://cdn.mangayabu.top/mangas/saint-seiya-os-cavaleiros-do-zodiaco/capitulo-02/37.jpg
+Parede de Cristal;1;Manga;Cdz;Volátil;;Descarte duas carta e coloque 4DefUp sobre o alvo;
+Parede de Cristal;1;Manga;CDZ;Volátil;;Descarte uma energia de um personagem para prevenir todo o dano causado a ele neste turno. Esta ação poderá ser utilizada uma vez para cada um dos personagens controlados por você.;
+Prisão na Ilha de Kanom;1;Manga;Cdz;Volátil;;Coloque um token de Doom no personagem alvo. Ele pode fazer uma aposta - se ganhar ele tira o doom do personagem.;
+Sangue de Atena;1;Manga;CDZ;Volátil;;Descarte duas cartas de sua mão para buscar um Cavaleiro de Bronze, Cavaleiro de Prata ou Cavaleiro de Ouro. Revele a carta e coloque em sua mão.;
+Transformar em Pedra;1;Manga;CDZ;Volátil;;"Coloque um tk de Paralisia sobre o alvo
+Devoção Algo de Perseu - coloque um tk de Doom";
+Treinamento Árduo;1;Manga;Cdz;Volátil;;O personagem ganha 2defUp, resistência contra fera e fisico.;https://cdn.mangayabu.top/mangas/saint-seiya-os-cavaleiros-do-zodiaco/capitulo-01/11.jpg
+Treinamento Mental;1;Manga;Cdz;Volátil;;O personagem alvo ganha resistencia ao tipo mental até o fim do turno.;
+Unidade com a Armadura;1;Manga;Cdz;Volátil;;Aposte (1): Ganhe 2 Atk Up e 2 Def Up / Ganhe 2 Atk Donw e 2 Def Down;https://cdn.mangayabu.top/mangas/saint-seiya-os-cavaleiros-do-zodiaco/capitulo-02/31.jpg
+Visão Cósmica;1;Manga;Cdz;Volátil;;Coloque um token de visão verdadeira sobre o personagem alvo e coloque um token de paralisia em outro personagem que vc controla.;Shyriu ligando o poderzinho para sair da casa de gemeos
+Satã Imperial;1;Manga;Cdz;Volátil Lendário;;Descarte duas cartas de sua mão para selecionar o alvo da próxima ação do personagem alvo. Este personagem é obrigado a atacar em seu próximo turno. Se o personagem causar um dano fatal, compre duas cartas. Afinidade (Saga de Gemeos ou Mestre Ares);
+Treinamento de Guilty;1;Manga;Cdz;"Volátil
+Lendário";;Coloque 1 furia sobre o personagem. Afinidade Guilty - Coloque mais dois furia.;
+Treinamento de Marin;1;Manga;Cdz;"Volátil
+Lendário";;Coloquem 1 tk AtkUp no personagem alvo. Afinidade Marin - Coloque mais 2 atkUp;https://cdn.mangayabu.top/mangas/saint-seiya-os-cavaleiros-do-zodiaco/capitulo-01/47.jpg
+Treinamento do Albiore;1;Manga;Cdz;"Volátil
+Lendário";;Coloque 1 atkUp e 1 def Up no personagem alvo. Afinidade Albiore - Coloque 1 pacifista no personagem alvo.;
+Treinamento do Mestre Ancião;1;Manga;Cdz;"Volátil
+Lendário";;Coloquem 1 tk DefUp no personagem alvo. Afinidade Dohko - Coloque mais 2 atkUp;
+Treinamento do Mestre de Cristal;1;Manga;Cdz;"Volátil
+Lendário";;o próximo atk do personagem alvo tem como efeito extra colocar um tk de pralisia em seu alvo. Afinidade Mestre de Cristal - coloque 1 defup neste personagem;
+Death Note Extra de Ryuk;1;Manga;Death Note;Permanente;1;Anexavel: Light Yagami. Uma vez por turno, sem custos, você pode colocar um token de perdição no personagem alvo.;
+eleve seu cosmo;1;manga;Cdz;volatil;;escolha uma ação do.personagem alvo. até o fim do turno, esta ação ganha expansivel (2);
+queime seu cosmo;1;manga;Cdz;volatil;;Selecione um personagem que você controla - extinguir fonte (2) - o próximo ataque deste personagem ganha atropelar e causa 3 dano extra;
+Armadura de Ferro;1;Game;minecraft;Permanente Anexável;;Este personagem ganha mais 2 de Defesa;
+Armadura de Ouro;1;Game;minecraft;Permanente Anexável;;Este personagem ganha mais 1 de Defesa e no início de sua fase principal você pode colocar um token de imunidade a debuff no personagem que anexa este card.;
+Armadura de Diamante;1;Game;minecraft;Permanente Anexável;;Este personagem ganha mais 3 de defesa.;
+Rendição Divina;1;Manga;Cdz;Volátil;;Devoção (Shaka de Virgem) - Descarte 3 energias de Shaka para que ele causa 6 pontos de dano em um personagem alvo ou distribuído em até quatro personagens alvo.;
+Tesouro do Céu;1;Manga;Cdz;Volátil;;"Devoção (Shaka de Virgem) - Remova todas as cartas anexadas ao personagem alvo e seus buffs.
+Shaka causa 1 ponto de dano para cada cara removida aquele personagem.";
+Invocação dos Espíritos Malignos;1;Manga;Cdz;Volátil;;"Devoção (Shaka de Virgem) - Coloque um token de amendrontar sobre Shaka de Virgem.
+Shaka causa 2 pontos de dano em cada um de até dois personagens alvo.";
+Rede de Cristal;1;Manga;Cdz;Volátil;;"Reciclar recurso (2) - Coloque um token de paralisia no personagem alvo. 
+
+Devoção (Mú de Áries) - Não pague o custo desta ação.";
+Revolução Estelar;1;Manga;Cdz;Volátil;;"Devoção (Mú de Áries) - Alvos Múltiplos - Causa 5 pontos de Dano em cada alvo.
+
+Se algum personagem alvo desta ação for nocauteado, descarte todos os buffs dos outros personagens alvo desta ação.";
+Expandindo as Fileiras;1;Comics;DC;Volátil;;Embaralhe 2 cartas para por em sua mão 2 cartas de personagem.;https://readcomicsonline.ru/uploads/manga/dcs-year-of-the-villain-special-2019/chapters/1/22.jpg
+Inferno de Sangue;1;Manga;Cdz;Volátil Lendária;;Devoção (Shaka) - Aposte (1) - Causa 2 pontos de dano em até 4 personagens alvo / Coloque um token de paralisia em até 4 personagens alvo;
+Cosmo Flamejante;1;Comics;Cdz;Volátil;;"Devoção - Ikki de Fenix
+Extinguir Fonte (5) - Todo o dano causado a Ikki de Fenix neste turno.
+
+Como custo adicional vx pode descartar 3 cards para procurar 3 cards de energia e anexar em seus personagens como energias extras.";
+Colheita no Sonhar;1;Comics;Vertigo;Volátil;;Reciclar Fonte (x): Selecione X tokens, itens ou fontes anexados a personagens q vc não controla e reanexe-os em personagens que vc controla;
