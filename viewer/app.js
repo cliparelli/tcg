@@ -17,6 +17,7 @@
     let activeCardId = null;
     let currentCollection = '';
     let currentType = '';
+    let currentRelPath = '';
 
     const TYPE_ASSET_MODEL = {
         personagem: 'card',
@@ -155,6 +156,7 @@
         if (!relPath) {
             return;
         }
+        currentRelPath = relPath;
         cardList.innerHTML = '<li>Carregando...</li>';
         const data = await fetchJson('api.php?action=cards&file=' + encodeURIComponent(relPath));
         currentCards = data.cards || [];
@@ -323,14 +325,14 @@
         if (card._type === 'personagem') {
             const stats = card.stats || {};
 
-            const heart = document.createElement('div');
-            heart.className = 'card-preview__heart';
-            heart.textContent = statValue(stats.life);
+            const heart = createStatInput('card-preview__heart', stats.life, (value) => {
+                saveStat(card, 'life', value);
+            });
             cardPreview.appendChild(heart);
 
-            const shield = document.createElement('div');
-            shield.className = 'card-preview__shield';
-            shield.textContent = statValue(stats.defense);
+            const shield = createStatInput('card-preview__shield', stats.defense, (value) => {
+                saveStat(card, 'defense', value);
+            });
             cardPreview.appendChild(shield);
         }
 
@@ -407,6 +409,204 @@
         return value === null || value === undefined || value === '' ? '-' : String(value);
     }
 
+    function createStatInput(className, value, onCommit) {
+        const input = document.createElement('input');
+        input.type = 'number';
+        input.className = className ? className + ' card-preview__stat-input' : 'card-preview__stat-input';
+        input.value = value === null || value === undefined ? '' : String(value);
+        input.addEventListener('click', (ev) => ev.stopPropagation());
+
+        const commit = () => {
+            const raw = input.value.trim();
+            const parsed = raw === '' ? null : parseInt(raw, 10);
+            if (raw !== '' && Number.isNaN(parsed)) {
+                input.value = value === null || value === undefined ? '' : String(value);
+                return;
+            }
+            if (parsed === value) {
+                return;
+            }
+            value = parsed;
+            onCommit(parsed);
+        };
+
+        input.addEventListener('change', commit);
+        input.addEventListener('keydown', (ev) => {
+            if (ev.key === 'Enter') {
+                input.blur();
+            }
+        });
+
+        return input;
+    }
+
+    function createTextInput(value, onCommit) {
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.className = 'card-preview__stat-input';
+        input.value = value === null || value === undefined ? '' : String(value);
+        input.addEventListener('click', (ev) => ev.stopPropagation());
+
+        const commit = () => {
+            const raw = input.value;
+            if (raw === value) {
+                return;
+            }
+            value = raw;
+            onCommit(raw);
+        };
+
+        input.addEventListener('change', commit);
+        input.addEventListener('keydown', (ev) => {
+            if (ev.key === 'Enter') {
+                input.blur();
+            }
+        });
+
+        return input;
+    }
+
+    async function saveStat(card, field, value) {
+        try {
+            const res = await fetch('api.php?action=update-stats', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    file: currentRelPath,
+                    id: card.id,
+                    [field]: value,
+                }),
+            });
+            const data = await res.json();
+            if (!res.ok) {
+                throw new Error(data.error || 'Falha ao salvar.');
+            }
+            if (data.card) {
+                Object.assign(card, data.card);
+                const idx = currentCards.findIndex((c) => c._id === card._id);
+                if (idx !== -1) {
+                    Object.assign(currentCards[idx], data.card);
+                }
+            }
+        } catch (err) {
+            alert('Erro ao salvar: ' + err.message);
+        }
+    }
+
+    async function saveActionField(card, actionIndex, field, value) {
+        try {
+            const res = await fetch('api.php?action=update-action', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    file: currentRelPath,
+                    id: card.id,
+                    actionIndex,
+                    field,
+                    value,
+                }),
+            });
+            const data = await res.json();
+            if (!res.ok) {
+                throw new Error(data.error || 'Falha ao salvar.');
+            }
+            if (data.card) {
+                Object.assign(card, data.card);
+                const idx = currentCards.findIndex((c) => c._id === card._id);
+                if (idx !== -1) {
+                    Object.assign(currentCards[idx], data.card);
+                }
+            }
+        } catch (err) {
+            alert('Erro ao salvar: ' + err.message);
+        }
+    }
+
+    function buildStatsRawFields(card) {
+        const stats = card.stats || {};
+        const wrapper = document.createElement('div');
+        wrapper.className = 'card-raw__stats';
+
+        const lifeField = document.createElement('label');
+        lifeField.className = 'card-raw__stat-field';
+        lifeField.append('Vida: ');
+        lifeField.appendChild(createStatInput('', stats.life, (value) => saveStat(card, 'life', value)));
+        wrapper.appendChild(lifeField);
+
+        const defenseField = document.createElement('label');
+        defenseField.className = 'card-raw__stat-field';
+        defenseField.append('Defesa: ');
+        defenseField.appendChild(createStatInput('', stats.defense, (value) => saveStat(card, 'defense', value)));
+        wrapper.appendChild(defenseField);
+
+        return wrapper;
+    }
+
+    function buildActionsRawFields(card) {
+        const actions = Array.isArray(card.actions) ? card.actions : [];
+        const wrapper = document.createElement('div');
+        wrapper.className = 'card-raw__actions';
+
+        actions.forEach((action, index) => {
+            const actionBlock = document.createElement('div');
+            actionBlock.className = 'card-raw__action-block';
+
+            const title = document.createElement('div');
+            title.className = 'card-raw__action-index';
+            title.textContent = `Action ${index + 1}`;
+            actionBlock.appendChild(title);
+
+            const fields = document.createElement('div');
+            fields.className = 'card-raw__stats';
+
+            const nameField = document.createElement('label');
+            nameField.className = 'card-raw__stat-field';
+            nameField.append('Nome: ');
+            nameField.appendChild(createTextInput(action.name, (value) => saveActionField(card, index, 'name', value)));
+            fields.appendChild(nameField);
+
+            const kindField = document.createElement('label');
+            kindField.className = 'card-raw__stat-field';
+            kindField.append('Tipo: ');
+            kindField.appendChild(createTextInput(action.kind, (value) => saveActionField(card, index, 'kind', value)));
+            fields.appendChild(kindField);
+
+            const costField = document.createElement('label');
+            costField.className = 'card-raw__stat-field';
+            costField.append('Custo: ');
+            costField.appendChild(createStatInput('', action.energyCost, (value) => saveActionField(card, index, 'energyCost', value)));
+            fields.appendChild(costField);
+
+            const keywordsField = document.createElement('label');
+            keywordsField.className = 'card-raw__stat-field';
+            keywordsField.append('Keywords: ');
+            keywordsField.appendChild(createTextInput(
+                Array.isArray(action.keywords) ? action.keywords.join(', ') : '',
+                (value) => saveActionField(card, index, 'keywords', value.split(',').map((s) => s.trim()).filter(Boolean))
+            ));
+            fields.appendChild(keywordsField);
+
+            actionBlock.appendChild(fields);
+
+            const descField = document.createElement('label');
+            descField.className = 'card-raw__stat-field card-raw__stat-field--full';
+            descField.append('Descrição: ');
+            descField.appendChild(createTextInput(action.description, (value) => saveActionField(card, index, 'description', value)));
+            actionBlock.appendChild(descField);
+
+            if (action.effectScript) {
+                const pre = document.createElement('pre');
+                pre.className = 'card-raw__json';
+                pre.textContent = JSON.stringify(action.effectScript, null, 2);
+                actionBlock.appendChild(pre);
+            }
+
+            wrapper.appendChild(actionBlock);
+        });
+
+        return wrapper;
+    }
+
     function costToSymbols(cost, tipo) {
         const n = parseInt(cost, 10);
         if (!n || n <= 0) {
@@ -414,15 +614,6 @@
         }
         const dot = `<span class="card-preview__dot card-preview__dot--cost ${typeColorClass(tipo)}" title="${escapeHtml(extractTypeName(tipo))}"></span>`;
         return dot.repeat(n);
-    }
-
-    function splitTitledDescription(value) {
-        const text = (value || '').trim();
-        const match = text.match(/^\*\*(.+?)\*\*\s*—\s*([\s\S]*)$/);
-        if (match) {
-            return { title: match[1].trim(), body: match[2].trim() };
-        }
-        return { title: '', body: text };
     }
 
     function resolveArtSrc(card) {
@@ -439,14 +630,10 @@
         const blocks = [];
 
         if (card._type === 'personagem') {
-            addActionBlock(blocks, card['Custo P'], card.Tipo, card['Descrição P']);
-            addActionBlock(blocks, card['Custo A'], card.Tipo, card['Descrição A']);
-
-            addBlock(blocks, 'Sidekick', card['Descrição Sidekick']);
-            addBlock(blocks, 'Líder', card['Descrição Líder']);
-            addBlock(blocks, 'Flanquear', card['Descrição Flanquear']);
-            addBlock(blocks, 'Ataque', card['Descrição Ataque']);
-            addBlock(blocks, null, card['Texto Final 2']);
+            const actions = Array.isArray(card.actions) ? card.actions : [];
+            for (const action of actions) {
+                addActionBlock(blocks, action.energyCost, cardAffinity(card), action.description, action.name);
+            }
         } else if (card._type === 'item') {
             addBlock(blocks, null, card.cardText);
             if (card.flavorText) {
@@ -474,11 +661,10 @@
         blocks.push(`<p>${escapeHtml(value)}</p>`);
     }
 
-    function addActionBlock(blocks, cost, tipo, description) {
+    function addActionBlock(blocks, cost, tipo, description, name) {
         if (!description || isUrl(description)) {
             return;
         }
-        const { title, body } = splitTitledDescription(description);
         const isPassive = !parseInt(cost, 10);
         const symbols = costToSymbols(cost, tipo);
 
@@ -489,8 +675,8 @@
         if (symbols) {
             headingParts.push(`<span class="card-preview__cost">${symbols}</span>`);
         }
-        if (title) {
-            headingParts.push(`<strong>${escapeHtml(title)}</strong>`);
+        if (name) {
+            headingParts.push(`<strong>${escapeHtml(name)}</strong>`);
         }
         const heading = headingParts.join(' ');
 
@@ -498,7 +684,7 @@
         if (heading) {
             blocks.push(`<h4>${heading}</h4>`);
         }
-        blocks.push(`<p>${escapeHtml(body)}</p>`);
+        blocks.push(`<p>${escapeHtml(description)}</p>`);
         blocks.push('</div>');
     }
 
@@ -520,7 +706,11 @@
             tr.appendChild(th);
 
             const td = document.createElement('td');
-            if (value !== null && typeof value === 'object') {
+            if (key === 'stats' && card._type === 'personagem') {
+                td.appendChild(buildStatsRawFields(card));
+            } else if (key === 'actions' && card._type === 'personagem') {
+                td.appendChild(buildActionsRawFields(card));
+            } else if (value !== null && typeof value === 'object') {
                 const pre = document.createElement('pre');
                 pre.className = 'card-raw__json';
                 pre.textContent = JSON.stringify(value, null, 2);

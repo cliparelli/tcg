@@ -66,7 +66,7 @@
             <select id="deck-select"></select>
         </div>
 
-        <p class="sidebar__hint">Arquivos lidos de <code>public/decks/</code>.</p>
+        <p class="sidebar__hint">Arquivos lidos de <code>EXPANSIONS/*/schemas/decks/</code>.</p>
     </aside>
 
     <main class="deck-pane" id="deck-pane">

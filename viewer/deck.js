@@ -18,6 +18,17 @@
     const cardModalBackdrop = document.getElementById('card-modal-backdrop');
     const cardModalClose = document.getElementById('card-modal-close');
 
+    const SECTION_LABELS = {
+        personagem: 'Personagens',
+        item: 'Itens',
+        energia: 'Fontes de Energia',
+    };
+
+    const ROLE_LABELS = {
+        leader: 'Líderes',
+        team: 'Time',
+    };
+
     cardModalBackdrop.addEventListener('click', closeCardModal);
     cardModalClose.addEventListener('click', closeCardModal);
     document.addEventListener('keydown', (e) => {
@@ -30,8 +41,7 @@
     init();
 
     async function init() {
-        // Carrega os dados dos decks do arquivo JSON
-        const data = await fetchJson('../decks/decks.json');
+        const data = await fetchJson('deck-api.php?action=list');
         decks = data.decks || [];
 
         sortField.addEventListener('change', renderDeckSelect);
@@ -102,8 +112,9 @@
 
     function sortDecks(list, field, direction) {
         const sorted = [...list].sort((a, b) => {
-            const valueA = (a[field] || '').toLocaleLowerCase('pt-BR');
-            const valueB = (b[field] || '').toLocaleLowerCase('pt-BR');
+            const fieldName = field === 'title' ? 'title' : field;
+            const valueA = (a[fieldName] || '').toLocaleLowerCase('pt-BR');
+            const valueB = (b[fieldName] || '').toLocaleLowerCase('pt-BR');
             return valueA.localeCompare(valueB, 'pt-BR');
         });
 
@@ -144,11 +155,19 @@
         h2.textContent = deck.title || '(sem título)';
         header.appendChild(h2);
 
-        if (deck.strategy) {
-            const strategy = document.createElement('div');
-            strategy.className = 'deck-header__strategy';
-            strategy.textContent = deck.strategy;
-            header.appendChild(strategy);
+        if (deck.description) {
+            const description = document.createElement('div');
+            description.className = 'deck-header__strategy';
+            description.textContent = deck.description;
+            header.appendChild(description);
+        }
+
+        const coreCombo = deck.strategy && deck.strategy.coreCombo;
+        if (coreCombo && coreCombo.description) {
+            const combo = document.createElement('div');
+            combo.className = 'deck-header__combo';
+            combo.innerHTML = '<strong>Combo central:</strong> ' + escapeHtml(coreCombo.description);
+            header.appendChild(combo);
         }
 
         deckPane.appendChild(header);
@@ -159,77 +178,112 @@
         const grid = document.createElement('div');
         grid.className = 'deck-grid';
 
-        let hasEntries = false;
-        for (const section of deck.sections || []) {
-            for (const group of section.groups || []) {
-                for (const entry of group.entries || []) {
-                    hasEntries = true;
-                    grid.appendChild(renderCardEntry(entry));
-                }
-            }
+        const comboCardIds = new Set((coreCombo && coreCombo.cardIds) || []);
+        const entries = deck.entries || [];
+        for (const entry of entries) {
+            grid.appendChild(renderCardEntry(entry, comboCardIds.has(entry.cardId)));
         }
 
-        if (hasEntries) {
+        if (entries.length > 0) {
             body.appendChild(grid);
-            body.appendChild(renderDecklist(deck));
+            body.appendChild(renderDecklist(deck, comboCardIds));
             deckPane.appendChild(body);
         } else {
             deckPane.appendChild(placeholderMessage('Este deck não tem cartas reconhecíveis.'));
         }
     }
 
-    function renderDecklist(deck) {
+    function groupEntries(entries) {
+        const bySection = new Map();
+
+        for (const entry of entries) {
+            const sectionKey = entry.cardType || 'outro';
+            if (!bySection.has(sectionKey)) {
+                bySection.set(sectionKey, new Map());
+            }
+            const byRole = bySection.get(sectionKey);
+            const roleKey = sectionKey === 'personagem' ? (entry.suggestedRole || '') : '';
+            if (!byRole.has(roleKey)) {
+                byRole.set(roleKey, []);
+            }
+            byRole.get(roleKey).push(entry);
+        }
+
+        return bySection;
+    }
+
+    function renderDecklist(deck, comboCardIds) {
         const list = document.createElement('div');
         list.className = 'decklist';
 
-        for (const section of deck.sections || []) {
+        const grouped = groupEntries(deck.entries || []);
+
+        for (const [sectionKey, byRole] of grouped) {
             const sectionEl = document.createElement('div');
             sectionEl.className = 'decklist__section';
 
             const title = document.createElement('div');
             title.className = 'decklist__section-title';
-            title.textContent = section.name;
+            title.textContent = SECTION_LABELS[sectionKey] || sectionKey;
             sectionEl.appendChild(title);
 
-            for (const group of section.groups || []) {
-                if (group.name) {
+            for (const [roleKey, roleEntries] of byRole) {
+                if (roleKey && ROLE_LABELS[roleKey]) {
                     const groupTitle = document.createElement('div');
                     groupTitle.className = 'decklist__group-title';
-                    groupTitle.textContent = group.name;
+                    groupTitle.textContent = ROLE_LABELS[roleKey];
                     sectionEl.appendChild(groupTitle);
                 }
 
-                for (const entry of group.entries || []) {
-                    sectionEl.appendChild(renderDecklistRow(entry));
+                for (const entry of roleEntries) {
+                    sectionEl.appendChild(renderDecklistRow(entry, comboCardIds.has(entry.cardId)));
                 }
             }
 
             list.appendChild(sectionEl);
         }
 
+        if (deck.sideboard && deck.sideboard.length > 0) {
+            const sideboardEl = document.createElement('div');
+            sideboardEl.className = 'decklist__section';
+
+            const title = document.createElement('div');
+            title.className = 'decklist__section-title';
+            title.textContent = 'Sideboard';
+            sideboardEl.appendChild(title);
+
+            for (const entry of deck.sideboard) {
+                sideboardEl.appendChild(renderDecklistRow(entry, comboCardIds.has(entry.cardId)));
+            }
+
+            list.appendChild(sideboardEl);
+        }
+
         return list;
     }
 
-    function renderDecklistRow(entry) {
+    function renderDecklistRow(entry, isCombo) {
         const row = document.createElement('div');
-        row.className = 'decklist__row' + (entry.combo ? ' decklist__row--combo' : '');
+        row.className = 'decklist__row' + (isCombo ? ' decklist__row--combo' : '');
 
         const qty = document.createElement('span');
         qty.className = 'decklist__qty';
-        qty.textContent = entry.qty + 'x';
+        qty.textContent = entry.quantity + 'x';
         row.appendChild(qty);
 
         const name = document.createElement('span');
         name.className = 'decklist__name';
-        name.textContent = entry.name;
+        name.textContent = entry.card ? entry.card.name : entry.cardId;
         row.appendChild(name);
 
         return row;
     }
 
-    function renderCardEntry(entry) {
+    function renderCardEntry(entry, isCombo) {
         const wrapper = document.createElement('div');
-        wrapper.className = 'deck-card' + (entry.combo ? ' deck-card--combo' : '');
+        wrapper.className = 'deck-card' + (isCombo ? ' deck-card--combo' : '');
+
+        const cardName = entry.card ? entry.card.name : entry.cardId;
 
         const thumb = document.createElement('div');
         thumb.className = 'deck-card__thumb';
@@ -240,27 +294,27 @@
             const img = document.createElement('img');
             img.className = 'deck-card__image';
             img.src = src;
-            img.alt = entry.name;
+            img.alt = cardName;
             img.addEventListener('error', () => {
                 img.remove();
                 thumb.classList.remove('deck-card__thumb--clickable');
                 thumb.classList.add('deck-card--missing');
                 wrapper.classList.add('deck-card--missing');
-                thumb.textContent = 'Sem imagem: ' + entry.name;
+                thumb.textContent = 'Sem imagem: ' + cardName;
             });
             thumb.appendChild(img);
 
             thumb.classList.add('deck-card__thumb--clickable');
-            thumb.addEventListener('click', () => openCardModal(src, entry.name));
+            thumb.addEventListener('click', () => openCardModal(src, cardName));
         } else {
             thumb.classList.add('deck-card--missing');
             wrapper.classList.add('deck-card--missing');
-            thumb.textContent = entry.card ? 'Sem imagem: ' + entry.name : 'Carta não encontrada: ' + entry.name;
+            thumb.textContent = entry.card ? 'Sem imagem: ' + cardName : 'Carta não encontrada: ' + cardName;
         }
 
         const qty = document.createElement('div');
         qty.className = 'deck-card__qty';
-        qty.textContent = 'x' + entry.qty;
+        qty.textContent = 'x' + entry.quantity;
         thumb.appendChild(qty);
 
         wrapper.appendChild(thumb);
@@ -332,6 +386,13 @@
             alert('Erro ao copiar link: ' + text);
         }
         document.body.removeChild(textarea);
+    }
+
+    function escapeHtml(str) {
+        return String(str ?? '')
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
     }
 
     async function fetchJson(url) {
