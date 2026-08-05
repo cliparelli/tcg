@@ -1,0 +1,210 @@
+{
+  "id": "dual-detritonia-destacamento-defesa",
+  "slug": "dual-detritonia-destacamento-defesa",
+  "name": "# Tri Detritônia/Solar Comum/Destacamento Sucata Blindada",
+  "description": "A estratégia deste deck é a primeira desta coleção a combinar três tipos ao mesmo tempo: Detritônia recicla o próprio descarte em vantagem de cartas, Solar Comum converte essa vantagem em dano bruto que ignora Defesa, e o Destacamento Interregno garante que o time sobreviva tempo suficiente para o motor de reciclagem girar. Nenhum dos três carrega o deck sozinho — TecSci abastece, Físico executa, Divino protege a execução.\n\nO combo central usa **Vharek, o Sábio Remanescente** (TecSci), **Bragan, o Recorde Imbatível** (Físico) e **Zaphiel, a Coroa Suspensa** (Divino) como núcleo: a **Cláusula Lida Duas Vezes** de Vharek compra 2 cartas a cada Item ou Fonte descartado, inclusive pela própria **Pacto Desfeito**, que já extingue 2 Fontes do defensor antes de bater. Bragan é imune a redução de Atk/Def com **Patrimônio Vivo**, e sua **Recorde Inquebrável** — Flanquear, Ignorar Defesa, 6 de dano — não perde valor mesmo que o oponente tente debuffar a Defesa dele. Zaphiel segura a retaguarda: imune a Debuffs e Perdição com **Presença Decisiva**, e mesmo perdendo o Aposte (2) de **Juízo Silencioso**, o time todo já está coberto por Sobrevida do Jardim do Véu das Plumas.\n\nOs Itens fecham o ciclo: **Bobina Reaproveitada** e **Ferro de Solda Improvisado** mantêm o descarte girando, **Machado que Não Se Curva** e **Punho que Atravessa** garantem que a Defesa do oponente nunca importe, e **Pluma do Último Suspiro** evita que qualquer perda de Vida vire nocaute antes da próxima compra de cartas.",
+  "format": "standard",
+  "strategy": {
+    "archetype": null,
+    "winCondition": null,
+    "keyMechanics": [],
+    "coreCombo": {
+      "description": "O combo central usa **Vharek, o Sábio Remanescente** (TecSci), **Bragan, o Recorde Imbatível** (Físico) e **Zaphiel, a Coroa Suspensa** (Divino) como núcleo: a **Cláusula Lida Duas Vezes** de Vharek compra 2 cartas a cada Item ou Fonte descartado, inclusive pela própria **Pacto Desfeito**, que já extingue 2 Fontes do defensor antes de bater. Bragan é imune a redução de Atk/Def com **Patrimônio Vivo**, e sua **Recorde Inquebrável** — Flanquear, Ignorar Defesa, 6 de dano — não perde valor mesmo que o oponente tente debuffar a Defesa dele. Zaphiel segura a retaguarda: imune a Debuffs e Perdição com **Presença Decisiva**, e mesmo perdendo o Aposte (2) de **Juízo Silencioso**, o time todo já está coberto por Sobrevida do Jardim do Véu das Plumas.",
+      "cardIds": [
+        "p017",
+        "p033",
+        "p049",
+        "i014",
+        "i024",
+        "i034",
+        "e010"
+      ]
+    },
+    "tempo": null
+  },
+  "entries": [
+    {
+      "cardId": "p017",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p033",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p022",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p020",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p035",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p037",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p049",
+      "quantity": 1,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p053",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p057",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i014",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Sustain"
+    },
+    {
+      "cardId": "i015",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Reaproveitar"
+    },
+    {
+      "cardId": "i025",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i037",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i024",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Transpassar"
+    },
+    {
+      "cardId": "i027",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Transpassar"
+    },
+    {
+      "cardId": "i034",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Sobrevida"
+    },
+    {
+      "cardId": "i017",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i012",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Triturar"
+    },
+    {
+      "cardId": "e019",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e024",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e029",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e020",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e004",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e007",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e010",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e012",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    }
+  ],
+  "sideboard": []
+}

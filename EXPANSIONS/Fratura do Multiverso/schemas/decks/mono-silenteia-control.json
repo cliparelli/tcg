@@ -1,0 +1,174 @@
+{
+  "id": "mono-silenteia-control",
+  "slug": "mono-silenteia-control",
+  "name": "[MONO] Control — Silenteia (Magia)",
+  "description": "Diferente do mono Silenteia de Ponto Fraco/DefDown e do de Cura/Sobrevida, este deck joga puro Control: trava o oponente com Paralisia e Ponto Fraco reutilizável enquanto se blinda contra o próprio jogo de leitura que Silenteia inflige em todo mundo. O objetivo não é matar rápido — é impedir que o oponente jogue sua própria partida.\n\nO combo central usa **Ilyah das Mãos Frias** e **Kaelen, Punho Sem Sombra** como Líderes: a **Toque Sem Calor** de Ilyah aplica Paralisia em qualquer personagem que a ataque com dano acima da própria Defesa, e sua **Mãos Frias** já sai com Ponto Fraco (2) — se o alvo já estiver paralisado, ainda ganha 2 tokens de Sobrevida de brinde. Kaelen usa **Sombra Que Não Segue** para Desviar uma vez por combate, driblando justamente os ataques que o oponente reserva para tentar remover a trava, e sua **Golpe Sem Rastro** aplica Ponto Fraco (2) com Visão Verdadeira.\n\n**Máscara do Sem-Rosto** e **Fratura do Silêncio** fecham a proteção defensiva: imunidade a Silêncio e a qualquer efeito que revele ou descarte a própria mão, tornando este deck imune ao mesmo tipo de controle que ele mesmo aplica. **Grilhão de Areia** e **Agulha da Fresta** martelam DefDown e Ponto Fraco reutilizável no alvo, e **Tigre de Pedra do Deserto** ainda extingue e triplica recursos do oponente quando a trava já estiver montada.",
+  "format": "standard",
+  "strategy": {
+    "archetype": null,
+    "winCondition": null,
+    "keyMechanics": [],
+    "coreCombo": {
+      "description": "O combo central usa **Ilyah das Mãos Frias** e **Kaelen, Punho Sem Sombra** como Líderes: a **Toque Sem Calor** de Ilyah aplica Paralisia em qualquer personagem que a ataque com dano acima da própria Defesa, e sua **Mãos Frias** já sai com Ponto Fraco (2) — se o alvo já estiver paralisado, ainda ganha 2 tokens de Sobrevida de brinde. Kaelen usa **Sombra Que Não Segue** para Desviar uma vez por combate, driblando justamente os ataques que o oponente reserva para tentar remover a trava, e sua **Golpe Sem Rastro** aplica Ponto Fraco (2) com Visão Verdadeira.",
+      "cardIds": [
+        "p006",
+        "p003",
+        "p015",
+        "i001",
+        "i004",
+        "e002"
+      ]
+    },
+    "tempo": null
+  },
+  "entries": [
+    {
+      "cardId": "p006",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p003",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p005",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p004",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p015",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p016",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p007",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i001",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i004",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i003",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "i005",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i007",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i010",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i006",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i008",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Suporte"
+    },
+    {
+      "cardId": "e014",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e015",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e016",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e017",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e018",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e002",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    }
+  ],
+  "sideboard": []
+}

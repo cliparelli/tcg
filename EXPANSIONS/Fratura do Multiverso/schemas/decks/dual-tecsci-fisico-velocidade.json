@@ -1,0 +1,258 @@
+{
+  "id": "dual-tecsci-fisico-velocidade",
+  "slug": "dual-tecsci-fisico-velocidade",
+  "name": "[DUAL] Velocidade e Buffes — TecSci + Físico",
+  "description": "Deck que combina descarte rápido (TecSci) com buffes crescentes (Físico). Quanto mais você recicla, mais forte o time fica. Vence pela escalação: cada turno, seus personagens ficam mais poderosos enquanto o oponente fica atrás.\n\n**Bruk Sete-Mãos** (TecSci) trabalha com **Coroa de Louros** (Físico) para criar uma máquina de crescimento constante. Sinergia de \"quanto mais tempo, mais forte\".",
+  "format": "standard",
+  "strategy": {
+    "archetype": null,
+    "winCondition": null,
+    "keyMechanics": [],
+    "coreCombo": {
+      "description": "**Bruk Sete-Mãos** (TecSci) trabalha com **Coroa de Louros** (Físico) para criar uma máquina de crescimento constante. Sinergia de \"quanto mais tempo, mais forte\".",
+      "cardIds": [
+        "p019",
+        "p035",
+        "i058",
+        "i064",
+        "i076",
+        "i023"
+      ]
+    },
+    "tempo": null
+  },
+  "entries": [
+    {
+      "cardId": "p019",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p035",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p020",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p038",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p023",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p036",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p024",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p039",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p040",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i014",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Utility"
+    },
+    {
+      "cardId": "i016",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Utility"
+    },
+    {
+      "cardId": "i058",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i056",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "i017",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i064",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i068",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Utility"
+    },
+    {
+      "cardId": "i076",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i023",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i071",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Utility"
+    },
+    {
+      "cardId": "i065",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Utility"
+    },
+    {
+      "cardId": "i072",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Defense"
+    },
+    {
+      "cardId": "e019",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e020",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e021",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e022",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e023",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e024",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e025",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e026",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i063",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e004",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e007",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e012",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    }
+  ],
+  "sideboard": []
+}

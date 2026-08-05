@@ -1,0 +1,183 @@
+{
+  "id": "mono-tecsci-engenheiros",
+  "slug": "mono-tecsci-engenheiros",
+  "name": "[MONO] Engenheiros — Detritônia (TecSci) da Queda",
+  "description": "Diferente do mono Detritônia de Reaproveitar/Triturar e do de Dano por Descarte, este deck é tribal: todo o time sai da categoria **Engenheiros da Queda**, cada um cobrindo um pedaço diferente da reciclagem, para que o descarte vire ao mesmo tempo motor de cartas, cura e dano crescente. Não é sobre uma peça-chave isolada — é sobre a soma dos quatro Engenheiros jogando juntos.\n\nO combo central usa **Vharek, o Sábio Remanescente** como Líder e **Bruk Sete-Mãos**, **Nyssa Solda-Frita**, **Drommel, o Recicla-Ossos** e **Fenn da Última Fundição** no Time: a **Cláusula Lida Duas Vezes** de Vharek compra 2 cartas toda vez que um Item ou Fonte vai para o descarte — inclusive as duas Fontes que sua própria **Pacto Desfeito** descarta do personagem defensor. Cada Engenheiro then reaproveita esse mesmo descarte: Nyssa cura com **Solda sem Fogo** sempre que uma Fonte é extinta, Fenn transforma cartas descartadas da mão em tokens de AtkUp com **Fundição Teimosa**, Bruk escala de 3 para 4 de dano com 3+ cartas no descarte, e Drommel compra e bate ao mesmo tempo com **Reciclagem de Combate**.\n\nOs Itens seguem a mesma lógica de girar o próprio descarte: **Bobina Reaproveitada** cura o time toda vez que um Item ou Fonte cai no descarte, **Ferro de Solda Improvisado** recicla de graça no fim da fase de compra, e **Serra Circular Remendada**/**Chave de Fenda Torta** escalam com o tamanho do descarte. **Fratura do Contrato** é o fecho de partida: Reaproveitar (3) ou Triturar (7), a depender do que o board pedir.",
+  "format": "standard",
+  "strategy": {
+    "archetype": null,
+    "winCondition": null,
+    "keyMechanics": [],
+    "coreCombo": {
+      "description": "O combo central usa **Vharek, o Sábio Remanescente** como Líder e **Bruk Sete-Mãos**, **Nyssa Solda-Frita**, **Drommel, o Recicla-Ossos** e **Fenn da Última Fundição** no Time: a **Cláusula Lida Duas Vezes** de Vharek compra 2 cartas toda vez que um Item ou Fonte vai para o descarte — inclusive as duas Fontes que sua própria **Pacto Desfeito** descarta do personagem defensor. Cada Engenheiro then reaproveita esse mesmo descarte: Nyssa cura com **Solda sem Fogo** sempre que uma Fonte é extinta, Fenn transforma cartas descartadas da mão em tokens de AtkUp com **Fundição Teimosa**, Bruk escala de 3 para 4 de dano com 3+ cartas no descarte, e Drommel compra e bate ao mesmo tempo com **Reciclagem de Combate**.",
+      "cardIds": [
+        "p017",
+        "p019",
+        "p020",
+        "p021",
+        "p022",
+        "i014",
+        "i011",
+        "e005"
+      ]
+    },
+    "tempo": null
+  },
+  "entries": [
+    {
+      "cardId": "p017",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p019",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p020",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p021",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p022",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i014",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Sustain"
+    },
+    {
+      "cardId": "i016",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Vantagem"
+    },
+    {
+      "cardId": "i015",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Reaproveitar"
+    },
+    {
+      "cardId": "i020",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Custo variável"
+    },
+    {
+      "cardId": "i012",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Triturar"
+    },
+    {
+      "cardId": "i013",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Triturar/Vantagem"
+    },
+    {
+      "cardId": "i011",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i017",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i019",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Custo variável"
+    },
+    {
+      "cardId": "e019",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e020",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e021",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e022",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e023",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e004",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e005",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e006",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    }
+  ],
+  "sideboard": []
+}

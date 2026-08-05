@@ -1,0 +1,243 @@
+{
+  "id": "dual-magia-divino-protecao",
+  "slug": "dual-magia-divino-protecao",
+  "name": "[DUAL] Proteção Absoluta — Magia + Divino",
+  "description": "Deck focado em cura (Magia) e sobrevida (Divino) combinadas. Cada personagem é praticamente indestrutível: cura de um lado, ressurreição do outro. Vence pelo tempo: o oponente cansa e morre enquanto você segue intacto.\n\n**Aridan, o Último Suspiro** (Magia) suporta cura enquanto **Rafiel Mão-Que-Protege** (Divino) garante que ninguém morre. Juntos, criam um ciclo de vida infinito.",
+  "format": "standard",
+  "strategy": {
+    "archetype": null,
+    "winCondition": null,
+    "keyMechanics": [],
+    "coreCombo": {
+      "description": "**Aridan, o Último Suspiro** (Magia) suporta cura enquanto **Rafiel Mão-Que-Protege** (Divino) garante que ninguém morre. Juntos, criam um ciclo de vida infinito.",
+      "cardIds": [
+        "p001",
+        "p053",
+        "i002",
+        "i034",
+        "i009"
+      ]
+    },
+    "tempo": null
+  },
+  "entries": [
+    {
+      "cardId": "p001",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p053",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p006",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p051",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p003",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p059",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p007",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p058",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i002",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Heal"
+    },
+    {
+      "cardId": "i051",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Defense"
+    },
+    {
+      "cardId": "i057",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Defense"
+    },
+    {
+      "cardId": "i056",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "i034",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Survival"
+    },
+    {
+      "cardId": "i009",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Survival"
+    },
+    {
+      "cardId": "i062",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Heal"
+    },
+    {
+      "cardId": "i072",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Defense"
+    },
+    {
+      "cardId": "i074",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Defense"
+    },
+    {
+      "cardId": "i075",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Utility"
+    },
+    {
+      "cardId": "i065",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Utility"
+    },
+    {
+      "cardId": "i008",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Utility"
+    },
+    {
+      "cardId": "e014",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e015",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e016",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e017",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e018",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e029",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e030",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i050",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e001",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e010",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e012",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    }
+  ],
+  "sideboard": []
+}

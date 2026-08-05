@@ -1,0 +1,260 @@
+{
+  "id": "mono-tecsci-mill-descarte",
+  "slug": "mono-tecsci-mill-descarte",
+  "name": "[MONO] Mill de Descarte Forçado — TecSci",
+  "description": "Deck dedicado à vitória pela condição 3 (deck out). Força o oponente a descartar via **Assalto à Mão** e **Corrente Quebra-Elo**, enquanto bloqueia a tentativa de recuperação via **Triturar**. Diferente do Controle de Descarte que recicla, este é puro atrito: quanto mais cartas descartadas, mais próximo está o oponente do deck out.\n\n**Vharek, o Sábio Remanescente** como líder monitora o descarte do oponente, sabendo exatamente quando aplicar pressão final. O deck flui naturalmente para late game, onde o descarte acumulado se transforma em vitória garantida.",
+  "format": "standard",
+  "strategy": {
+    "archetype": null,
+    "winCondition": null,
+    "keyMechanics": [],
+    "coreCombo": {
+      "description": "**Vharek, o Sábio Remanescente** como líder monitora o descarte do oponente, sabendo exatamente quando aplicar pressão final. O deck flui naturalmente para late game, onde o descarte acumulado se transforma em vitória garantida.",
+      "cardIds": [
+        "p017",
+        "p019",
+        "i012",
+        "i020",
+        "i011",
+        "i013",
+        "i082",
+        "i081"
+      ]
+    },
+    "tempo": null
+  },
+  "entries": [
+    {
+      "cardId": "p017",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p019",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p020",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p021",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p023",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p024",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p025",
+      "quantity": 1,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p027",
+      "quantity": 1,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p026",
+      "quantity": 1,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i012",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i020",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "i059",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Utility"
+    },
+    {
+      "cardId": "i058",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i011",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i013",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i018",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i082",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i081",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i070",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "i068",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Utility"
+    },
+    {
+      "cardId": "i069",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Utility"
+    },
+    {
+      "cardId": "i064",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i072",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Defense"
+    },
+    {
+      "cardId": "e019",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e020",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e021",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e022",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e023",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i050",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e004",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e005",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e006",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e012",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    }
+  ],
+  "sideboard": []
+}

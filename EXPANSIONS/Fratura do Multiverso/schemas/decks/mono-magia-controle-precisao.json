@@ -1,0 +1,245 @@
+{
+  "id": "mono-magia-controle-precisao",
+  "slug": "mono-magia-controle-precisao",
+  "name": "[MONO] Controle de Precisão — Magia",
+  "description": "Deck focado em ler e explorar os pontos fracos do oponente através de Clarividência e manipulação de recursos. Vence controlando o ritmo do jogo, revelando a mão adversária e puxando cartas-chave do próprio deck enquanto reduz o tempo de resposta do oponente via debuffs direcionados.\n\nA estratégia central é acumular informação sobre o oponente (via **Cajado do Vento Parado** e **Tigre de Pedra do Deserto**) e usar essa vantagem para antecipar ataques e preparar bloqueios defensivos. **Yemira das Mil Dunas** funciona como vencedora tardia: cada turno que passa, a informação que ela lê do oponente se traduz em redução de dano ou debuff. Personagens de baixa vida são protegidos via cura modesta e remoção de debuffs.",
+  "format": "standard",
+  "strategy": {
+    "archetype": null,
+    "winCondition": null,
+    "keyMechanics": [],
+    "coreCombo": {
+      "description": "A estratégia central é acumular informação sobre o oponente (via **Cajado do Vento Parado** e **Tigre de Pedra do Deserto**) e usar essa vantagem para antecipar ataques e preparar bloqueios defensivos. **Yemira das Mil Dunas** funciona como vencedora tardia: cada turno que passa, a informação que ela lê do oponente se traduz em redução de dano ou debuff. Personagens de baixa vida são protegidos via cura modesta e remoção de debuffs.",
+      "cardIds": [
+        "p002",
+        "p003",
+        "p004",
+        "i003",
+        "i006",
+        "e001",
+        "e002"
+      ]
+    },
+    "tempo": null
+  },
+  "entries": [
+    {
+      "cardId": "p002",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p003",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p004",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p005",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p006",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p007",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p008",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p009",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i003",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i005",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i004",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Defense"
+    },
+    {
+      "cardId": "i056",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "i058",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i060",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Utility"
+    },
+    {
+      "cardId": "i006",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i007",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Debuff"
+    },
+    {
+      "cardId": "i008",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Utility"
+    },
+    {
+      "cardId": "i009",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Survival"
+    },
+    {
+      "cardId": "i010",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i072",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Defense"
+    },
+    {
+      "cardId": "i070",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "e014",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e015",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e016",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e017",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e018",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i050",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e001",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e002",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e003",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e012",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    }
+  ],
+  "sideboard": []
+}

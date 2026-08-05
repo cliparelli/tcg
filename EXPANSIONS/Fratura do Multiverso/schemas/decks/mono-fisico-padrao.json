@@ -1,0 +1,134 @@
+{
+  "id": "mono-fisico-padrao",
+  "slug": "mono-fisico-padrao",
+  "name": "[MONO] Padrão — Solar Comum (Físico)",
+  "description": "Diferente dos demais decks de Solar Comum — que giram em torno de Ignorar Defesa/Agro extremo, Escudo/Sobrevida ou Atk crescente por vitórias —, este é o deck de entrada do tipo: a curva de dano direto mais simples possível, sem Transpassar condicional nem buff de time acumulado. É o retrato mais cru da agressão de Físico, sem enfeite.\n\nO núcleo usa **Yuna Sete-Vitórias** como Líder: sua **Sétima Vitória** causa 3 de dano direto, sem condição nenhuma, a um custo baixo o bastante para bater todo turno. O Time segue a mesma receita: **Elin do Mercado Central** e **Comerciante do Bairro** batem por 1 energia, **Doran Punho-de-Nação** e **Tomasz da Vila Nova** seguram o meio de curva com 2-3 de dano direto, e **Kassian, o Escudo do Vale** dá alguma resiliência ao time sem abrir mão do próprio dano.\n\nOs Itens completam com o pacote mais direto possível: **Golpe do Sol a Pino** é dano puro de alto impacto, **Lança da Aurora Comum** já perfura metade da Defesa do alvo sem depender de outra carta, e **Cinto de Utilidade**, **Escudo Comum** e **Poção de Vigor** cobrem o básico de qualquer deck de entrada.",
+  "format": "standard",
+  "strategy": {
+    "archetype": null,
+    "winCondition": null,
+    "keyMechanics": [],
+    "coreCombo": {
+      "description": "O núcleo usa **Yuna Sete-Vitórias** como Líder: sua **Sétima Vitória** causa 3 de dano direto, sem condição nenhuma, a um custo baixo o bastante para bater todo turno. O Time segue a mesma receita: **Elin do Mercado Central** e **Comerciante do Bairro** batem por 1 energia, **Doran Punho-de-Nação** e **Tomasz da Vila Nova** seguram o meio de curva com 2-3 de dano direto, e **Kassian, o Escudo do Vale** dá alguma resiliência ao time sem abrir mão do próprio dano.",
+      "cardIds": [
+        "p038"
+      ]
+    },
+    "tempo": null
+  },
+  "entries": [
+    {
+      "cardId": "p038",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p044",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p045",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p035",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p039",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p037",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i051",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i049",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i026",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i029",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Transpassar"
+    },
+    {
+      "cardId": "i062",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Cura"
+    },
+    {
+      "cardId": "e024",
+      "quantity": 5,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e028",
+      "quantity": 5,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e026",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e027",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e007",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    }
+  ],
+  "sideboard": []
+}

@@ -111,6 +111,39 @@ body {
     display: none;
 }
 
+.type-buttons {
+    display: flex;
+    gap: 6px;
+}
+
+.type-buttons__btn {
+    flex: 1;
+    padding: 8px 4px;
+    background: #262530;
+    border: 1px solid var(--panel-border);
+    border-radius: 6px;
+    color: var(--text-dim);
+    font-size: 12px;
+    cursor: pointer;
+    transition: background .15s, color .15s, border-color .15s;
+}
+
+.type-buttons__btn:hover:not(:disabled) {
+    background: #322f3d;
+    color: var(--text);
+}
+
+.type-buttons__btn--active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+.type-buttons__btn:disabled {
+    opacity: .35;
+    cursor: not-allowed;
+}
+
 .card-list {
     list-style: none;
     margin: 8px 0 0;
@@ -336,7 +369,7 @@ body {
     font-size: 11px;
     line-height: 1.35;
     color: black;
-    padding: 4px 2px;
+    padding: 10px 2px 4px 2px;
 }
 
 .card-preview__text h4 {
@@ -479,61 +512,19 @@ body {
     white-space: pre-wrap;
 }
 
-.card-raw__field {
-    width: 100%;
-    padding: 6px 8px;
+.card-raw__json {
+    margin: 0;
+    padding: 8px;
     background: #262530;
     border: 1px solid var(--panel-border);
     border-radius: 6px;
     color: var(--text);
-    font-size: 12px;
-    font-family: inherit;
-    resize: vertical;
-}
-
-textarea.card-raw__field {
-    min-height: 60px;
-}
-
-.card-raw__actions {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 12px;
-    margin-top: 12px;
-}
-
-.card-raw__actions button {
-    padding: 8px 18px;
-    background: var(--accent);
-    border: none;
-    border-radius: 6px;
-    color: #fff;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.card-raw__actions button:hover {
-    filter: brightness(1.1);
-}
-
-.card-raw__actions button:disabled {
-    opacity: 0.6;
-    cursor: default;
-}
-
-.card-raw__status {
-    font-size: 12px;
-    color: var(--text-dim);
-}
-
-.card-raw__status--ok {
-    color: #4ade80;
-}
-
-.card-raw__status--error {
-    color: #f87171;
+    font-size: 11px;
+    font-family: "SFMono-Regular", Consolas, monospace;
+    white-space: pre;
+    overflow-x: auto;
+    max-height: 320px;
+    overflow-y: auto;
 }
 
 @media (max-width: 768px) {

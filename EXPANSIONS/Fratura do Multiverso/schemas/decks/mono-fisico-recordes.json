@@ -1,0 +1,174 @@
+{
+  "id": "mono-fisico-recordes",
+  "slug": "mono-fisico-recordes",
+  "name": "[MONO] Recordes — Solar Comum (Físico) Vivos",
+  "description": "Diferente do mono Solar Comum de Ignorar Defesa/Agro e do de Escudo/Sobrevida, este deck joga o terceiro ângulo do tipo: Atk crescente por combate vencido. O time inteiro fica mais forte a cada turno que passa, até que o dano por golpe simples e direto se torne insustentável de bloquear.\n\nO combo central usa **Bragan, o Recorde Imbatível** como Líder e **Doran Punho-de-Nação**, **Mireia Passo-Rápido** e **Yuna Sete-Vitórias** no Time, todos da categoria **Recordes Vivos**: a **Bandeira Tatuada** de Doran empilha um token de AtkUp para cada personagem do tipo Físico em jogo assim que ele entra vindo da mão, enquanto **Coroa de Louros** e **Arena do Recorde Eterno** entregam mais um AtkUp permanente ao fim de cada fase de limpeza, turno após turno. Bragan segura a linha de frente com **Patrimônio Vivo**, imune a qualquer redução de Atk/Def, e fecha com **Recorde Inquebrável** — Flanquear, Ignorar Defesa e 6 de dano puro.\n\n**Grito de Guerra do Povo** e **Fratura do Sol** são os picos de curva: o primeiro dá um AtkUp a cada personagem em campo, o segundo trava 3 AtkUp e 3 LifeUp permanentes e imunes a remoção no time inteiro. Com o Atk já em escalada natural, cada carta de buff adicional passa a representar dano exponencial, não apenas linear.",
+  "format": "standard",
+  "strategy": {
+    "archetype": null,
+    "winCondition": null,
+    "keyMechanics": [],
+    "coreCombo": {
+      "description": "O combo central usa **Bragan, o Recorde Imbatível** como Líder e **Doran Punho-de-Nação**, **Mireia Passo-Rápido** e **Yuna Sete-Vitórias** no Time, todos da categoria **Recordes Vivos**: a **Bandeira Tatuada** de Doran empilha um token de AtkUp para cada personagem do tipo Físico em jogo assim que ele entra vindo da mão, enquanto **Coroa de Louros** e **Arena do Recorde Eterno** entregam mais um AtkUp permanente ao fim de cada fase de limpeza, turno após turno. Bragan segura a linha de frente com **Patrimônio Vivo**, imune a qualquer redução de Atk/Def, e fecha com **Recorde Inquebrável** — Flanquear, Ignorar Defesa e 6 de dano puro.",
+      "cardIds": [
+        "p033",
+        "p035",
+        "i025",
+        "i023",
+        "i021",
+        "e009"
+      ]
+    },
+    "tempo": null
+  },
+  "entries": [
+    {
+      "cardId": "p033",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p035",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p036",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p038",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p037",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p039",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i025",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i028",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Resiliência"
+    },
+    {
+      "cardId": "i022",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i023",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff em massa"
+    },
+    {
+      "cardId": "i021",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff em massa"
+    },
+    {
+      "cardId": "i026",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i029",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Transpassar"
+    },
+    {
+      "cardId": "e024",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e028",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e026",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e027",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e025",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e009",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e007",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e008",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    }
+  ],
+  "sideboard": []
+}

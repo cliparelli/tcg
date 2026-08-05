@@ -1,0 +1,199 @@
+{
+  "id": "mono-divino-interregno",
+  "slug": "mono-divino-interregno",
+  "name": "[MONO] Destacamento Interregno — Divino Sobrevida/Aposte",
+  "description": "A estratégia deste deck é negar a morte do próprio time enquanto arrisca tudo em ataques de alto risco/alta recompensa: tokens de Sobrevida seguram os personagens à beira de 0 de Vida, e `Aposte (X)` transforma esses mesmos personagens em ameaças capazes de decidir a partida de uma só jogada. O Destacamento não joga para durar pouco nem para durar para sempre — joga para intervir no momento exato.\n\nO combo central usa **Zaphiel, a Coroa Suspensa** e **Ishmael, o Último Serafim** como Líderes: Zaphiel é imune a Debuffs e Perdição com **Presença Decisiva**, e sua **Juízo Silencioso** aposta em 8 de dano com Silêncio — mesmo perdendo a aposta, o oponente ainda recebe 5 tokens de DefDown. Ishmael entra em jogo já protegido por 3 tokens de Sobrevida via **Palavra Rara**, e sua **Profecia do Juízo** escala para 5 de dano se houve um nocaute no turno anterior — recompensando o próprio risco do time.\n\nO Time reforça a mesma dualidade entre proteção e julgamento: **Rafiel Mão-Que-Protege** empilha 3 tokens de Sobrevida com Flanquear, **Aurelith das Asas Partidas** converte dano fatal em descarte preventivo (sem contar como nocaute) e sua ativa aposta dano extra com mais Sobrevida, enquanto **Cassiel, Voz do Juízo** aposta para nocautear diretamente qualquer alvo que já tenha sofrido dano no turno. **Petra, Sentinela do Primeiro Portão** empilha Escudo em todo fim de fase de limpeza e **Tobiah das Mãos Vazias** pune o oponente com extinção de recursos sempre que o time nocauteia alguém — amplificando justamente o momento de intervenção decisiva que Zaphiel e Ishmael preparam. **Selo do Juízo Suspenso** e **Espada Envolta em Névoa** fecham o alvo que já está fraco, **Testemunho da Fratura** transforma a perda de um personagem em DefUp e compra de cartas para o resto do time, e **Pluma do Último Suspiro** garante que ninguém morra no turno certo. **Véu da Vigília Eterna** e **Grade da Última Guarda** blindam o time contra debuffs e dano letal em momentos-chave. **Fratura da Coroa** fecha o pacote como Item Épico: sacrifica um personagem para inundar o resto do time com o dobro da Vida dele em tokens de Sobrevida.",
+  "format": "standard",
+  "strategy": {
+    "archetype": null,
+    "winCondition": null,
+    "keyMechanics": [],
+    "coreCombo": {
+      "description": "O combo central usa **Zaphiel, a Coroa Suspensa** e **Ishmael, o Último Serafim** como Líderes: Zaphiel é imune a Debuffs e Perdição com **Presença Decisiva**, e sua **Juízo Silencioso** aposta em 8 de dano com Silêncio — mesmo perdendo a aposta, o oponente ainda recebe 5 tokens de DefDown. Ishmael entra em jogo já protegido por 3 tokens de Sobrevida via **Palavra Rara**, e sua **Profecia do Juízo** escala para 5 de dano se houve um nocaute no turno anterior — recompensando o próprio risco do time.",
+      "cardIds": [
+        "p049",
+        "p050",
+        "p053",
+        "p051",
+        "p058",
+        "p055",
+        "i030",
+        "i031",
+        "i033",
+        "e010"
+      ]
+    },
+    "tempo": null
+  },
+  "entries": [
+    {
+      "cardId": "p049",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p050",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p053",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p051",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p052",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p058",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p054",
+      "quantity": 1,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p055",
+      "quantity": 1,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i030",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Deck Control"
+    },
+    {
+      "cardId": "i038",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Protect"
+    },
+    {
+      "cardId": "i035",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Protect"
+    },
+    {
+      "cardId": "i037",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Protect"
+    },
+    {
+      "cardId": "i056",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "i031",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i033",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i032",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i034",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i036",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "e029",
+      "quantity": 5,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e030",
+      "quantity": 5,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e031",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e032",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e033",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e010",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    }
+  ],
+  "sideboard": []
+}

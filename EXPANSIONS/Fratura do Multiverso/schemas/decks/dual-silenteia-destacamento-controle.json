@@ -1,0 +1,199 @@
+{
+  "id": "dual-silenteia-destacamento-controle",
+  "slug": "dual-silenteia-destacamento-controle",
+  "name": "[DUAL] Controle — Magia + Divino Controle e Sobrevida",
+  "description": "A estratégia deste deck combina o controle de Silenteia — leitura de fraqueza e debuff — com a Sobrevida do Destacamento Interregno, que nega a morte do time enquanto o combo de debuff se instala. O deck vence de forma lenta e segura: nada morre até que o oponente já esteja completamente exposto.\n\nO combo central usa **Yemira das Mil Dunas** (Magia) e **Ishmael, o Último Serafim** (Divino) como Líderes: Yemira aplica Ponto Fraco via Flanquear sem gastar energia extra com **Rastro do Guerreiro**, e ainda prevê o próprio deck de graça a cada turno. Ishmael entra em jogo já com 3 tokens de Sobrevida via **Palavra Rara**, e sua **Profecia do Juízo** escala para 5 de dano se houve um nocaute no turno anterior — um finalizador que se abastece do próprio controle que Silenteia já preparou.\n\nO Time reforça a dupla função de controlar e proteger: **Kaelen, Punho Sem Sombra** e **Ilyah das Mãos Frias** aplicam mais Ponto Fraco e Paralisia, enquanto **Rafiel Mão-Que-Protege** empilha 3 tokens de Sobrevida com Flanquear no personagem que mais precisa. **Guarda, Sentinela do Quarto Portão** soma Clarividência via Devoção a Silenteia, reforçando o lado de leitura do splash direto do time do Destacamento. **Grilhão de Areia** e **Agulha da Fresta** derrubam a Defesa do alvo, **Pluma do Último Suspiro** garante que nenhum aliado morra no turno errado, e **Véu da Vigília Eterna** blinda contra o primeiro Debuff recebido a cada turno — cobrindo justamente a fraqueza natural de Magia contra TecSci. **Cajado do Vento Parado** garante leitura de mão constante para antecipar a jogada do oponente.",
+  "format": "standard",
+  "strategy": {
+    "archetype": null,
+    "winCondition": null,
+    "keyMechanics": [],
+    "coreCombo": {
+      "description": "A estratégia deste deck combina o controle de Silenteia — leitura de fraqueza e debuff — com a Sobrevida do Destacamento Interregno, que nega a morte do time enquanto o combo de debuff se instala. O deck vence de forma lenta e segura: nada morre até que o oponente já esteja completamente exposto.",
+      "cardIds": [
+        "p002",
+        "p050",
+        "p003",
+        "p053",
+        "p061",
+        "i003",
+        "i037",
+        "i007",
+        "i010",
+        "e010"
+      ]
+    },
+    "tempo": null
+  },
+  "entries": [
+    {
+      "cardId": "p002",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p050",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p003",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p053",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p006",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p061",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p004",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i003",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "i037",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Protect"
+    },
+    {
+      "cardId": "i004",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Protect"
+    },
+    {
+      "cardId": "i005",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i056",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "i007",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i010",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i034",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i008",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i002",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "e014",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e015",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e029",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e030",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e001",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e002",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e010",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    }
+  ],
+  "sideboard": []
+}

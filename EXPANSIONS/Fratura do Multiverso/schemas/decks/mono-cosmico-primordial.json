@@ -1,0 +1,191 @@
+{
+  "id": "mono-cosmico-primordial",
+  "slug": "mono-cosmico-primordial",
+  "name": "[MONO] Astraca Primordial — Cósmico Ataque Expansível/AoE",
+  "description": "A estratégia deste deck é acumular energia anexada nos próprios personagens para escalar dano em área, aceitando o recoil que vem junto — a Astraca não poupa nem a si mesma. Cada energia anexada é munição; cada ataque expansível é maior quanto mais munição houver em campo, e o time inteiro do oponente sente o impacto, não só o alvo direto.\n\nO combo central usa **Or'Kaath, a Última Estrela** e **Nyx-Vahl, o Titã em Ruínas** como Líderes: toda ação de combate de Or'Kaath causa Dano Penetrante via **Distorção Constante**, e sua **Vontade de Voltar a Dormir** aposta em 9 de dano ao alvo mais 3 de dano em área — inclusive nos próprios personagens. Nyx-Vahl sofre o mesmo dano que causa com **Rachaduras Abertas**, mas sua **Colapso Parcial** já nasce expansível e ainda ganha Alvos Múltiplos ao extinguir recursos, multiplicando o próprio recoil em vantagem de área.\n\nO Time reforça a escalada por energia: **Ashkar das Marés Estelares** usa Ataque Expansível puro para converter energia anexada em dano extra, **Threnody das Órbitas Partidas** e **Petrichor Vazio** já vêm com Alvos Múltiplos nativo, batendo em mais de um personagem inimigo por ativação. **Núcleo em Expansão** e **Chifre do Titã Adormecido** transformam energia anexada — a sua ou a do time inteiro somada — em dano bruto adicional, enquanto **Cadeia de Supernovas** dobra de valor com 3+ energias no personagem que ataca. **Tempestade sem Fim** e **Onda do Vácuo** martelam todo o time do oponente por igual, e **Herança Estelar** dá flexibilidade de tipo para contornar a Fraqueza natural do próprio deck. **Fratura do Descanso** fecha o pacote como Item Épico: 5 de dano em área no oponente inteiro, ao custo de 2 de dano no próprio time — o preço de acordar a entidade.",
+  "format": "standard",
+  "strategy": {
+    "archetype": null,
+    "winCondition": null,
+    "keyMechanics": [],
+    "coreCombo": {
+      "description": "O combo central usa **Or'Kaath, a Última Estrela** e **Nyx-Vahl, o Titã em Ruínas** como Líderes: toda ação de combate de Or'Kaath causa Dano Penetrante via **Distorção Constante**, e sua **Vontade de Voltar a Dormir** aposta em 9 de dano ao alvo mais 3 de dano em área — inclusive nos próprios personagens. Nyx-Vahl sofre o mesmo dano que causa com **Rachaduras Abertas**, mas sua **Colapso Parcial** já nasce expansível e ainda ganha Alvos Múltiplos ao extinguir recursos, multiplicando o próprio recoil em vantagem de área.",
+      "cardIds": [
+        "p065",
+        "p066",
+        "p072",
+        "p067",
+        "i039",
+        "i040",
+        "i041",
+        "i044",
+        "e011"
+      ]
+    },
+    "tempo": null
+  },
+  "entries": [
+    {
+      "cardId": "p065",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p066",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p072",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p067",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p073",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p068",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p069",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i039",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Deck Control"
+    },
+    {
+      "cardId": "i040",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i042",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Protect"
+    },
+    {
+      "cardId": "i056",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "i041",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i044",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i046",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i048",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i045",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i047",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "e034",
+      "quantity": 5,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e035",
+      "quantity": 5,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e036",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e037",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e038",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e011",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    }
+  ],
+  "sideboard": []
+}

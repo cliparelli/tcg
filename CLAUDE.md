@@ -39,10 +39,15 @@ Os tipos de personagem descritos em `rules.md` (Natureza, Vida, Morte, Divino, E
 
 ## Coleções e biblioteca de cartas (`EXPANSIONS/`)
 
-`EXPANSIONS/` (antigo `LIB/`) guarda os CSVs de cada coleção, um subdiretório por expansão:
+`EXPANSIONS/` (antigo `LIB/`) guarda tudo relativo a cada coleção/expansão, um subdiretório por expansão (`base-set/`, `Fratura do Multiverso/`), cada um com:
 
-- `EXPANSIONS/base-set/card-list/*-CardGenerator.csv` — formato antigo, sem colunas `Prompt Arte`/`Arte`.
-- `EXPANSIONS/Fratura do Multiverso/card-list/{PERSONAGENS,ITENS,ENERGIAS}.csv` — formato atual, separador `;`, inclui `Prompt Arte` e `Arte`/`IMAGEM` (nome do arquivo de asset gerado). `json-art/` guarda prompts de arte por mundo em JSON.
+- `card-list/*.csv` — dados das cartas.
+  - `base-set/card-list/*-CardGenerator.csv` — formato antigo, sem colunas `Prompt Arte`/`Arte`.
+  - `Fratura do Multiverso/card-list/{PERSONAGENS,ITENS,ENERGIAS}.csv` — formato atual, separador `;`, inclui `Prompt Arte` e `Arte`/`IMAGEM` (nome do arquivo de asset gerado).
+- `decks/` — decklists da coleção (ver seção "Decklists" abaixo). Substituiu o antigo `public/decks/` — `public/` hoje só guarda imagens soltas, sem mais decklists.
+- `imgs/` — imagens de apoio da coleção (ex. arte de fundo, ícones).
+- `schemas/` — pasta placeholder por coleção, ainda vazia; o schema de dados real e ativo continua em `schemas/` na raiz do repo (ver seção acima). Não confundir os dois.
+- `Fratura do Multiverso/` também tem `card-art/` (arte final renderizada), `json-art/` (prompts de arte por mundo em JSON) e `fratura-do-multiverso.md` (documento de design/lore do set: escopo, tipos, mecânicas, cota de cartas — não é a lista final de cartas, isso é `card-list/`).
 
 Novas coleções: crie uma subpasta em `EXPANSIONS/` com CSVs cujo nome contenha `PERSONAGENS`, `ITENS` ou `ENERGIAS` — `viewer/` detecta automaticamente.
 
@@ -60,7 +65,7 @@ Automação de produção de assets, fora do fluxo de regras/conteúdo. Ver `scr
 
 ## Decklists
 
-Arquivos de deck ficam em `public/decks/` (ex.: `dot.md`) e seguem este formato: título `# Mono <Tema> DOT`, parágrafo de estratégia, depois seções `## Personagens (N)`, `## Itens (N)`, `## Fontes de Energia (N)` com a contagem de cartas no título, subseções por categoria (`Líderes`, `Time`, `Permanente`, `Volátil`, `Básica`, `Prismática`, `Avançada`), e cada carta listada como `- NxNome (Versão) - Tag *`, onde `*` marca cartas-chave do combo. `new-decks.md` mantém um checklist manual de decks pendentes de criação, organizado por escopo (Mono Type, Dual Type, Triple Type, Rainbow).
+Arquivos de deck ficam em `EXPANSIONS/<coleção>/decks/` (antigo `public/decks/`) e seguem este formato: título `# [MONO|DUAL|TRIPLE|RAINBOW] <Tema> — <Mundo(s)/Tipo(s)> (<Afinidade(s)>)`, parágrafo(s) de estratégia, depois seções `## Personagens (N)`, `## Itens (N)`, `## Fontes de Energia (N)` com a contagem de cartas no título, subseções por categoria (`Líderes`, `Time`, `Permanente`, `Volátil`, `Básica`, `Prismática`, `Avançada`), e cada carta listada como `- NxNome (Versão) (Coleção) - Tag *`, onde `*` marca cartas-chave do combo e `(Coleção)` referencia a expansão de origem da carta (ex. `(Fratura do Multiverso)`). Nome de arquivo segue o prefixo do escopo, ex. `MONO-Divino-Sentinelas.md`, `DUAL-Magia+TecSci-Sinergia.md`, `TRIPLE-Magia+Fisico+Cosmico-Furia.md`, `RAINBOW-Equilibrio-Balanceado.md`. `new-decks.md` mantém um checklist manual de decks pendentes de criação, organizado por escopo (Mono Type, Dual Type, Triple Type, Rainbow).
 
 ## Licenciamento
 

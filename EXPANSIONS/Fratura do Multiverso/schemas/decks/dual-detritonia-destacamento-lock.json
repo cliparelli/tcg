@@ -1,0 +1,189 @@
+{
+  "id": "dual-detritonia-destacamento-lock",
+  "slug": "dual-detritonia-destacamento-lock",
+  "name": "# Bi Detritônia/Destacamento Negação e Imunidade",
+  "description": "A estratégia deste deck combina os dois lados do Control que nenhum outro deck desta coleção havia juntado: Detritônia extingue e tritura os recursos do oponente até ele não conseguir mais pagar as próprias ações, enquanto o Destacamento Interregno torna o próprio time imune aos debuffs e à perda de Vida que sobrariam como única resposta. Um lado ataca o motor do adversário, o outro protege o motor próprio — nenhum concede ao oponente uma janela de reação.\n\nO combo central usa **Vharek, o Sábio Remanescente** (TecSci) e **Zaphiel, a Coroa Suspensa** (Divino) como Líderes: **Pacto Desfeito** de Vharek já descarta 2 Fontes do defensor antes do dano, e **Cláusula Lida Duas Vezes** vira compra de 2 cartas a cada Item ou Fonte perdida — inclusive as do próprio oponente. Zaphiel segura a retaguarda com **Presença Decisiva**, imune a Debuffs e Perdição, então mesmo que o oponente já sem recursos consiga uma última resposta de controle, ela simplesmente não pega.\n\n**Alicate de Contrato Roto** e **Trono Enferrujado** mantêm a pressão de Extinguir Fonte turno após turno, enquanto **Grade da Última Guarda** e **Auréola Rachada** blindam o time contra qualquer LifeDown ou Debuff que o oponente ainda tente na desespero. **Fratura do Contrato** fecha a partida: Reaproveitar (3) para reabastecer a própria mão ou Triturar (7) para arrancar o que restar do oponente, a depender de qual lado do jogo precisa mais de atenção naquele turno.",
+  "format": "standard",
+  "strategy": {
+    "archetype": null,
+    "winCondition": null,
+    "keyMechanics": [],
+    "coreCombo": {
+      "description": "O combo central usa **Vharek, o Sábio Remanescente** (TecSci) e **Zaphiel, a Coroa Suspensa** (Divino) como Líderes: **Pacto Desfeito** de Vharek já descarta 2 Fontes do defensor antes do dano, e **Cláusula Lida Duas Vezes** vira compra de 2 cartas a cada Item ou Fonte perdida — inclusive as do próprio oponente. Zaphiel segura a retaguarda com **Presença Decisiva**, imune a Debuffs e Perdição, então mesmo que o oponente já sem recursos consiga uma última resposta de controle, ela simplesmente não pega.",
+      "cardIds": [
+        "p017",
+        "p049",
+        "p055",
+        "i038",
+        "i011",
+        "i012",
+        "e006"
+      ]
+    },
+    "tempo": null
+  },
+  "entries": [
+    {
+      "cardId": "p017",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p049",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p025",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p027",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p057",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p055",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p053",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i014",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Sustain"
+    },
+    {
+      "cardId": "i038",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i037",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i020",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Custo variável"
+    },
+    {
+      "cardId": "i011",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i012",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i019",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i035",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i034",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Sobrevida"
+    },
+    {
+      "cardId": "e019",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e020",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e029",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e030",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e006",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e004",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e010",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    }
+  ],
+  "sideboard": []
+}

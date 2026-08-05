@@ -1,0 +1,190 @@
+{
+  "id": "dual-destacamento-astraca-poder",
+  "slug": "dual-destacamento-astraca-poder",
+  "name": "# Bi Destacamento/Astraca Sobrevida e Recoil",
+  "description": "A estratégia deste deck explora a sinergia natural da dupla de topo: o Destacamento Interregno sustenta o time com Sobrevida enquanto a Astraca Primordial causa dano em área com recoil — a Sobrevida absorve justamente o dano que a própria Astraca devolveria ao seu controlador. As duas forças não competem, colaboram: uma observa e protege, a outra desperta com fúria e é blindada pela primeira.\n\nO combo central usa **Ishmael, o Último Serafim** (Divino) e **Or'Kaath, a Última Estrela** (Cósmico) como Líderes: Ishmael entra em jogo já com 3 tokens de Sobrevida via **Palavra Rara**, colchão que absorve boa parte do recoil que o resto do time recebe. Or'Kaath causa Dano Penetrante em toda ação com **Distorção Constante**, e sua **Vontade de Voltar a Dormir** aposta em 9 de dano ao alvo mais 3 de dano em área — inclusive no próprio time, dano que a Sobrevida acumulada por Ishmael neutraliza antes que doa de verdade.\n\nO Time reforça o mesmo ciclo: **Rafiel Mão-Que-Protege** empilha 3 tokens de Sobrevida com Flanquear, **Nyx-Vahl, o Titã em Ruínas** sofre o mesmo dano que causa mas já nasce protegido pela Sobrevida acumulada em campo, e **Aurelith das Asas Partidas** converte dano fatal em descarte preventivo sem contar como nocaute. **Vellithra, Tempestade sem Nome** usa Devoção a Or'Kaath para deixar o controlador escolher o Tipo Mutável da própria ativa, dando flexibilidade justamente contra a Fraqueza que o recoil cósmico expõe. **Pluma do Último Suspiro** garante que ninguém morra no turno errado, **Chifre do Titã Adormecido** converte energia anexada de todo o time em dano bruto, e **Testemunho da Fratura** transforma qualquer perda em DefUp e compra de cartas para o resto do grupo. **Jardim do Véu das Plumas** fecha o pacote distribuindo 2 tokens de Sobrevida em todo o time assim que entra em jogo, absorvendo de largada o próximo recoil cósmico.",
+  "format": "standard",
+  "strategy": {
+    "archetype": null,
+    "winCondition": null,
+    "keyMechanics": [],
+    "coreCombo": {
+      "description": "O combo central usa **Ishmael, o Último Serafim** (Divino) e **Or'Kaath, a Última Estrela** (Cósmico) como Líderes: Ishmael entra em jogo já com 3 tokens de Sobrevida via **Palavra Rara**, colchão que absorve boa parte do recoil que o resto do time recebe. Or'Kaath causa Dano Penetrante em toda ação com **Distorção Constante**, e sua **Vontade de Voltar a Dormir** aposta em 9 de dano ao alvo mais 3 de dano em área — inclusive no próprio time, dano que a Sobrevida acumulada por Ishmael neutraliza antes que doa de verdade.",
+      "cardIds": [
+        "p050",
+        "p065",
+        "p053",
+        "p066",
+        "p070",
+        "i034",
+        "i041",
+        "e010"
+      ]
+    },
+    "tempo": null
+  },
+  "entries": [
+    {
+      "cardId": "p050",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p065",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p053",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p066",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p051",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p072",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p070",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i037",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Protect"
+    },
+    {
+      "cardId": "i040",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i035",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Protect"
+    },
+    {
+      "cardId": "i042",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Protect"
+    },
+    {
+      "cardId": "i056",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "i034",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i041",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i033",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i046",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i036",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "e029",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e030",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e034",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e035",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e010",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e011",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    }
+  ],
+  "sideboard": []
+}

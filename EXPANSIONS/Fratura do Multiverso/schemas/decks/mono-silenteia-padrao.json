@@ -1,0 +1,134 @@
+{
+  "id": "mono-silenteia-padrao",
+  "slug": "mono-silenteia-padrao",
+  "name": "[MONO] Padrão — Silenteia (Magia)",
+  "description": "Diferente dos demais decks de Silenteia desta coleção — que giram em torno de trava de Paralisia, Cura/Sobrevida ou Control puro —, este é o deck de entrada do tipo: uma curva simples de dano direto com Ponto Fraco como único tempero, sem nenhuma peça de combo obrigatória. Qualquer jogador novo consegue montar o board e atacar todo turno sem decorar interações complicadas.\n\nO núcleo usa **Yemira das Mil Dunas** como Líder: sua **Rastro do Guerreiro** já é Flanquear com Ponto Fraco (3) por apenas 2 de energia, dano simples e direto que qualquer curva consegue pagar cedo. O Time é só dano de custo baixo: **Andarilho Silencioso** bate por 1 energia, **Sem Voz Andante** e **Sora do Vento Contido** batem por 2, e **Dorhen, Guarda da Última Miragem** segura o meio de curva com 4 de dano e boa Defesa. Nenhuma dessas ativas depende de outra carta em campo para funcionar.\n\nOs Itens seguem a mesma lógica direta: **Grilhão de Areia** e **Agulha da Fresta** aplicam debuff simples de apoio ao ataque, e **Cinto de Utilidade**, **Escudo Comum** e **Poção de Vigor** são utilidades genéricas de baixo custo que qualquer deck de entrada pode usar sem depender de sinergia de tipo.",
+  "format": "standard",
+  "strategy": {
+    "archetype": null,
+    "winCondition": null,
+    "keyMechanics": [],
+    "coreCombo": {
+      "description": "Diferente dos demais decks de Silenteia desta coleção — que giram em torno de trava de Paralisia, Cura/Sobrevida ou Control puro —, este é o deck de entrada do tipo: uma curva simples de dano direto com Ponto Fraco como único tempero, sem nenhuma peça de combo obrigatória. Qualquer jogador novo consegue montar o board e atacar todo turno sem decorar interações complicadas.",
+      "cardIds": [
+        "p002"
+      ]
+    },
+    "tempo": null
+  },
+  "entries": [
+    {
+      "cardId": "p002",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p008",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p010",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p004",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p005",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p007",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i051",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i049",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i007",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i010",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i062",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Cura"
+    },
+    {
+      "cardId": "e014",
+      "quantity": 5,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e015",
+      "quantity": 5,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e016",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e017",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e002",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    }
+  ],
+  "sideboard": []
+}

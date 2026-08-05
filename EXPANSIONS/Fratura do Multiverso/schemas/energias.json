@@ -1,0 +1,1224 @@
+[
+  {
+    "id": "e001",
+    "slug": "fonte-poco-do-silencio-inicial-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Rara",
+    "assetRef": "fonte-poco-do-silencio-inicial-v1.png",
+    "flavorText": null,
+    "cardText": "Devoção (Magia) - Ao entrar em jogo, dê X tokens de Sobrevida ao personagem principal, onde X é a quantidade de Personagens do Tipo Magia em jogo.",
+    "cardType": "FonteDeEnergia",
+    "name": "Poço do Silêncio Inicial",
+    "type": "Avançada",
+    "worldAffinity": "Magia",
+    "worldName": "Silenteia",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 2,
+    "effectScript": {
+      "conditionToAct": [
+        {
+          "kind": "Devotion",
+          "condition": {
+            "filterType": "worldType",
+            "value": "Magia"
+          }
+        }
+      ],
+      "trigger": "OnEnter",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "TOKEN",
+          "params": {
+            "tokenType": "Sobrevida",
+            "amount": "count(allies.worldType=='Magia')"
+          },
+          "target": {
+            "scope": "attachedCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Efeito alterado de Prever (X) para Sobrevida (X), mantendo a mesma escala (Personagens do Tipo Magia em jogo). Cobre a assinatura Cura/Sobrevida modesta de Silenteia."
+  },
+  {
+    "id": "e002",
+    "slug": "fonte-circulo-dos-mil-passos-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Incomum",
+    "assetRef": "fonte-circulo-dos-mil-passos-v1.png",
+    "flavorText": null,
+    "cardText": "Devoção (Magia) - Ao entrar em jogo, coloque um token de DefDown sobre o personagem alvo.",
+    "cardType": "FonteDeEnergia",
+    "name": "Círculo dos Mil Passos",
+    "type": "Avançada",
+    "worldAffinity": "Magia",
+    "worldName": "Silenteia",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 2,
+    "effectScript": {
+      "conditionToAct": [
+        {
+          "kind": "Devotion",
+          "condition": {
+            "filterType": "worldType",
+            "value": "Magia"
+          }
+        }
+      ],
+      "trigger": "OnEnter",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "TOKEN",
+          "params": {
+            "tokenType": "DefDown",
+            "amount": 1
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Cobre a assinatura Ponto Fraco (debuff de Defesa) de Silenteia. Determinístico, sem Desafiar."
+  },
+  {
+    "id": "e003",
+    "slug": "fonte-sombra-do-vazio-solar-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Rara",
+    "assetRef": "fonte-sombra-do-vazio-solar-v1.png",
+    "flavorText": null,
+    "cardText": "Devoção (Magia) - Ao entrar em jogo, extinga uma Fonte de Energia do oponente.",
+    "cardType": "FonteDeEnergia",
+    "name": "Sombra do Vazio Solar",
+    "type": "Avançada",
+    "worldAffinity": "Magia",
+    "worldName": "Silenteia",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 1,
+    "effectScript": {
+      "conditionToAct": [
+        {
+          "kind": "Devotion",
+          "condition": {
+            "filterType": "worldType",
+            "value": "Magia"
+          }
+        }
+      ],
+      "trigger": "OnEnter",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "DESTROY",
+          "params": {
+            "scope": "energySource"
+          },
+          "target": {
+            "scope": "opponentController",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Cobre Triturar/Extinguir Fonte. Com Poço e Círculo, as 3 Fontes Avançadas de Silenteia cobrem Sobrevida, Ponto Fraco e Extinguir Fonte."
+  },
+  {
+    "id": "e004",
+    "slug": "fonte-fossa-dos-sabios-caidos-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Incomum",
+    "assetRef": "fonte-fossa-dos-sabios-caidos-v1.png",
+    "flavorText": null,
+    "cardText": "Devoção (TecSci) - Ao entrar em jogo, Reaproveitar Recurso (1).",
+    "cardType": "FonteDeEnergia",
+    "name": "Fossa dos Sábios Caídos",
+    "type": "Avançada",
+    "worldAffinity": "TecSci",
+    "worldName": "Reino da Detritônia",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 1,
+    "effectScript": {
+      "conditionToAct": [
+        {
+          "kind": "Devotion",
+          "condition": {
+            "filterType": "worldType",
+            "value": "TecSci"
+          }
+        }
+      ],
+      "trigger": "OnEnter",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "RETURN_TO_HAND",
+          "params": {
+            "scope": "item",
+            "amount": 1,
+            "from": "discard"
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Cobre Reaproveitar Recurso. Mais barato que o Ferro de Solda Improvisado (Item) por não poder ser usado mais de uma vez por turno e ser Fonte, não Item."
+  },
+  {
+    "id": "e005",
+    "slug": "fonte-cratera-da-sucata-viva-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Super-rara",
+    "assetRef": "fonte-cratera-da-sucata-viva-v1.png",
+    "flavorText": null,
+    "cardText": "Devoção (TecSci) - Ao entrar em jogo, coloque um token de AtkUp no personagem que este card for anexado para cada carta de Item na sua pilha de decarte.",
+    "cardType": "FonteDeEnergia",
+    "name": "Cratera da Sucata Viva",
+    "type": "Avançada",
+    "worldAffinity": "TecSci",
+    "worldName": "Reino da Detritônia",
+    "isLegendary": true,
+    "isEpic": false,
+    "energyGenerated": 2,
+    "effectScript": {
+      "conditionToAct": [
+        {
+          "kind": "Devotion",
+          "condition": {
+            "filterType": "worldType",
+            "value": "TecSci"
+          }
+        }
+      ],
+      "trigger": "OnEnter",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "TOKEN",
+          "params": {
+            "tokenType": "AtkUp",
+            "amount": "controller.discard.itemCount"
+          },
+          "target": {
+            "scope": "attachedCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Buff condicionado à quantidade de Itens na pilha de descarte, mesma lógica da Serra Circular Remendada (Item) mas como Atk permanente em vez de dano pontual."
+  },
+  {
+    "id": "e006",
+    "slug": "fonte-trono-enferrujado-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Rara",
+    "assetRef": "fonte-trono-enferrujado-v1.png",
+    "flavorText": null,
+    "cardText": "Devoção (TecSci) - Ao entrar em jogo, Extinguir Fonte (1) de um personagem que você não controla.",
+    "cardType": "FonteDeEnergia",
+    "name": "Trono Enferrujado",
+    "type": "Avançada",
+    "worldAffinity": "TecSci",
+    "worldName": "Reino da Detritônia",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 2,
+    "effectScript": {
+      "conditionToAct": [
+        {
+          "kind": "Devotion",
+          "condition": {
+            "filterType": "worldType",
+            "value": "TecSci"
+          }
+        }
+      ],
+      "trigger": "OnEnter",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "DESTROY",
+          "params": {
+            "scope": "energySource",
+            "amount": 1
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1,
+            "excludeController": true
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Cobre Triturar/Extinguir Fonte do lado da Detritônia, espelhando a Sombra do Vazio Solar de Silenteia. Com Fossa/Cratera/Trono cobertas as 3 assinaturas centrais da Detritônia."
+  },
+  {
+    "id": "e007",
+    "slug": "fonte-praca-comum-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Rara",
+    "assetRef": "fonte-praca-comum-v1.png",
+    "flavorText": null,
+    "cardText": "Devoção (Físico) - Ao entrar em jogo, coloque sobre o personagem que este card for anexado, 2 tokens de AtkUp e 2 tokens de LifeUp.",
+    "cardType": "FonteDeEnergia",
+    "name": "Praça Comum",
+    "type": "Avançada",
+    "worldAffinity": "Físico",
+    "worldName": "Solar Comum",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 2,
+    "effectScript": {
+      "conditionToAct": [
+        {
+          "kind": "Devotion",
+          "condition": {
+            "filterType": "worldType",
+            "value": "Físico"
+          }
+        }
+      ],
+      "trigger": "OnEnter",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "TOKEN",
+          "params": {
+            "tokenType": "AtkUp",
+            "amount": 2
+          },
+          "target": {
+            "scope": "attachedCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        },
+        {
+          "id": "e2",
+          "action": "TOKEN",
+          "params": {
+            "tokenType": "LifeUp",
+            "amount": 2
+          },
+          "target": {
+            "scope": "attachedCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Alteração direta e de alto valor em Atk/Vida, sem condicionais — efeito determinístico e imediato, coerente com a agressão crua de Solar Comum."
+  },
+  {
+    "id": "e008",
+    "slug": "fonte-vale-da-tempera-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Rara",
+    "assetRef": "fonte-vale-da-tempera-v1.png",
+    "flavorText": null,
+    "cardText": "Devoção (Físico) - Ao entrar em jogo, a próxima ação de combate do personagem que este card for anexado, ganha Ignorar Defesa e Trespassar.",
+    "cardType": "FonteDeEnergia",
+    "name": "Vale da Têmpera",
+    "type": "Avançada",
+    "worldAffinity": "Físico",
+    "worldName": "Solar Comum",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 1,
+    "effectScript": {
+      "conditionToAct": [
+        {
+          "kind": "Devotion",
+          "condition": {
+            "filterType": "worldType",
+            "value": "Físico"
+          }
+        }
+      ],
+      "trigger": "OnEnter",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "GRANT_KEYWORD",
+          "params": {
+            "keyword": "IgnorarDefesa",
+            "duration": "nextCombatAction"
+          },
+          "target": {
+            "scope": "attachedCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        },
+        {
+          "id": "e2",
+          "action": "GRANT_KEYWORD",
+          "params": {
+            "keyword": "Transpassar",
+            "duration": "nextCombatAction"
+          },
+          "target": {
+            "scope": "attachedCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Cobre Ataque Perfurante/Transpassar (variante de meia-Defesa, mesma escala da Lança da Aurora Comum, Item Temático). Determinístico."
+  },
+  {
+    "id": "e009",
+    "slug": "fonte-arena-do-recorde-eterno-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Incomum",
+    "assetRef": "fonte-arena-do-recorde-eterno-v1.png",
+    "flavorText": null,
+    "cardText": "Devoção (Físico) - Ao entrar em jogo, coloque um token de AtkUp no personagemque este card for anexado.",
+    "cardType": "FonteDeEnergia",
+    "name": "Arena do Recorde Eterno",
+    "type": "Avançada",
+    "worldAffinity": "Físico",
+    "worldName": "Solar Comum",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 1,
+    "effectScript": {
+      "conditionToAct": [
+        {
+          "kind": "Devotion",
+          "condition": {
+            "filterType": "worldType",
+            "value": "Físico"
+          }
+        }
+      ],
+      "trigger": "OnEnter",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "TOKEN",
+          "params": {
+            "tokenType": "AtkUp",
+            "amount": 1
+          },
+          "target": {
+            "scope": "attachedCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Ganho de Atk crescente por combate consecutivo, espelhando a Coroa de Louros (Item Lendário) como Fonte de Energia. Com Praça e Vale, 3 das 4 assinaturas de Solar Comum cobertas."
+  },
+  {
+    "id": "e010",
+    "slug": "fonte-jardim-do-veu-das-plumas-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Rara",
+    "assetRef": "fonte-jardim-do-veu-das-plumas-v1.png",
+    "flavorText": null,
+    "cardText": "Devoção (Divino) - Ao entrar em jogo, coloque 2 tokens de Sobrevida em cada um dos personagens que você controla.",
+    "cardType": "FonteDeEnergia",
+    "name": "Jardim do Véu das Plumas",
+    "type": "Avançada",
+    "worldAffinity": "Divino",
+    "worldName": "Destacamento Interregno",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 2,
+    "effectScript": {
+      "conditionToAct": [
+        {
+          "kind": "Devotion",
+          "condition": {
+            "filterType": "worldType",
+            "value": "Divino"
+          }
+        }
+      ],
+      "trigger": "OnEnter",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "TOKEN",
+          "params": {
+            "tokenType": "Sobrevida",
+            "amount": 2
+          },
+          "target": {
+            "scope": "allAllies",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": null
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Única Fonte Avançada do Destacamento Interregno (cota 1 por tipo da dupla de topo). Cobre Sobrevida/negação de morte em escala de time. Determinístico, sem Desafiar."
+  },
+  {
+    "id": "e011",
+    "slug": "fonte-vortice-da-tempestade-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Rara",
+    "assetRef": "fonte-vortice-da-tempestade-v1.png",
+    "flavorText": null,
+    "cardText": "Devoção (Cósmico) - Ao entrar em jogo, o personagem que este card for anexado, causa dano a um alvo à escolha igual ao número de fontes de energia anexadas a ele.",
+    "cardType": "FonteDeEnergia",
+    "name": "Vórtice da Tempestade",
+    "type": "Avançada",
+    "worldAffinity": "Cósmico",
+    "worldName": "Astraca Primordial",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 2,
+    "effectScript": {
+      "conditionToAct": [
+        {
+          "kind": "Devotion",
+          "condition": {
+            "filterType": "worldType",
+            "value": "Cósmico"
+          }
+        }
+      ],
+      "trigger": "OnEnter",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "DAMAGE",
+          "params": {
+            "amount": "self.attachedEnergy.count",
+            "combatFlags": []
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Única Fonte Avançada da Astraca Primordial (cota 1 por tipo da dupla de topo). Ataque expansível por energia anexada, herdado de rules.md. Determinístico."
+  },
+  {
+    "id": "e012",
+    "slug": "fonte-arena-neutra-do-torneio-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Rara",
+    "assetRef": "fonte-arena-neutra-do-torneio-v1.png",
+    "flavorText": null,
+    "cardText": "Enquanto esta Fonte estiver em jogo, o custo de ações de Combate de ambos os jogadores é reduzido em 1.",
+    "cardType": "FonteDeEnergia",
+    "name": "Arena Neutra do Torneio",
+    "type": "Avançada",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 2,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Passive",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "STATIC_MODIFIER",
+          "params": {
+            "affects": "actionCost",
+            "filter": {
+              "filterType": "actionCategory",
+              "value": "Combat"
+            },
+            "amount": -1,
+            "min": 1,
+            "scope": "both"
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Primeira Fonte de Energia Avançada sem afinidade de tipo do set — cobre Modificação de Regras/Efeitos de Estádio, com efeito simétrico (afeta ambos os jogadores). Determinístico."
+  },
+  {
+    "id": "e013",
+    "slug": "fonte-relogio-de-areia-partilhado-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Rara",
+    "assetRef": "fonte-relogio-de-areia-partilhado-v1.png",
+    "flavorText": null,
+    "cardText": "Enquanto esta Fonte estiver em jogo, no início da fase de compra de cada jogador, Sondar (1).",
+    "cardType": "FonteDeEnergia",
+    "name": "Relógio de Areia Partilhado",
+    "type": "Avançada",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 2,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "OnEvent",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "LOOK_TOP",
+          "params": {
+            "amount": 1,
+            "deck": "own",
+            "reorder": true,
+            "reveal": false,
+            "keepOrDiscard": true
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          },
+          "condition": "phase.current == 'Draw'"
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Segunda Fonte de Energia Avançada genérica do set, cobrindo Modificação de Regras/Efeitos de Estádio com efeito simétrico de baixo impacto (visão, não vantagem material). Determinístico, contínuo enquanto em jogo."
+  },
+  {
+    "id": "e014",
+    "slug": "fonte-grao-de-areia-eterna-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "fonte-grao-de-areia-eterna-v1.png",
+    "flavorText": null,
+    "cardText": null,
+    "cardType": "FonteDeEnergia",
+    "name": "Grão de Areia Eterna",
+    "type": "Básica",
+    "worldAffinity": "Magia",
+    "worldName": "Silenteia",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 1,
+    "effectScript": null,
+    "designNotes": null
+  },
+  {
+    "id": "e015",
+    "slug": "fonte-sopro-do-deserto-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "fonte-sopro-do-deserto-v1.png",
+    "flavorText": null,
+    "cardText": null,
+    "cardType": "FonteDeEnergia",
+    "name": "Sopro do Deserto",
+    "type": "Básica",
+    "worldAffinity": "Magia",
+    "worldName": "Silenteia",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 1,
+    "effectScript": null,
+    "designNotes": null
+  },
+  {
+    "id": "e016",
+    "slug": "fonte-passo-silencioso-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "fonte-passo-silencioso-v1.png",
+    "flavorText": null,
+    "cardText": null,
+    "cardType": "FonteDeEnergia",
+    "name": "Passo Silencioso",
+    "type": "Básica",
+    "worldAffinity": "Magia",
+    "worldName": "Silenteia",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 1,
+    "effectScript": null,
+    "designNotes": null
+  },
+  {
+    "id": "e017",
+    "slug": "fonte-ossos-do-vento-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "fonte-ossos-do-vento-v1.png",
+    "flavorText": null,
+    "cardText": null,
+    "cardType": "FonteDeEnergia",
+    "name": "Ossos do Vento",
+    "type": "Básica",
+    "worldAffinity": "Magia",
+    "worldName": "Silenteia",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 1,
+    "effectScript": null,
+    "designNotes": null
+  },
+  {
+    "id": "e018",
+    "slug": "fonte-ultima-miragem-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "fonte-ultima-miragem-v1.png",
+    "flavorText": null,
+    "cardText": null,
+    "cardType": "FonteDeEnergia",
+    "name": "Última Miragem",
+    "type": "Básica",
+    "worldAffinity": "Magia",
+    "worldName": "Silenteia",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 1,
+    "effectScript": null,
+    "designNotes": null
+  },
+  {
+    "id": "e019",
+    "slug": "fonte-parafuso-solto-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "fonte-parafuso-solto-v1.png",
+    "flavorText": null,
+    "cardText": null,
+    "cardType": "FonteDeEnergia",
+    "name": "Parafuso Solto",
+    "type": "Básica",
+    "worldAffinity": "TecSci",
+    "worldName": "Reino da Detritônia",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 1,
+    "effectScript": null,
+    "designNotes": null
+  },
+  {
+    "id": "e020",
+    "slug": "fonte-fragmento-de-circuito-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "fonte-fragmento-de-circuito-v1.png",
+    "flavorText": null,
+    "cardText": null,
+    "cardType": "FonteDeEnergia",
+    "name": "Fragmento de Circuito",
+    "type": "Básica",
+    "worldAffinity": "TecSci",
+    "worldName": "Reino da Detritônia",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 1,
+    "effectScript": null,
+    "designNotes": null
+  },
+  {
+    "id": "e021",
+    "slug": "fonte-resto-de-coroa-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "fonte-resto-de-coroa-v1.png",
+    "flavorText": null,
+    "cardText": null,
+    "cardType": "FonteDeEnergia",
+    "name": "Resto de Coroa",
+    "type": "Básica",
+    "worldAffinity": "TecSci",
+    "worldName": "Reino da Detritônia",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 1,
+    "effectScript": null,
+    "designNotes": null
+  },
+  {
+    "id": "e022",
+    "slug": "fonte-placa-amassada-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "fonte-placa-amassada-v1.png",
+    "flavorText": null,
+    "cardText": null,
+    "cardType": "FonteDeEnergia",
+    "name": "Placa Amassada",
+    "type": "Básica",
+    "worldAffinity": "TecSci",
+    "worldName": "Reino da Detritônia",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 1,
+    "effectScript": null,
+    "designNotes": null
+  },
+  {
+    "id": "e023",
+    "slug": "fonte-fio-desencapado-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "fonte-fio-desencapado-v1.png",
+    "flavorText": null,
+    "cardText": null,
+    "cardType": "FonteDeEnergia",
+    "name": "Fio Desencapado",
+    "type": "Básica",
+    "worldAffinity": "TecSci",
+    "worldName": "Reino da Detritônia",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 1,
+    "effectScript": null,
+    "designNotes": null
+  },
+  {
+    "id": "e024",
+    "slug": "fonte-raio-de-sol-comum-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "fonte-raio-de-sol-comum-v1.png",
+    "flavorText": null,
+    "cardText": null,
+    "cardType": "FonteDeEnergia",
+    "name": "Raio de Sol Comum",
+    "type": "Básica",
+    "worldAffinity": "Físico",
+    "worldName": "Solar Comum",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 1,
+    "effectScript": null,
+    "designNotes": null
+  },
+  {
+    "id": "e025",
+    "slug": "fonte-suor-da-tempera-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "fonte-suor-da-tempera-v1.png",
+    "flavorText": null,
+    "cardText": null,
+    "cardType": "FonteDeEnergia",
+    "name": "Suor da Têmpera",
+    "type": "Básica",
+    "worldAffinity": "Físico",
+    "worldName": "Solar Comum",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 1,
+    "effectScript": null,
+    "designNotes": null
+  },
+  {
+    "id": "e026",
+    "slug": "fonte-bandeira-de-chao-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "fonte-bandeira-de-chao-v1.png",
+    "flavorText": null,
+    "cardText": null,
+    "cardType": "FonteDeEnergia",
+    "name": "Bandeira de Chão",
+    "type": "Básica",
+    "worldAffinity": "Físico",
+    "worldName": "Solar Comum",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 1,
+    "effectScript": null,
+    "designNotes": null
+  },
+  {
+    "id": "e027",
+    "slug": "fonte-pedra-da-arena-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "fonte-pedra-da-arena-v1.png",
+    "flavorText": null,
+    "cardText": null,
+    "cardType": "FonteDeEnergia",
+    "name": "Pedra da Arena",
+    "type": "Básica",
+    "worldAffinity": "Físico",
+    "worldName": "Solar Comum",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 1,
+    "effectScript": null,
+    "designNotes": null
+  },
+  {
+    "id": "e028",
+    "slug": "fonte-folego-do-atleta-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "fonte-folego-do-atleta-v1.png",
+    "flavorText": null,
+    "cardText": null,
+    "cardType": "FonteDeEnergia",
+    "name": "Fôlego do Atleta",
+    "type": "Básica",
+    "worldAffinity": "Físico",
+    "worldName": "Solar Comum",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 1,
+    "effectScript": null,
+    "designNotes": null
+  },
+  {
+    "id": "e029",
+    "slug": "fonte-pena-solta-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "fonte-pena-solta-v1.png",
+    "flavorText": null,
+    "cardText": null,
+    "cardType": "FonteDeEnergia",
+    "name": "Pena Solta",
+    "type": "Básica",
+    "worldAffinity": "Divino",
+    "worldName": "Destacamento Interregno",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 1,
+    "effectScript": null,
+    "designNotes": null
+  },
+  {
+    "id": "e030",
+    "slug": "fonte-fio-de-nevoa-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "fonte-fio-de-nevoa-v1.png",
+    "flavorText": null,
+    "cardText": null,
+    "cardType": "FonteDeEnergia",
+    "name": "Fio de Névoa",
+    "type": "Básica",
+    "worldAffinity": "Divino",
+    "worldName": "Destacamento Interregno",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 1,
+    "effectScript": null,
+    "designNotes": null
+  },
+  {
+    "id": "e031",
+    "slug": "fonte-sussurro-suspenso-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "fonte-sussurro-suspenso-v1.png",
+    "flavorText": null,
+    "cardText": null,
+    "cardType": "FonteDeEnergia",
+    "name": "Sussurro Suspenso",
+    "type": "Básica",
+    "worldAffinity": "Divino",
+    "worldName": "Destacamento Interregno",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 1,
+    "effectScript": null,
+    "designNotes": null
+  },
+  {
+    "id": "e032",
+    "slug": "fonte-cinza-alada-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "fonte-cinza-alada-v1.png",
+    "flavorText": null,
+    "cardText": null,
+    "cardType": "FonteDeEnergia",
+    "name": "Cinza Alada",
+    "type": "Básica",
+    "worldAffinity": "Divino",
+    "worldName": "Destacamento Interregno",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 1,
+    "effectScript": null,
+    "designNotes": null
+  },
+  {
+    "id": "e033",
+    "slug": "fonte-resquicio-celeste-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "fonte-resquicio-celeste-v1.png",
+    "flavorText": null,
+    "cardText": null,
+    "cardType": "FonteDeEnergia",
+    "name": "Resquício Celeste",
+    "type": "Básica",
+    "worldAffinity": "Divino",
+    "worldName": "Destacamento Interregno",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 1,
+    "effectScript": null,
+    "designNotes": null
+  },
+  {
+    "id": "e034",
+    "slug": "fonte-poeira-cosmica-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "fonte-poeira-cosmica-v1.png",
+    "flavorText": null,
+    "cardText": null,
+    "cardType": "FonteDeEnergia",
+    "name": "Poeira Cósmica",
+    "type": "Básica",
+    "worldAffinity": "Cósmico",
+    "worldName": "Astraca Primordial",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 1,
+    "effectScript": null,
+    "designNotes": null
+  },
+  {
+    "id": "e035",
+    "slug": "fonte-faisca-adormecida-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "fonte-faisca-adormecida-v1.png",
+    "flavorText": null,
+    "cardText": null,
+    "cardType": "FonteDeEnergia",
+    "name": "Faísca Adormecida",
+    "type": "Básica",
+    "worldAffinity": "Cósmico",
+    "worldName": "Astraca Primordial",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 1,
+    "effectScript": null,
+    "designNotes": null
+  },
+  {
+    "id": "e036",
+    "slug": "fonte-eco-distante-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "fonte-eco-distante-v1.png",
+    "flavorText": null,
+    "cardText": null,
+    "cardType": "FonteDeEnergia",
+    "name": "Eco Distante",
+    "type": "Básica",
+    "worldAffinity": "Cósmico",
+    "worldName": "Astraca Primordial",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 1,
+    "effectScript": null,
+    "designNotes": null
+  },
+  {
+    "id": "e037",
+    "slug": "fonte-fragmento-estelar-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "fonte-fragmento-estelar-v1.png",
+    "flavorText": null,
+    "cardText": null,
+    "cardType": "FonteDeEnergia",
+    "name": "Fragmento Estelar",
+    "type": "Básica",
+    "worldAffinity": "Cósmico",
+    "worldName": "Astraca Primordial",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 1,
+    "effectScript": null,
+    "designNotes": null
+  },
+  {
+    "id": "e038",
+    "slug": "fonte-silencio-do-vacuo-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "fonte-silencio-do-vacuo-v1.png",
+    "flavorText": null,
+    "cardText": null,
+    "cardType": "FonteDeEnergia",
+    "name": "Silêncio do Vácuo",
+    "type": "Básica",
+    "worldAffinity": "Cósmico",
+    "worldName": "Astraca Primordial",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyGenerated": 1,
+    "effectScript": null,
+    "designNotes": null
+  }
+]

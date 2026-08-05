@@ -1,7 +1,8 @@
 (function () {
     'use strict';
 
-    const fileSelect = document.getElementById('file-select');
+    const collectionSelect = document.getElementById('collection-select');
+    const typeButtons = document.getElementById('type-buttons');
     const cardSelect = document.getElementById('card-select');
     const searchInput = document.getElementById('search');
     const sortSelect = document.getElementById('sort-select');
@@ -10,18 +11,18 @@
     const cardRaw = document.getElementById('card-raw');
     const shareBtn = document.getElementById('share-btn');
 
+    let collectionsData = [];
     let currentCards = [];
     let filteredCards = [];
     let activeCardId = null;
     let currentCollection = '';
+    let currentType = '';
 
     const TYPE_ASSET_MODEL = {
         personagem: 'card',
         item: 'land',
         energia: 'land',
     };
-
-    const RARITY_OPTIONS = ['Comum', 'Incomum', 'Rara', 'Super-rara', 'Ultra-rara'];
 
     const RARITY_INITIAL = {
         comum: 'C',
@@ -55,8 +56,15 @@
 
     async function init() {
         const data = await fetchJson('api.php?action=list-files');
-        populateFileSelect(data.collections || []);
-        fileSelect.addEventListener('change', () => loadFile(fileSelect.value));
+        collectionsData = data.collections || [];
+        populateCollectionSelect(collectionsData);
+        collectionSelect.addEventListener('change', () => selectCollection(collectionSelect.value));
+        typeButtons.addEventListener('click', (ev) => {
+            const btn = ev.target.closest('.type-buttons__btn');
+            if (btn && !btn.disabled) {
+                selectType(btn.dataset.type);
+            }
+        });
         searchInput.addEventListener('input', applyFilter);
         sortSelect.addEventListener('change', applyFilter);
         cardSelect.addEventListener('change', () => {
@@ -67,11 +75,11 @@
         });
         shareBtn.addEventListener('click', shareCard);
 
-        if (fileSelect.options.length > 0) {
+        if (collectionSelect.options.length > 0) {
             const queryParams = window.appQueryParams || {};
             if (queryParams.collection) {
-                fileSelect.value = queryParams.collection;
-                await loadFile(queryParams.collection);
+                collectionSelect.value = queryParams.collection;
+                await selectCollection(queryParams.collection, queryParams.type);
                 if (queryParams.card) {
                     await new Promise(r => setTimeout(r, 100));
                     const card = currentCards.find((c) => c._id === queryParams.card);
@@ -80,32 +88,73 @@
                     }
                 }
             } else {
-                loadFile(fileSelect.value);
+                await selectCollection(collectionSelect.value);
             }
         }
     }
 
-    function populateFileSelect(collections) {
-        fileSelect.innerHTML = '';
+    function populateCollectionSelect(collections) {
+        collectionSelect.innerHTML = '';
         for (const collection of collections) {
-            const group = document.createElement('optgroup');
-            group.label = collection.name;
-            for (const file of collection.files) {
-                const opt = document.createElement('option');
-                opt.value = file.relPath;
-                opt.dataset.type = file.type;
-                opt.textContent = `${file.relPath} (${file.count})`;
-                group.appendChild(opt);
-            }
-            fileSelect.appendChild(group);
+            const opt = document.createElement('option');
+            opt.value = collection.name;
+            opt.textContent = collection.name;
+            collectionSelect.appendChild(opt);
         }
+    }
+
+    function findCollection(name) {
+        return collectionsData.find((c) => c.name === name) || null;
+    }
+
+    function updateTypeButtons(collection) {
+        const buttons = typeButtons.querySelectorAll('.type-buttons__btn');
+        for (const btn of buttons) {
+            const file = collection && collection.files.find((f) => f.type === btn.dataset.type);
+            btn.disabled = !file;
+            btn.classList.toggle('type-buttons__btn--active', btn.dataset.type === currentType);
+            btn.title = file ? `${file.count} carta(s)` : 'Nenhuma carta neste tipo';
+        }
+    }
+
+    async function selectCollection(name, preferredType) {
+        currentCollection = name || '';
+        const collection = findCollection(currentCollection);
+        currentType = '';
+        updateTypeButtons(collection);
+
+        if (!collection) {
+            currentCards = [];
+            activeCardId = null;
+            applyFilter();
+            return;
+        }
+
+        const wantedType = preferredType && collection.files.some((f) => f.type === preferredType)
+            ? preferredType
+            : (collection.files[0] && collection.files[0].type);
+
+        if (wantedType) {
+            await selectType(wantedType);
+        }
+    }
+
+    async function selectType(type) {
+        const collection = findCollection(currentCollection);
+        const file = collection && collection.files.find((f) => f.type === type);
+        if (!file) {
+            return;
+        }
+
+        currentType = type;
+        updateTypeButtons(collection);
+        await loadFile(file.relPath);
     }
 
     async function loadFile(relPath) {
         if (!relPath) {
             return;
         }
-        currentCollection = relPath.split('/')[0] || '';
         cardList.innerHTML = '<li>Carregando...</li>';
         const data = await fetchJson('api.php?action=cards&file=' + encodeURIComponent(relPath));
         currentCards = data.cards || [];
@@ -116,7 +165,7 @@
     function applyFilter() {
         const term = searchInput.value.trim().toLowerCase();
         filteredCards = term
-            ? currentCards.filter((c) => (c.Nome || '').toLowerCase().includes(term))
+            ? currentCards.filter((c) => (c.name || '').toLowerCase().includes(term))
             : currentCards.slice();
         sortCards(filteredCards);
         renderList();
@@ -128,27 +177,26 @@
 
         cards.sort((a, b) => {
             if (mode === 'tipo') {
-                const diff = collator.compare(extractTypeName(a.Tipo) || '', extractTypeName(b.Tipo) || '');
+                const diff = collator.compare(cardAffinity(a), cardAffinity(b));
                 if (diff !== 0) return diff;
             } else if (mode === 'faccao') {
                 const diff = collator.compare(extractFaction(a), extractFaction(b));
                 if (diff !== 0) return diff;
             }
-            return collator.compare(a.Nome || '', b.Nome || '');
+            return collator.compare(a.name || '', b.name || '');
         });
     }
 
+    /** Afinidade elemental: worldType em personagens, worldAffinity em itens/energias. */
+    function cardAffinity(card) {
+        const value = card._type === 'personagem' ? card.worldType : card.worldAffinity;
+        return (value || '').trim();
+    }
+
+    /** Facção/tribo: category em personagens e itens, type em energias. */
     function extractFaction(card) {
-        if (card._type === 'personagem') {
-            const raw = (card.Classificação || '').trim();
-            if (!raw) return '';
-            const parts = raw.split(' - ')[0].trim().split(/\s+/);
-            return parts.length > 1 ? parts.slice(1).join(' ') : parts[0] || '';
-        }
-        if (card._type === 'item') {
-            return (card.Dinâmica || '').trim() || (card.Tipo || '').trim();
-        }
-        return (card.Tipo || '').trim();
+        const value = card._type === 'energia' ? card.type : card.category;
+        return (value || '').trim();
     }
 
     function renderList() {
@@ -165,7 +213,7 @@
 
         for (const card of filteredCards) {
             const li = document.createElement('li');
-            li.textContent = card.Nome || '(sem nome)';
+            li.textContent = card.name || '(sem nome)';
             if (card._id === activeCardId) {
                 li.classList.add('active');
             }
@@ -173,8 +221,8 @@
             const tag = document.createElement('span');
             tag.className = 'tag';
             tag.textContent = sortSelect.value === 'faccao'
-                ? (extractFaction(card) || card.Tipo || card.Classificação || '')
-                : (card.Tipo || card.Classificação || '');
+                ? (extractFaction(card) || cardAffinity(card))
+                : (cardAffinity(card) || extractFaction(card));
             li.appendChild(tag);
 
             li.addEventListener('click', () => selectCard(card));
@@ -182,7 +230,7 @@
 
             const opt = document.createElement('option');
             opt.value = card._id;
-            opt.textContent = card.Nome || '(sem nome)';
+            opt.textContent = card.name || '(sem nome)';
             if (card._id === activeCardId) {
                 opt.selected = true;
             }
@@ -199,7 +247,7 @@
     }
 
     function shareCard() {
-        const collection = fileSelect.value;
+        const collection = currentCollection;
         const cardId = activeCardId;
 
         if (!collection || !cardId) {
@@ -208,6 +256,7 @@
 
         const url = new URL(window.location);
         url.searchParams.set('collection', collection);
+        url.searchParams.set('type', currentType);
         url.searchParams.set('card', cardId);
 
         const shareUrl = url.toString();
@@ -271,24 +320,26 @@
         }
         cardPreview.appendChild(art);
 
-        if (card._type !== 'energia') {
+        if (card._type === 'personagem') {
+            const stats = card.stats || {};
+
             const heart = document.createElement('div');
             heart.className = 'card-preview__heart';
-            heart.textContent = card.Vida || '-';
+            heart.textContent = statValue(stats.life);
             cardPreview.appendChild(heart);
 
             const shield = document.createElement('div');
             shield.className = 'card-preview__shield';
-            shield.textContent = card.Defesa || '-';
+            shield.textContent = statValue(stats.defense);
             cardPreview.appendChild(shield);
         }
 
         const title = document.createElement('div');
         title.className = 'card-preview__title';
-        title.textContent = card.Nome || '';
+        title.textContent = card.name || '';
         cardPreview.appendChild(title);
 
-        const elementalType = card._type !== 'item' ? extractTypeName(card.Tipo) : '';
+        const elementalType = card._type !== 'item' ? cardAffinity(card) : '';
         if (elementalType) {
             const typeBadge = document.createElement('div');
             typeBadge.className = 'card-preview__type-badge';
@@ -301,10 +352,10 @@
 
         const classification = document.createElement('div');
         classification.className = 'card-preview__classification';
-        const classificationText = card._type === 'personagem'
-            ? extractClassification(card)
-            : (card._type === 'item' ? (card.Tipo || '').trim() : elementalType);
-        const rarityInitial = rarityInitialFor(card.Raridade);
+        const classificationText = card._type === 'energia'
+            ? (card.type || '').trim()
+            : (card.category || '').trim();
+        const rarityInitial = rarityInitialFor(card.rarity);
         classification.textContent = rarityInitial
             ? `${classificationText} ${rarityInitial}`
             : classificationText;
@@ -315,12 +366,12 @@
         text.innerHTML = buildTextBlocks(card);
         cardPreview.appendChild(text);
 
-        if (card._type !== 'energia' && (card.Resistência || card.Fraqueza)) {
+        if (card._type === 'personagem' && (card.resistance || card.weakness)) {
             const footer = document.createElement('div');
             footer.className = 'card-preview__footer';
             footer.innerHTML = `
-                <span class="card-preview__dot ${typeColorClass(card.Resistência)}" title="Resistência: ${escapeHtml(card.Resistência || '')}"></span>
-                <span class="card-preview__dot ${typeColorClass(card.Fraqueza)}" title="Fraqueza: ${escapeHtml(card.Fraqueza || '')}"></span>
+                <span class="card-preview__dot ${typeColorClass(card.resistance)}" title="Resistência: ${escapeHtml(card.resistance || '')}"></span>
+                <span class="card-preview__dot ${typeColorClass(card.weakness)}" title="Fraqueza: ${escapeHtml(card.weakness || '')}"></span>
             `;
             cardPreview.appendChild(footer);
         }
@@ -352,13 +403,8 @@
         return RARITY_INITIAL[key] || '';
     }
 
-    function extractClassification(card) {
-        const raw = (card.Classificação || '').trim();
-        if (!raw) {
-            return '';
-        }
-        const parts = raw.split(' - ');
-        return parts.length > 1 ? parts.slice(1).join(' - ').trim() : raw;
+    function statValue(value) {
+        return value === null || value === undefined || value === '' ? '-' : String(value);
     }
 
     function costToSymbols(cost, tipo) {
@@ -380,15 +426,13 @@
     }
 
     function resolveArtSrc(card) {
-        const arte = (card.Arte || '').trim();
-        if (arte) {
-            return isUrl(arte)
-                ? arte
-                : 'asset.php?art=1&collection=' + encodeURIComponent(currentCollection) + '&file=' + encodeURIComponent(arte);
+        const assetRef = (card.assetRef || '').trim();
+        if (!assetRef) {
+            return '';
         }
 
-        const imageUrl = card.IMAGEM || (card['Texto Final 1'] && isUrl(card['Texto Final 1']) ? card['Texto Final 1'] : '');
-        return imageUrl && isUrl(imageUrl) ? imageUrl : '';
+        const file = currentCollection + '/card-art/' + assetRef;
+        return 'asset.php?expansion=1&file=' + encodeURIComponent(file);
     }
 
     function buildTextBlocks(card) {
@@ -404,15 +448,16 @@
             addBlock(blocks, 'Ataque', card['Descrição Ataque']);
             addBlock(blocks, null, card['Texto Final 2']);
         } else if (card._type === 'item') {
-            const meta = [card.Dinâmica, card.Universo].filter(Boolean).join(' · ');
-            if (meta) blocks.push(`<h4>${escapeHtml(meta)}</h4>`);
-            addBlock(blocks, null, card['Descrição']);
+            addBlock(blocks, null, card.cardText);
+            if (card.flavorText) {
+                blocks.push(`<p class="card-preview__flavor">${escapeHtml(card.flavorText)}</p>`);
+            }
         } else if (card._type === 'energia') {
-            const meta = card.Energia ? `Energia ${card.Energia}` : '';
+            const meta = card.energyGenerated ? `Energia ${card.energyGenerated}` : '';
             if (meta) blocks.push(`<h4>${escapeHtml(meta)}</h4>`);
-            addBlock(blocks, null, card['Descrição']);
-            if (card['Texto Final'] && !isUrl(card['Texto Final'])) {
-                blocks.push(`<p class="card-preview__flavor">${escapeHtml(card['Texto Final'])}</p>`);
+            addBlock(blocks, null, card.cardText);
+            if (card.flavorText) {
+                blocks.push(`<p class="card-preview__flavor">${escapeHtml(card.flavorText)}</p>`);
             }
         }
 
@@ -460,14 +505,8 @@
     function renderRaw(card) {
         cardRaw.innerHTML = '';
 
-        const form = document.createElement('form');
-        form.className = 'card-raw__form';
-        form.addEventListener('submit', (ev) => {
-            ev.preventDefault();
-            saveCard(card, form);
-        });
-
         const table = document.createElement('table');
+        table.className = 'card-raw__table';
         const tbody = document.createElement('tbody');
 
         for (const [key, value] of Object.entries(card)) {
@@ -481,103 +520,21 @@
             tr.appendChild(th);
 
             const td = document.createElement('td');
-            let field;
-            if (key === 'Raridade') {
-                field = document.createElement('select');
-                const emptyOpt = document.createElement('option');
-                emptyOpt.value = '';
-                emptyOpt.textContent = '—';
-                field.appendChild(emptyOpt);
-                for (const rarity of RARITY_OPTIONS) {
-                    const opt = document.createElement('option');
-                    opt.value = rarity;
-                    opt.textContent = rarity;
-                    field.appendChild(opt);
-                }
-                field.value = value || '';
+            if (value !== null && typeof value === 'object') {
+                const pre = document.createElement('pre');
+                pre.className = 'card-raw__json';
+                pre.textContent = JSON.stringify(value, null, 2);
+                td.appendChild(pre);
             } else {
-                const isLong = String(value || '').length > 60 || /\n/.test(String(value || ''));
-                field = document.createElement(isLong ? 'textarea' : 'input');
-                if (!isLong) {
-                    field.type = 'text';
-                } else {
-                    field.rows = 3;
-                }
-                field.value = value || '';
+                td.textContent = value ?? '';
             }
-            field.name = key;
-            field.className = 'card-raw__field';
-            td.appendChild(field);
             tr.appendChild(td);
 
             tbody.appendChild(tr);
         }
 
         table.appendChild(tbody);
-        form.appendChild(table);
-
-        const actions = document.createElement('div');
-        actions.className = 'card-raw__actions';
-
-        const status = document.createElement('span');
-        status.className = 'card-raw__status';
-        actions.appendChild(status);
-
-        const saveBtn = document.createElement('button');
-        saveBtn.type = 'submit';
-        saveBtn.textContent = 'Salvar';
-        actions.appendChild(saveBtn);
-
-        form.appendChild(actions);
-        cardRaw.appendChild(form);
-    }
-
-    async function saveCard(card, form) {
-        const status = form.querySelector('.card-raw__status');
-        const saveBtn = form.querySelector('button[type="submit"]');
-        const fields = {};
-        for (const el of form.elements) {
-            if (el.name) {
-                fields[el.name] = el.value;
-            }
-        }
-
-        saveBtn.disabled = true;
-        status.textContent = 'Salvando...';
-        status.className = 'card-raw__status';
-
-        try {
-            const res = await fetch('api.php?action=save-card', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    file: fileSelect.value,
-                    id: card._id,
-                    fields,
-                }),
-            });
-            const data = await res.json();
-            if (!res.ok || data.error) {
-                throw new Error(data.error || 'Falha ao salvar.');
-            }
-
-            currentCards = data.cards || [];
-            const updated = currentCards.find((c) => c._id === card._id);
-            applyFilter();
-            if (updated) {
-                activeCardId = updated._id;
-                renderList();
-                renderPreview(updated);
-                renderRaw(updated);
-                const refreshedStatus = cardRaw.querySelector('.card-raw__status');
-                refreshedStatus.textContent = 'Salvo.';
-                refreshedStatus.className = 'card-raw__status card-raw__status--ok';
-            }
-        } catch (err) {
-            status.textContent = err.message || 'Erro ao salvar.';
-            status.className = 'card-raw__status card-raw__status--error';
-            saveBtn.disabled = false;
-        }
+        cardRaw.appendChild(table);
     }
 
     function isUrl(value) {

@@ -1,0 +1,159 @@
+{
+  "id": "mono-divino-imunidade",
+  "slug": "mono-divino-imunidade",
+  "name": "[MONO] Imunidade — Destacamento (Divino)",
+  "description": "Diferente do mono Destacamento de Sobrevida/Aposte e do de Sentinelas, este deck é Control puro por negação: em vez de curar o dano recebido ou multiplicar alvos, ele torna o time inteiro imune ao tipo de efeito que o derrubaria, enquanto **Tobiah das Mãos Vazias** pune o oponente por tentar remover qualquer coisa. O Destacamento aqui não sobrevive ao dano — impede que o dano e o controle alheio sequer se apliquem.\n\nO combo central usa **Zaphiel, a Coroa Suspensa** como Líder: **Presença Decisiva** já o torna imune a Debuffs e Perdição, e mesmo que **Juízo Silencioso** perca o Aposte (2), o pior resultado é 5 tokens de DefDown nele mesmo — irrelevante para um personagem que não depende de Defesa contra um oponente sem debuffs de Atk para aplicar. **Tobiah das Mãos Vazias** entra como o gatilho punitivo: sua **Ação à Distância** força o oponente a Extinguir recursos da mão até sobrar apenas 3 cartas sempre que um personagem dele é nocauteado — o que raramente acontece, já que o time inteiro está protegido.\n\nOs Itens fecham a rede de imunidades: **Grade da Última Guarda** dá imunidade a LifeDown a todo o time, **Véu da Vigília Eterna** bloqueia o primeiro Debuff recebido a cada turno, e **Auréola Rachada** garante imunidade total a Debuffs a um custo de Vida que o próprio **Talismã de Persistência** e a Sobrevida residual de **Pluma do Último Suspiro** compensam sem esforço.",
+  "format": "standard",
+  "strategy": {
+    "archetype": null,
+    "winCondition": null,
+    "keyMechanics": [],
+    "coreCombo": {
+      "description": "O combo central usa **Zaphiel, a Coroa Suspensa** como Líder: **Presença Decisiva** já o torna imune a Debuffs e Perdição, e mesmo que **Juízo Silencioso** perca o Aposte (2), o pior resultado é 5 tokens de DefDown nele mesmo — irrelevante para um personagem que não depende de Defesa contra um oponente sem debuffs de Atk para aplicar. **Tobiah das Mãos Vazias** entra como o gatilho punitivo: sua **Ação à Distância** força o oponente a Extinguir recursos da mão até sobrar apenas 3 cartas sempre que um personagem dele é nocauteado — o que raramente acontece, já que o time inteiro está protegido.",
+      "cardIds": [
+        "p049",
+        "p055",
+        "i038",
+        "i037",
+        "e010"
+      ]
+    },
+    "tempo": null
+  },
+  "entries": [
+    {
+      "cardId": "p049",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p055",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p057",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p053",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p058",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p063",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i038",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i037",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i035",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i054",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i033",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Vantagem"
+    },
+    {
+      "cardId": "i034",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Sobrevida"
+    },
+    {
+      "cardId": "i036",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Cura"
+    },
+    {
+      "cardId": "e029",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e030",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e031",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e032",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e033",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e010",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    }
+  ],
+  "sideboard": []
+}

@@ -1,0 +1,198 @@
+{
+  "id": "mono-tecsci-detritonia",
+  "slug": "mono-tecsci-detritonia",
+  "name": "[MONO] Detritônia — TecSci Reaproveitar/Triturar",
+  "description": "A estratégia deste deck é transformar o próprio descarte em motor de vantagem: cada Item ou Fonte que vai para a pilha de descarte financia compra de cartas, cura ou dano extra, enquanto o oponente tem seus recursos triturados antes de poder usá-los. A Detritônia não vence por força bruta — vence fazendo mais com a sucata que sobra da partida.\n\nO combo central usa **Vharek, o Sábio Remanescente** e **Ishara da Coroa Fundida** como Líderes: sempre que um Item ou Fonte seu vai para o descarte, Vharek compra 2 cartas com **Cláusula Lida Duas Vezes**, e sua ativa **Pacto Desfeito** descarta duas Fontes do defensor antes de causar dano — alimentando o próprio gatilho de Vharek. Ishara é imune a Debuffs com **Leitura sem Armadilha** e usa **Coroa Reforjada** para converter Reaproveitar Recursos em tokens de Sobrevida, sustentando o time enquanto a engrenagem gira.\n\nO Time reforça o mesmo ciclo: **Fenn da Última Fundição** converte reciclagem de recursos da mão em AtkUp, **Drommel, o Recicla-Ossos** compra carta e causa dano ao reciclar, e **Bruk Sete-Mãos** garante um token de Imunidade a Morte logo ao entrar, escalando para uma segunda proteção se nocautear o alvo. **Herdeiro Atento** usa Devoção a Vharek para imunizar o time TecSci a Confusão, protegendo a engrenagem de reciclagem contra controle de mão/deck do oponente. **Alicate de Contrato Roto** e **Trono Enferrujado** cobrem o lado destrutivo (Extinguir Fonte do oponente), enquanto **Cofre Arrombado da Dívida** tritura e compra ao mesmo tempo. **Bobina Reaproveitada** e **Cratera da Sucata Viva** transformam qualquer Item/Fonte descartada — sua ou do oponente indiretamente — em Sobrevida e AtkUp para o time. **Fratura do Contrato** fecha o pacote como Item Épico, reaproveitando 3 recursos do próprio descarte e triturando 7 pontos de recurso do oponente em uma única jogada.",
+  "format": "standard",
+  "strategy": {
+    "archetype": null,
+    "winCondition": null,
+    "keyMechanics": [],
+    "coreCombo": {
+      "description": "O combo central usa **Vharek, o Sábio Remanescente** e **Ishara da Coroa Fundida** como Líderes: sempre que um Item ou Fonte seu vai para o descarte, Vharek compra 2 cartas com **Cláusula Lida Duas Vezes**, e sua ativa **Pacto Desfeito** descarta duas Fontes do defensor antes de causar dano — alimentando o próprio gatilho de Vharek. Ishara é imune a Debuffs com **Leitura sem Armadilha** e usa **Coroa Reforjada** para converter Reaproveitar Recursos em tokens de Sobrevida, sustentando o time enquanto a engrenagem gira.",
+      "cardIds": [
+        "p017",
+        "p018",
+        "p022",
+        "p021",
+        "p027",
+        "i011",
+        "i013",
+        "i012",
+        "e005"
+      ]
+    },
+    "tempo": null
+  },
+  "entries": [
+    {
+      "cardId": "p017",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p018",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p022",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p021",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p019",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p020",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p027",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i011",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Deck Control"
+    },
+    {
+      "cardId": "i014",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i015",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "i020",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "i056",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "i013",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i012",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i017",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i018",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i019",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "e019",
+      "quantity": 5,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e020",
+      "quantity": 5,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e021",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e022",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e023",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e005",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e006",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    }
+  ],
+  "sideboard": []
+}

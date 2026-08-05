@@ -21,9 +21,18 @@
             <span class="share-btn__text">Compartilhar</span>
         </button>
 
-        <div class="field field--file">
-            <label for="file-select">Arquivo CSV</label>
-            <select id="file-select"></select>
+        <div class="field field--collection">
+            <label for="collection-select">Coleção</label>
+            <select id="collection-select"></select>
+        </div>
+
+        <div class="field field--type-buttons">
+            <label>Tipo</label>
+            <div class="type-buttons" id="type-buttons">
+                <button type="button" class="type-buttons__btn" data-type="personagem">Personagens</button>
+                <button type="button" class="type-buttons__btn" data-type="item">Itens</button>
+                <button type="button" class="type-buttons__btn" data-type="energia">Energias</button>
+            </div>
         </div>
 
         <div class="field field--card-select">
@@ -61,6 +70,7 @@
     const urlParams = new URLSearchParams(window.location.search);
     window.appQueryParams = {
         collection: urlParams.get('collection'),
+        type: urlParams.get('type'),
         card: urlParams.get('card')
     };
 })();

@@ -1,0 +1,204 @@
+{
+  "id": "dual-detritonia-solarcomum-sinergias",
+  "slug": "dual-detritonia-solarcomum-sinergias",
+  "name": "# Bi Detritônia/Solar Comum Reciclagem Agressiva",
+  "description": "A estratégia deste deck aposta em pressão constante: Detritônia recicla recursos e Itens do próprio descarte para nunca ficar sem munição, enquanto Solar Comum garante que cada munição reciclada vire dano direto que ignora Defesa. É um deck que aceita a desvantagem natural de TecSci contra Físico dentro do triângulo — a resposta é nunca deixar o combate durar o suficiente para essa fraqueza importar.\n\nO combo central usa **Ishara da Coroa Fundida** (TecSci) e **Bragan, o Recorde Imbatível** (Físico) como Líderes: Ishara é imune a Debuffs com **Leitura sem Armadilha** e sua **Coroa Reforjada** converte Reaproveitar Recursos em tokens de Sobrevida a cada Flanquear, enquanto Bragan é imune a reduções de Atk/Def com **Patrimônio Vivo** e sua **Recorde Inquebrável** já sai com Flanquear e Ignorar Defesa — as duas ativas se revezam abrindo espaço uma para a outra na fila de combate.\n\nO Time reforça reciclagem virando dano: **Drommel, o Recicla-Ossos** compra carta e causa dano ao reciclar, **Fenn da Última Fundição** converte reciclagem de mão em AtkUp permanente, e **Doran Punho-de-Nação** distribui AtkUp para todo personagem Físico assim que entra em jogo — inclusive reforçando o próprio time reciclado. **Machado que Não Se Curva** e **Punho que Atravessa** ignoram Defesa por completo, **Alicate de Contrato Roto** corta a Fonte do oponente antes do golpe, e **Ferro de Solda Improvisado** garante que o Item usado neste turno volte à mão no próximo, sustentando a pressão. **Grito de Guerra do Povo** fecha o pacote com um pico de Atk em escala de time nos turnos decisivos.",
+  "format": "standard",
+  "strategy": {
+    "archetype": null,
+    "winCondition": null,
+    "keyMechanics": [],
+    "coreCombo": {
+      "description": "O combo central usa **Ishara da Coroa Fundida** (TecSci) e **Bragan, o Recorde Imbatível** (Físico) como Líderes: Ishara é imune a Debuffs com **Leitura sem Armadilha** e sua **Coroa Reforjada** converte Reaproveitar Recursos em tokens de Sobrevida a cada Flanquear, enquanto Bragan é imune a reduções de Atk/Def com **Patrimônio Vivo** e sua **Recorde Inquebrável** já sai com Flanquear e Ignorar Defesa — as duas ativas se revezam abrindo espaço uma para a outra na fila de combate.",
+      "cardIds": [
+        "p018",
+        "p033",
+        "p021",
+        "p035",
+        "i015",
+        "i024",
+        "i027",
+        "e008"
+      ]
+    },
+    "tempo": null
+  },
+  "entries": [
+    {
+      "cardId": "p018",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p033",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p021",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p035",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p022",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p036",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p020",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i015",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "i022",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i028",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Protect"
+    },
+    {
+      "cardId": "i020",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "i056",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "i024",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i027",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i012",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i023",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i019",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "e019",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e020",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e024",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e025",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e006",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e005",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e008",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e009",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    }
+  ],
+  "sideboard": []
+}

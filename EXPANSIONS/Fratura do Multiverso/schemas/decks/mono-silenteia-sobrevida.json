@@ -1,0 +1,196 @@
+{
+  "id": "mono-silenteia-sobrevida",
+  "slug": "mono-silenteia-sobrevida",
+  "name": "# Mono Silenteia Cura/Sobrevida",
+  "description": "Diferente do mono Silenteia de Ponto Fraco/DefDown, este deck abandona a agressão e joga puramente pelo desgaste: cura constante, remoção de Debuff e Sobrevida pontual mantêm o time inteiro vivo enquanto o oponente esgota os próprios recursos tentando derrubar personagens que sempre voltam ao topo da Vida. Silenteia aqui não lê o guerreiro para atacá-lo — lê a própria exaustão do adversário e simplesmente espera.\n\nO combo central usa **Temuris, o Andarilho Jovem** e **Dorhen, Guarda da Última Miragem** como Líderes: Temuris é o ponto de entrada narrativo dos Andarilhos, sustentando o time com energia estável enquanto os Adultos genéricos completam a curva, e Dorhen protege a fronteira do time como guardião defensivo, quase impossível de flanquear. Juntos formam uma dupla resiliente que segura a linha até os Itens de cura virarem a partida.\n\nO Time reforça a mesma filosofia de resistência: **Andarilho Silencioso** e **Deserto Andante** dão corpo barato à curva baixa, enquanto **Sem Voz Andante** e **Andarilha** completam o time sem abrir brechas. **Filha de Silenteia** usa Devoção a Yemira para imunizar o time a Confusão e Paralisia, fechando outra via de controle que o oponente poderia usar contra um deck que joga para durar. **Cântaro da Última Água** e **Cinzas do Último Templo** curam e resgatam personagens à beira de 0, **Bandagem do Silêncio** remove qualquer Debuff que ameace travar o plano, e **Máscara do Sem-Rosto** protege contra leitura de fraqueza — a própria arma de Silenteia usada contra o time é neutralizada. **Fratura do Silêncio** fecha o pacote como Item Épico, revelando permanentemente a mão do oponente para que nenhuma ameaça pegue o time desprevenido.",
+  "format": "standard",
+  "strategy": {
+    "archetype": null,
+    "winCondition": null,
+    "keyMechanics": [],
+    "coreCombo": {
+      "description": "O combo central usa **Temuris, o Andarilho Jovem** e **Dorhen, Guarda da Última Miragem** como Líderes: Temuris é o ponto de entrada narrativo dos Andarilhos, sustentando o time com energia estável enquanto os Adultos genéricos completam a curva, e Dorhen protege a fronteira do time como guardião defensivo, quase impossível de flanquear. Juntos formam uma dupla resiliente que segura a linha até os Itens de cura virarem a partida.",
+      "cardIds": [
+        "p007",
+        "p005",
+        "p015",
+        "i001",
+        "i004",
+        "i002",
+        "i009"
+      ]
+    },
+    "tempo": null
+  },
+  "entries": [
+    {
+      "cardId": "p007",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p005",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p008",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p009",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p010",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p011",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p015",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i001",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Deck Control"
+    },
+    {
+      "cardId": "i004",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Protect"
+    },
+    {
+      "cardId": "i003",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "i005",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i056",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "i002",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i009",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i008",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i006",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "i007",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "e014",
+      "quantity": 5,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e015",
+      "quantity": 5,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e016",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e017",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e018",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e003",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e002",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    }
+  ],
+  "sideboard": []
+}

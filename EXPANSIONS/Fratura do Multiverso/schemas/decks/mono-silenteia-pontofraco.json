@@ -1,0 +1,204 @@
+{
+  "id": "mono-silenteia-pontofraco",
+  "slug": "mono-silenteia-pontofraco",
+  "name": "[MONO] Ponto Fraco — Silenteia (Magia)",
+  "description": "A estratégia deste deck é empilhar tokens de DefDown no alvo até a Defesa dele desmoronar, para então liberar Ponto Fraco e dano direto sobre um personagem que já não consegue se proteger. Silenteia não vence pela força — vence lendo o guerreiro adversário até não sobrar nada para ele defender.\n\nO combo central usa **Yemira das Mil Dunas** e **Aridan, o Último Suspiro** como Líderes: Yemira prevê o próprio deck e aplica Ponto Fraco (3) com Flanquear, enquanto Aridan finaliza com Ponto Fraco (4) e espalha Perdição pelo time inimigo sempre que nocauteia o alvo. Como Aridan tem Imunidade a DOT e Perdição, ele pode carregar seus próprios debuffs de Perdição sem medo de retaliação simétrica.\n\nO Time reforça a mesma leitura de fraquezas: **Kaelen, Punho Sem Sombra** e **Ilyah das Mãos Frias** aplicam mais Ponto Fraco e ainda geram Paralisia (Ilyah trava o atacante que ousar bater nela com dano maior que sua Defesa, e reverte isso em Sobrevida). **Grilhão de Areia** e **Silenteia Estrondosa** derrubam a Defesa do alvo antes mesmo do combate começar, e **Agulha da Fresta** garante que a próxima ação do personagem equipado já saia com Ponto Fraco embutido, sem gastar energia extra. **Cajado do Vento Parado** e **Tigre de Pedra do Deserto** dão a leitura de mão/Clarividência que sustenta o controle, enquanto **Cântaro da Última Água**, **Bandagem do Silêncio** e **Cinzas do Último Templo** seguram a Sobrevida do time contra decks de agressão direta (o algoz natural de Magia é Físico). **Fratura do Silêncio** fecha o pacote de controle de mão como Item Épico, deixando o time imune a qualquer disrupção de mão/deck do oponente enquanto o próprio joga com a mão do adversário exposta.",
+  "format": "standard",
+  "strategy": {
+    "archetype": null,
+    "winCondition": null,
+    "keyMechanics": [],
+    "coreCombo": {
+      "description": "O combo central usa **Yemira das Mil Dunas** e **Aridan, o Último Suspiro** como Líderes: Yemira prevê o próprio deck e aplica Ponto Fraco (3) com Flanquear, enquanto Aridan finaliza com Ponto Fraco (4) e espalha Perdição pelo time inimigo sempre que nocauteia o alvo. Como Aridan tem Imunidade a DOT e Perdição, ele pode carregar seus próprios debuffs de Perdição sem medo de retaliação simétrica.",
+      "cardIds": [
+        "p002",
+        "p001",
+        "p003",
+        "p006",
+        "i001",
+        "i007",
+        "i010",
+        "e002"
+      ]
+    },
+    "tempo": null
+  },
+  "entries": [
+    {
+      "cardId": "p002",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p001",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p003",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p006",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p005",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p004",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p016",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i001",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Deck Control"
+    },
+    {
+      "cardId": "i003",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "i004",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Protect"
+    },
+    {
+      "cardId": "i005",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i056",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "i007",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i010",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i006",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "i002",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i008",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i009",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "e014",
+      "quantity": 5,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e015",
+      "quantity": 5,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e016",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e017",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e018",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e002",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e001",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    }
+  ],
+  "sideboard": []
+}

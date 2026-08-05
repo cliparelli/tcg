@@ -1,0 +1,203 @@
+{
+  "id": "triple-silenteia-fisico-astraca-controle",
+  "slug": "triple-silenteia-fisico-astraca-controle",
+  "name": "[TRIPLE] Controle de Alvo — Magia + Físico + Cósmico",
+  "description": "A estratégia deste deck é a primeira desta coleção a montar um Control de três tipos apoiado nos Itens genéricos de controle de posicionamento e alvo: Silenteia lê e debuffa a Defesa do oponente, Solar Comum garante que o alvo escolhido nunca escape do golpe certo, e a Astraca Primordial reescreve o próprio tipo do inimigo para anular resistências e sinergias. Nenhum dos três domina o board pela força — dominam escolhendo exatamente quem sofre e quando.\n\nO combo central usa **Yemira das Mil Dunas** (Magia), **Kassian, o Escudo do Vale** (Físico) e **Vellithra, Tempestade sem Nome** (Cósmico) como núcleo: Yemira aplica Ponto Fraco (3) via Flanquear sem custo extra com **Rastro do Guerreiro**, já debilitando a Defesa do alvo antes mesmo do combate principal. **Provocação Forçada** e **Chamado Inesperado** garantem que o próximo ataque do oponente seja redirecionado para Kassian, cuja **Guarda Invicta** empilha Escudo todo turno — o alvo \"escolhido\" pelo Control nunca é o alvo certo para o oponente. Vellithra fecha o combo: sua **Recusa de Nome** usa Tipo Mutável para causar dano já escolhendo o pior matchup de resistência para o defensor.\n\n**Grilhão de Areia** e **Agulha da Fresta** seguem debuffando Defesa e aplicando Ponto Fraco reutilizável, enquanto **Fragmento sem Nome** força o alvo a virar Cósmico até o fim da partida — quebrando qualquer sinergia de tipo que o time do oponente dependa. **Retirada Forçada** e **Laço do Impostor** fecham o pacote como respostas de emergência, devolvendo à mão (ou descartando os recursos) do personagem que o oponente mais precisa em campo naquele turno.",
+  "format": "standard",
+  "strategy": {
+    "archetype": null,
+    "winCondition": null,
+    "keyMechanics": [],
+    "coreCombo": {
+      "description": "O combo central usa **Yemira das Mil Dunas** (Magia), **Kassian, o Escudo do Vale** (Físico) e **Vellithra, Tempestade sem Nome** (Cósmico) como núcleo: Yemira aplica Ponto Fraco (3) via Flanquear sem custo extra com **Rastro do Guerreiro**, já debilitando a Defesa do alvo antes mesmo do combate principal. **Provocação Forçada** e **Chamado Inesperado** garantem que o próximo ataque do oponente seja redirecionado para Kassian, cuja **Guarda Invicta** empilha Escudo todo turno — o alvo \"escolhido\" pelo Control nunca é o alvo certo para o oponente. Vellithra fecha o combo: sua **Recusa de Nome** usa Tipo Mutável para causar dano já escolhendo o pior matchup de resistência para o defensor.",
+      "cardIds": [
+        "p002",
+        "p037",
+        "p070",
+        "i042",
+        "i066",
+        "i043",
+        "e011"
+      ]
+    },
+    "tempo": null
+  },
+  "entries": [
+    {
+      "cardId": "p002",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p037",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p070",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p005",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p039",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p074",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p076",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i042",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i005",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i028",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i066",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i075",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "i007",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i010",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i043",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i084",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i085",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "e014",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e024",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e034",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e016",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e028",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e002",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e008",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e011",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    }
+  ],
+  "sideboard": []
+}

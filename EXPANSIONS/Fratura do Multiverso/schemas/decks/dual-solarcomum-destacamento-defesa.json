@@ -1,0 +1,204 @@
+{
+  "id": "dual-solarcomum-destacamento-defesa",
+  "slug": "dual-solarcomum-destacamento-defesa",
+  "name": "[DUAL] Defesa — Físico + Divino Agro de Alto Risco",
+  "description": "A estratégia deste deck combina o dano bruto de Solar Comum com o Aposte de alto risco/alta recompensa do Destacamento Interregno — o time bate primeiro e forte, e quando o dano puro não é suficiente, a aposta decide a partida de uma só jogada. Sobrevida do Destacamento cobre a única fraqueza real de um deck que joga tudo para frente.\n\nO combo central usa **Bragan, o Recorde Imbatível** (Físico) e **Zaphiel, a Coroa Suspensa** (Divino) como Líderes: Bragan é imune a reduções de Atk/Def com **Patrimônio Vivo**, e sua **Recorde Inquebrável** já sai com Flanquear e Ignorar Defesa, causando 6 de dano direto todo turno. Zaphiel é imune a Debuffs e Perdição com **Presença Decisiva**, e sua **Juízo Silencioso** aposta em 8 de dano com Silêncio — mesmo perdendo, o oponente ainda recebe 5 tokens de DefDown, o que só facilita o próximo golpe de Bragan.\n\nO Time reforça a pressão de duas frentes: **Doran Punho-de-Nação** distribui AtkUp para todo personagem Físico ao entrar em jogo, **Mireia Passo-Rápido** pune quem joga defensivo, e **Rafiel Mão-Que-Protege** empilha Sobrevida no personagem mais exposto antes do contra-ataque. **Petra, Sentinela do Primeiro Portão** soma Escudo recorrente ao time inteiro sem tirar o foco do plano agressivo, dando uma camada extra de proteção barata enquanto Bragan e Doran seguem batendo. **Machado que Não Se Curva** e **Punho que Atravessa** ignoram Defesa por completo, **Selo do Juízo Suspenso** finaliza qualquer alvo com Vida abaixo de 3, e **Grito de Guerra do Povo** garante um pico de Atk em escala de time no turno decisivo. **Testemunho da Fratura** transforma qualquer perda do próprio time em DefUp e compra de cartas, sustentando a pressão até o fim.",
+  "format": "standard",
+  "strategy": {
+    "archetype": null,
+    "winCondition": null,
+    "keyMechanics": [],
+    "coreCombo": {
+      "description": "O combo central usa **Bragan, o Recorde Imbatível** (Físico) e **Zaphiel, a Coroa Suspensa** (Divino) como Líderes: Bragan é imune a reduções de Atk/Def com **Patrimônio Vivo**, e sua **Recorde Inquebrável** já sai com Flanquear e Ignorar Defesa, causando 6 de dano direto todo turno. Zaphiel é imune a Debuffs e Perdição com **Presença Decisiva**, e sua **Juízo Silencioso** aposta em 8 de dano com Silêncio — mesmo perdendo, o oponente ainda recebe 5 tokens de DefDown, o que só facilita o próximo golpe de Bragan.",
+      "cardIds": [
+        "p033",
+        "p049",
+        "p035",
+        "p051",
+        "p058",
+        "i024",
+        "i031",
+        "e008"
+      ]
+    },
+    "tempo": null
+  },
+  "entries": [
+    {
+      "cardId": "p033",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p049",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p035",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p053",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p036",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p051",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p037",
+      "quantity": 1,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p058",
+      "quantity": 1,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i022",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i037",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Protect"
+    },
+    {
+      "cardId": "i028",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Protect"
+    },
+    {
+      "cardId": "i035",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Protect"
+    },
+    {
+      "cardId": "i056",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "i024",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i031",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i027",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i023",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i033",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "e024",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e025",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e029",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e030",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e008",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e009",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e010",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    }
+  ],
+  "sideboard": []
+}

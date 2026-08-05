@@ -68,7 +68,7 @@ Todo `effectScript` tem a mesma forma raiz:
 
 ```json
 {
-  "scope": "self | singleCharacter | allAllies | allEnemies | eachController | opponentController | allCharacters",
+  "scope": "self | singleCharacter | allAllies | allEnemies | eachController | opponentController | allCharacters | attachedCharacter",
   "filter": { "filterType": "worldType | category | characterName | none", "value": "X" },
   "selection": "fixed | choice | random",
   "count": 1
@@ -76,6 +76,7 @@ Todo `effectScript` tem a mesma forma raiz:
 ```
 
 - `scope` define o universo básico de quem é elegível.
+- `attachedCharacter` — usado por Item/Fonte de Energia cujo texto se refere ao "personagem que este card for anexado" (ex. "coloque um token de AtkUp no personagem que este card for anexado"). Distinto de `self`: `self` é a própria carta de Fonte/Item/Personagem (relevante quando ela própria pode ser alvo de um efeito, ex. recoil em Personagem); `attachedCharacter` é sempre o personagem hospedeiro do anexo, nunca a carta de Item/Fonte em si. Não se aplica a Personagem (que não é anexado a nada).
 - `filter` restringe dentro do `scope` (ex. "categoria Sentinelas" dentro de `allAllies`). `filterType: "none"` quando não há restrição.
 - `selection`: `fixed` (alvo implícito/automático, ex. "self"), `choice` (controlador escolhe), `random` (sorteio D4/moeda — o fallback "escolha livre se não houver resultado" é regra fixa de motor e não aparece aqui).
 - `count`: quantos alvos, default 1. Trabalha junto com a flag `AlvosMúltiplos` (seção 5) quando for efeito de dano.
@@ -87,6 +88,21 @@ Todo `effectScript` tem a mesma forma raiz:
 efeito colateral secundário (token em cada personagem do defensor, condicionado a nocaute):
 ```json
 "target": { "scope": "eachController", "filter": { "filterType": "none" }, "selection": "fixed", "count": null }
+```
+
+**Campos adicionais opcionais em `target`** — usados quando `scope`/`filter`
+sozinhos não capturam uma restrição pontual do texto da carta, sem precisar
+de um novo valor de `filterType` para um caso isolado:
+
+| Campo | Tipo | Descrição |
+|---|---|---|
+| `note` | string | Anotação legível por humano/IA para uma restrição de alvo que ainda não tem vocabulário fechado próprio (ex. `"personagem na posição principal"`, `"mesmo alvo de e1"`). Não é lido por parser de regra — é documentação inline até a restrição aparecer em cartas suficientes para virar `filterType` novo |
+| `excludeController` | boolean | Quando `true`, restringe implicitamente a `singleCharacter`/`allCharacters` para excluir personagens do próprio controlador do efeito (ex. "Extinguir Fonte de um personagem que você não controla"). Default `false` |
+
+**Exemplo real (Trono Enferrujado — Fonte de Energia, "Extinguir Fonte (1)
+de um personagem que você não controla"):**
+```json
+"target": { "scope": "singleCharacter", "filter": {"filterType":"none"}, "selection": "choice", "count": 1, "excludeController": true }
 ```
 
 ---
@@ -110,11 +126,11 @@ Cada efeito:
 | `action` | `params` típico | Cobre (glossário) |
 |---|---|---|
 | `DAMAGE` | `{ "amount": 4, "combatFlags": [] }` | Dano direto |
-| `TOKEN` | `{ "tokenType": "Escudo\|Sobrevida\|AtkUp\|DefDown\|...", "amount": 2 }` | Todos os tokens de efeito positivo/negativo |
+| `TOKEN` | `{ "tokenType": "Escudo\|Sobrevida\|AtkUp\|DefDown\|...", "amount": 2, "removable": true }` | Todos os tokens de efeito positivo/negativo |
 | `REMOVE_TOKEN` | `{ "tokenType": "DefDown", "amount": "all\|1" }` | Remoção de token |
 | `HEAL` | `{ "amount": 3 }` | Cura direta de Vida (distinto de token Sobrevida) |
 | `DRAW` | `{ "amount": 1, "deck": "own\|opponent" }` | Compra de carta |
-| `DISCARD` | `{ "amount": 1, "chosenBy": "self\|opponent" }` | `Extinguir Recurso` como efeito |
+| `DISCARD` | `{ "amount": 1, "chosenBy": "self\|opponent", "wholeHand": false }` | `Extinguir Recurso` como efeito |
 | `LOOK_TOP` | `{ "amount": 2, "deck": "own\|targetPlayer", "reorder": true, "reveal": false, "keepOrDiscard": false }` | `Prever`/`Sondar` — ver 4.2 |
 | `SEARCH` | `{ "matchType": "cardType\|worldType\|exactName", "value": "X", "reveal": true, "destination": "hand" }` | `Clarividência` |
 | `RETURN_TO_HAND` | `{ "scope": "character\|item\|energySource", "amount": 1, "from": "discard\|battlefield" }` | `Reaproveitar Recurso` / Scoopup |
@@ -125,13 +141,36 @@ Cada efeito:
 | `MODIFY_STAT` | `{ "stat": "attack\|defense\|life", "amount": 1, "duration": "untilCleanup\|permanent\|untilEndOfTurn" }` | Buff/debuff de atributo fora do sistema de tokens |
 | `GENERATE_ENERGY` | `{ "amount": 1, "worldType": "any-choice\|Magia\|..." }` | Geração pontual de energia |
 | `STATIC_MODIFIER` | ver 4.3 | Efeitos contínuos (Permanentes/Avançadas) |
-| `GRANT_KEYWORD` | `{ "keyword": "Desviar\|Reflexão\|IgnorarDefesa\|Flanquear\|...", "duration": "..." }` | Concessão temporária de palavra-chave |
+| `GRANT_KEYWORD` | `{ "keyword": "Desviar\|Reflexão\|IgnorarDefesa\|Flanquear\|...", "duration": "untilCleanup\|permanent\|untilEndOfTurn\|nextCombatAction", "freeCost": false }` | Concessão temporária de palavra-chave |
 | `SET_STATE` | `{ "state": "Stance", "value": "NomeDaStance\|null" }` | Ver seção 10 |
 | `CHALLENGE` | ver seção 8 | `Desafiar` (ex-Aposte) |
 | `CHOICE` | ver seção 8 | Escolha entre efeitos (N de M) |
 
 Todos os `additionalCosts[]`/`optionalCosts[]` usam esta mesma tabela de ações
 — não existe um vocabulário de custo separado (seção 9).
+
+**Campos opcionais adicionais em `params`, com default que preserva o
+comportamento anterior (nenhuma carta existente precisa de migração):**
+
+| Campo | Em | Tipo | Default | Descrição |
+|---|---|---|---|---|
+| `wholeHand` | `DISCARD` | boolean | `false` | Quando `true`, `amount` é ignorado e a ação descarta a mão inteira do alvo, sem escolha — distinto de um `amount` fixo ou expressão dinâmica (seção 4.4) sobre uma quantidade parcial escolhida. Caso real: Reciclagem Total ("Recicle todas as cartas disponíveis na sua mão") |
+| `removable` | `TOKEN` | boolean | `true` | Quando `false`, o token não pode ser removido por efeitos nem pela fase de limpeza — reforço textual raro, não um novo tipo de token. Caso real: Fratura do Sol ("Estes tokens não podem ser removidos por efeitos ou durante a fase de limpeza") |
+| `freeCost` | `GRANT_KEYWORD` | boolean | `false` | Quando `true`, a próxima vez que a palavra-chave concedida seria usada, seu custo de energia normal é ignorado — usado quando o texto concede a keyword explicitamente "sem custo" além de concedê-la. Caso real: Investida Dupla ("as ações do personagem alvo ganham Duplicar sem custo") |
+
+`duration` em `GRANT_KEYWORD`/`MODIFY_STAT` inclui o valor `nextCombatAction`
+— concede o efeito até (e incluindo) a próxima ação de combate do
+personagem, consumido no uso dela, distinto de `untilEndOfTurn` (que expira
+no fim do turno mesmo sem uso). Caso real: Vale da Têmpera (Fonte de
+Energia) — "a próxima ação de combate do personagem que este card for
+anexado ganha Ignorar Defesa e Transpassar":
+```json
+{
+  "action": "GRANT_KEYWORD",
+  "params": { "keyword": "IgnorarDefesa", "duration": "nextCombatAction" },
+  "target": { "scope": "attachedCharacter", "filter": {"filterType":"none"}, "selection": "fixed", "count": 1 }
+}
+```
 
 ### 4.2 Nota: `Prever` vs `Sondar` vs `Clarividência`
 
@@ -144,18 +183,26 @@ Três primitivas de "olhar deck" com semânticas distintas:
 
 ```json
 {
-  "affects": "actionCost | stat | rule",
-  "filter": { "filterType": "hasKeyword | worldType | category | actionCategory | none", "value": "X" },
+  "affects": "actionCost | stat | rule | combatFlag",
+  "filter": { "filterType": "hasKeyword | hasAdditionalCost | worldType | category | actionCategory | none", "value": "X" },
   "amount": -3,
   "scope": "controller | opponent | both",
+  "appliesTo": "allMatching | nextAction",
   "ruleId": "energyAttachLimit | itemsPerTurnLimit | ...",
-  "newValue": 2
+  "newValue": 2,
+  "grantsCombatFlag": "DanoPerfurante"
 }
 ```
 
 - `affects: "actionCost"` — reduz/aumenta custo de ações que casam com `filter` (ex. Cajado do Vento Parado: `filter.filterType = "hasKeyword"`, `value: "Clarividencia"`, `amount: -3`, `scope: "controller"`).
 - `affects: "stat"` — modifica atributo continuamente enquanto a carta estiver em jogo.
 - `affects: "rule"` — modificação de um limite nomeado do jogo, não numérico-simples sobre um filtro. Usa `ruleId` (enum fechado e extensível, ex. `energyAttachLimit`) + `newValue` no lugar de `filter`/`amount` (ex. Sobrecarga de Núcleo: `ruleId: "energyAttachLimit"`, `newValue: 2`, `scope: "controller"`).
+- `affects: "combatFlag"` — concede uma `combatFlag` (seção 5) a todas as ações de combate que casam com `filter`, continuamente enquanto a carta estiver em jogo. Usa `grantsCombatFlag` (nome da flag) no lugar de `amount`/`newValue`. Distinto de `GRANT_KEYWORD` (que concede uma keyword pontual, com `duration` finita, a um alvo específico) — aqui o efeito é permanente e vale para toda ação de combate futura do personagem, não uma concessão única. Caso real (Or'Kaath, a Última Estrela — "todas as suas ações de combate causam Dano Penetrante"):
+```json
+{ "action": "STATIC_MODIFIER", "params": { "affects": "combatFlag", "filter": { "filterType": "actionCategory", "value": "Combat" }, "scope": "controller", "grantsCombatFlag": "DanoPerfurante" } }
+```
+- `filter.filterType: "hasAdditionalCost"` — casa ações cujo `additionalCosts[]` contém uma ação de um tipo dado (`value` é o nome da `action`, ex. `"DISCARD"` para "ações que possuem Extinguir Recursos como custo adicional"), distinto de `hasKeyword` (que casa pela keyword da própria ação, não pelo seu custo). Caso real: Bolsa sem Fundo.
+- `appliesTo` (opcional, default `allMatching`) — quando `nextAction`, o modificador se consome na próxima ação que casar com `filter`, em vez de valer continuamente enquanto a carta estiver em jogo. Usado por efeitos pontuais (não `Passive`) que reduzem o custo de uma única ação futura específica, distinto do uso contínuo padrão de `STATIC_MODIFIER`. Caso real: Chave de Fenda Torta ("o custo da próxima ação do personagem alvo é reduzida em 1").
 
 **Exemplo real (Arena Neutra do Torneio — custo de ações de Combate reduzido para ambos os jogadores):**
 ```json
@@ -430,9 +477,26 @@ próprio glossário associada ao personagem como um todo).
 {
   "id": "e1",
   "action": "CHALLENGE",
-  "params": { "rolls": 2, "requireMoreWinsThanLosses": true },
+  "params": { "rolls": 2, "requireMoreWinsThanLosses": true, "coinFlipStyle": false },
   "onWin":  [ /* lista de efeitos, 1..n */ ],
   "onLose": [ /* lista de efeitos, 1..n */ ]
+}
+```
+
+`params.coinFlipStyle` (opcional, default `false`) — quando `true`, o
+resultado de cada rolagem individual (cara/coroa) fica disponível para os
+efeitos de `onWin`/`onLose` via `challenge.heads`/`challenge.tails` (contagem
+de cada face entre as `rolls` rolagens), em vez de só o resultado agregado
+vitória/derrota. Distinto do caso padrão, em que só `onWin`/`onLose` importam
+e o placar interno da rolagem é irrelevante ao efeito. Caso real: Draug-Nol,
+Golpe Instável ("se ganhar, +1 de dano para cada cara; se perder, -1 de dano
+para cada coroa"):
+```json
+{
+  "id": "e1", "action": "CHALLENGE",
+  "params": { "rolls": 3, "requireMoreWinsThanLosses": false, "coinFlipStyle": true },
+  "onWin":  [{ "action": "DAMAGE", "params": { "amount": "3 + challenge.heads", "combatFlags": [] }, "target": {...} }],
+  "onLose": [{ "action": "DAMAGE", "params": { "amount": "3 - challenge.tails", "combatFlags": [] }, "target": {...} }]
 }
 ```
 
@@ -558,6 +622,39 @@ podem aparecer em `effects[]`, `additionalCosts[]`, ou `optionalCosts[]`
 indistintamente — a mesma ação primitiva; a posição na árvore é que define se
 ela é custo obrigatório, custo opcional, ou efeito autônomo da carta.
 
+**Padrão alternativo — custo opcional habilita um efeito inteiro (não só uma
+combatFlag)**: quando o texto liga o pagamento de um custo opcional a um
+*efeito adicional completo* em vez de só uma propriedade de dano, o segundo
+efeito usa `condition: "<id-do-custo>.paid == true"`, referenciando
+diretamente se aquele `optionalCosts[]` foi pago — paralelo a
+`requiresOptionalCost` (seção 5), mas no nível de `effects[].condition` em
+vez de dentro de `combatFlags`. Caso real (Treino de Fim de Tarde): dano
+base incondicional + 2 de dano adicional apenas se Extinguir Fonte(2) foi
+pago como custo opcional:
+```json
+{
+  "optionalCosts": [
+    { "id": "c1", "action": "DESTROY", "params": { "scope": "energySource", "amount": 2 }, "target": {...} }
+  ],
+  "effects": [
+    { "id": "e1", "action": "DAMAGE", "params": { "amount": 2, "combatFlags": [] }, "target": {...} },
+    { "id": "e2", "action": "DAMAGE", "params": { "amount": 2, "combatFlags": [] }, "target": {...}, "condition": "c1.paid == true" }
+  ]
+}
+```
+
+**Campo `variable` em custos com quantidade `"X"`**: quando `additionalCosts[]`/
+`optionalCosts[]` usa uma quantidade `"X"` escolhida pelo controlador no
+momento do pagamento (em vez de um valor fixo), o nó de custo carrega
+`"variable": true` junto ao `amount: "X"`, deixando explícito que `X` não é
+uma expressão calculada (seção 4.4) mas um valor livre escolhido ali, e cujo
+significado exato é resolvido por `linkedToCost` em qualquer `combatFlag` ou
+`condition` que o referencie (seção 5). Caso real: Coroa Reforjada (Ishara
+da Coroa Fundida) — `Reaproveitar Recursos (X)`:
+```json
+{ "id": "c1", "action": "RETURN_TO_HAND", "params": { "scope": "item", "amount": "X", "from": "discard", "variable": true }, "target": {...} }
+```
+
 ---
 
 ## 10. `SET_STATE` — Stance como estado, não efeito de carta
@@ -596,9 +693,17 @@ modelar em detalhe antes de haver um caso concreto para validar contra.
 | `conditionToAct[].kind` | `Devotion \| Affinity \| Concentration \| Dependency` |
 | `trigger` | `OnEnter \| Passive \| OnAttach \| OnDetach \| OnEvent \| null` |
 | `onceKind` | `turn \| combat \| game \| none` |
-| `target.scope` | `self \| singleCharacter \| allAllies \| allEnemies \| eachController \| opponentController \| allCharacters` |
+| `target.scope` | `self \| singleCharacter \| allAllies \| allEnemies \| eachController \| opponentController \| allCharacters \| attachedCharacter` |
 | `target.filter.filterType` | `worldType \| category \| characterName \| none` |
 | `target.selection` | `fixed \| choice \| random` |
 | `resolvesAt` | `immediate \| endOfCombatPhase \| endOfTurn \| endOfCleanupPhase` |
 | `effects[].action` | ver tabela 4.1 |
-| `STATIC_MODIFIER.affects` | `actionCost \| stat \| rule` |
+| `STATIC_MODIFIER.affects` | `actionCost \| stat \| rule \| combatFlag` |
+| `STATIC_MODIFIER.filter.filterType` | `hasKeyword \| hasAdditionalCost \| worldType \| category \| actionCategory \| none` (namespace próprio, distinto de `target.filter.filterType`) |
+| `CHALLENGE.params.coinFlipStyle` | boolean, default `false` |
+| custo `variable` (`additionalCosts[]`/`optionalCosts[]`) | boolean, default `false` — marca quantidade `"X"` escolhida no pagamento |
+| `STATIC_MODIFIER.appliesTo` | `allMatching \| nextAction` |
+| `DISCARD.wholeHand` | boolean, default `false` |
+| `TOKEN.removable` | boolean, default `true` |
+| `GRANT_KEYWORD.freeCost` | boolean, default `false` |
+| `target.excludeController` | boolean, default `false` |

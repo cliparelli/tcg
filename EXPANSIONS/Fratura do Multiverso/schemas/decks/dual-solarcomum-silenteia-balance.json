@@ -1,0 +1,210 @@
+{
+  "id": "dual-solarcomum-silenteia-balance",
+  "slug": "dual-solarcomum-silenteia-balance",
+  "name": "# Bi Solar Comum/Silenteia Debuff para Trespassar",
+  "description": "A estratégia deste deck usa a leitura de fraqueza de Silenteia para preparar o terreno e o dano bruto de Solar Comum para executar — Ponto Fraco e DefDown deixam o alvo exposto, e então Ignorar Defesa/Trespassar garante que nenhuma Defesa recuperada nos turnos seguintes importe. É a leitura completa do triângulo: Magia vence Físico tematicamente, mas aqui as duas afinidades cooperam em vez de competir.\n\nO combo central usa **Ilenya do Sol a Pino** (Físico) e **Aridan, o Último Suspiro** (Magia) como Líderes: Ilenya reduz pela metade o dano de qualquer ação de combate que sofrer com **Corpo Temperado**, tornando-a difícil de remover enquanto prepara o ataque, e seu **Golpe do Meio-Dia** garante 5 de dano consistente. Aridan é imune a DOT e Perdição com **Vazio que Persiste**, e sua **Leitura do Último Fôlego** aplica Ponto Fraco (4) — se nocautear o alvo, espalha Perdição pelo resto do time inimigo, plantando dano contínuo para o resto da partida.\n\nO Time reforça a mesma sequência de debuff-então-dano: **Yemira das Mil Dunas** aplica Ponto Fraco via Flanquear e ainda prevê o próprio deck de graça, enquanto **Kassian, o Escudo do Vale** segura a linha de frente com Escudo constante até o combo estar pronto. **Grilhão de Areia** derruba a Defesa antes do golpe, **Machado que Não Se Curva** e **Lança da Aurora Comum** ignoram a Defesa já fragilizada, e **Agulha da Fresta** garante que a próxima ação do time já saia com Ponto Fraco embutido sem custo extra. **Cântaro da Última Água** e **Grito de Guerra do Povo** sustentam o time nos turnos de transição entre preparação e execução.",
+  "format": "standard",
+  "strategy": {
+    "archetype": null,
+    "winCondition": null,
+    "keyMechanics": [],
+    "coreCombo": {
+      "description": "O combo central usa **Ilenya do Sol a Pino** (Físico) e **Aridan, o Último Suspiro** (Magia) como Líderes: Ilenya reduz pela metade o dano de qualquer ação de combate que sofrer com **Corpo Temperado**, tornando-a difícil de remover enquanto prepara o ataque, e seu **Golpe do Meio-Dia** garante 5 de dano consistente. Aridan é imune a DOT e Perdição com **Vazio que Persiste**, e sua **Leitura do Último Fôlego** aplica Ponto Fraco (4) — se nocautear o alvo, espalha Perdição pelo resto do time inimigo, plantando dano contínuo para o resto da partida.",
+      "cardIds": [
+        "p034",
+        "p001",
+        "p002",
+        "i007",
+        "i024",
+        "i010",
+        "e008"
+      ]
+    },
+    "tempo": null
+  },
+  "entries": [
+    {
+      "cardId": "p034",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p001",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p002",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p037",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p035",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p003",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p038",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i004",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Protect"
+    },
+    {
+      "cardId": "i022",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i005",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i028",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Protect"
+    },
+    {
+      "cardId": "i056",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "i007",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i024",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i010",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i029",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i023",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i002",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "e014",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e015",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e024",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e025",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e002",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e001",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e008",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e009",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    }
+  ],
+  "sideboard": []
+}

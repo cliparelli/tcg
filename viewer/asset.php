@@ -4,15 +4,9 @@ declare(strict_types=1);
 
 /**
  * Serve os templates de moldura (CARD-MODEL / LAND-MODEL) de CARDS/ASSETS/STRUCTURES/V6,
- * (com ?art=1) a arte de uma carta em LIB/{Coleção}/ARTE/{arquivo}, apontada
- * pela coluna "Arte" do CSV, ou (com ?expansion=1) a carta já renderizada em
- * EXPANSIONS/{Coleção}/{arquivo}.
+ * ou (com ?expansion=1) a arte de uma carta em EXPANSIONS/{Coleção}/{arquivo}
+ * (relPath relativo a EXPANSIONS/, ex. "Fratura do Multiverso/card-art/{assetRef}").
  */
-
-if (($_GET['art'] ?? '') !== '') {
-    serveArt();
-    exit;
-}
 
 if (($_GET['expansion'] ?? '') !== '') {
     serveExpansionImage();
@@ -42,44 +36,6 @@ if (!is_file($path)) {
 header('Content-Type: image/png');
 header('Cache-Control: no-cache');
 readfile($path);
-
-function serveArt(): void
-{
-    $collection = (string) ($_GET['collection'] ?? '');
-    $file = (string) ($_GET['file'] ?? '');
-
-    if ($collection === '' || $file === '') {
-        http_response_code(400);
-        exit;
-    }
-
-    $libDir = dirname(__DIR__) . '/LIB';
-    // $artDir = realpath($libDir . '/' . $collection . '/ARTE');
-    $artDir = realpath($libDir . '/' . $collection . '');
-    $libReal = realpath($libDir);
-
-    if ($artDir === false || $libReal === false || !str_starts_with($artDir, $libReal)) {
-        http_response_code(404);
-        exit;
-    }
-
-    $path = realpath($artDir . '/' . $file);
-    if ($path === false || !str_starts_with($path, $artDir) || !is_file($path)) {
-        http_response_code(404);
-        exit;
-    }
-
-    $mime = match (strtolower(pathinfo($path, PATHINFO_EXTENSION))) {
-        'png' => 'image/png',
-        'jpg', 'jpeg' => 'image/jpeg',
-        'webp' => 'image/webp',
-        default => 'application/octet-stream',
-    };
-
-    header('Content-Type: ' . $mime);
-    header('Cache-Control: no-cache');
-    readfile($path);
-}
 
 function serveExpansionImage(): void
 {

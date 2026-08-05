@@ -1,0 +1,219 @@
+{
+  "id": "dual-silenteia-detritonia-vantagemtipo",
+  "slug": "dual-silenteia-detritonia-vantagemtipo",
+  "name": "[DUAL] Vantagem de Tipo — Magia + TecSci",
+  "description": "A estratégia deste deck aproveita a vantagem mecânica de Magia contra Físico e a fraqueza natural de TecSci contra Magia, mas usa isso ao contrário do que se espera: Silenteia lê e desarma o alvo, e Detritônia recicla os próprios recursos gastos nesse processo, girando o motor de cartas mais rápido do que o oponente consegue reagir. Nenhum dos dois tipos vence pela força — vencem pela informação e pela reposição de recursos.\n\nO combo central usa **Yemira das Mil Dunas** (Magia) e **Vharek, o Sábio Remanescente** (TecSci) como Líderes: Yemira aplica Ponto Fraco via Flanquear com **Rastro do Guerreiro** e ainda prevê o próprio deck sem custo com **Memória da Areia**, enquanto Vharek transforma qualquer Item/Fonte que vá para o descarte em compra de 2 cartas com **Cláusula Lida Duas Vezes** — inclusive as Fontes que sua própria **Pacto Desfeito** descarta do oponente antes de bater.\n\nO Time combina leitura de fraqueza com reciclagem de recursos: **Kaelen, Punho Sem Sombra** e **Ilyah das Mãos Frias** empilham Ponto Fraco e Paralisia, enquanto **Fenn da Última Fundição** converte reciclagem de mão em AtkUp e **Drommel, o Recicla-Ossos** compra carta e causa dano ao mesmo tempo. **Herdeiro Atento** usa Devoção a Vharek para imunizar o time TecSci a Confusão, protegendo o motor de reciclagem contra controle de mão/deck. **Grilhão de Areia** e **Agulha da Fresta** derrubam a Defesa do alvo antes do golpe final, e **Alicate de Contrato Roto**/**Cofre Arrombado da Dívida** cortam as Fontes do oponente enquanto abastecem a própria mão. **Cajado do Vento Parado** garante leitura de mão contínua, e **Bobina Reaproveitada** converte cada descarte — próprio ou reciclado — em Sobrevida para segurar o time até o combo fechar.",
+  "format": "standard",
+  "strategy": {
+    "archetype": null,
+    "winCondition": null,
+    "keyMechanics": [],
+    "coreCombo": {
+      "description": "O combo central usa **Yemira das Mil Dunas** (Magia) e **Vharek, o Sábio Remanescente** (TecSci) como Líderes: Yemira aplica Ponto Fraco via Flanquear com **Rastro do Guerreiro** e ainda prevê o próprio deck sem custo com **Memória da Areia**, enquanto Vharek transforma qualquer Item/Fonte que vá para o descarte em compra de 2 cartas com **Cláusula Lida Duas Vezes** — inclusive as Fontes que sua própria **Pacto Desfeito** descarta do oponente antes de bater.",
+      "cardIds": [
+        "p002",
+        "p017",
+        "p003",
+        "p022",
+        "p027",
+        "i003",
+        "i014",
+        "i007",
+        "i010"
+      ]
+    },
+    "tempo": null
+  },
+  "entries": [
+    {
+      "cardId": "p002",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p017",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p003",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p006",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p004",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p022",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p021",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p027",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i003",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "i014",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i005",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i015",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "i056",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "i007",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i010",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i012",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i013",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i019",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i002",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "e014",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e015",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e019",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e020",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e001",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e002",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e004",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e005",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    }
+  ],
+  "sideboard": []
+}

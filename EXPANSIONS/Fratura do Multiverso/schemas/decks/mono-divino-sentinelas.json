@@ -1,0 +1,168 @@
+{
+  "id": "mono-divino-sentinelas",
+  "slug": "mono-divino-sentinelas",
+  "name": "[MONO] Sentinelas — Destacamento (Divino)",
+  "description": "Diferente do mono Destacamento de Sobrevida/Aposte, este deck abandona o risco alto e joga pela paciência vigilante: Escudo recorrente segura o time inteiro enquanto a categoria **Sentinelas** transforma esse mesmo Escudo em alcance — quanto mais Sentinelas em campo, mais alvos um único ataque acerta de uma vez. É Destacamento lido pela guarda coletiva, não pela aposta.\n\nO combo central usa **Zaphiel, a Coroa Suspensa** como Líder e as quatro Sentinelas — **Petra**, **Auroruum**, **Derileun** e **Guarda** — no Time: a **Vigília Permanente** de Petra deposita um token de Escudo por turno, e sua **Ordem de Comando** ganha Alvos Múltiplos (X) igual ao número de Sentinelas em jogo, tornando um ataque de 2 de dano em um ataque de time inteiro assim que as quatro estiverem em campo. Zaphiel segura tudo por cima: **Presença Decisiva** o torna imune a Debuffs e Perdição, e mesmo perdendo o Aposte (2) de **Juízo Silencioso**, o pior cenário é 5 tokens de DefDown nele mesmo — irrelevante para um deck que não depende de Defesa para sobreviver.\n\n**Grade da Última Guarda** e **Véu da Vigília Eterna** fecham a imunidade em massa: o primeiro dá imunidade a LifeDown a todo o time, o segundo bloqueia o primeiro Debuff recebido a cada turno. Com o time inteiro protegido e as Sentinelas empilhando Escudo, o dano em alvos múltiplos de Ordem de Comando vira a única saída ofensiva do oponente ser ignorada primeiro e respondida depois.",
+  "format": "standard",
+  "strategy": {
+    "archetype": null,
+    "winCondition": null,
+    "keyMechanics": [],
+    "coreCombo": {
+      "description": "O combo central usa **Zaphiel, a Coroa Suspensa** como Líder e as quatro Sentinelas — **Petra**, **Auroruum**, **Derileun** e **Guarda** — no Time: a **Vigília Permanente** de Petra deposita um token de Escudo por turno, e sua **Ordem de Comando** ganha Alvos Múltiplos (X) igual ao número de Sentinelas em jogo, tornando um ataque de 2 de dano em um ataque de time inteiro assim que as quatro estiverem em campo. Zaphiel segura tudo por cima: **Presença Decisiva** o torna imune a Debuffs e Perdição, e mesmo perdendo o Aposte (2) de **Juízo Silencioso**, o pior cenário é 5 tokens de DefDown nele mesmo — irrelevante para um deck que não depende de Defesa para sobreviver.",
+      "cardIds": [
+        "p049",
+        "p058",
+        "p059",
+        "p060",
+        "p061",
+        "i038",
+        "e010"
+      ]
+    },
+    "tempo": null
+  },
+  "entries": [
+    {
+      "cardId": "p049",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p058",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p059",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p060",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p061",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p053",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i038",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i037",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i035",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i033",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff/Vantagem"
+    },
+    {
+      "cardId": "i034",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Sobrevida"
+    },
+    {
+      "cardId": "i036",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Cura"
+    },
+    {
+      "cardId": "i031",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "e029",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e030",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e031",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e032",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e033",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e010",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e012",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    }
+  ],
+  "sideboard": []
+}

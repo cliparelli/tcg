@@ -1,0 +1,4813 @@
+[
+  {
+    "id": "i001",
+    "slug": "item-fratura-do-silencio-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Ultra-rara",
+    "assetRef": "item-fratura-do-silencio-v1.png",
+    "flavorText": null,
+    "cardText": "Seu oponente joga com a mão aberta. O jogador que controla este item é imune a efeitos que descartem cartas de sua mão ou o topo do deck de adversários.",
+    "cardType": "Item",
+    "name": "Fratura do Silêncio",
+    "category": "Permanente",
+    "worldAffinity": "Magia",
+    "worldName": "Silenteia",
+    "isLegendary": false,
+    "isEpic": true,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Passive",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "GRANT_KEYWORD",
+          "params": {
+            "keyword": "ImunidadeADescarteDeMao",
+            "duration": "permanent"
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        },
+        {
+          "id": "e2",
+          "action": "STATIC_MODIFIER",
+          "params": {
+            "affects": "rule",
+            "ruleId": "opponentPlaysHandRevealed",
+            "newValue": true,
+            "scope": "opponent"
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Slot Épico único de Silenteia (cópia única; se for ao descarte, é removido do jogo). Reforça Ponto Fraco/Clarividência em sua forma mais extrema — visão permanente e contínua."
+  },
+  {
+    "id": "i002",
+    "slug": "item-cantaro-da-ultima-agua-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Super-rara",
+    "assetRef": "item-cantaro-da-ultima-agua-v1.png",
+    "flavorText": null,
+    "cardText": "Coloque 3 tokens de Sobrevida no personagem alvo,",
+    "cardType": "Item",
+    "name": "Cântaro da Última Água",
+    "category": "Volátil",
+    "worldAffinity": "Magia",
+    "worldName": "Silenteia",
+    "isLegendary": true,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "TOKEN",
+          "params": {
+            "tokenType": "Sobrevida",
+            "amount": 3
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Cópia única (Lendário). Cobre Cura/Sobrevida modesta, assinatura de Magia, em escala pontual mais generosa que os Itens Temáticos do tipo."
+  },
+  {
+    "id": "i003",
+    "slug": "item-cajado-do-vento-parado-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Super-rara",
+    "assetRef": "item-cajado-do-vento-parado-v1.png",
+    "flavorText": null,
+    "cardText": "Uma vez por turno, olhe a mão do oponente.",
+    "cardType": "Item",
+    "name": "Cajado do Vento Parado",
+    "category": "Permanente",
+    "worldAffinity": "Magia",
+    "worldName": "Silenteia",
+    "isLegendary": true,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Passive",
+      "onceKind": "turn",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "LOOK_TOP",
+          "params": {
+            "amount": 0,
+            "deck": "opponent",
+            "reorder": false,
+            "reveal": true,
+            "keepOrDiscard": false,
+            "scope": "hand"
+          },
+          "target": {
+            "scope": "opponentController",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          }
+        },
+        {
+          "id": "e2",
+          "action": "STATIC_MODIFIER",
+          "params": {
+            "affects": "actionCost",
+            "filter": {
+              "filterType": "hasKeyword",
+              "value": "Clarividencia"
+            },
+            "amount": -3,
+            "scope": "controller"
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Todas as ações do controlador com Clarividência têm custo reduzido em 3. 'Olhar a mão do oponente' modelado como LOOK_TOP adaptado (escopo mão, sem reorder)."
+  },
+  {
+    "id": "i004",
+    "slug": "item-mascara-do-sem-rosto-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Super-rara",
+    "assetRef": "item-mascara-do-sem-rosto-v1.png",
+    "flavorText": null,
+    "cardText": "Imunidade a Silêncio. Enquanto esta carta está em jogo, seu controlador não poderá ser alvo de efeitos que revelem ou descartem cartas da sua mão ou deck controlado por outros jogadores.",
+    "cardType": "Item",
+    "name": "Máscara do Sem-Rosto",
+    "category": "Anexável",
+    "worldAffinity": "Magia",
+    "worldName": "Silenteia",
+    "isLegendary": true,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": {
+      "target": "any-character",
+      "value": null
+    },
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Passive",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "GRANT_KEYWORD",
+          "params": {
+            "keyword": "ImunidadeASilencio",
+            "duration": "permanent"
+          },
+          "target": {
+            "scope": "attachedCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        },
+        {
+          "id": "e2",
+          "action": "GRANT_KEYWORD",
+          "params": {
+            "keyword": "ImunidadeARevelarOuDescartar",
+            "duration": "permanent"
+          },
+          "target": {
+            "scope": "attachedCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Cópia única (Lendário). Item defensivo que inverte a assinatura de Ponto Fraco do próprio tipo, protegendo contra ela."
+  },
+  {
+    "id": "i005",
+    "slug": "item-espelho-de-areia-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Rara",
+    "assetRef": "item-espelho-de-areia-v1.png",
+    "flavorText": null,
+    "cardText": "Enquato este item estiver em jogo, o personagem que estiver na posição principal controlado por você, terá resistência ao mesmo tipo do personagem principal de seu oponente.",
+    "cardType": "Item",
+    "name": "Espelho de Areia",
+    "category": "Permanente",
+    "worldAffinity": "Magia",
+    "worldName": "Silenteia",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Passive",
+      "onceKind": "game",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "GRANT_KEYWORD",
+          "params": {
+            "keyword": "ResistenciaIgualAoOponente",
+            "duration": "permanent"
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1,
+            "note": "personagem na posição principal do controlador"
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Enquanto em jogo, o personagem principal do controlador ganha resistência ao mesmo tipo do personagem principal do oponente. Efeito determinístico, uso único por partida."
+  },
+  {
+    "id": "i006",
+    "slug": "item-tigre-de-pedra-do-deserto-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Rara",
+    "assetRef": "item-tigre-de-pedra-do-deserto-v1.png",
+    "flavorText": null,
+    "cardText": "Extinguir Recurso (2) do Jogador Alvo.\n\nTriplicar (3).",
+    "cardType": "Item",
+    "name": "Tigre de Pedra do Deserto",
+    "category": "Volátil",
+    "worldAffinity": "Magia",
+    "worldName": "Silenteia",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "DISCARD",
+          "params": {
+            "amount": 2,
+            "chosenBy": "opponent"
+          },
+          "target": {
+            "scope": "opponentController",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          }
+        },
+        {
+          "id": "e2",
+          "action": "GRANT_KEYWORD",
+          "params": {
+            "keyword": "Triplicar",
+            "amount": 3
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Extinguir Recurso (2) do jogador alvo + Triplicar (3). Cobre Clarividência combinada a controle leve."
+  },
+  {
+    "id": "i007",
+    "slug": "item-grilhao-de-areia-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Incomum",
+    "assetRef": "item-grilhao-de-areia-v1.png",
+    "flavorText": null,
+    "cardText": "Coloque 3 tokens de DefDown no personagem alvo.",
+    "cardType": "Item",
+    "name": "Grilhão de Areia",
+    "category": "Volátil",
+    "worldAffinity": "Magia",
+    "worldName": "Silenteia",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "TOKEN",
+          "params": {
+            "tokenType": "DefDown",
+            "amount": 3
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Cobre Debuff de Atk/Def, assinatura de Magia, em escala Temática (mais forte que a versão dos Sobre-humanos, mas de uso único)."
+  },
+  {
+    "id": "i008",
+    "slug": "item-bandagem-do-silencio-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Incomum",
+    "assetRef": "item-bandagem-do-silencio-v1.png",
+    "flavorText": null,
+    "cardText": "Remove 2 tokens de Debuff de um personagem que você controla.",
+    "cardType": "Item",
+    "name": "Bandagem do Silêncio",
+    "category": "Volátil",
+    "worldAffinity": "Magia",
+    "worldName": "Silenteia",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "REMOVE_TOKEN",
+          "params": {
+            "tokenType": "any-debuff",
+            "amount": 2
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Cobre suporte defensivo leve, complementando a linha de Cura/Sobrevida modesta sem ser cura direta."
+  },
+  {
+    "id": "i009",
+    "slug": "item-cinzas-do-ultimo-templo-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Rara",
+    "assetRef": "item-cinzas-do-ultimo-templo-v1.png",
+    "flavorText": null,
+    "cardText": "Retorne uma carta de personagem com até 3 de Vida da sua pilha de descarte para sua mão.",
+    "cardType": "Item",
+    "name": "Cinzas do Último Templo",
+    "category": "Volátil",
+    "worldAffinity": "Magia",
+    "worldName": "Silenteia",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "RETURN_TO_HAND",
+          "params": {
+            "scope": "character",
+            "amount": 1,
+            "from": "discard"
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1,
+            "condition": "target.life <= 3"
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Retorna carta de personagem com até 3 de Vida do descarte para a mão. Cobre Sobrevida pontual condicionada a Vida baixa."
+  },
+  {
+    "id": "i010",
+    "slug": "item-agulha-da-fresta-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Rara",
+    "assetRef": "item-agulha-da-fresta-v1.png",
+    "flavorText": null,
+    "cardText": "As ações do personagem alvo ganham Ponto Fraco (2) - trate este como um efeito adicional as açõe ativas e passivas, sem custo.",
+    "cardType": "Item",
+    "name": "Agulha da Fresta",
+    "category": "Volátil",
+    "worldAffinity": "Magia",
+    "worldName": "Silenteia",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "GRANT_KEYWORD",
+          "params": {
+            "keyword": "PontoFraco",
+            "amount": 2,
+            "duration": "permanent",
+            "appliesTo": "allActions"
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "As ações do personagem alvo ganham Ponto Fraco (2) como efeito adicional a ações ativas e passivas, sem custo. Fecha as 4 palavras-chave de assinatura de Magia na cota de Itens."
+  },
+  {
+    "id": "i011",
+    "slug": "item-fratura-do-contrato-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Ultra-rara",
+    "assetRef": "item-fratura-do-contrato-v1.png",
+    "flavorText": null,
+    "cardText": "Reaproveitar Recursos (3) - Triturar (7).",
+    "cardType": "Item",
+    "name": "Fratura do Contrato",
+    "category": "Volátil",
+    "worldAffinity": "TecSci",
+    "worldName": "Reino da Detritônia",
+    "isLegendary": false,
+    "isEpic": true,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "CHOICE",
+          "chooseCount": 1,
+          "options": [
+            {
+              "action": "RETURN_TO_HAND",
+              "params": {
+                "scope": "any",
+                "amount": 3,
+                "from": "discard"
+              },
+              "target": {
+                "scope": "self",
+                "filter": {
+                  "filterType": "none",
+                  "value": null
+                },
+                "selection": "fixed",
+                "count": 1
+              }
+            },
+            {
+              "action": "DESTROY",
+              "params": {
+                "scope": "item"
+              },
+              "target": {
+                "scope": "opponentController",
+                "filter": {
+                  "filterType": "none",
+                  "value": null
+                },
+                "selection": "choice",
+                "count": 1
+              }
+            }
+          ]
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Slot Épico único da Detritônia. Reaproveitar Recursos (3) - Triturar (7) — escolha entre recuperar recurso próprio ou anular efeito alheio."
+  },
+  {
+    "id": "i012",
+    "slug": "item-alicate-de-contrato-roto-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Super-rara",
+    "assetRef": "item-alicate-de-contrato-roto-v1.png",
+    "flavorText": null,
+    "cardText": "Extinguir Fonte (1) do personagem alvo que você não controla.",
+    "cardType": "Item",
+    "name": "Alicate de Contrato Roto",
+    "category": "Volátil",
+    "worldAffinity": "TecSci",
+    "worldName": "Reino da Detritônia",
+    "isLegendary": true,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "DESTROY",
+          "params": {
+            "scope": "energySource",
+            "amount": 1
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1,
+            "excludeController": true
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Cópia única (Lendário). Cobre Triturar/Extinguir Fonte de forma direta e simples."
+  },
+  {
+    "id": "i013",
+    "slug": "item-cofre-arrombado-da-divida-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Super-rara",
+    "assetRef": "item-cofre-arrombado-da-divida-v1.png",
+    "flavorText": null,
+    "cardText": "Triturar (5) - Compre 2 cartas",
+    "cardType": "Item",
+    "name": "Cofre Arrombado da Dívida",
+    "category": "Volátil",
+    "worldAffinity": "TecSci",
+    "worldName": "Reino da Detritônia",
+    "isLegendary": true,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "DESTROY",
+          "params": {
+            "scope": "energySource",
+            "amount": 5
+          },
+          "target": {
+            "scope": "opponentController",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          }
+        },
+        {
+          "id": "e2",
+          "action": "DRAW",
+          "params": {
+            "amount": 2,
+            "deck": "own"
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Cópia única (Lendário). Triturar (5) - Compre 2 cartas. Combina Triturar/Extinguir Fonte com vantagem de cartas."
+  },
+  {
+    "id": "i014",
+    "slug": "item-bobina-reaproveitada-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Super-rara",
+    "assetRef": "item-bobina-reaproveitada-v1.png",
+    "flavorText": null,
+    "cardText": "Sempre que um Item ou Fonte de Energia for colocado em qualquer pilha de descarte, coloque um token de sobrevida nos personagens que você controla.",
+    "cardType": "Item",
+    "name": "Bobina Reaproveitada",
+    "category": "Permanente",
+    "worldAffinity": "TecSci",
+    "worldName": "Reino da Detritônia",
+    "isLegendary": true,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "OnEvent",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "TOKEN",
+          "params": {
+            "tokenType": "Sobrevida",
+            "amount": 1
+          },
+          "target": {
+            "scope": "allAllies",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": null
+          },
+          "condition": "event.type == 'itemOrEnergySourceDiscarded'"
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Cópia única (Lendário). Sempre que um Item ou Fonte de Energia for descartado (de qualquer jogador), coloca token de Sobrevida nos personagens do controlador."
+  },
+  {
+    "id": "i015",
+    "slug": "item-ferro-de-solda-improvisado-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Incomum",
+    "assetRef": "item-ferro-de-solda-improvisado-v1.png",
+    "flavorText": null,
+    "cardText": "No fim da sua fase de compra, Reaproveitar Recursos (1).",
+    "cardType": "Item",
+    "name": "Ferro de Solda Improvisado",
+    "category": "Permanente",
+    "worldAffinity": "TecSci",
+    "worldName": "Reino da Detritônia",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "OnEvent",
+      "onceKind": "turn",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "RETURN_TO_HAND",
+          "params": {
+            "scope": "item",
+            "amount": 1,
+            "from": "discard"
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          },
+          "condition": "phase.current == 'Draw' && phase.timing == 'end'"
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "No fim da fase de compra do controlador, Reaproveitar Recursos (1). Cobre Reaproveitar recorrente, mas equilibrado frente à versão sem custo do Épico."
+  },
+  {
+    "id": "i016",
+    "slug": "item-bau-de-restos-do-palacio-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Incomum",
+    "assetRef": "item-bau-de-restos-do-palacio-v1.png",
+    "flavorText": null,
+    "cardText": "Devoção (🟢) - Quando um Item for descartado, compre 1 carta.",
+    "cardType": "Item",
+    "name": "Baú de Restos do Palácio",
+    "category": "Permanente",
+    "worldAffinity": "TecSci",
+    "worldName": "Reino da Detritônia",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [
+        {
+          "kind": "Devotion",
+          "condition": {
+            "filterType": "worldType",
+            "value": "TecSci"
+          }
+        }
+      ],
+      "trigger": "OnEvent",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "DRAW",
+          "params": {
+            "amount": 1,
+            "deck": "own"
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          },
+          "condition": "event.type == 'itemDiscarded'"
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Devoção (TecSci) - Quando um Item for descartado, compre 1 carta. Cobre vantagem de cartas ligada à perda de recursos."
+  },
+  {
+    "id": "i017",
+    "slug": "item-serra-circular-remendada-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Incomum",
+    "assetRef": "item-serra-circular-remendada-v1.png",
+    "flavorText": null,
+    "cardText": "Causa 2 pontos de dano ao personagem alvo; se você tiver 5 ou mais cartas no descarte, causa 3 pontos ao invés de 2.",
+    "cardType": "Item",
+    "name": "Serra Circular Remendada",
+    "category": "Volátil",
+    "worldAffinity": "TecSci",
+    "worldName": "Reino da Detritônia",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "DAMAGE",
+          "params": {
+            "amount": 2,
+            "combatFlags": []
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          },
+          "condition": "controller.discard.count < 5"
+        },
+        {
+          "id": "e2",
+          "action": "DAMAGE",
+          "params": {
+            "amount": 3,
+            "combatFlags": []
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          },
+          "condition": "controller.discard.count >= 5"
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Causa 2 de dano; se 5+ cartas no descarte, causa 3. Cobre o buff condicionado à quantidade de cartas em descarte."
+  },
+  {
+    "id": "i018",
+    "slug": "item-broca-de-diamante-falso-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Incomum",
+    "assetRef": "item-broca-de-diamante-falso-v1.png",
+    "flavorText": null,
+    "cardText": "Descarte um Item permanente alvo.",
+    "cardType": "Item",
+    "name": "Broca de Diamante Falso",
+    "category": "Volátil",
+    "worldAffinity": "TecSci",
+    "worldName": "Reino da Detritônia",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "DISCARD",
+          "params": {
+            "amount": 1,
+            "chosenBy": "self",
+            "scope": "itemPermanente"
+          },
+          "target": {
+            "scope": "opponentController",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Descarte um Item permanente alvo. Cobre Triturar em variante de destruição de Item."
+  },
+  {
+    "id": "i019",
+    "slug": "item-chave-de-fenda-torta-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Rara",
+    "assetRef": "item-chave-de-fenda-torta-v1.png",
+    "flavorText": null,
+    "cardText": "Extinguir Recursos (1) - O custo da próxima ação do personagem alvo, é reduzida em 1.",
+    "cardType": "Item",
+    "name": "Chave de Fenda Torta",
+    "category": "Volátil",
+    "worldAffinity": "TecSci",
+    "worldName": "Reino da Detritônia",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [
+        {
+          "id": "c1",
+          "action": "DISCARD",
+          "params": {
+            "amount": 1,
+            "chosenBy": "self"
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        }
+      ],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "STATIC_MODIFIER",
+          "params": {
+            "affects": "actionCost",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "amount": -1,
+            "scope": "controller",
+            "appliesTo": "nextAction"
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Extinguir Recursos (1) - custo da próxima ação do personagem alvo reduzido em 1. Cobre custo variável pago com descarte."
+  },
+  {
+    "id": "i020",
+    "slug": "item-rede-de-cabos-emendados-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Rara",
+    "assetRef": "item-rede-de-cabos-emendados-v1.png",
+    "flavorText": null,
+    "cardText": "No fim da sua fase de limpeza, você pdoe Extinguir Recurso (1) - Prever (2).",
+    "cardType": "Item",
+    "name": "Rede de Cabos Emendados",
+    "category": "Permanente",
+    "worldAffinity": "TecSci",
+    "worldName": "Reino da Detritônia",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "OnEvent",
+      "onceKind": "turn",
+      "additionalCosts": [],
+      "optionalCosts": [
+        {
+          "id": "c1",
+          "action": "DISCARD",
+          "params": {
+            "amount": 1,
+            "chosenBy": "self"
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        }
+      ],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "LOOK_TOP",
+          "params": {
+            "amount": 2,
+            "deck": "own",
+            "reorder": true,
+            "reveal": false,
+            "keepOrDiscard": false
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          },
+          "condition": "phase.current == 'Cleanup' && phase.timing == 'end'",
+          "requiresOptionalCost": "c1"
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "No fim da fase de limpeza, pode Extinguir Recurso (1) - Prever (2). Fecha, junto com a Chave de Fenda Torta, a cobertura de custo variável pago com descarte."
+  },
+  {
+    "id": "i021",
+    "slug": "item-fratura-do-sol-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Ultra-rara",
+    "assetRef": "item-fratura-do-sol-v1.png",
+    "flavorText": null,
+    "cardText": "Coloque 3 tokens de LifeUp e 3 tokens de AtkUp nos personagens que você controla. Estes tokens não podem ser removidos por efeitos ou durante a fase de limpeza.",
+    "cardType": "Item",
+    "name": "Fratura do Sol",
+    "category": "Volátil",
+    "worldAffinity": "Físico",
+    "worldName": "Solar Comum",
+    "isLegendary": false,
+    "isEpic": true,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "TOKEN",
+          "params": {
+            "tokenType": "LifeUp",
+            "amount": 3,
+            "removable": false
+          },
+          "target": {
+            "scope": "allAllies",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": null
+          }
+        },
+        {
+          "id": "e2",
+          "action": "TOKEN",
+          "params": {
+            "tokenType": "AtkUp",
+            "amount": 3,
+            "removable": false
+          },
+          "target": {
+            "scope": "allAllies",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": null
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Slot Épico único de Solar Comum. Tokens não removíveis por efeitos nem pela fase de limpeza — buff grande, imediato e sem condicionais, escala de time e de partida inteira."
+  },
+  {
+    "id": "i022",
+    "slug": "item-estandarte-da-tempera-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Super-rara",
+    "assetRef": "item-estandarte-da-tempera-v1.png",
+    "flavorText": null,
+    "cardText": "No fim da sua fase de limpeza, coloque 2 tokens de AtkUp no personagem que estar carta esta anexada.",
+    "cardType": "Item",
+    "name": "Estandarte da Têmpera",
+    "category": "Anexável",
+    "worldAffinity": "Físico",
+    "worldName": "Solar Comum",
+    "isLegendary": true,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": {
+      "target": "any-character",
+      "value": null
+    },
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "OnEvent",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "TOKEN",
+          "params": {
+            "tokenType": "AtkUp",
+            "amount": 2
+          },
+          "target": {
+            "scope": "attachedCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          },
+          "condition": "phase.current == 'Cleanup' && phase.timing == 'end'"
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Cópia única (Lendário). No fim da fase de limpeza do controlador, coloca 2 tokens de AtkUp no personagem anexado. Alteração direta condicional simples, assinatura de Físico."
+  },
+  {
+    "id": "i023",
+    "slug": "item-grito-de-guerra-do-povo-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Super-rara",
+    "assetRef": "item-grito-de-guerra-do-povo-v1.png",
+    "flavorText": null,
+    "cardText": "Devoção(🔴): Coloque 1 token de AtkUp em cada um dos personagens que você controla.",
+    "cardType": "Item",
+    "name": "Grito de Guerra do Povo",
+    "category": "Volátil",
+    "worldAffinity": "Físico",
+    "worldName": "Solar Comum",
+    "isLegendary": true,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [
+        {
+          "kind": "Devotion",
+          "condition": {
+            "filterType": "worldType",
+            "value": "Físico"
+          }
+        }
+      ],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "TOKEN",
+          "params": {
+            "tokenType": "AtkUp",
+            "amount": 1
+          },
+          "target": {
+            "scope": "allAllies",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": null
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Cópia única (Lendário). Devoção (Físico) - AtkUp em cada personagem controlado. Alteração direta de alto valor em escala de time."
+  },
+  {
+    "id": "i024",
+    "slug": "item-machado-que-nao-se-curva-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Super-rara",
+    "assetRef": "item-machado-que-nao-se-curva-v1.png",
+    "flavorText": null,
+    "cardText": "Causa X pontos de dano penetrante no personagem alvo, onde X é igual sua defesa.",
+    "cardType": "Item",
+    "name": "Machado que Não Se Curva",
+    "category": "Volátil",
+    "worldAffinity": "Físico",
+    "worldName": "Solar Comum",
+    "isLegendary": true,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "DAMAGE",
+          "params": {
+            "amount": "target.defense",
+            "combatFlags": [
+              {
+                "flag": "DanoPerfurante"
+              }
+            ]
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Cópia única (Lendário). Causa dano penetrante igual à Defesa do alvo. Cobre Transpassar em variante escalável."
+  },
+  {
+    "id": "i025",
+    "slug": "item-coroa-de-louros-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Rara",
+    "assetRef": "item-coroa-de-louros-v1.png",
+    "flavorText": null,
+    "cardText": "No fim da sua fase de limpeza, adicione um token de AtkUp no personagem que este card está anexado.",
+    "cardType": "Item",
+    "name": "Coroa de Louros",
+    "category": "Anexável",
+    "worldAffinity": "Físico",
+    "worldName": "Solar Comum",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": {
+      "target": "any-character",
+      "value": null
+    },
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "OnEvent",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "TOKEN",
+          "params": {
+            "tokenType": "AtkUp",
+            "amount": 1
+          },
+          "target": {
+            "scope": "attachedCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          },
+          "condition": "phase.current == 'Cleanup' && phase.timing == 'end'"
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "No fim da fase de limpeza do controlador, adiciona token de AtkUp no personagem anexado. Cobre Atk crescente por combate consecutivo, versão Permanente/recorrente."
+  },
+  {
+    "id": "i026",
+    "slug": "item-golpe-do-sol-a-pino-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Incomum",
+    "assetRef": "item-golpe-do-sol-a-pino-v1.png",
+    "flavorText": null,
+    "cardText": "Extinguir Recursos (2): Causa 5 pontos de dano ao personagem alvo.",
+    "cardType": "Item",
+    "name": "Golpe do Sol a Pino",
+    "category": "Volátil",
+    "worldAffinity": "Físico",
+    "worldName": "Solar Comum",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [
+        {
+          "id": "c1",
+          "action": "DISCARD",
+          "params": {
+            "amount": 2,
+            "chosenBy": "self"
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        }
+      ],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "DAMAGE",
+          "params": {
+            "amount": 5,
+            "combatFlags": []
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Extinguir Recursos (2): causa 5 de dano. Cobre alteração direta/agressão crua em sua forma mais pura."
+  },
+  {
+    "id": "i027",
+    "slug": "item-punho-que-atravessa-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Incomum",
+    "assetRef": "item-punho-que-atravessa-v1.png",
+    "flavorText": null,
+    "cardText": "Extinguir Recuros (1) - A próxima ação do personagem alvo ganha Ignorar Defesa até o fim do turno.",
+    "cardType": "Item",
+    "name": "Punho que Atravessa",
+    "category": "Volátil",
+    "worldAffinity": "Físico",
+    "worldName": "Solar Comum",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [
+        {
+          "id": "c1",
+          "action": "DISCARD",
+          "params": {
+            "amount": 1,
+            "chosenBy": "self"
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        }
+      ],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "GRANT_KEYWORD",
+          "params": {
+            "keyword": "IgnorarDefesa",
+            "duration": "untilEndOfTurn"
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Extinguir Recursos (1) - a próxima ação do personagem alvo ganha Ignorar Defesa até o fim do turno. Cobre Transpassar em forma direta (Ignorar Defesa completo)."
+  },
+  {
+    "id": "i028",
+    "slug": "item-bandeira-da-nacao-vencedora-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Incomum",
+    "assetRef": "item-bandeira-da-nacao-vencedora-v1.png",
+    "flavorText": null,
+    "cardText": "O personagem que este card está anexado, recebe Imunidade a AtkDown",
+    "cardType": "Item",
+    "name": "Bandeira da Nação Vencedora",
+    "category": "Anexável",
+    "worldAffinity": "Físico",
+    "worldName": "Solar Comum",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": {
+      "target": "any-character",
+      "value": null
+    },
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Passive",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "GRANT_KEYWORD",
+          "params": {
+            "keyword": "ImunidadeATokens",
+            "tokenTypes": [
+              "AtkDown"
+            ],
+            "duration": "permanent"
+          },
+          "target": {
+            "scope": "attachedCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "O personagem anexado recebe Imunidade a AtkDown. Cobre baixa dependência de suporte, resiliência própria contra debuff."
+  },
+  {
+    "id": "i029",
+    "slug": "item-lanca-da-aurora-comum-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Incomum",
+    "assetRef": "item-lanca-da-aurora-comum-v1.png",
+    "flavorText": null,
+    "cardText": "Na primeira ação de combate utilizada neste turno pelo jogador que utilizou este item, aquela ação causa 1 pontos de dano extra e ganha Transpassar.",
+    "cardType": "Item",
+    "name": "Lança da Aurora Comum",
+    "category": "Volátil",
+    "worldAffinity": "Físico",
+    "worldName": "Solar Comum",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "OnEvent",
+      "onceKind": "turn",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "MODIFY_STAT",
+          "params": {
+            "stat": "attack",
+            "amount": 1,
+            "duration": "untilEndOfTurn"
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          },
+          "condition": "event.type == 'firstCombatActionThisTurn' && event.controller == controller"
+        },
+        {
+          "id": "e2",
+          "action": "GRANT_KEYWORD",
+          "params": {
+            "keyword": "Transpassar",
+            "duration": "untilEndOfTurn"
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          },
+          "condition": "event.type == 'firstCombatActionThisTurn' && event.controller == controller"
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Na primeira ação de combate do turno do controlador, ela causa 1 de dano extra e ganha Transpassar. Cobre Transpassar em escala moderada (metade da Defesa), complementando Punho que Atravessa e Machado que Não Se Curva."
+  },
+  {
+    "id": "i030",
+    "slug": "item-fratura-da-coroa-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Ultra-rara",
+    "assetRef": "item-fratura-da-coroa-v1.png",
+    "flavorText": null,
+    "cardText": "Nocauteie um personagem que você controla - Coloque X tokens de sobrevida sobre os personagens restantes, onde X é duas vezes a Vida do personagem nocauteado.",
+    "cardType": "Item",
+    "name": "Fratura da Coroa",
+    "category": "Volátil",
+    "worldAffinity": "Divino",
+    "worldName": "Destacamento Interregno",
+    "isLegendary": false,
+    "isEpic": true,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [
+        {
+          "id": "c1",
+          "action": "KNOCKOUT",
+          "params": {},
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          }
+        }
+      ],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "TOKEN",
+          "params": {
+            "tokenType": "Sobrevida",
+            "amount": "2 * c1.target.life"
+          },
+          "target": {
+            "scope": "allAllies",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": null
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Slot Épico único do Destacamento Interregno. Nocauteie um personagem controlado - coloque X tokens de Sobrevida nos restantes, X = 2x a Vida do nocauteado. Cobre duas assinaturas de Divino simultaneamente."
+  },
+  {
+    "id": "i031",
+    "slug": "item-selo-do-juizo-suspenso-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Ultra-rara",
+    "assetRef": "item-selo-do-juizo-suspenso-v1.png",
+    "flavorText": null,
+    "cardText": "Extinguir Recursos (5) - Nocauteie o alvo com até 3 pontos de vida.",
+    "cardType": "Item",
+    "name": "Selo do Juízo Suspenso",
+    "category": "Volátil",
+    "worldAffinity": "Divino",
+    "worldName": "Destacamento Interregno",
+    "isLegendary": true,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [
+        {
+          "id": "c1",
+          "action": "DISCARD",
+          "params": {
+            "amount": 5,
+            "chosenBy": "self"
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        }
+      ],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "KNOCKOUT",
+          "params": {},
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          },
+          "condition": "target.life <= 3"
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Cópia única (Lendário). Extinguir Recursos (5) - nocauteie o alvo com até 3 de vida. Efeito de grande escala situacional condicionado a Vida baixa do alvo."
+  },
+  {
+    "id": "i032",
+    "slug": "item-espada-envolta-em-nevoa-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Super-rara",
+    "assetRef": "item-espada-envolta-em-nevoa-v1.png",
+    "flavorText": null,
+    "cardText": "Selecione um personagem que você controla, que foi alvo de ações de combate no último turno. Este personagem causa X pontos de dano no personagem na posição principal do oponente, onde X é o dano que ele recebeu.",
+    "cardType": "Item",
+    "name": "Espada Envolta em Névoa",
+    "category": "Volátil",
+    "worldAffinity": "Divino",
+    "worldName": "Destacamento Interregno",
+    "isLegendary": true,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "DAMAGE",
+          "params": {
+            "amount": "target.damageTakenLastTurn",
+            "combatFlags": []
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1,
+            "note": "personagem que você controla, alvo de ações de combate no último turno"
+          }
+        },
+        {
+          "id": "e2",
+          "action": "DAMAGE",
+          "params": {
+            "amount": "e1.result.amount",
+            "combatFlags": []
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1,
+            "note": "personagem na posição principal do oponente"
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Cópia única (Lendário). Custo em Vida como payoff — dano recebido pelo personagem selecionado é redirecionado como dano ao personagem principal do oponente."
+  },
+  {
+    "id": "i033",
+    "slug": "item-testemunho-da-fratura-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Super-rara",
+    "assetRef": "item-testemunho-da-fratura-v1.png",
+    "flavorText": null,
+    "cardText": "Se um personagem que você controla foi nocauteado no turno passado, coloque 2 tokens de DefUp em cada um dos seus personagens em campo e compre 3 cartas.",
+    "cardType": "Item",
+    "name": "Testemunho da Fratura",
+    "category": "Volátil",
+    "worldAffinity": "Divino",
+    "worldName": "Destacamento Interregno",
+    "isLegendary": true,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "TOKEN",
+          "params": {
+            "tokenType": "DefUp",
+            "amount": 2
+          },
+          "target": {
+            "scope": "allAllies",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": null
+          },
+          "condition": "event.characterKnockedOutLastTurn == True && event.controller == controller"
+        },
+        {
+          "id": "e2",
+          "action": "DRAW",
+          "params": {
+            "amount": 3,
+            "deck": "own"
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          },
+          "condition": "event.characterKnockedOutLastTurn == True && event.controller == controller"
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Cópia única (Lendário). Buff condicionado a morte — se um personagem do controlador foi nocauteado no turno passado, DefUp em massa + compra 3."
+  },
+  {
+    "id": "i034",
+    "slug": "item-pluma-do-ultimo-suspiro-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Super-rara",
+    "assetRef": "item-pluma-do-ultimo-suspiro-v1.png",
+    "flavorText": null,
+    "cardText": "Extinguir Recursos (5) - Coloque um token de Reviver no personagem alvo.",
+    "cardType": "Item",
+    "name": "Pluma do Último Suspiro",
+    "category": "Volátil",
+    "worldAffinity": "Divino",
+    "worldName": "Destacamento Interregno",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [
+        {
+          "id": "c1",
+          "action": "DISCARD",
+          "params": {
+            "amount": 5,
+            "chosenBy": "self"
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        }
+      ],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "TOKEN",
+          "params": {
+            "tokenType": "Reviver",
+            "amount": 1
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Extinguir Recursos (5) - coloque token de Reviver no alvo. Cobre Sobrevida/negação de morte em forma mais direta."
+  },
+  {
+    "id": "i035",
+    "slug": "item-aureola-rachada-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Rara",
+    "assetRef": "item-aureola-rachada-v1.png",
+    "flavorText": null,
+    "cardText": "O personagem que esta carta está anexada, ganha imunidade a Debuffs. No fim da sua fase de limpeza, em cada turno, coloque 3 tokens de LifeDown neste personagem.",
+    "cardType": "Item",
+    "name": "Auréola Rachada",
+    "category": "Anexável",
+    "worldAffinity": "Divino",
+    "worldName": "Destacamento Interregno",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": {
+      "target": "any-character",
+      "value": null
+    },
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Passive",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "GRANT_KEYWORD",
+          "params": {
+            "keyword": "ImunidadeADebuffs",
+            "duration": "permanent"
+          },
+          "target": {
+            "scope": "attachedCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        },
+        {
+          "id": "e2",
+          "action": "TOKEN",
+          "params": {
+            "tokenType": "LifeDown",
+            "amount": 3
+          },
+          "target": {
+            "scope": "attachedCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          },
+          "resolvesAt": "endOfCleanupPhase"
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Imunidade a Debuffs; no fim da fase de limpeza a cada turno, recebe 3 tokens de LifeDown. Imunidade combinada a custo contínuo em Vida."
+  },
+  {
+    "id": "i036",
+    "slug": "item-lagrima-congelada-no-tempo-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Incomum",
+    "assetRef": "item-lagrima-congelada-no-tempo-v1.png",
+    "flavorText": null,
+    "cardText": "Coloque 2 tokens de Sobrevida no persoangem alvo que você controla. Este personagem não pode ter mais de 3 pontos de vida.",
+    "cardType": "Item",
+    "name": "Lágrima Congelada no Tempo",
+    "category": "Volátil",
+    "worldAffinity": "Divino",
+    "worldName": "Destacamento Interregno",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "TOKEN",
+          "params": {
+            "tokenType": "Sobrevida",
+            "amount": 2
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1,
+            "condition": "target.life <= 3"
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Coloca 2 tokens de Sobrevida no alvo controlado, que não pode ter mais de 3 de vida. Efeito situacional condicionado a Vida criticamente baixa."
+  },
+  {
+    "id": "i037",
+    "slug": "item-veu-da-vigilia-eterna-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Rara",
+    "assetRef": "item-veu-da-vigilia-eterna-v1.png",
+    "flavorText": null,
+    "cardText": "O personagem equipado é imune ao primeiro Debuff que receber a cada turno.",
+    "cardType": "Item",
+    "name": "Véu da Vigília Eterna",
+    "category": "Permanente",
+    "worldAffinity": "Divino",
+    "worldName": "Destacamento Interregno",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Passive",
+      "onceKind": "turn",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "GRANT_KEYWORD",
+          "params": {
+            "keyword": "ImunidadeAoPrimeiroDebuff",
+            "duration": "untilEndOfTurn"
+          },
+          "target": {
+            "scope": "attachedCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "O personagem equipado é imune ao primeiro Debuff que receber a cada turno. Cobre imunidades amplas em forma recorrente."
+  },
+  {
+    "id": "i038",
+    "slug": "item-grade-da-ultima-guarda-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Rara",
+    "assetRef": "item-grade-da-ultima-guarda-v1.png",
+    "flavorText": null,
+    "cardText": "Devoção (🟡) - Todos os personagens que você controla, ganham imunidade a LifeDown",
+    "cardType": "Item",
+    "name": "Grade da Última Guarda",
+    "category": "Permanente",
+    "worldAffinity": "Divino",
+    "worldName": "Destacamento Interregno",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [
+        {
+          "kind": "Devotion",
+          "condition": {
+            "filterType": "worldType",
+            "value": "Divino"
+          }
+        }
+      ],
+      "trigger": "Passive",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "GRANT_KEYWORD",
+          "params": {
+            "keyword": "ImunidadeATokens",
+            "tokenTypes": [
+              "LifeDown"
+            ],
+            "duration": "permanent"
+          },
+          "target": {
+            "scope": "allAllies",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": null
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Devoção (Divino) - todos os personagens controlados ganham imunidade a LifeDown. Fecha as 4 palavras-chave de assinatura de Divino na cota de Itens junto com o Véu da Vigília Eterna."
+  },
+  {
+    "id": "i039",
+    "slug": "item-fratura-do-descanso-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Ultra-rara",
+    "assetRef": "item-fratura-do-descanso-v1.png",
+    "flavorText": null,
+    "cardText": "Cause 5 pontos de dano a todos os personagens do oponente e 2 pontos de dano a todos os seus próprios personagens.",
+    "cardType": "Item",
+    "name": "Fratura do Descanso",
+    "category": "Volátil",
+    "worldAffinity": "Cósmico",
+    "worldName": "Astraca Primordial",
+    "isLegendary": false,
+    "isEpic": true,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "DAMAGE",
+          "params": {
+            "amount": 5,
+            "combatFlags": []
+          },
+          "target": {
+            "scope": "allEnemies",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": null
+          }
+        },
+        {
+          "id": "e2",
+          "action": "DAMAGE",
+          "params": {
+            "amount": 2,
+            "combatFlags": []
+          },
+          "target": {
+            "scope": "allAllies",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": null
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Slot Épico único da Astraca Primordial. 5 de dano a todos do oponente, 2 de dano a todos os próprios. Ataque expansível/dano em área com recoil, cobrindo duas assinaturas de Cósmico."
+  },
+  {
+    "id": "i040",
+    "slug": "item-nucleo-em-expansao-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Super-rara",
+    "assetRef": "item-nucleo-em-expansao-v1.png",
+    "flavorText": null,
+    "cardText": "Uma vez por turno, uma ação de combate do personagem que este card estiver anexado, irá causar 1 ponto de dano extra.",
+    "cardType": "Item",
+    "name": "Núcleo em Expansão",
+    "category": "Anexável",
+    "worldAffinity": "Cósmico",
+    "worldName": "Astraca Primordial",
+    "isLegendary": true,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": {
+      "target": "any-character",
+      "value": null
+    },
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "OnEvent",
+      "onceKind": "turn",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "MODIFY_STAT",
+          "params": {
+            "stat": "attack",
+            "amount": 1,
+            "duration": "untilEndOfTurn"
+          },
+          "target": {
+            "scope": "attachedCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          },
+          "condition": "event.type == 'combatAction' && event.source == attachedCharacter"
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Cópia única (Lendário). Uma vez por turno, uma ação de combate do personagem anexado causa 1 de dano extra. Cobre ataque expansível direto e recorrente."
+  },
+  {
+    "id": "i041",
+    "slug": "item-chifre-do-tita-adormecido-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Super-rara",
+    "assetRef": "item-chifre-do-titan-adormecido-v1.png",
+    "flavorText": null,
+    "cardText": "Este item causa dano igual ao número de fontes de energia anexadas a todos os personagens que você controla ao personagem alvo que você não controla.",
+    "cardType": "Item",
+    "name": "Chifre do Titã Adormecido",
+    "category": "Volátil",
+    "worldAffinity": "Cósmico",
+    "worldName": "Astraca Primordial",
+    "isLegendary": true,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "DAMAGE",
+          "params": {
+            "amount": "controller.allies.attachedEnergy.totalCount",
+            "combatFlags": []
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1,
+            "excludeController": true
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Cópia única (Lendário). Dano igual ao número de Fontes de Energia anexadas a todos os personagens controlados. Ataque expansível em escala coletiva."
+  },
+  {
+    "id": "i042",
+    "slug": "item-heranca-estelar-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Super-rara",
+    "assetRef": "item-heranca-estelar-v1.png",
+    "flavorText": null,
+    "cardText": "O personagem recebe Tipo Mutável - a sua escolha. A resitência e a fraqueza deste persoangem são aleradas para o tipo escolhido.\nVocê pode escolher um novo tipo no fim de cada uma das suas fases de limpeza.",
+    "cardType": "Item",
+    "name": "Herança Estelar",
+    "category": "Anexável",
+    "worldAffinity": "Cósmico",
+    "worldName": "Astraca Primordial",
+    "isLegendary": true,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": {
+      "target": "any-character",
+      "value": null
+    },
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "OnEvent",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "CHANGE_TYPE",
+          "params": {
+            "newWorldType": "any-choice"
+          },
+          "target": {
+            "scope": "attachedCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          },
+          "condition": "phase.current == 'Cleanup' && phase.timing == 'end'"
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "O personagem anexado recebe Tipo Mutável à escolha (resistência/fraqueza alteradas); nova escolha possível no fim de cada fase de limpeza do controlador. Cobre Devoção/alteração de tipo em forma mais flexível."
+  },
+  {
+    "id": "i043",
+    "slug": "item-fragmento-sem-nome-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Incomum",
+    "assetRef": "item-fragmento-sem-nome-v1.png",
+    "flavorText": null,
+    "cardText": "O personagem alvo perde seu tipo atual e se torna do tipo Cósmico até o fim da partida.",
+    "cardType": "Item",
+    "name": "Fragmento sem Nome",
+    "category": "Volátil",
+    "worldAffinity": "Cósmico",
+    "worldName": "Astraca Primordial",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "CHANGE_TYPE",
+          "params": {
+            "newWorldType": "Cósmico",
+            "duration": "untilEndOfGame"
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "O personagem alvo perde seu tipo atual e se torna Cósmico até o fim da partida. Cobre Devoção/alteração de tipo aplicada ao alvo (não ao próprio), diferenciando da Herança Estelar."
+  },
+  {
+    "id": "i044",
+    "slug": "item-cadeia-de-supernovas-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Rara",
+    "assetRef": "item-cadeia-de-supernovas-v1.png",
+    "flavorText": null,
+    "cardText": "Causa 3 pontos de dano no personagem alvo. Se o alvo estiver com 3 ou mais fontes de energia anexadas, escolha:\n- Causa 3 pontos de dano adicional;\n- Extingua 2 fontes daquele alvo.",
+    "cardType": "Item",
+    "name": "Cadeia de Supernovas",
+    "category": "Volátil",
+    "worldAffinity": "Cósmico",
+    "worldName": "Astraca Primordial",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "DAMAGE",
+          "params": {
+            "amount": 3,
+            "combatFlags": []
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          }
+        },
+        {
+          "id": "e2",
+          "action": "CHOICE",
+          "chooseCount": 1,
+          "condition": "self.attachedEnergy.count >= 3",
+          "options": [
+            {
+              "action": "DAMAGE",
+              "params": {
+                "amount": 3,
+                "combatFlags": []
+              },
+              "target": {
+                "scope": "singleCharacter",
+                "filter": {
+                  "filterType": "none",
+                  "value": null
+                },
+                "selection": "fixed",
+                "count": 1,
+                "note": "mesmo alvo de e1"
+              }
+            },
+            {
+              "action": "DESTROY",
+              "params": {
+                "scope": "energySource",
+                "amount": 2
+              },
+              "target": {
+                "scope": "singleCharacter",
+                "filter": {
+                  "filterType": "none",
+                  "value": null
+                },
+                "selection": "fixed",
+                "count": 1,
+                "note": "mesmo alvo de e1"
+              }
+            }
+          ]
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "3 de dano; se o alvo tiver 3+ fontes anexadas, escolha entre +3 de dano ou extinguir 2 fontes. Ataque expansível em formato de limiar (threshold)."
+  },
+  {
+    "id": "i045",
+    "slug": "item-implosao-compartilhada-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Incomum",
+    "assetRef": "item-implosao-compartilhada-v1.png",
+    "flavorText": null,
+    "cardText": "Causa 4 pontos de dano no personagem alvo controlado pelo seu oponente e causa 1 ponto de dano em um personagem alvo que você controla.",
+    "cardType": "Item",
+    "name": "Implosão Compartilhada",
+    "category": "Volátil",
+    "worldAffinity": "Cósmico",
+    "worldName": "Astraca Primordial",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "DAMAGE",
+          "params": {
+            "amount": 4,
+            "combatFlags": []
+          },
+          "target": {
+            "scope": "opponentController",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          }
+        },
+        {
+          "id": "e2",
+          "action": "DAMAGE",
+          "params": {
+            "amount": 1,
+            "combatFlags": []
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "4 de dano num personagem do oponente + 1 de dano em um personagem controlado à escolha. Recoil/custo colateral direcionado a um aliado à escolha."
+  },
+  {
+    "id": "i046",
+    "slug": "item-tempestade-sem-fim-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Rara",
+    "assetRef": "item-tempestade-sem-fim-v1.png",
+    "flavorText": null,
+    "cardText": "Causa X pontos de dano a todos os personagens do oponente alvo, onde X é a quantidade de energias anexadas no personagem alvo que ele não controla.",
+    "cardType": "Item",
+    "name": "Tempestade sem Fim",
+    "category": "Volátil",
+    "worldAffinity": "Cósmico",
+    "worldName": "Astraca Primordial",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "DAMAGE",
+          "params": {
+            "amount": "target.attachedEnergy.count",
+            "combatFlags": []
+          },
+          "target": {
+            "scope": "allEnemies",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": null
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Dano a todos os personagens do oponente igual à quantidade de energias anexadas no personagem alvo (não controlado pelo executor). Ataque expansível combinado a dano em área."
+  },
+  {
+    "id": "i047",
+    "slug": "item-grito-do-vacuo-desperto-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Incomum",
+    "assetRef": "item-grito-do-vacuo-desperto-v1.png",
+    "flavorText": null,
+    "cardText": "Selecione um personagem que você controla: Este personagem causa 4 pontos de dano ao alvo e não poderá usar ações durante a fase de combate deste turno.",
+    "cardType": "Item",
+    "name": "Grito do Vácuo Desperto",
+    "category": "Volátil",
+    "worldAffinity": "Cósmico",
+    "worldName": "Astraca Primordial",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "DAMAGE",
+          "params": {
+            "amount": 4,
+            "combatFlags": []
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          }
+        },
+        {
+          "id": "e2",
+          "action": "GRANT_KEYWORD",
+          "params": {
+            "keyword": "ImpedidoDeAgirNaFaseDeCombate",
+            "duration": "untilEndOfTurn"
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1,
+            "note": "personagem controlado, mesmo de e1"
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Selecione um personagem controlado: causa 4 de dano ao alvo e não pode usar ações na fase de combate deste turno. Recoil em variante de custo não-Vida."
+  },
+  {
+    "id": "i048",
+    "slug": "item-onda-do-vacuo-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Incomum",
+    "assetRef": "item-onda-do-vacuo-v1.png",
+    "flavorText": null,
+    "cardText": "Reciclar Fonte (2) - Causa 2 pontos de dano a todos os personagens do oponente",
+    "cardType": "Item",
+    "name": "Onda do Vácuo",
+    "category": "Volátil",
+    "worldAffinity": "Cósmico",
+    "worldName": "Astraca Primordial",
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [
+        {
+          "id": "c1",
+          "action": "RETURN_TO_HAND",
+          "params": {
+            "scope": "energySource",
+            "amount": 2,
+            "from": "discard"
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        }
+      ],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "DAMAGE",
+          "params": {
+            "amount": 2,
+            "combatFlags": []
+          },
+          "target": {
+            "scope": "allEnemies",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": null
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Reciclar Fonte (2) - causa 2 de dano a todos os personagens do oponente. Fecha as 4 palavras-chave de assinatura de Cósmico na cota de Itens."
+  },
+  {
+    "id": "i049",
+    "slug": "item-cinto-de-utilidade-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Incomum",
+    "assetRef": "item-cinto-de-utilidade-v1.png",
+    "flavorText": null,
+    "cardText": "No fim da sua fase de limpeza, escolha:\n- Coloque 1 token de AtkUp no personagem alvo;\n- Coloque 1 token de LifeUp no personagem alvo;\n- Coloque 1 token de DefUp no persaongem alvo;\n- Coloque 1 token de Paralisia no personagem alvo.",
+    "cardType": "Item",
+    "name": "Cinto de Utilidade",
+    "category": "Anexável",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": {
+      "target": "any-character",
+      "value": null
+    },
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "OnEvent",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "CHOICE",
+          "chooseCount": 1,
+          "condition": "phase.current == 'Cleanup' && phase.timing == 'end'",
+          "options": [
+            {
+              "action": "TOKEN",
+              "params": {
+                "tokenType": "AtkUp",
+                "amount": 1
+              },
+              "target": {
+                "scope": "singleCharacter",
+                "filter": {
+                  "filterType": "none",
+                  "value": null
+                },
+                "selection": "choice",
+                "count": 1
+              }
+            },
+            {
+              "action": "TOKEN",
+              "params": {
+                "tokenType": "LifeUp",
+                "amount": 1
+              },
+              "target": {
+                "scope": "singleCharacter",
+                "filter": {
+                  "filterType": "none",
+                  "value": null
+                },
+                "selection": "choice",
+                "count": 1
+              }
+            },
+            {
+              "action": "TOKEN",
+              "params": {
+                "tokenType": "DefUp",
+                "amount": 1
+              },
+              "target": {
+                "scope": "singleCharacter",
+                "filter": {
+                  "filterType": "none",
+                  "value": null
+                },
+                "selection": "choice",
+                "count": 1
+              }
+            },
+            {
+              "action": "TOKEN",
+              "params": {
+                "tokenType": "Paralisia",
+                "amount": 1
+              },
+              "target": {
+                "scope": "singleCharacter",
+                "filter": {
+                  "filterType": "none",
+                  "value": null
+                },
+                "selection": "choice",
+                "count": 1
+              }
+            }
+          ]
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico sem afinidade de tipo. No fim da fase de limpeza, escolha entre 4 tokens."
+  },
+  {
+    "id": "i050",
+    "slug": "item-amuleto-neutro-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "item-amuleto-neutro-v1.png",
+    "flavorText": null,
+    "cardText": "Uma vez por turno, a fonte de energia alvo, gera uma energia extra.",
+    "cardType": "Item",
+    "name": "Amuleto Neutro",
+    "category": "Permanente",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "turn",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "GENERATE_ENERGY",
+          "params": {
+            "amount": 1,
+            "worldType": "any-choice"
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1,
+            "note": "a fonte de energia alvo"
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico de fixing de energia, sem afinidade de tipo. Uma vez por turno, a Fonte de Energia alvo gera uma energia extra."
+  },
+  {
+    "id": "i051",
+    "slug": "item-escudo-comum-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "item-escudo-comum-v1.png",
+    "flavorText": null,
+    "cardText": "Quando um personagem entrar em jogo, coloque 1 token de Escudo naquele personagem.",
+    "cardType": "Item",
+    "name": "Escudo Comum",
+    "category": "Permanente",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "OnEvent",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "TOKEN",
+          "params": {
+            "tokenType": "Escudo",
+            "amount": 1
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1,
+            "note": "personagem que entrou em jogo"
+          },
+          "condition": "event.type == 'characterEntered'"
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico de Escudo puro, sem afinidade de tipo. Quando um personagem entra em jogo, coloca 1 token de Escudo nele."
+  },
+  {
+    "id": "i052",
+    "slug": "item-capa-de-fuga-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Incomum",
+    "assetRef": "item-capa-de-fuga-v1.png",
+    "flavorText": null,
+    "cardText": "Uma vez por combate, o personagem equipado pode usar Desviar.",
+    "cardType": "Item",
+    "name": "Capa de Fuga",
+    "category": "Anexável",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": {
+      "target": "any-character",
+      "value": null
+    },
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "combat",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "GRANT_KEYWORD",
+          "params": {
+            "keyword": "Desviar",
+            "duration": "untilEndOfTurn"
+          },
+          "target": {
+            "scope": "attachedCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico que concede Desviar, sem afinidade de tipo. Uma vez por combate."
+  },
+  {
+    "id": "i053",
+    "slug": "item-espelho-de-retaliacao-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Incomum",
+    "assetRef": "item-espelho-de-retaliacao-v1.png",
+    "flavorText": null,
+    "cardText": "Uma vez por turno, durante a fase de combate, o personagem equipado pode usar Reflexão.",
+    "cardType": "Item",
+    "name": "Espelho de Retaliação",
+    "category": "Anexável",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": {
+      "target": "any-character",
+      "value": null
+    },
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "turn",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "GRANT_KEYWORD",
+          "params": {
+            "keyword": "Reflexão",
+            "duration": "untilEndOfTurn"
+          },
+          "target": {
+            "scope": "attachedCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          },
+          "condition": "phase.current == 'Combat'"
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico que concede Reflexão, sem afinidade de tipo. Uma vez por turno, durante a fase de combate."
+  },
+  {
+    "id": "i054",
+    "slug": "item-talisma-da-coragem-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "item-talisma-da-coragem-v1.png",
+    "flavorText": null,
+    "cardText": "O personagem equipado não pode ser alvo de efeitos que mudam sua posição em campo.",
+    "cardType": "Item",
+    "name": "Talismã da Coragem",
+    "category": "Permanente",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Passive",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "GRANT_KEYWORD",
+          "params": {
+            "keyword": "ImunidadeAMudancaDePosicao",
+            "duration": "permanent"
+          },
+          "target": {
+            "scope": "attachedCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico de proteção posicional, sem afinidade de tipo. O personagem equipado não pode ser alvo de efeitos que mudam sua posição em campo."
+  },
+  {
+    "id": "i055",
+    "slug": "item-corrente-de-reserva-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "item-corrente-de-reserva-v1.png",
+    "flavorText": null,
+    "cardText": "No fim da sua fase de limpeza, se você não tiver Fontes de Energia em jogo, Clarividência (Fonte de Energia).",
+    "cardType": "Item",
+    "name": "Corrente de Reserva",
+    "category": "Permanente",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "OnEvent",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "SEARCH",
+          "params": {
+            "matchType": "cardType",
+            "value": "FonteDeEnergia",
+            "reveal": true,
+            "destination": "hand"
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          },
+          "condition": "phase.current == 'Cleanup' && phase.timing == 'end' && controller.energySources.count == 0"
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico de fixing condicional, sem afinidade de tipo. No fim da fase de limpeza, se não houver Fontes em jogo, Clarividência (Fonte de Energia)."
+  },
+  {
+    "id": "i056",
+    "slug": "item-colar-de-vigilancia-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "item-colar-de-vigilancia-v1.png",
+    "flavorText": null,
+    "cardText": "Uma vez por turno, Prever (1).",
+    "cardType": "Item",
+    "name": "Colar de Vigilância",
+    "category": "Permanente",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "turn",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "LOOK_TOP",
+          "params": {
+            "amount": 1,
+            "deck": "own",
+            "reorder": true,
+            "reveal": false,
+            "keepOrDiscard": false
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico de Prever, sem afinidade de tipo. Uma vez por turno, Prever (1)."
+  },
+  {
+    "id": "i057",
+    "slug": "item-placa-de-time-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "item-placa-de-time-v1.png",
+    "flavorText": null,
+    "cardText": "Coloque um token de DefUp em cada um dos personagens que você controla na posição de Time.",
+    "cardType": "Item",
+    "name": "Placa de Time",
+    "category": "Permanente",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "OnEnter",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "TOKEN",
+          "params": {
+            "tokenType": "DefUp",
+            "amount": 1
+          },
+          "target": {
+            "scope": "allAllies",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": null,
+            "note": "apenas personagens na posição de Time"
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico de suporte posicional, sem afinidade de tipo. Coloca token de DefUp em cada personagem controlado na posição de Time."
+  },
+  {
+    "id": "i058",
+    "slug": "item-emblema-do-lider-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "item-emblema-do-lider-v1.png",
+    "flavorText": null,
+    "cardText": "Coloque 1 token de AtkUp no personagem alvo na posição principal.",
+    "cardType": "Item",
+    "name": "Emblema do Líder",
+    "category": "Permanente",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "OnEnter",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "TOKEN",
+          "params": {
+            "tokenType": "AtkUp",
+            "amount": 1
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1,
+            "note": "personagem alvo na posição principal"
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico de suporte posicional, sem afinidade de tipo. Coloca token de AtkUp no personagem alvo na posição principal."
+  },
+  {
+    "id": "i059",
+    "slug": "item-bolsa-sem-fundo-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Incomum",
+    "assetRef": "item-bolsa-sem-fundo-v1.png",
+    "flavorText": null,
+    "cardText": "Ações que possuem Extinguir Recursos como custo adicional, seu custo de energia em 1.",
+    "cardType": "Item",
+    "name": "Bolsa sem Fundo",
+    "category": "Permanente",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Passive",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "STATIC_MODIFIER",
+          "params": {
+            "affects": "actionCost",
+            "filter": {
+              "filterType": "hasAdditionalCost",
+              "value": "DISCARD"
+            },
+            "amount": -1,
+            "scope": "controller"
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico de redução de custo, sem afinidade de tipo. Ações que possuem Extinguir Recursos como custo adicional têm o custo de energia reduzido em 1."
+  },
+  {
+    "id": "i060",
+    "slug": "item-selo-de-fixacao-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Incomum",
+    "assetRef": "item-selo-de-fixacao-v1.png",
+    "flavorText": null,
+    "cardText": "Fontes de Energia anexadas a este personagem não podem ser alvo de ações ou efeitos de seus oponentes.",
+    "cardType": "Item",
+    "name": "Selo de Fixação",
+    "category": "Permanente",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Passive",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "GRANT_KEYWORD",
+          "params": {
+            "keyword": "ProtecaoDeFontesAnexadas",
+            "duration": "permanent"
+          },
+          "target": {
+            "scope": "attachedCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico de proteção de recurso, sem afinidade de tipo. Fontes de Energia anexadas a este personagem não podem ser alvo de ações/efeitos de oponentes."
+  },
+  {
+    "id": "i061",
+    "slug": "item-manopla-de-combo-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Incomum",
+    "assetRef": "item-manopla-de-combo-v1.png",
+    "flavorText": null,
+    "cardText": "Extinguir Recursos (2) - Uma ação do personagem alvo pode ser utilizada novamente sem custo. Ações únicas não podem ser alvo deste efeito.",
+    "cardType": "Item",
+    "name": "Manopla de Combo",
+    "category": "Volátil",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [
+        {
+          "id": "c1",
+          "action": "DISCARD",
+          "params": {
+            "amount": 2,
+            "chosenBy": "self"
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        }
+      ],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "GRANT_KEYWORD",
+          "params": {
+            "keyword": "Duplicar",
+            "duration": "untilEndOfTurn"
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1,
+            "note": "uma ação específica do personagem alvo; não aplicável a Ações Únicas"
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico de suporte a combo (Aposte/Duplicar/Tag), sem afinidade de tipo. Extinguir Recursos (2) - uma ação do alvo pode ser usada novamente sem custo. Ações únicas não podem ser alvo."
+  },
+  {
+    "id": "i062",
+    "slug": "item-pocao-de-vigor-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "item-pocao-de-vigor-v1.png",
+    "flavorText": null,
+    "cardText": "Coloque 2 tokens de Sobrevida e 1 Token de LifeUp no personagem alvo.",
+    "cardType": "Item",
+    "name": "Poção de Vigor",
+    "category": "Volátil",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "TOKEN",
+          "params": {
+            "tokenType": "Sobrevida",
+            "amount": 2
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          }
+        },
+        {
+          "id": "e2",
+          "action": "TOKEN",
+          "params": {
+            "tokenType": "LifeUp",
+            "amount": 1
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1,
+            "note": "mesmo alvo de e1"
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico de cura, sem afinidade de tipo. Coloca 2 tokens de Sobrevida e 1 de LifeUp no personagem alvo."
+  },
+  {
+    "id": "i063",
+    "slug": "item-fagulha-neutra-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Rara",
+    "assetRef": "item-fagulha-neutra-v1.png",
+    "flavorText": null,
+    "cardText": "A fonte de energia alvo, irá gerar 2 energias extras este turno.",
+    "cardType": "Item",
+    "name": "Fagulha Neutra",
+    "category": "Volátil",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "GENERATE_ENERGY",
+          "params": {
+            "amount": 2,
+            "worldType": "any-choice",
+            "duration": "thisTurn"
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1,
+            "note": "a fonte de energia alvo"
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico de fixing, sem afinidade de tipo. A Fonte de Energia alvo gera 2 energias extras neste turno."
+  },
+  {
+    "id": "i064",
+    "slug": "item-corte-rapido-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "item-corte-rapido-v1.png",
+    "flavorText": null,
+    "cardText": "Causa 2 pontos de dano do personagem alvo.",
+    "cardType": "Item",
+    "name": "Corte Rápido",
+    "category": "Volátil",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "DAMAGE",
+          "params": {
+            "amount": 2,
+            "combatFlags": []
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico de dano direto, sem afinidade de tipo."
+  },
+  {
+    "id": "i065",
+    "slug": "item-reviravolta-tatica-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Incomum",
+    "assetRef": "item-reviravolta-tatica-v1.png",
+    "flavorText": null,
+    "cardText": "Seleciona uma ação do personagem alvo - ela ganha Flanquear até o fim do turno.",
+    "cardType": "Item",
+    "name": "Reviravolta Tática",
+    "category": "Volátil",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "GRANT_KEYWORD",
+          "params": {
+            "keyword": "Flanquear",
+            "duration": "untilEndOfTurn"
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1,
+            "note": "uma ação específica do personagem alvo"
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico que concede Flanquear, sem afinidade de tipo. Seleciona uma ação do personagem alvo, que ganha Flanquear até o fim do turno."
+  },
+  {
+    "id": "i066",
+    "slug": "item-provocacao-forcada-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Rara",
+    "assetRef": "item-provocacao-forcada-v1.png",
+    "flavorText": null,
+    "cardText": "Decida o alvo da próxima ação de combate do personagem alvo. Caso escolha um alvo que você não controla, este efeito continuará válido até o fim do turno do controlador do personagem ou ele sair de jogo.",
+    "cardType": "Item",
+    "name": "Provocação Forçada",
+    "category": "Volátil",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "SET_STATE",
+          "params": {
+            "state": "ForcedTarget",
+            "value": "choice"
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          },
+          "duration": "untilEndOfTurnOrLeavesPlay"
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico de controle de alvo, sem afinidade de tipo. Decide o alvo da próxima ação de combate do personagem alvo; se escolher alvo não controlado, persiste até fim do turno do controlador do personagem ou ele sair de jogo."
+  },
+  {
+    "id": "i067",
+    "slug": "item-golpe-ignorante-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "item-golpe-ignorante-v1.png",
+    "flavorText": null,
+    "cardText": "As ações do personagem alvo ganha Ignorar Defesa até o fim do turno.",
+    "cardType": "Item",
+    "name": "Golpe Ignorante",
+    "category": "Volátil",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "GRANT_KEYWORD",
+          "params": {
+            "keyword": "IgnorarDefesa",
+            "duration": "untilEndOfTurn"
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico que concede Ignorar Defesa, sem afinidade de tipo. As ações do personagem alvo ganham Ignorar Defesa até o fim do turno."
+  },
+  {
+    "id": "i068",
+    "slug": "item-filtragem-de-baralho-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "item-filtragem-de-baralho-v1.png",
+    "flavorText": null,
+    "cardText": "Reciclar Recursos (2/1)",
+    "cardType": "Item",
+    "name": "Filtragem de Baralho",
+    "category": "Volátil",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "DISCARD",
+          "params": {
+            "amount": 2,
+            "chosenBy": "self",
+            "scope": "hand"
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        },
+        {
+          "id": "e2",
+          "action": "DRAW",
+          "params": {
+            "amount": 1,
+            "deck": "own"
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico de filtragem de mão/deck, sem afinidade de tipo. Reciclar Recursos (2/1)."
+  },
+  {
+    "id": "i069",
+    "slug": "item-reserva-de-emergencia-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "item-reserva-de-emergencia-v1.png",
+    "flavorText": null,
+    "cardText": "Reciclar Fonte (1/1)",
+    "cardType": "Item",
+    "name": "Reserva de Emergência",
+    "category": "Volátil",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "DESTROY",
+          "params": {
+            "scope": "energySource",
+            "amount": 1
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        },
+        {
+          "id": "e2",
+          "action": "SEARCH",
+          "params": {
+            "matchType": "cardType",
+            "value": "FonteDeEnergia",
+            "reveal": true,
+            "destination": "hand"
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico de filtragem de Fontes de Energia, sem afinidade de tipo. Reciclar Fonte (1/1)."
+  },
+  {
+    "id": "i070",
+    "slug": "item-vislumbre-alheio-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "item-vislumbre-alheio-v1.png",
+    "flavorText": null,
+    "cardText": "Prever (2) no deck do oponente.",
+    "cardType": "Item",
+    "name": "Vislumbre Alheio",
+    "category": "Volátil",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "LOOK_TOP",
+          "params": {
+            "amount": 2,
+            "deck": "opponent",
+            "reorder": true,
+            "reveal": false,
+            "keepOrDiscard": false
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico de Prever, sem afinidade de tipo. Prever (2) no deck do oponente."
+  },
+  {
+    "id": "i071",
+    "slug": "item-investida-dupla-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Incomum",
+    "assetRef": "item-investida-dupla-v1.png",
+    "flavorText": null,
+    "cardText": "Extinguir Recurso (3) - As ações do personagem alvo, ganham Duplicar sem custo.",
+    "cardType": "Item",
+    "name": "Investida Dupla",
+    "category": "Volátil",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [
+        {
+          "id": "c1",
+          "action": "DISCARD",
+          "params": {
+            "amount": 3,
+            "chosenBy": "self"
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        }
+      ],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "GRANT_KEYWORD",
+          "params": {
+            "keyword": "Duplicar",
+            "duration": "untilEndOfTurn",
+            "freeCost": true
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1,
+            "note": "as ações do personagem alvo"
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico de Duplicar, sem afinidade de tipo. Extinguir Recurso (3) - as ações do personagem alvo ganham Duplicar sem custo."
+  },
+  {
+    "id": "i072",
+    "slug": "item-barreira-instantanea-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "item-barreira-instantanea-v1.png",
+    "flavorText": null,
+    "cardText": "Personagem alvo recebe 3 tokens de Escudo.",
+    "cardType": "Item",
+    "name": "Barreira Instantânea",
+    "category": "Volátil",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "TOKEN",
+          "params": {
+            "tokenType": "Escudo",
+            "amount": 3
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico de Escudo pontual, sem afinidade de tipo."
+  },
+  {
+    "id": "i073",
+    "slug": "item-fio-da-sorte-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Incomum",
+    "assetRef": "item-fio-da-sorte-v1.png",
+    "flavorText": null,
+    "cardText": "Selecione um personagem que você controla - \nAposte (1): Se ganhar, Coloque 3 tokens de sobrevida no alvo; se perder, coloque 3 tokens de LifeDown no alvo.",
+    "cardType": "Item",
+    "name": "Fio da Sorte",
+    "category": "Volátil",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "CHALLENGE",
+          "params": {
+            "rolls": 1,
+            "requireMoreWinsThanLosses": true
+          },
+          "onWin": [
+            {
+              "action": "TOKEN",
+              "params": {
+                "tokenType": "Sobrevida",
+                "amount": 3
+              },
+              "target": {
+                "scope": "singleCharacter",
+                "filter": {
+                  "filterType": "none",
+                  "value": null
+                },
+                "selection": "fixed",
+                "count": 1,
+                "note": "personagem selecionado"
+              }
+            }
+          ],
+          "onLose": [
+            {
+              "action": "TOKEN",
+              "params": {
+                "tokenType": "LifeDown",
+                "amount": 3
+              },
+              "target": {
+                "scope": "singleCharacter",
+                "filter": {
+                  "filterType": "none",
+                  "value": null
+                },
+                "selection": "fixed",
+                "count": 1,
+                "note": "personagem selecionado"
+              }
+            }
+          ]
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico que usa Desafiar (1), sem afinidade de tipo — um dos poucos itens genéricos com a mecânica de assinatura do sistema."
+  },
+  {
+    "id": "i074",
+    "slug": "item-reforco-de-retaguarda-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "item-reforco-de-retaguarda-v1.png",
+    "flavorText": null,
+    "cardText": "Coloque 2 tokens de DefUp no personagem alvo na posição de time.",
+    "cardType": "Item",
+    "name": "Reforço de Retaguarda",
+    "category": "Volátil",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "TOKEN",
+          "params": {
+            "tokenType": "DefUp",
+            "amount": 2
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1,
+            "note": "personagem alvo na posição de time"
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico de suporte posicional, sem afinidade de tipo. Coloca 2 tokens de DefUp no personagem alvo na posição de time."
+  },
+  {
+    "id": "i075",
+    "slug": "item-chamado-inesperado-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "item-chamado-inesperado-v1.png",
+    "flavorText": null,
+    "cardText": "Altere um personagem do time para a posição principal.",
+    "cardType": "Item",
+    "name": "Chamado Inesperado",
+    "category": "Volátil",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "SET_STATE",
+          "params": {
+            "state": "Position",
+            "value": "principal"
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1,
+            "note": "um personagem do time do controlador"
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico de Tag, sem exigir item com tag específica, sem afinidade de tipo. Altera um personagem do time para a posição principal."
+  },
+  {
+    "id": "i076",
+    "slug": "item-grito-de-combate-esforcado-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "item-grito-de-combate-esforcado-v1.png",
+    "flavorText": null,
+    "cardText": "Extinguri Recurso (1): Coloque 1 token de AtkUp em cada um dos personagens que você controla.",
+    "cardType": "Item",
+    "name": "Grito de Combate Esforçado",
+    "category": "Volátil",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [
+        {
+          "id": "c1",
+          "action": "DISCARD",
+          "params": {
+            "amount": 1,
+            "chosenBy": "self"
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        }
+      ],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "TOKEN",
+          "params": {
+            "tokenType": "AtkUp",
+            "amount": 1,
+            "duration": "untilEndOfCombatPhase"
+          },
+          "target": {
+            "scope": "allAllies",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": null
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico de buff de time em escopo reduzido (combate atual, não turno inteiro), para não competir com Grito de Guerra do Povo (Solar Comum). Extinguir Recurso (1) - AtkUp em cada personagem controlado."
+  },
+  {
+    "id": "i077",
+    "slug": "item-sobrecarga-de-nucleo-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Incomum",
+    "assetRef": "item-sobrecarga-de-nucleo-v1.png",
+    "flavorText": null,
+    "cardText": "Enquanto este item estiver em jogo, seu controlador poderá anexar 2 Fontes de Energia por turno ao invés de 1.",
+    "cardType": "Item",
+    "name": "Sobrecarga de Núcleo",
+    "category": "Permanente",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Passive",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "STATIC_MODIFIER",
+          "params": {
+            "affects": "rule",
+            "ruleId": "energyAttachLimit",
+            "newValue": 2,
+            "scope": "controller"
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico cobrindo a lacuna de Aceleração — enquanto em jogo, o controlador pode anexar 2 Fontes de Energia por turno em vez de 1."
+  },
+  {
+    "id": "i078",
+    "slug": "item-reciclagem-total-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "item-reciclagem-total-v1.png",
+    "flavorText": null,
+    "cardText": "Recicle todas cartas disponíveis na sua mão e compre a mesma quantidade de cartas do topo do seu deck.",
+    "cardType": "Item",
+    "name": "Reciclagem Total",
+    "category": "Volátil",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "DISCARD",
+          "params": {
+            "amount": "controller.hand.count",
+            "chosenBy": "self",
+            "scope": "hand",
+            "wholeHand": true
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        },
+        {
+          "id": "e2",
+          "action": "DRAW",
+          "params": {
+            "amount": "e1.result.amount",
+            "deck": "own"
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico cobrindo Reciclagem de Mão — descarta a mão inteira, sem escolha, e compra a mesma quantidade. Distinto de Extinguir Recurso/Reciclar Recursos (descarte parcial escolhido)."
+  },
+  {
+    "id": "i079",
+    "slug": "item-compasso-do-cacador-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Incomum",
+    "assetRef": "item-compasso-do-cacador-v1.png",
+    "flavorText": null,
+    "cardText": "Clarividência (alvo): procure uma carta específica em seu deck, revele e coloque em sua mão, depois embaralhe seu deck.",
+    "cardType": "Item",
+    "name": "Compasso do Caçador",
+    "category": "Volátil",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "game",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "SEARCH",
+          "params": {
+            "matchType": "exactName",
+            "value": "choice",
+            "reveal": true,
+            "destination": "hand"
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico cobrindo Busca Universal/Tutor usando Clarividência (X) para buscar carta específica por nome (não tipo). Uso único por partida."
+  },
+  {
+    "id": "i080",
+    "slug": "item-mapa-de-categoria-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Incomum",
+    "assetRef": "item-mapa-de-categoria-v1.png",
+    "flavorText": null,
+    "cardText": "Extinguir Recursos (2) - Clarividência (1).",
+    "cardType": "Item",
+    "name": "Mapa de Categoria",
+    "category": "Volátil",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [
+        {
+          "id": "c1",
+          "action": "DISCARD",
+          "params": {
+            "amount": 2,
+            "chosenBy": "self"
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        }
+      ],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "SEARCH",
+          "params": {
+            "matchType": "cardType",
+            "value": "choice",
+            "reveal": true,
+            "destination": "hand"
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico cobrindo Busca de Peças-Chave usando Clarividência (X) por categoria de carta (Personagem/Item/Fonte), complementando o Compasso do Caçador (busca por nome). Extinguir Recursos (2) - Clarividência (1)."
+  },
+  {
+    "id": "i081",
+    "slug": "item-corrente-quebra-elo-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Rara",
+    "assetRef": "item-corrente-quebra-elo-v1.png",
+    "flavorText": null,
+    "cardText": "Remova do jogo 1 carta à sua escolha do descarte do oponente.",
+    "cardType": "Item",
+    "name": "Corrente Quebra-Elo",
+    "category": "Volátil",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "SEARCH",
+          "params": {
+            "matchType": "exactName",
+            "value": "choice",
+            "reveal": false,
+            "destination": "removedFromGame",
+            "scope": "opponentDiscard"
+          },
+          "target": {
+            "scope": "opponentController",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico cobrindo Exclusão de Recursos — remove do jogo 1 carta à escolha do descarte do oponente (não vai para nenhum descarte)."
+  },
+  {
+    "id": "i082",
+    "slug": "item-assalto-a-mao-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "item-assalto-a-mao-v1.png",
+    "flavorText": null,
+    "cardText": "Escolha um oponente - Extinguir Recursos (2)",
+    "cardType": "Item",
+    "name": "Assalto à Mão",
+    "category": "Volátil",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "DISCARD",
+          "params": {
+            "amount": 2,
+            "chosenBy": "opponent"
+          },
+          "target": {
+            "scope": "opponentController",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico cobrindo disrupção da mão do oponente. A escolha da carta descartada fica com o oponente, mantendo o efeito determinístico."
+  },
+  {
+    "id": "i083",
+    "slug": "item-retirada-completa-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Super-rara",
+    "assetRef": "item-retirada-completa-v1.png",
+    "flavorText": null,
+    "cardText": "Devolva um personagem controlado por você à sua mão, junto com todas as cartas anexadas a ele.",
+    "cardType": "Item",
+    "name": "Retirada Completa",
+    "category": "Volátil",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "RETURN_TO_HAND",
+          "params": {
+            "scope": "character",
+            "amount": 1,
+            "from": "battlefield",
+            "keepAttachments": true
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico cobrindo Scoopup/Retorno à mão (variante 'limpa'): devolve personagem controlado à mão junto com todas as cartas anexadas."
+  },
+  {
+    "id": "i084",
+    "slug": "item-retirada-forcada-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Rara",
+    "assetRef": "item-retirada-forcada-v1.png",
+    "flavorText": null,
+    "cardText": "Devolva um personagem controlado por você à sua mão; todas as cartas que estavam anexadas a ele vão para a pilha de descarte",
+    "cardType": "Item",
+    "name": "Retirada Forçada",
+    "category": "Volátil",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "RETURN_TO_HAND",
+          "params": {
+            "scope": "character",
+            "amount": 1,
+            "from": "battlefield",
+            "keepAttachments": false
+          },
+          "target": {
+            "scope": "singleCharacter",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "choice",
+            "count": 1
+          }
+        },
+        {
+          "id": "e2",
+          "action": "DISCARD",
+          "params": {
+            "amount": "all",
+            "chosenBy": "self",
+            "scope": "attachmentsOf(e1.target)"
+          },
+          "target": {
+            "scope": "self",
+            "filter": {
+              "filterType": "none",
+              "value": null
+            },
+            "selection": "fixed",
+            "count": null
+          }
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Segunda variante de Scoopup, mais barata que Retirada Completa: devolve personagem controlado à mão; cartas anexadas vão para o descarte em vez de acompanhar."
+  },
+  {
+    "id": "i085",
+    "slug": "item-laco-do-impostor-v1",
+    "set": "fratura-do-multiverso",
+    "version": "v1",
+    "rarity": "Comum",
+    "assetRef": "item-laco-do-impostor-v1.png",
+    "flavorText": null,
+    "cardText": "Aposte (3): se ganhar, devolva o personagem alvo controlado pelo oponente à sua mão - coloque todas as outras cartas anexadas na pilha de descarte.",
+    "cardType": "Item",
+    "name": "Laço do Impostor",
+    "category": "Volátil",
+    "worldAffinity": null,
+    "worldName": null,
+    "isLegendary": false,
+    "isEpic": false,
+    "energyCost": 0,
+    "attachRequirement": null,
+    "effectScript": {
+      "conditionToAct": [],
+      "trigger": "Active",
+      "onceKind": "none",
+      "additionalCosts": [],
+      "optionalCosts": [],
+      "effects": [
+        {
+          "id": "e1",
+          "action": "CHALLENGE",
+          "params": {
+            "rolls": 3,
+            "requireMoreWinsThanLosses": true
+          },
+          "onWin": [
+            {
+              "action": "RETURN_TO_HAND",
+              "params": {
+                "scope": "character",
+                "amount": 1,
+                "from": "battlefield",
+                "keepAttachments": false
+              },
+              "target": {
+                "scope": "opponentController",
+                "filter": {
+                  "filterType": "none",
+                  "value": null
+                },
+                "selection": "choice",
+                "count": 1
+              }
+            }
+          ],
+          "onLose": []
+        }
+      ],
+      "combo": null
+    },
+    "designNotes": "Item genérico Scoopup (oponente, Desafiar). Desafiar (3): se ganhar, devolve o personagem alvo controlado pelo oponente à mão, cartas anexadas vão para o descarte; se perder, nada acontece."
+  }
+]

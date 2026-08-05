@@ -22,6 +22,7 @@
 | `rarity` | enum | `Comum \| Incomum \| Rara \| Super-rara \| Ultra-rara` |
 | `assetRef` | string | Nome do arquivo de imagem, ex: `fonte-poco-do-silencio-inicial-v1.png` |
 | `flavorText` | string \| null | Texto de flavor/lore, quando existir separado do efeito mecânico |
+| `cardText` | string\| null | Texto base que será apresentado no corpo da carta. Em Personagem, consolida o texto em prosa de todas as `actions[]` no formato `**Nome** — corpo`, separado por linha em branco; o corpo de cada ação também vive individualmente em `actions[].description` — texto renderizável, não substitui `effectScript` estruturado |
 
 ```json
 {
@@ -31,7 +32,8 @@
   "version": "",
   "rarity": "",
   "assetRef": "",
-  "flavorText": null
+  "flavorText": null,
+  "cardText": ""
 }
 ```
 
@@ -129,6 +131,7 @@
 | Campo | Tipo | Descrição |
 |---|---|---|
 | `name` | string | Nome da ação |
+| `description` | string | Texto em prosa do efeito desta ação (equivalente ao corpo de `Descrição P`/`Descrição A` do CSV, já sem o prefixo `**Nome** —`) — texto renderizável por ação, não substitui o `effectScript` estruturado |
 | `kind` | enum | `Passive \| Active` |
 | `energyCost` | integer (≥0) | Custo em energia (pode ser 0, inclusive em passivas) |
 | `keywords` | array de string | Restrições posicionais/de uso que não afetam o cálculo do efeito em si — ex. `Flanquear`, `Liderança`, `Sidekick`, `Posição Estratégia`, `Posição Vantajosa`. Controlam **quando/quem** pode usar a ação, não o que ela faz — por isso ficam fora do `effectScript` (ver `effectscript-taxonomy-v1.md`, nota na seção 8) |
@@ -152,6 +155,7 @@ Personagem sem duplicar estrutura.
   "actions": [
     {
       "name": "",
+      "description": "",
       "kind": "",
       "energyCost": 0,
       "keywords": [],
@@ -182,6 +186,9 @@ Personagem sem duplicar estrutura.
 - `additionalCosts[]`/`optionalCosts[]` ficam dentro de `effectScript`, não
   como campo próprio da `action` — validado contra exemplos reais (Nyx-Vahl,
   Colapso Parcial) em `personagens-validacao-schema.md`.
+- `description` na `action` de Personagem é campo novo: permite renderizar cada
+  ação isoladamente (nome + custo + texto) sem precisar reparsear o `cardText`
+  consolidado, que continua existindo como texto integral da carta.
 - `keywords[]` na `action` de Personagem é campo novo, adicionado após
   validação contra cartas reais (Bragan, Recorde Inquebrável — palavra-chave
   `Flanquear`) — cobre restrições de posição/uso que não são parte do cálculo

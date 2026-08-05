@@ -1,0 +1,175 @@
+{
+  "id": "mono-tecsci-lockdown",
+  "slug": "mono-tecsci-lockdown",
+  "name": "[MONO] Lockdown — Detritônia (TecSci)",
+  "description": "Diferente do mono Detritônia de Reaproveitar/Triturar e do de Dano por Descarte, este deck não usa a reciclagem como motor de vantagem própria — usa Triturar/Extinguir Fonte como arma de trava, removendo a energia anexada do oponente até que ele não consiga mais pagar as próprias ações. Detritônia aqui não recicla para crescer, recicla para sufocar.\n\nO combo central usa **Vharek, o Sábio Remanescente** como Líder: sua **Pacto Desfeito** já descarta 2 Fontes do personagem defensor antes de causar dano, e **Cláusula Lida Duas Vezes** transforma cada Fonte perdida — a do oponente ou a própria — em compra de 2 cartas, então o próprio ato de travar o adversário sustenta a mão. **Ishara da Coroa Fundida** reforça a resiliência do plano: **Leitura sem Armadilha** a torna imune a Debuffs, então nenhuma retaliação do oponente desfaz o próprio trabalho de trava enquanto **Coroa Reforjada** recicla Itens do descarte de volta ao jogo.\n\nOs Itens são o coração do lockdown: **Alicate de Contrato Roto**, **Trono Enferrujado** (Fonte) e **Chave de Fenda Torta** extinguem Fontes do oponente turno após turno, **Broca de Diamante Falso** destrói qualquer Item Permanente que tente estabilizar o board adversário, e **Fratura do Contrato** e **Cofre Arrombado da Dívida** fecham a partida trocando Triturar em massa por vantagem de cartas — o oponente fica sem energia para reagir bem antes de ficar sem Vida.",
+  "format": "standard",
+  "strategy": {
+    "archetype": null,
+    "winCondition": null,
+    "keyMechanics": [],
+    "coreCombo": {
+      "description": "O combo central usa **Vharek, o Sábio Remanescente** como Líder: sua **Pacto Desfeito** já descarta 2 Fontes do personagem defensor antes de causar dano, e **Cláusula Lida Duas Vezes** transforma cada Fonte perdida — a do oponente ou a própria — em compra de 2 cartas, então o próprio ato de travar o adversário sustenta a mão. **Ishara da Coroa Fundida** reforça a resiliência do plano: **Leitura sem Armadilha** a torna imune a Debuffs, então nenhuma retaliação do oponente desfaz o próprio trabalho de trava enquanto **Coroa Reforjada** recicla Itens do descarte de volta ao jogo.",
+      "cardIds": [
+        "p017",
+        "p018",
+        "p025",
+        "i011",
+        "i013",
+        "i012",
+        "e006"
+      ]
+    },
+    "tempo": null
+  },
+  "entries": [
+    {
+      "cardId": "p017",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p018",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p019",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p027",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p025",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p023",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i014",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Sustain"
+    },
+    {
+      "cardId": "i020",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Custo variável"
+    },
+    {
+      "cardId": "i011",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i013",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Triturar/Vantagem"
+    },
+    {
+      "cardId": "i012",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i019",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i018",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "i082",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "e019",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e020",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e021",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e022",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e023",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e006",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Control"
+    },
+    {
+      "cardId": "e004",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    }
+  ],
+  "sideboard": []
+}

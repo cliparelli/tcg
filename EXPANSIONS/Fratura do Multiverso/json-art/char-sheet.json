@@ -1,0 +1,321 @@
+{
+  "project": {
+    "name": "{{CHARACTER_NAME}} — Character Sheet",
+    "asset_type": "professional_character_design_sheet",
+    "purpose": "Criar uma prancha visual completa e consistente para documentação, apresentação e futuras gerações do personagem.",
+    "language": "Português do Brasil",
+    "aspect_ratio": "16:9",
+    "orientation": "landscape",
+    "recommended_resolution": "3840x2160"
+  },
+
+  "character": {
+    "name": "{{CHARACTER_NAME}}",
+    "subtitle": "{{CHARACTER_SUBTITLE_OR_TITLE}}",
+    "archetype": "{{CHARACTER_ARCHETYPE}}",
+    "origin": "{{WORLD_OR_FACTION}}",
+    "description": "{{FULL_CHARACTER_DESCRIPTION}}",
+    "personality": [
+      "{{PERSONALITY_TRAIT_01}}",
+      "{{PERSONALITY_TRAIT_02}}",
+      "{{PERSONALITY_TRAIT_03}}"
+    ],
+    "visual_keywords": [
+      "{{VISUAL_KEYWORD_01}}",
+      "{{VISUAL_KEYWORD_02}}",
+      "{{VISUAL_KEYWORD_03}}",
+      "{{VISUAL_KEYWORD_04}}"
+    ],
+    "scale": {
+      "height": "{{CHARACTER_HEIGHT}}",
+      "reference_subject": "{{HUMAN_OR_OBJECT_REFERENCE}}"
+    }
+  },
+
+  "visual_style": {
+    "art_direction": "{{GENERAL_ART_DIRECTION}}",
+    "linework": "{{LINEWORK_DESCRIPTION}}",
+    "rendering": "{{RENDERING_STYLE}}",
+    "detail_level": "alto",
+    "shape_language": "{{SHAPE_LANGUAGE}}",
+    "surface_treatment": "{{SURFACE_AND_MATERIAL_DESCRIPTION}}",
+    "movement_language": "{{MOVEMENT_AND_GESTURE_DESCRIPTION}}",
+    "mood": "{{OVERALL_MOOD}}",
+    "influences": [
+      "{{STYLE_REFERENCE_01}}",
+      "{{STYLE_REFERENCE_02}}",
+      "{{STYLE_REFERENCE_03}}"
+    ],
+    "consistency_rule": "Todas as vistas, poses, detalhes e variações devem representar exatamente o mesmo personagem, mantendo proporções, anatomia, silhueta, materiais, cores, símbolos e elementos distintivos."
+  },
+
+  "color_palette": {
+    "primary": {
+      "name": "{{PRIMARY_COLOR_NAME}}",
+      "hex": "{{PRIMARY_COLOR_HEX}}"
+    },
+    "secondary": {
+      "name": "{{SECONDARY_COLOR_NAME}}",
+      "hex": "{{SECONDARY_COLOR_HEX}}"
+    },
+    "accent": {
+      "name": "{{ACCENT_COLOR_NAME}}",
+      "hex": "{{ACCENT_COLOR_HEX}}"
+    },
+    "highlight": {
+      "name": "{{HIGHLIGHT_COLOR_NAME}}",
+      "hex": "{{HIGHLIGHT_COLOR_HEX}}"
+    },
+    "shadow": {
+      "name": "{{SHADOW_COLOR_NAME}}",
+      "hex": "{{SHADOW_COLOR_HEX}}"
+    },
+    "background": {
+      "name": "Branco técnico",
+      "hex": "#F8F8F6"
+    }
+  },
+
+  "sheet_layout": {
+    "design": "Prancha horizontal limpa, editorial e técnica, com fundo branco levemente quente, divisórias finas, títulos em azul-escuro e bastante espaço negativo.",
+    "grid": "Grade modular assimétrica com uma ilustração principal dominante à esquerda e módulos técnicos organizados à direita e na faixa inferior.",
+    "margins": "amplas",
+    "section_dividers": "linhas horizontais finas em azul-escuro",
+    "typography": {
+      "title": "serifada clássica, elegante, em caixa alta",
+      "section_headers": "serifada compacta, caixa alta",
+      "body_text": "legível, discreto e pequeno",
+      "color": "#102551"
+    },
+    "text_rule": "Usar somente os títulos e rótulos definidos. Evitar textos longos, caracteres aleatórios, pseudoescrita ou informações ilegíveis."
+  },
+
+  "sections": [
+    {
+      "id": "identity",
+      "position": "upper_left",
+      "title": "{{CHARACTER_NAME}}",
+      "subtitle": "{{CHARACTER_SUBTITLE_OR_TITLE}}",
+      "content": [
+        "Pequeno símbolo ou emblema do personagem.",
+        "Descrição resumida em duas a quatro linhas.",
+        "Hierarquia visual forte para o nome."
+      ]
+    },
+    {
+      "id": "hero_view",
+      "position": "left_dominant",
+      "title": "VISÃO PRINCIPAL",
+      "content": [
+        "Ilustração principal de corpo inteiro.",
+        "Pose característica e levemente dinâmica.",
+        "Silhueta clara e facilmente reconhecível.",
+        "Apresentar os principais materiais, poderes, acessórios e efeitos visuais.",
+        "Usar uma base discreta ou elemento ambiental mínimo quando necessário."
+      ],
+      "camera": "vista frontal em três quartos",
+      "framing": "corpo inteiro"
+    },
+    {
+      "id": "palette",
+      "position": "left_middle",
+      "title": "PALETA DE CORES",
+      "content": [
+        "Cinco ou seis amostras horizontais.",
+        "Organizadas do tom mais escuro ao mais luminoso.",
+        "Usar exatamente as cores definidas na paleta."
+      ]
+    },
+    {
+      "id": "symbol",
+      "position": "left_lower",
+      "title": "SÍMBOLO",
+      "content": [
+        "Emblema isolado do personagem.",
+        "Desenho geométrico limpo.",
+        "Versão simplificada e legível em tamanho reduzido."
+      ]
+    },
+    {
+      "id": "orthographic_views",
+      "position": "upper_center_right",
+      "title": "VISTAS ORTOGRÁFICAS",
+      "content": [
+        "Vista frontal.",
+        "Vista lateral.",
+        "Vista traseira.",
+        "Postura neutra.",
+        "Mesma escala e mesma linha de base.",
+        "Sem perspectiva dramática.",
+        "Manter absoluta consistência entre todas as vistas."
+      ],
+      "labels": [
+        "FRONTAL",
+        "LATERAL",
+        "TRASEIRA"
+      ]
+    },
+    {
+      "id": "head_studies",
+      "position": "upper_right",
+      "title": "CABEÇA / EXPRESSÕES",
+      "content": [
+        "Três estudos aproximados da cabeça.",
+        "Vista frontal ou três quartos.",
+        "Vista lateral.",
+        "Variação de expressão, estado emocional ou intensidade energética.",
+        "Destacar olhos, rosto, máscara, cabelo, chifres, coroa ou estrutura equivalente."
+      ]
+    },
+    {
+      "id": "material_detail",
+      "position": "middle_center",
+      "title": "DETALHES",
+      "content": [
+        "Close do torso, armadura, roupa ou superfície corporal.",
+        "Mostrar textura, encaixes, padrões, fissuras, luzes e materiais.",
+        "Destacar o principal ponto focal visual do personagem."
+      ]
+    },
+    {
+      "id": "hands_or_appendages",
+      "position": "middle_right",
+      "title": "{{APPENDAGE_SECTION_TITLE}}",
+      "content": [
+        "Estudos isolados de mãos, braços, asas, cauda, tentáculos ou extensões corporais.",
+        "Mostrar anatomia, articulação e comportamento do material.",
+        "Apresentar de três a cinco variações coerentes."
+      ]
+    },
+    {
+      "id": "energy_or_effects",
+      "position": "middle_far_right",
+      "title": "{{EFFECTS_SECTION_TITLE}}",
+      "content": [
+        "Painel visual mostrando partículas, aura, magia, tecnologia, fumaça, água, fogo ou energia associada ao personagem.",
+        "Fundo mais escuro apenas dentro deste módulo.",
+        "Efeito sem personagem completo para facilitar a leitura."
+      ]
+    },
+    {
+      "id": "scale",
+      "position": "bottom_left",
+      "title": "ESCALA",
+      "content": [
+        "Silhueta humana ou objeto familiar ao lado do personagem.",
+        "Marcadores verticais de altura.",
+        "Linha de chão compartilhada.",
+        "Diferença de escala imediatamente compreensível."
+      ]
+    },
+    {
+      "id": "form_variations",
+      "position": "bottom_center",
+      "title": "VARIAÇÕES DE FORMA",
+      "content": [
+        "Quatro ou cinco pequenas variações do personagem.",
+        "Alterar postura, intensidade, movimento, estado de poder ou distribuição dos elementos.",
+        "Preservar identidade, paleta e silhueta principal.",
+        "Não transformar as variações em personagens diferentes."
+      ]
+    },
+    {
+      "id": "visual_references",
+      "position": "bottom_right",
+      "title": "ELEMENTOS / REFERÊNCIAS",
+      "content": [
+        "Quatro miniaturas visuais.",
+        "Uma para símbolo ou geometria.",
+        "Uma para movimento ou fenômeno natural.",
+        "Uma para material ou arquitetura.",
+        "Uma para textura, ambiente ou energia.",
+        "As referências devem apoiar o design sem copiar personagens existentes."
+      ]
+    }
+  ],
+
+  "character_design_rules": {
+    "silhouette": "{{SILHOUETTE_DESCRIPTION}}",
+    "body_proportions": "{{BODY_PROPORTIONS}}",
+    "head_design": "{{HEAD_DESIGN}}",
+    "torso_design": "{{TORSO_DESIGN}}",
+    "arms_and_hands": "{{ARMS_AND_HANDS_DESIGN}}",
+    "lower_body": "{{LOWER_BODY_DESIGN}}",
+    "costume_or_armor": "{{COSTUME_OR_ARMOR_DESCRIPTION}}",
+    "materials": [
+      "{{MATERIAL_01}}",
+      "{{MATERIAL_02}}",
+      "{{MATERIAL_03}}"
+    ],
+    "signature_elements": [
+      "{{SIGNATURE_ELEMENT_01}}",
+      "{{SIGNATURE_ELEMENT_02}}",
+      "{{SIGNATURE_ELEMENT_03}}"
+    ],
+    "energy_behavior": "{{ENERGY_OR_POWER_BEHAVIOR}}",
+    "environmental_interaction": "{{ENVIRONMENTAL_INTERACTION}}"
+  },
+
+  "composition_rules": {
+    "main_character_priority": "A arte principal deve ser o maior elemento da prancha.",
+    "readability": "Cada módulo deve ser claramente separado e compreensível mesmo em visualização reduzida.",
+    "spacing": "Evitar sobreposição entre módulos, textos e personagens.",
+    "background": "Branco ou branco levemente quente, sem cenário completo.",
+    "technical_lines": "Guias e linhas de escala discretas, finas e organizadas.",
+    "visual_balance": "Equilibrar a grande ilustração da esquerda com os módulos técnicos da direita.",
+    "presentation": "Aspecto de documento oficial de produção para animação, quadrinhos, jogo ou card game."
+  },
+
+  "generation_prompt": {
+    "positive": "Professional character design sheet for {{CHARACTER_NAME}}, {{FULL_CHARACTER_DESCRIPTION}}. Clean horizontal concept-art presentation on a warm white background, elegant editorial layout, large full-body hero illustration on the left, orthographic front side and back views, head and expression studies, detailed material close-up, hands or appendage studies, isolated energy effects, color palette, emblem, scale comparison, form variations and visual reference thumbnails. Highly consistent character design across every panel, refined linework, high-detail rendering, clear silhouette, technical production artwork, generous negative space, thin navy section dividers, sophisticated Portuguese labels, 16:9 landscape composition.",
+    "negative": [
+      "personagens inconsistentes entre os módulos",
+      "mudança de roupa, anatomia ou paleta",
+      "membros extras não solicitados",
+      "vistas ortográficas em escalas diferentes",
+      "perspectiva exagerada nas vistas técnicas",
+      "texto ilegível",
+      "letras aleatórias",
+      "pseudoescrita",
+      "módulos cortados",
+      "layout desorganizado",
+      "fundo poluído",
+      "cenário completo atrás da prancha",
+      "baixa resolução",
+      "anatomia deformada",
+      "duplicação acidental de membros",
+      "mistura de personagens diferentes",
+      "marca-d'água",
+      "assinatura",
+      "logotipo de terceiros"
+    ]
+  },
+
+  "customizable_fields": [
+    "{{CHARACTER_NAME}}",
+    "{{CHARACTER_SUBTITLE_OR_TITLE}}",
+    "{{CHARACTER_ARCHETYPE}}",
+    "{{WORLD_OR_FACTION}}",
+    "{{FULL_CHARACTER_DESCRIPTION}}",
+    "{{GENERAL_ART_DIRECTION}}",
+    "{{LINEWORK_DESCRIPTION}}",
+    "{{RENDERING_STYLE}}",
+    "{{SHAPE_LANGUAGE}}",
+    "{{SURFACE_AND_MATERIAL_DESCRIPTION}}",
+    "{{MOVEMENT_AND_GESTURE_DESCRIPTION}}",
+    "{{OVERALL_MOOD}}",
+    "{{CHARACTER_HEIGHT}}",
+    "{{HUMAN_OR_OBJECT_REFERENCE}}",
+    "{{SILHOUETTE_DESCRIPTION}}",
+    "{{BODY_PROPORTIONS}}",
+    "{{HEAD_DESIGN}}",
+    "{{TORSO_DESIGN}}",
+    "{{ARMS_AND_HANDS_DESIGN}}",
+    "{{LOWER_BODY_DESIGN}}",
+    "{{COSTUME_OR_ARMOR_DESCRIPTION}}",
+    "{{ENERGY_OR_POWER_BEHAVIOR}}",
+    "{{ENVIRONMENTAL_INTERACTION}}",
+    "{{APPENDAGE_SECTION_TITLE}}",
+    "{{EFFECTS_SECTION_TITLE}}"
+  ]
+}

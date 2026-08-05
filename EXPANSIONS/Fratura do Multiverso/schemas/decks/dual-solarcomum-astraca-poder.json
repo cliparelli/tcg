@@ -1,0 +1,196 @@
+{
+  "id": "dual-solarcomum-astraca-poder",
+  "slug": "dual-solarcomum-astraca-poder",
+  "name": "[DUAL] Poder — Físico + Cósmico Dano em Área Perfurante",
+  "description": "A estratégia deste deck junta o dano direto de Solar Comum com o dano em área da Astraca Primordial — Ignorar Defesa remove qualquer bloqueio individual, enquanto ataques de área da Astraca garantem que nenhum personagem reserva do oponente sobreviva ileso. É o finalizador mais bruto entre todos os splashes do triângulo, sem nenhuma sutileza de controle.\n\nO combo central usa **Ilenya do Sol a Pino** (Físico) e **Nyx-Vahl, o Titã em Ruínas** (Cósmico) como Líderes: Ilenya reduz o dano recebido pela metade do custo da ação inimiga com **Corpo Temperado**, segurando a linha de frente, e sua **Golpe do Meio-Dia** garante 5 de dano consistente todo turno. Nyx-Vahl sofre o mesmo dano que causa com **Rachaduras Abertas**, mas sua **Colapso Parcial** já nasce expansível e ganha Alvos Múltiplos ao extinguir recursos — o recoil vira aceitável porque Ilenya já corta pela metade qualquer retaliação que volte para o time.\n\nO Time reforça a mesma lógica de \"atropelar em área\": **Doran Punho-de-Nação** distribui AtkUp assim que entra em jogo, **Threnody das Órbitas Partidas** já vem com Alvos Múltiplos nativo, e **Petrichor Vazio** bate em mais de um personagem inimigo por ativação. **Machado que Não Se Curva** e **Punho que Atravessa** ignoram Defesa por completo, **Onda do Vácuo** e **Tempestade sem Fim** martelam todo o time do oponente por igual, e **Grito de Guerra do Povo** garante o pico de Atk final antes da varredura em área.",
+  "format": "standard",
+  "strategy": {
+    "archetype": null,
+    "winCondition": null,
+    "keyMechanics": [],
+    "coreCombo": {
+      "description": "O combo central usa **Ilenya do Sol a Pino** (Físico) e **Nyx-Vahl, o Titã em Ruínas** (Cósmico) como Líderes: Ilenya reduz o dano recebido pela metade do custo da ação inimiga com **Corpo Temperado**, segurando a linha de frente, e sua **Golpe do Meio-Dia** garante 5 de dano consistente todo turno. Nyx-Vahl sofre o mesmo dano que causa com **Rachaduras Abertas**, mas sua **Colapso Parcial** já nasce expansível e ganha Alvos Múltiplos ao extinguir recursos — o recoil vira aceitável porque Ilenya já corta pela metade qualquer retaliação que volte para o time.",
+      "cardIds": [
+        "p034",
+        "p066",
+        "p067",
+        "p073",
+        "i024",
+        "i048",
+        "e008"
+      ]
+    },
+    "tempo": null
+  },
+  "entries": [
+    {
+      "cardId": "p034",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p066",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p035",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p067",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p073",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p036",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p072",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i022",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i042",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Protect"
+    },
+    {
+      "cardId": "i028",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Protect"
+    },
+    {
+      "cardId": "i040",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i056",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Search"
+    },
+    {
+      "cardId": "i024",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i048",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i027",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i046",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i023",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "e024",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e025",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e034",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e035",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e008",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e009",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e011",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    }
+  ],
+  "sideboard": []
+}

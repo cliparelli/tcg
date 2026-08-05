@@ -1,0 +1,232 @@
+{
+  "id": "rainbow-multiverso-aggro",
+  "slug": "rainbow-multiverso-aggro",
+  "name": "[RAINBOW] Aggro — Todos os Tipos",
+  "description": "A estratégia deste deck é a primeira desta coleção a usar os 5 tipos de \"Fratura do Multiverso\" ao mesmo tempo, todos puxando para o mesmo lugar: dano direto, barato e constante, sem depender de nenhum combo de várias peças. Cada tipo contribui com seu ângulo de agressão mais eficiente — Transpassar de Solar Comum, Ataque Expansível de Astraca, dano crescente de Detritônia — e a Fonte de Energia certa garante que a mão nunca fique sem munição de nenhuma cor. O deck não lê o oponente nem tranca recursos: ele conta o relógio e empurra o máximo de dano possível a cada turno.\n\nO combo central usa **Bragan, o Recorde Imbatível** (Físico) e **Nyx-Vahl, o Titã em Ruínas** (Cósmico) como Líderes: Bragan é imune a redução de Atk/Def com **Patrimônio Vivo**, e sua **Recorde Inquebrável** já sai com Flanquear e Ignorar Defesa — 6 de dano puro que nenhuma Defesa detém. Nyx-Vahl entra pronto para bater desde o turno 1 com **Colapso Parcial** (Ataque Expansível 2, custo 1), podendo trocar Extinguir Fonte por Alvos Múltiplos quando o board do oponente já estiver cheio — o recoil de **Rachaduras Abertas** raramente importa, já que os dois Líderes têm Vida alta o bastante para absorver o próprio dano de retorno.\n\nO Time completa a curva com o melhor custo-benefício de cada tipo: **Andarilho Silencioso** e **Estilhaço Desperto** batem 2 de dano por 1 energia desde o turno inicial, **Drommel, o Recicla-Ossos** e **Doran Punho-de-Nação** equilibram dano com vantagem de cartas e AtkUp, e **Skarn da Fúria Acordada** e **Sarien Mão-Que-Julga** seguram o meio de curva com 3-4 de dano direto e simples. Os Itens dobram a aposta na agressão pura: **Golpe do Sol a Pino** e **Machado que Não Se Curva** ignoram Defesa, **Cratera da Sucata Viva** e **Praça Comum** entregam AtkUp imediato, e **Tempestade sem Fim** fecha em dano de área quando o board já estiver montado.",
+  "format": "standard",
+  "strategy": {
+    "archetype": null,
+    "winCondition": null,
+    "keyMechanics": [],
+    "coreCombo": {
+      "description": "A estratégia deste deck é a primeira desta coleção a usar os 5 tipos de \"Fratura do Multiverso\" ao mesmo tempo, todos puxando para o mesmo lugar: dano direto, barato e constante, sem depender de nenhum combo de várias peças. Cada tipo contribui com seu ângulo de agressão mais eficiente — Transpassar de Solar Comum, Ataque Expansível de Astraca, dano crescente de Detritônia — e a Fonte de Energia certa garante que a mão nunca fique sem munição de nenhuma cor. O deck não lê o oponente nem tranca recursos: ele conta o relógio e empurra o máximo de dano possível a cada turno.",
+      "cardIds": [
+        "p033",
+        "p066",
+        "p035",
+        "i040",
+        "i024",
+        "i026",
+        "e007",
+        "e005"
+      ]
+    },
+    "tempo": null
+  },
+  "entries": [
+    {
+      "cardId": "p033",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p066",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p008",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p075",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p021",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p035",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p069",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p054",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p005",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p036",
+      "quantity": 2,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p058",
+      "quantity": 1,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i040",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Buff"
+    },
+    {
+      "cardId": "i024",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Transpassar"
+    },
+    {
+      "cardId": "i026",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i027",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Transpassar"
+    },
+    {
+      "cardId": "i017",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "i046",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg em área"
+    },
+    {
+      "cardId": "i032",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg"
+    },
+    {
+      "cardId": "e015",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e020",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e024",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e029",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e034",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e007",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e008",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e005",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e011",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e003",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e010",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    }
+  ],
+  "sideboard": []
+}

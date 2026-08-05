@@ -1,0 +1,167 @@
+{
+  "id": "mono-cosmico-estilhacos",
+  "slug": "mono-cosmico-estilhacos",
+  "name": "[MONO] Estilhaços — Astraca Primordial (Cósmico)",
+  "description": "Diferente do mono Astraca de Ataque Expansível/AoE, este deck não escala energia anexada — ele joga o lado mais barato e caótico do tipo: personagens pequenos e de baixo custo que causam dano em troca de sofrer dano próprio, jogados em volume suficiente para que o recoil compartilhado importe mais para o oponente do que para o controlador. A Astraca aqui não desperta aos poucos: já nasce com raiva.\n\nO combo central usa **Nyx-Vahl, o Titã em Ruínas** como Líder e **Skarn da Fúria Acordada**, **Mira-Ket, o Estilhaço Curioso** e **Estilhaço Desperto** no Time: tanto Nyx-Vahl quanto Skarn carregam **Rachaduras Abertas** — todo dano causado volta igual para o próprio personagem — e como o time inteiro é de Vida baixa mas em grande número, o recoil individual nunca ameaça o board inteiro de uma vez, apenas o personagem que já cumpriu sua função. **Colapso Parcial** de Nyx-Vahl ainda soma Ataque Expansível (2) e pode extinguir X Fontes para atingir X alvos ao mesmo tempo, escalando o próprio recoil como consequência aceitável.\n\nOs Itens dobram a aposta em dano recíproco e em área: **Implosão Compartilhada** e **Grito do Vácuo Desperto** trocam dano extra por um custo colateral (um aliado ou uma ação futura), enquanto **Onda do Vácuo** e **Tempestade sem Fim** atingem todo o time do oponente de uma vez. **Fratura do Descanso** é o fecho de partida: 5 de dano em todos os personagens do oponente, 2 nos próprios — um preço baixo para um deck que já joga com Vida curta em todos os personagens.",
+  "format": "standard",
+  "strategy": {
+    "archetype": null,
+    "winCondition": null,
+    "keyMechanics": [],
+    "coreCombo": {
+      "description": "O combo central usa **Nyx-Vahl, o Titã em Ruínas** como Líder e **Skarn da Fúria Acordada**, **Mira-Ket, o Estilhaço Curioso** e **Estilhaço Desperto** no Time: tanto Nyx-Vahl quanto Skarn carregam **Rachaduras Abertas** — todo dano causado volta igual para o próprio personagem — e como o time inteiro é de Vida baixa mas em grande número, o recoil individual nunca ameaça o board inteiro de uma vez, apenas o personagem que já cumpriu sua função. **Colapso Parcial** de Nyx-Vahl ainda soma Ataque Expansível (2) e pode extinguir X Fontes para atingir X alvos ao mesmo tempo, escalando o próprio recoil como consequência aceitável.",
+      "cardIds": [
+        "p066",
+        "p069",
+        "i039",
+        "i045",
+        "i046",
+        "e011"
+      ]
+    },
+    "tempo": null
+  },
+  "entries": [
+    {
+      "cardId": "p066",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p069",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p074",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p075",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p071",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "p073",
+      "quantity": 3,
+      "suggestedRole": "team",
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i040",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Ataque expansível"
+    },
+    {
+      "cardId": "i039",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dmg em área com recoil"
+    },
+    {
+      "cardId": "i041",
+      "quantity": 1,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Ataque expansível coletivo"
+    },
+    {
+      "cardId": "i045",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Recoil/Custo colateral"
+    },
+    {
+      "cardId": "i047",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "i048",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Dano em área"
+    },
+    {
+      "cardId": "i046",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": "Ataque expansível em área"
+    },
+    {
+      "cardId": "e034",
+      "quantity": 4,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e035",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e036",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e037",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e038",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e011",
+      "quantity": 3,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    },
+    {
+      "cardId": "e013",
+      "quantity": 2,
+      "suggestedRole": null,
+      "suggestedPlay": null,
+      "designNotes": null
+    }
+  ],
+  "sideboard": []
+}

@@ -2,14 +2,12 @@
 
 declare(strict_types=1);
 
-require_once __DIR__ . '/lib/CsvLibrary.php';
+require_once __DIR__ . '/lib/CardLibrary.php';
 require_once __DIR__ . '/lib/DeckParser.php';
 require_once __DIR__ . '/lib/CardResolver.php';
 
 header('Content-Type: application/json; charset=utf-8');
 
-$decksDir = dirname(__DIR__) . '/public/decks';
-$libDir = dirname(__DIR__) . '/LIB';
 $expansionsDir = dirname(__DIR__) . '/EXPANSIONS';
 
 $action = $_GET['action'] ?? 'list';
@@ -17,9 +15,9 @@ $action = $_GET['action'] ?? 'list';
 try {
     switch ($action) {
         case 'list':
-            $library = new CsvLibrary($libDir);
+            $library = new CardLibrary($expansionsDir);
             $resolver = new CardResolver($library, $expansionsDir);
-            echo json_encode(['decks' => listDecks($decksDir, $resolver)], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+            echo json_encode(['decks' => listDecks($expansionsDir, $resolver)], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
             break;
 
         case 'deck':
@@ -28,9 +26,9 @@ try {
                 throw new InvalidArgumentException('Parâmetro "file" é obrigatório.');
             }
 
-            $path = realpath($decksDir . '/' . $file);
-            $decksReal = realpath($decksDir);
-            if ($path === false || $decksReal === false || !str_starts_with($path, $decksReal) || !is_file($path)) {
+            $path = realpath($expansionsDir . '/' . $file);
+            $expansionsReal = realpath($expansionsDir);
+            if ($path === false || $expansionsReal === false || !str_starts_with($path, $expansionsReal) || !is_file($path) || !str_contains($file, '/decks/')) {
                 throw new InvalidArgumentException('Deck não encontrado.');
             }
 
@@ -40,7 +38,7 @@ try {
             }
 
             $deck = DeckParser::parse($markdown);
-            $library = new CsvLibrary($libDir);
+            $library = new CardLibrary($expansionsDir);
             $resolver = new CardResolver($library, $expansionsDir);
 
             foreach ($deck['sections'] as &$section) {
@@ -54,7 +52,7 @@ try {
                             $entry['expansionImage'] = $resolver->resolveExpansionImage(
                                 $match['collection'],
                                 $match['type'],
-                                $match['record']['Nome'] ?? $entry['name']
+                                (string) ($match['record']['assetRef'] ?? '')
                             );
                         } else {
                             $entry['card'] = null;
@@ -84,31 +82,42 @@ try {
 /**
  * @return array<int, array{file: string, title: string, style: string, type: string}>
  */
-function listDecks(string $decksDir, CardResolver $resolver): array
+function listDecks(string $expansionsDir, CardResolver $resolver): array
 {
-    if (!is_dir($decksDir)) {
+    if (!is_dir($expansionsDir)) {
         return [];
     }
 
-    $files = glob($decksDir . '/*.md') ?: [];
-    sort($files);
-
     $decks = [];
-    foreach ($files as $path) {
-        $contents = file_get_contents($path) ?: '';
-        $file = basename($path);
-        $title = basename($path, '.md');
-        if (preg_match('/^#\s+(.+)$/m', $contents, $m) === 1) {
-            $title = trim($m[1]);
+    $collectionDirs = glob($expansionsDir . '/*', GLOB_ONLYDIR) ?: [];
+    sort($collectionDirs);
+
+    foreach ($collectionDirs as $collectionDir) {
+        $decksDir = $collectionDir . '/decks';
+        if (!is_dir($decksDir)) {
+            continue;
         }
 
-        $deck = DeckParser::parse($contents);
-        $decks[] = [
-            'file' => $file,
-            'title' => $title,
-            'style' => deckStyle($title),
-            'type' => deckType($deck, $resolver),
-        ];
+        $collection = basename($collectionDir);
+        $files = glob($decksDir . '/*.md') ?: [];
+        sort($files);
+
+        foreach ($files as $path) {
+            $contents = file_get_contents($path) ?: '';
+            $relFile = $collection . '/decks/' . basename($path);
+            $title = basename($path, '.md');
+            if (preg_match('/^#\s+(.+)$/m', $contents, $m) === 1) {
+                $title = trim($m[1]);
+            }
+
+            $deck = DeckParser::parse($contents);
+            $decks[] = [
+                'file' => $relFile,
+                'title' => $title,
+                'style' => deckStyle($title),
+                'type' => deckType($deck, $resolver),
+            ];
+        }
     }
 
     return $decks;
@@ -142,7 +151,7 @@ function deckType(array $deck, CardResolver $resolver): string
                     continue;
                 }
 
-                $tipo = trim($match['record']['Tipo'] ?? '');
+                $tipo = trim((string) ($match['record']['worldType'] ?? ''));
                 if ($tipo === '') {
                     continue;
                 }
