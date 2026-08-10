@@ -1,0 +1,16 @@
+{
+  "id": "zzz-teste-caio-novo-deck",
+  "slug": "zzz-teste-caio-novo-deck",
+  "name": "ZZZ - Teste Caio Novo Deck",
+  "description": "YO",
+  "format": "standard",
+  "strategy": {
+    "archetype": null,
+    "winCondition": null,
+    "keyMechanics": [],
+    "coreCombo": null,
+    "tempo": null
+  },
+  "entries": [],
+  "sideboard": []
+}

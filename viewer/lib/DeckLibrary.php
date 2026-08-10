@@ -102,6 +102,182 @@ final class DeckLibrary
     }
 
     /**
+     * Cria um novo deck vazio (template de schema-deck.md) em
+     * EXPANSIONS/{collection}/schemas/decks/{slug}.json. Falha se o slug já
+     * existir, para não sobrescrever um deck existente por engano.
+     *
+     * @param array{id?: string, slug: string, name: string, description?: string|null, format?: string} $meta
+     */
+    public function createDeck(string $collection, array $meta): string
+    {
+        $slug = trim((string) ($meta['slug'] ?? ''));
+        if ($collection === '') {
+            throw new InvalidArgumentException('Coleção é obrigatória.');
+        }
+        if ($slug === '') {
+            throw new InvalidArgumentException('Slug é obrigatório.');
+        }
+        if (!preg_match('/^[a-z0-9\-]+$/', $slug)) {
+            throw new InvalidArgumentException(
+                'Slug inválido: "' . $slug . '". Use apenas letras minúsculas, números e hífen (ex.: mono-tema-mundo).'
+            );
+        }
+
+        $expansionsReal = realpath($this->expansionsDir);
+        if ($expansionsReal === false || !is_dir($this->expansionsDir . '/' . $collection . '/schemas')) {
+            throw new InvalidArgumentException('Coleção não encontrada: "' . $collection . '".');
+        }
+
+        $decksDir = $this->expansionsDir . '/' . $collection . '/schemas/decks';
+
+        if (!is_dir($decksDir) && !mkdir($decksDir, 0777, true) && !is_dir($decksDir)) {
+            throw new InvalidArgumentException('Falha ao criar pasta de decks da coleção.');
+        }
+
+        $jsonPath = $decksDir . '/' . $slug . '.json';
+        if (file_exists($jsonPath)) {
+            throw new InvalidArgumentException('Já existe um deck com o slug "' . $slug . '" nesta coleção.');
+        }
+
+        $deck = [
+            'id' => (string) ($meta['id'] ?? $slug),
+            'slug' => $slug,
+            'name' => (string) ($meta['name'] ?? $slug),
+            'description' => $meta['description'] ?? null,
+            'format' => (string) ($meta['format'] ?? 'standard'),
+            'strategy' => [
+                'archetype' => null,
+                'winCondition' => null,
+                'keyMechanics' => [],
+                'coreCombo' => null,
+                'tempo' => null,
+            ],
+            'entries' => [],
+            'sideboard' => [],
+        ];
+
+        $written = file_put_contents($jsonPath, self::encodeWithTwoSpaceIndent($deck) . "\n");
+        if ($written === false) {
+            throw new InvalidArgumentException('Falha ao gravar o arquivo do deck.');
+        }
+
+        $this->cardIndex = null;
+
+        return $collection . '/schemas/decks/' . $slug . '.json';
+    }
+
+    /**
+     * Regrava o deck completo em $relPath (deve já existir, dentro de
+     * .../schemas/decks/). Não valida legalidade de deck (regras de
+     * montagem) — isso é responsabilidade do client; um rascunho incompleto
+     * é um estado válido conforme schema-deck.md.
+     *
+     * @param array<string, mixed> $deck
+     */
+    public function saveDeck(string $relPath, array $deck): void
+    {
+        $decksDir = realpath($this->expansionsDir . '/' . dirname($relPath));
+        $expansionsReal = realpath($this->expansionsDir);
+        $jsonPath = $this->expansionsDir . DIRECTORY_SEPARATOR . str_replace('/', DIRECTORY_SEPARATOR, $relPath);
+        $existing = realpath($jsonPath);
+
+        if (
+            $expansionsReal === false
+            || $decksDir === false
+            || !str_starts_with($decksDir, $expansionsReal)
+            || !str_contains($relPath, '/schemas/decks/')
+            || $existing === false
+            || !str_starts_with($existing, $expansionsReal)
+        ) {
+            throw new InvalidArgumentException('Deck não encontrado.');
+        }
+
+        $payload = [
+            'id' => (string) ($deck['id'] ?? basename($relPath, '.json')),
+            'slug' => (string) ($deck['slug'] ?? basename($relPath, '.json')),
+            'name' => (string) ($deck['name'] ?? ''),
+            'description' => $deck['description'] ?? null,
+            'format' => (string) ($deck['format'] ?? 'standard'),
+            'strategy' => is_array($deck['strategy'] ?? null) ? $deck['strategy'] : [
+                'archetype' => null,
+                'winCondition' => null,
+                'keyMechanics' => [],
+                'coreCombo' => null,
+                'tempo' => null,
+            ],
+            'entries' => self::sanitizeEntries($deck['entries'] ?? [], true),
+            'sideboard' => self::sanitizeEntries($deck['sideboard'] ?? [], false),
+        ];
+
+        $written = file_put_contents($existing, self::encodeWithTwoSpaceIndent($payload) . "\n");
+        if ($written === false) {
+            throw new InvalidArgumentException('Falha ao gravar o arquivo do deck.');
+        }
+
+        $this->cardIndex = null;
+    }
+
+    /**
+     * @param mixed $entries
+     * @return array<int, array<string, mixed>>
+     */
+    private static function sanitizeEntries(mixed $entries, bool $withPlayMeta): array
+    {
+        if (!is_array($entries)) {
+            return [];
+        }
+
+        $sanitized = [];
+        foreach ($entries as $entry) {
+            if (!is_array($entry)) {
+                continue;
+            }
+            $cardId = trim((string) ($entry['cardId'] ?? ''));
+            if ($cardId === '') {
+                continue;
+            }
+
+            $item = [
+                'cardId' => $cardId,
+                'quantity' => max(0, (int) ($entry['quantity'] ?? 0)),
+            ];
+
+            if ($withPlayMeta) {
+                $item['suggestedRole'] = $entry['suggestedRole'] ?? null;
+                $item['suggestedPlay'] = $entry['suggestedPlay'] ?? null;
+                $item['designNotes'] = $entry['designNotes'] ?? null;
+            }
+
+            $sanitized[] = $item;
+        }
+
+        return $sanitized;
+    }
+
+    /**
+     * json_encode(..., JSON_PRETTY_PRINT) sempre indenta com 4 espaços por
+     * nível; os schemas em EXPANSIONS/ usam 2. Reindenta linha a linha
+     * (mesma técnica de CardLibrary::encodeWithTwoSpaceIndent).
+     */
+    private static function encodeWithTwoSpaceIndent(mixed $data): string
+    {
+        $json = json_encode($data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+        if ($json === false) {
+            throw new InvalidArgumentException('Falha ao codificar JSON.');
+        }
+
+        $lines = explode("\n", $json);
+        foreach ($lines as $i => $line) {
+            if (preg_match('/^( +)/', $line, $m)) {
+                $level = (int) (strlen($m[1]) / 4);
+                $lines[$i] = str_repeat('  ', $level) . substr($line, strlen($m[1]));
+            }
+        }
+
+        return implode("\n", $lines);
+    }
+
+    /**
      * @param array<int, array<string, mixed>> $rawEntries
      * @return array<int, array<string, mixed>>
      */

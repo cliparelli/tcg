@@ -524,8 +524,8 @@ As habilidades de Assistência, Desviar e Reflexão deixaram de ser tokens e pas
 Os seguintes tokens são exceções à regra geral: eles não são retirados na fase de limpeza e persistem entre turnos, pois sua mecânica depende de acumular ou se repetir ao longo de várias fases de limpeza:
  - DOT (-): Dano contínuo - cada token adiciona um ponto de dano antes do cálculo de dano ao dano total de **cada** ação que cause dano diretamente e tenha este personagem como alvo, não apenas uma vez por combate - ver [Tipos de Dano](#tipos-de-dano). É removido apenas por efeito específico que o retire;
  - Perdição (-): Quando este personagem adquirir um total de tokens igual sua vida, ele é nocauteado. É removido apenas por efeito específico que o retire;
- - Sonolência (-): No início de sua fase de limpeza, faça uma aposta, se ganhar, tire este token do personagem, senão este personagem não pode usar qualquer ação, trocar de posição ou ter cartas anexadas;
- - Infecção (-): No início de sua fase de limpeza, Aposte (1) (jogue 1 moeda ou dado - ver [Palavras-Chave → Dinâmicas de Jogo](#palavras-chave) - se ganhar): retire este token / coloque outro token de infecção neste personagem. Se este personagem estiver com mais tokens de infecção que sua vida, coloque um token de Perdição sobre este personagem para cada token de infecção extra.
+ - Sonolência (-): No início de sua fase de limpeza, faça um desafio, se ganhar, tire este token do personagem, senão este personagem não pode usar qualquer ação, trocar de posição ou ter cartas anexadas;
+ - Infecção (-): No início de sua fase de limpeza, Desafie (1) (jogue 1 moeda ou dado - ver [Palavras-Chave → Dinâmicas de Jogo](#palavras-chave) - se ganhar): retire este token / coloque outro token de infecção neste personagem. Se este personagem estiver com mais tokens de infecção que sua vida, coloque um token de Perdição sobre este personagem para cada token de infecção extra.
 
 ## Condições de Vitória
 Existem três condições de vitória possíveis que podem ser exploradas na construção de decks e montagem de estratégias durante o jogo:
@@ -571,14 +571,14 @@ Existem três condições de vitória possíveis que podem ser exploradas na con
  - Ação Expansível (X): Usada em ações que geram algum efeito (não dano) - efeito extra quando o personagem estiver com X fontes de energia a mais anexadas a ele, além do custo original da ação. Não confundir com [Ataque Expansível](#combate), usada para ações que causam dano;
  - Afinidade (Especificação): Para que a ação aconteça, um determinado tipo ou categoria de personagem ou um determinado personagem;
  - Anexar: Colocar uma carta de item ou fonte de energia junto a um personagem;
- - Aposte (X): Jogue X moedas ou X dados (d4, d6 ou um dado de faces pares) - se der cara na moeda ou par nos dados, você ganha a aposta. Quando X for maior que 1, o jogador desafiante deverá ganhar mais apostas do que perder;
+ - Desafie (X): Jogue X moedas ou X dados (d4, d6 ou um dado de faces pares) - se der cara na moeda ou par nos dados, você ganha o desafio. Quando X for maior que 1, o jogador desafiante deverá ganhar mais desafios do que perder;
  - Concentração (Condição): A ação só pode ser usada se a condição for alcançada;
  - Desanexar: Colocar uma carta que está junto a um personagem na pilha de descarte;
  - Dependência (Condição): O efeito de uma carta só será liberado se uma condição for alcançada. Diferente da Concentração, a dependência é no efeito e não na ação.
- - Starter (X): Dinâmica de combos. A palavra-chave Starter representa o início de um combo e tem a seguinte definição: Starter (X) - Aposte (1) - Procure o item X e utilize a ação descrita pela palavra chave Starter. Após a resolução dos efeitos aquela carta deve ser colocada no fundo de seu deck;
- - Combo (X): Dinâmica de combos. Esta palavra-chave indica que o item pode ter seu efeito utilizado mais de uma vez e sua definição é a seguinte: Combo (X) - Aposte (X) para usar a ação novamente, sem a necessidade de pagar seus custos;
+ - Starter (X): Dinâmica de combos. A palavra-chave Starter representa o início de um combo e tem a seguinte definição: Starter (X) - Desafie (1) - Procure o item X e utilize a ação descrita pela palavra chave Starter. Após a resolução dos efeitos aquela carta deve ser colocada no fundo de seu deck;
+ - Combo (X): Dinâmica de combos. Esta palavra-chave indica que o item pode ter seu efeito utilizado mais de uma vez e sua definição é a seguinte: Combo (X) - Desafie (X) para usar a ação novamente, sem a necessidade de pagar seus custos;
  - Stance (X) - Dinâmica de combos. Esta palavra-chave indica que o personagem tem mais de uma posição de combate. Sua definição é: Stance (X) - O personagem recebe um token de Stance (X) e poderá utilizar itens com a marcação Stance (X). Em uma Stance o personagem não pode usar outros golpes, apenas os de Stance. Você pode tirar o token de Stance a qualquer momento e caso outro token de Stance seja colocado no personagem, descarte o anterior. Itens marcados como Stance são anexáveis e dão uma outra ação para o personagem;
- - Finisher (X): Dinâmica de combos. A palavra-chave Finisher representa o fim de um combo e tem a seguinte definição: Finisher (X) - Aposte (1) - Procure o item X e utilize a ação descrita pela palavra chave Finisher. Após a resolução dos efeitos aquela carta deve ser colocada no fundo de seu deck;
+ - Finisher (X): Dinâmica de combos. A palavra-chave Finisher representa o fim de um combo e tem a seguinte definição: Finisher (X) - Desafie (1) - Procure o item X e utilize a ação descrita pela palavra chave Finisher. Após a resolução dos efeitos aquela carta deve ser colocada no fundo de seu deck;
  - Tag (X) - Dinâmica de combos. A palavra-chave representa alternância entre personagens. Sua definição é: Tag (X) - Altere o personagem X para a posição principal e procure um item com tag do personagem X e use o efeito descrito pela palavra chave Tag. Após a resolução dos efeitos aquela carta deve ser colocada no fundo de seu deck;
  
 ### Efeitos
@@ -606,17 +606,17 @@ Lista alfabética de todas as palavras-chave do jogo, com uma breve descrição 
  - [Alvos Múltiplos (X)](#combate): a ação pode ter mais de um alvo;
  - [Amedrontar](#efeitos): permite trocar o defensor da posição principal ao ser alvo de combate;
  - [Anexar](#dinâmicas-de-jogo): colocar um item ou fonte de energia junto a um personagem;
- - [Aposte (X)](#dinâmicas-de-jogo): jogue X moedas ou dados - cara ou par ganha a aposta;
  - [Assistência](#combate): outro personagem causa 1 de dano extra ao mesmo alvo, após a ação;
  - [Ataque Expansível (X)](#combate): dano extra por fonte de energia extra anexada;
  - [Bando (X)](#efeitos): afeta todos os personagens de um tipo, classe ou nome X;
  - [Clarividência (X)](#controle-de-cartas): busca uma carta do deck, revela e coloca na mão;
- - [Combo (X)](#dinâmicas-de-jogo): permite repetir o efeito de um item pagando uma aposta;
+ - [Combo (X)](#dinâmicas-de-jogo): permite repetir o efeito de um item pagando um desafio;
  - [Concentração (Condição)](#dinâmicas-de-jogo): a ação só pode ser usada se a condição for cumprida;
  - [Conexão Vital (Personagem)](#combate): gera Sobrevida para si ou para outro personagem por dano absorvido;
  - [Dano](#combate): Indica a quantidade de vida que um personagem perde como resultado de uma ação de combate. O Dano não é considerado como um efeito.
- - [Dependência (Condição)](#dinâmicas-de-jogo): o efeito só acontece se a condição for cumprida;
+ - [Desafie (X)](#dinâmicas-de-jogo): jogue X moedas ou dados - cara ou par ganha o desafio;
  - [Desanexar](#dinâmicas-de-jogo): colocar uma carta anexada na pilha de descarte;
+ - [Dependência (Condição)](#dinâmicas-de-jogo): o efeito só acontece se a condição for cumprida;
  - [Desviar](#combate): redireciona dano recebido para outro personagem do mesmo controlador;
  - [Devoção (X)](#efeitos): libera uma ação se um tipo, categoria ou personagem X estiver em cena;
  - [Duplicar (X) / Triplicar (X)](#efeitos): descarta cartas da mão para repetir a ação;
@@ -663,7 +663,7 @@ v0.2 [pendente] - Temporalidade de tokens unificada, simplificação de ações 
 v0.3 [pendente] - Ordem de mitigação de dano simplificada em blocos, resolução da contradição Escudo x Dano Perfurante (Ignorar Defesa), regra de combate sem personagens elegíveis;
 v0.4 [pendente] - Tabela de apoio ao Cálculo de Dano Complexo;
 v0.5 [pendente] - Power System movido para dentro de Personagens, desduplicação dos Tipos de Personagem;
-v0.6 [pendente] - DOT somando por ação de dano, sorteio padrão com D4, descrição de Aposte (X), declarações no Cálculo de Dano Complexo;
+v0.6 [pendente] - DOT somando por ação de dano, sorteio padrão com D4, descrição de Desafie (X), declarações no Cálculo de Dano Complexo;
 v0.7 [pendente] - Exemplo de declaração de combate com Flanquear dos dois lados;
 v0.8 [pendente] - Regras de precedência de alvo (Provocação/Invisibilidade/Visão Verdadeira/Amedrontar), Ignorar Defesa voltando a afetar o Escudo, distinção Ataque Expansível/Ação Expansível, glossário de palavras-chave, revisão ortográfica geral;
 v0.9 [pendente] - Mudança de licenciamento de GNU AGPL v3.0 para Creative Commons Atribuição-NãoComercial-CompartilhaIgual 4.0 (CC BY-NC-SA 4.0);

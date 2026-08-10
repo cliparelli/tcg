@@ -11,6 +11,7 @@
     <span class="top-nav__brand">MULTIVERSITY CONQUEST</span>
     <a class="top-nav__link active" href="index.php">Card Viewer</a>
     <a class="top-nav__link" href="deck.php">Deck Viewer</a>
+    <a class="top-nav__link" href="deck-builder.php">Deck Builder</a>
 </nav>
 <div class="app">
     <aside class="sidebar">

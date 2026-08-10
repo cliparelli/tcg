@@ -63,6 +63,37 @@ Depois acesse http://localhost:8791 no navegador.
 Coleções sem `schemas/decks/` (hoje, `base-set/`) não aparecem no Deck
 Viewer — só decklists já migradas para o schema JSON são lidas.
 
+## Deck Builder (`deck-builder.php`)
+
+Editor de decks (criar e editar), inspirado no Builder do Limitless TCG:
+paleta de cartas pesquisável à esquerda, deck em construção ao centro, painel
+de legalidade ao vivo à direita.
+
+- `deck-builder-api.php` — endpoints JSON:
+  - `action=collections` — lista as coleções disponíveis (subpastas de
+    `EXPANSIONS/` com `schemas/`).
+  - `action=cards&collection=<coleção>` — todas as cartas
+    (personagem/item/energia) da coleção, para popular a paleta.
+  - `action=list` / `action=deck&file=...` — mesmos dados de
+    `deck-api.php` (via `DeckLibrary`), reaproveitados para a tela de
+    "editar deck existente".
+  - `action=create` (POST `{collection, meta}`) — cria um deck vazio
+    (template de `schema-deck.md`) em
+    `EXPANSIONS/{coleção}/schemas/decks/{slug}.json`.
+  - `action=save` (POST `{file, deck}`) — regrava o deck completo no
+    arquivo indicado.
+- `lib/DeckLibrary.php` — além de `listDecks`/`readDeck` (somente-leitura,
+  usados pelo Deck Viewer), tem `createDeck`/`saveDeck` para o Builder,
+  regravando o JSON com o mesmo guard de path traversal e a mesma
+  indentação de 2 espaços usada por `CardLibrary`.
+- `deck-builder.js` — estado do deck em memória (`entries[]`/`sideboard[]`),
+  adição/remoção de cartas, e `validateDeck()`: valida ao vivo, no client,
+  as regras de "Montagem do Deck" de `rules.md` (máx. 60 cartas no deck
+  principal, mín. 12 Personagens, mín. 12 Fontes de Energia, máx. 4 cópias
+  de Personagem/Item/Energia avançada, Lendária/Épica só 1 cópia, sideboard
+  máx. 15). O backend não valida legalidade no save — um deck
+  incompleto/rascunho é um estado válido, conforme `schema-deck.md`.
+
 ## Adicionando novas coleções
 
 Basta criar uma subpasta em `EXPANSIONS/` com `schemas/{personagens,itens,
